@@ -6,15 +6,29 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    #region 플레이어를 중심으로 이동
+
+    public GameObject TouchParticle;
+
+    public void MoveTarget()
+    {
+        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
+        {
+            //agent.SetDestination(hit.point);
+            Destroy(Instantiate(TouchParticle, hit.point, Quaternion.identity), 3);
+        }
+    }
+
+    #endregion
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
 }
