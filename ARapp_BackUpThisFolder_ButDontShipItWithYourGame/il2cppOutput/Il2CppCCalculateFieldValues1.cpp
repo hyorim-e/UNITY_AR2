@@ -474,6 +474,8 @@ struct List_1_t10BA05B555C92BD54800DFF82DCAAFC9DE44A077;
 struct List_1_tB9CD639EB4FE5EA0A8B417168BB9BD2D29AEE271;
 // System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycast>
 struct List_1_tE7BEADF38CADBCC46B040CF07A1B719A7F7E5123;
+// System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>
+struct List_1_t0754071572EFE7A5C92A59495D2524FC935364E3;
 // System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARReferencePoint>
 struct List_1_t2FD8903BBE837973AFCE154B4045672F6F238D2A;
 // System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARTextureInfo>
@@ -968,10 +970,14 @@ struct ARFace_t73C068C9C8422F79A858EC41C322D399305B8453;
 struct AROcclusionManager_t9EDE9F76050AF892E2AC6704D0F76EDAC370609D;
 // UnityEngine.XR.ARFoundation.ARPlane
 struct ARPlane_tB2F02248AD4019D141553B25C1B9005913E98EF0;
+// UnityEngine.XR.ARFoundation.ARPlaneManager
+struct ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928;
 // UnityEngine.XR.ARFoundation.ARPointCloud
 struct ARPointCloud_t884F66E095A8DEA1E8207FBF9E15F98D7C75B1F2;
 // UnityEngine.XR.ARFoundation.ARRaycast
 struct ARRaycast_t141143E16F40B1580060317DA867423FF2624E76;
+// UnityEngine.XR.ARFoundation.ARRaycastManager
+struct ARRaycastManager_tD9459374F0F5BD9E2E4A8A1C665E7F33F9C2EE44;
 // UnityEngine.XR.ARFoundation.ARSession
 struct ARSession_t13374A44A01F2C6D90578F93E0F0DA2482BE3014;
 // UnityEngine.XR.ARFoundation.ARSessionOrigin
@@ -24256,8 +24262,16 @@ struct ARInputManager_tAB4CB9CAC8C8198EAF1BAAFC7C1F6C0F726CE98D_StaticFields
 // ARManager
 struct ARManager_t082C478673DF5F5786DFB25006CC1643E8471245  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.XR.ARFoundation.ARRaycastManager ARManager::arRaycaster
+	ARRaycastManager_tD9459374F0F5BD9E2E4A8A1C665E7F33F9C2EE44* ___arRaycaster_4;
+	// UnityEngine.GameObject ARManager::spawnPrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnPrefab_5;
+	// System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit> ARManager::hits
+	List_1_t0754071572EFE7A5C92A59495D2524FC935364E3* ___hits_6;
 	// UnityEngine.GameObject ARManager::TouchParticle
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___TouchParticle_4;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___TouchParticle_7;
+	// UnityEngine.XR.ARFoundation.ARPlaneManager ARManager::arPlane
+	ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* ___arPlane_8;
 };
 
 // UnityEngine.XR.ARFoundation.ARMeshManager
@@ -30696,15 +30710,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5002[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5003[6] = 
 {
 	static_cast<int32_t>(offsetof(LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED, ___position_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED, ___color_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED, ___attenuation_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED, ___spotDirection_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED, ___occlusionProbeChannels_4)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED, ___layerMask_5)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5012[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5006[5] = 
 {
-	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5020[1] = 
-{
-	static_cast<int32_t>(offsetof(ARManager_t082C478673DF5F5786DFB25006CC1643E8471245, ___TouchParticle_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5021[4] = 
+	static_cast<int32_t>(offsetof(ARManager_t082C478673DF5F5786DFB25006CC1643E8471245, ___arRaycaster_4)),static_cast<int32_t>(offsetof(ARManager_t082C478673DF5F5786DFB25006CC1643E8471245, ___spawnPrefab_5)),static_cast<int32_t>(offsetof(ARManager_t082C478673DF5F5786DFB25006CC1643E8471245, ___hits_6)),static_cast<int32_t>(offsetof(ARManager_t082C478673DF5F5786DFB25006CC1643E8471245, ___TouchParticle_7)),static_cast<int32_t>(offsetof(ARManager_t082C478673DF5F5786DFB25006CC1643E8471245, ___arPlane_8)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5007[4] = 
 {
 	static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___heading_0)),static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___text_1)),static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___linkText_2)),static_cast<int32_t>(offsetof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401, ___url_3)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5022[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5008[4] = 
 {
 	static_cast<int32_t>(offsetof(Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB, ___icon_4)),static_cast<int32_t>(offsetof(Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB, ___title_5)),static_cast<int32_t>(offsetof(Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB, ___sections_6)),static_cast<int32_t>(offsetof(Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB, ___loadedLayout_7)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5016[4] = 
+{
+	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};
