@@ -117,10 +117,10 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	11,
 	g_ReversePInvokeWrapperPointers,
-	40002,
+	40003,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	11747,
+	11749,
 	g_Il2CppInvokerPointers,
 	1345,
 	g_UnresolvedVirtualMethodPointers,
