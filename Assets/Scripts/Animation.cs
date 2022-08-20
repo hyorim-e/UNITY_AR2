@@ -16,8 +16,6 @@ public class Animation : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-
-        animator.SetBool("Touch", true);
     }
 
     void Update()
@@ -37,10 +35,10 @@ public class Animation : MonoBehaviour
             Pose hitPose = hits[0].pose;
 
             animator.SetBool("Touch", true);
-            if (this.transform.position == arOrigin.transform.position)
-            {
-                animator.SetBool("Touch", false);
-            }
+        }
+        if (this.transform.position == arOrigin.transform.position)
+        {
+            animator.SetBool("Touch", false);
         }
 
 
