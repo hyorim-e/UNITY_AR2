@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
 
 public class ARManager : MonoBehaviour
 {
-    private Animator animator;
-
-    public GameObject character;
+    //private Animator animator;
+    //public GameObject character;
 
     #region ¹Ù´Ú¿¡ ÇÁ¸®ÆÕ ³õ±â
 
@@ -33,10 +33,12 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
+    /*
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
     }
+    */
 
     void Update()
     {
@@ -127,14 +129,14 @@ public class ARManager : MonoBehaviour
 
     public void MoveTarget()
     {
-        //if (Input.touchCount == 0) return;
+        if (Input.touchCount == 0) return;
 
-        bool isAlived = Vector3.Distance(arOrigin.transform.position, agent.transform.position) <= 0.1f;
-        if (isAlived) animator.SetBool("Touch", false);
+        //bool isAlived = Vector3.Distance(arOrigin.transform.position, agent.transform.position) <= 0.1f;
+        //if (isAlived) animator.SetBool("Touch", false);
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
         {
-            animator.SetBool("Touch", true);
+            //animator.SetBool("Touch", true);
 
             agent.SetDestination(hit.point);
             Destroy(Instantiate(TouchParticle, hit.point, Quaternion.identity), 3);
@@ -145,6 +147,7 @@ public class ARManager : MonoBehaviour
     {
         PlayerPos.playerPos = agent.transform.position;
         arOrigin.transform.position = PlayerPos.playerPos;
+        SetMapCenter(PlayerPos.playerPos);
     }
 
     #endregion
@@ -154,7 +157,7 @@ public class ARManager : MonoBehaviour
     public Material[] MapMts;
 
     void Start() => SetMapRadius(40f);
-    private void OnApplicationQuit() => SetMapRadius(float.MaxValue);
+    void OnApplicationQuit() => SetMapRadius(float.MaxValue);
 
     void SetMapCenter(Vector3 vec)
     {
