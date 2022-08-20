@@ -8,8 +8,8 @@ using UnityEngine.AI;
 
 public class ARManager : MonoBehaviour
 {
-    //private Animator animator;
-    //public GameObject character;
+    private Animator animator;
+    public GameObject character;
 
     #region 바닥에 프리팹 놓기
 
@@ -33,16 +33,16 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
-    /*
+    ///*
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
     }
-    */
+    //*/
 
     void Update()
     {
-        //PlacePrefab(); // 화면 터치 시 공 생성
+        PlacePrefab(); // 화면 터치 시 공 생성
         PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
         PlayerMove();
     }
@@ -131,12 +131,12 @@ public class ARManager : MonoBehaviour
     {
         if (Input.touchCount == 0) return;
 
-        //bool isAlived = Vector3.Distance(arOrigin.transform.position, agent.transform.position) <= 0.1f;
-        //if (isAlived) animator.SetBool("Touch", false);
+        bool isAlived = Vector3.Distance(arOrigin.transform.position, agent.transform.position) <= 0.1f;
+        if (isAlived) animator.SetBool("Touch", false);
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
         {
-            //animator.SetBool("Touch", true);
+            animator.SetBool("Touch", true);
 
             agent.SetDestination(hit.point);
             Destroy(Instantiate(TouchParticle, hit.point, Quaternion.identity), 3);
