@@ -42,7 +42,7 @@ public class ARManager : MonoBehaviour
 
     void Update()
     {
-        PlacePrefab(); // 화면 터치 시 공 생성
+        //PlacePrefab(); // 화면 터치 시 공 생성
         PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
         PlayerMove();
     }
