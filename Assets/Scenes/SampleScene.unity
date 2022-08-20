@@ -993,6 +993,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f059f491303799344baf55ebd1e0815f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arRaycaster: {fileID: 287020270}
+  arOrigin: {fileID: 287020267}
 --- !u!1 &989901664
 GameObject:
   m_ObjectHideFlags: 0
