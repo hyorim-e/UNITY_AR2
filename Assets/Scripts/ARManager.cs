@@ -133,6 +133,9 @@ public class ARManager : MonoBehaviour
         Touch touch = Input.GetTouch(0);
         if (touch.phase != TouchPhase.Began) return;
 
+        bool isAlived = Vector3.Distance(touch.position, agent.transform.position) <= 0.1f;
+        if (isAlived) animator.SetBool("Touch", false);
+
         //if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
         if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
@@ -140,9 +143,6 @@ public class ARManager : MonoBehaviour
 
             Pose hitPose = hits[0].pose;
             agent.SetDestination(hitPose.position);
-            bool isAlived = Vector3.Distance(touch.position, agent.transform.position) <= 0.1f;
-            if (isAlived) animator.SetBool("Touch", false);
-
 
             Destroy(Instantiate(TouchParticle, hitPose.position, Quaternion.identity), 3);
         }
