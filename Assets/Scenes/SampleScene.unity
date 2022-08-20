@@ -313,6 +313,8 @@ MonoBehaviour:
   arPlane: {fileID: 287020269}
   Indicator: {fileID: 1555711194}
   arOrigin: {fileID: 287020267}
+  arCameraManager: {fileID: 643259285}
+  currentLight: {fileID: 2138677392}
 --- !u!4 &335874713
 Transform:
   m_ObjectHideFlags: 0
@@ -854,7 +856,7 @@ MonoBehaviour:
   m_FocusMode: -1
   m_LightEstimationMode: -1
   m_AutoFocus: 1
-  m_LightEstimation: 0
+  m_LightEstimation: 1
   m_FacingDirection: 1
 --- !u!114 &643259286
 MonoBehaviour:
@@ -1484,7 +1486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1555711191
 MeshCollider:
   m_ObjectHideFlags: 0
