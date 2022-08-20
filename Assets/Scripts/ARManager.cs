@@ -7,6 +7,9 @@ using UnityEngine.AI;
 
 public class ARManager : MonoBehaviour
 {
+    Animator animator; // 터치 시 플레이어 이동 애니메이션
+    bool isTouch;
+
     #region 바닥에 프리팹 놓기
 
     public ARRaycastManager arRaycaster;
@@ -29,11 +32,16 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
+    void Awake()
+    {
+        animator = GetComponent<Animator> (); // 터치 시 플레이어 이동 애니메이션
+    }
     void Update()
     {
         //PlacePrefab(); // 화면 터치 시 공 생성
         PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
         MoveTarget(); // 터치 시 플레이어 이동
+
     }
 
     #region 바닥 활성화
@@ -120,6 +128,7 @@ public class ARManager : MonoBehaviour
     {
         if (Input.touchCount == 0) return;
 
+        isTouch = true;
         Touch touch = Input.GetTouch(0);
         if (touch.phase != TouchPhase.Began) return;
 
