@@ -133,14 +133,14 @@ public class ARManager : MonoBehaviour
         Touch touch = Input.GetTouch(0);
         if (touch.phase != TouchPhase.Began) return;
 
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
-        //if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
+        //if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
+        if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
             animator.SetBool("Touch", true);
 
             Pose hitPose = hits[0].pose;
             agent.SetDestination(hitPose.position);
-            bool isAlived = Vector3.Distance(hit.point, agent.transform.position) <= 0.1f;
+            bool isAlived = Vector3.Distance(touch.position, agent.transform.position) <= 0.1f;
             if (isAlived) animator.SetBool("Touch", false);
 
 
