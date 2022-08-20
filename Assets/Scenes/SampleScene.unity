@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6609e238b7b6b224fb8196b3e9d3ffde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 984980637}
   arRaycaster: {fileID: 287020270}
   spawnPrefab: {fileID: 5962619530372552158, guid: 5ba775a923dd326468c97aad3694275f, type: 3}
   arPlane: {fileID: 287020269}
@@ -981,21 +982,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &984980643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984980637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f059f491303799344baf55ebd1e0815f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arRaycaster: {fileID: 287020270}
-  arOrigin: {fileID: 287020267}
-  agent: {fileID: 984980640}
 --- !u!1 &989901664
 GameObject:
   m_ObjectHideFlags: 0

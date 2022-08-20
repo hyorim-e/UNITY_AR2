@@ -7,6 +7,10 @@ using UnityEngine.AI;
 
 public class ARManager : MonoBehaviour
 {
+    private Animator animator;
+
+    public GameObject character;
+
     #region ¹Ù´Ú¿¡ ÇÁ¸®ÆÕ ³õ±â
 
     public ARRaycastManager arRaycaster;
@@ -28,6 +32,11 @@ public class ARManager : MonoBehaviour
     }
 
     #endregion
+
+    private void Awake()
+    {
+        animator = character.GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -119,16 +128,22 @@ public class ARManager : MonoBehaviour
 
     public void MoveTarget()
     {
-        if (Input.touchCount == 0) return;
+        //if (Input.touchCount == 0) return;
 
         Touch touch = Input.GetTouch(0);
         if (touch.phase != TouchPhase.Began) return;
 
-        //if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
-        if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
+        //if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
+            animator.SetBool("Touch", true);
+
             Pose hitPose = hits[0].pose;
             agent.SetDestination(hitPose.position);
+            bool isAlived = Vector3.Distance(hit.point, agent.transform.position) <= 0.1f;
+            if (isAlived) animator.SetBool("Touch", false);
+
+
             Destroy(Instantiate(TouchParticle, hitPose.position, Quaternion.identity), 3);
         }
     }
