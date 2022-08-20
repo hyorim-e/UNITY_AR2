@@ -105,4 +105,25 @@ public class ARManager : MonoBehaviour
         }
     }
     #endregion
+
+    #region ºû °¨Áö
+
+    public ARCameraManager arCameraManager;
+    public Light currentLight;
+    void OnEnable() => arCameraManager.frameReceived += FrameUpdated;
+    void OnDisable() => arCameraManager.frameReceived -= FrameUpdated;
+
+    void FrameUpdated(ARCameraFrameEventArgs args)
+    {
+        var brightness = args.lightEstimation.averageBrightness;
+
+        if (brightness.HasValue)
+        {
+            bool isBright = brightness.Value > 0.3f;
+            float fixBrightness = brightness.Value * 4f;
+            currentLight.intensity = fixBrightness;
+            //print($"¹à±â : {brightness.Value} \nºûÀÇ ¼¼±â : {fixBrightness} \n¹àÀ½ : {isBright}");
+        }
+    }
+    #endregion
 }
