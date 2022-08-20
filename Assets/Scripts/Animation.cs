@@ -24,7 +24,7 @@ public class Animation : MonoBehaviour
 
     public void MoveAnimation()
     {
-        if (Input.touchCount == 0) return;
+        //if (Input.touchCount == 0) return;
 
         Touch touch = Input.GetTouch(0);
         if (touch.phase != TouchPhase.Began) return;
