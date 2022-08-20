@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 9d0d805a2ec26c64aa8a0961006f8460, type: 2}
 --- !u!1 &287020266
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,12 +309,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arRaycaster: {fileID: 287020270}
   spawnPrefab: {fileID: 5962619530372552158, guid: 5ba775a923dd326468c97aad3694275f, type: 3}
-  TouchParticle: {fileID: 1963267574761631511, guid: a1bb6d28dc1057c4a965bada342f9652, type: 3}
   arPlane: {fileID: 287020269}
   Indicator: {fileID: 1555711194}
   arOrigin: {fileID: 287020267}
   arCameraManager: {fileID: 643259285}
   currentLight: {fileID: 2138677392}
+  agent: {fileID: 984980640}
+  TouchParticle: {fileID: 1963267574761631511, guid: a1bb6d28dc1057c4a965bada342f9652, type: 3}
 --- !u!4 &335874713
 Transform:
   m_ObjectHideFlags: 0
@@ -953,6 +954,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &984980637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1144978573833690, guid: 1e8e1924bb442334c9125455634bb567, type: 3}
+  m_PrefabInstance: {fileID: 1772403261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &984980640
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984980637}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 100
+  m_Acceleration: 100
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &989901664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1997,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1925276336
 MeshCollider:
