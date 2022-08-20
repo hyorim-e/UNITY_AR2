@@ -317,6 +317,8 @@ MonoBehaviour:
   currentLight: {fileID: 2138677392}
   agent: {fileID: 984980640}
   TouchParticle: {fileID: 1963267574761631511, guid: a1bb6d28dc1057c4a965bada342f9652, type: 3}
+  MapMts:
+  - {fileID: 2100000, guid: 0af924faf2efd6b4395688e112abee89, type: 2}
 --- !u!4 &335874713
 Transform:
   m_ObjectHideFlags: 0

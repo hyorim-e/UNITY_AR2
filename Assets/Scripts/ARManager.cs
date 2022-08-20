@@ -133,7 +133,7 @@ public class ARManager : MonoBehaviour
         Touch touch = Input.GetTouch(0);
         if (touch.phase != TouchPhase.Began) return;
 
-        bool isAlived = Vector3.Distance(touch.position, agent.transform.position) <= 0.1f;
+        bool isAlived = Vector3.Distance(arOrigin.transform.position, agent.transform.position) <= 0.1f;
         if (isAlived) animator.SetBool("Touch", false);
 
         //if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
@@ -150,8 +150,37 @@ public class ARManager : MonoBehaviour
 
     void PlayerMove()
     {
-        arOrigin.transform.position = agent.transform.position;
+        PlayerPos.playerPos = agent.transform.position;
+        arOrigin.transform.position = PlayerPos.playerPos;
     }
 
     #endregion
+
+    #region 머테리얼 숨기기
+
+    public Material[] MapMts;
+
+    void Start() => SetMapRadius(40f);
+    private void OnApplicationQuit() => SetMapRadius(float.MaxValue);
+
+    void SetMapCenter(Vector3 vec)
+    {
+        Vector4 myVec = new Vector4(vec.x, vec.y, vec.z, 0);
+
+        for (int i = 0; i < MapMts.Length; i++)
+            MapMts[i].SetVector("_Center", myVec);
+    }
+
+    void SetMapRadius(float r)
+    {
+        for (int i = 0; i < MapMts.Length; i++)
+            MapMts[i].SetFloat("_Radius", r);
+    }
+
+    #endregion
+}
+
+public static class PlayerPos
+{
+    public static Vector3 playerPos;
 }
