@@ -995,6 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arRaycaster: {fileID: 287020270}
   arOrigin: {fileID: 287020267}
+  agent: {fileID: 984980640}
 --- !u!1 &989901664
 GameObject:
   m_ObjectHideFlags: 0

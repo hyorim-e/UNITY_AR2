@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.AI;
 
 public class Animation : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Animation : MonoBehaviour
         MoveAnimation();
     }
 
+    public NavMeshAgent agent;
+
     public void MoveAnimation()
     {
         //if (Input.touchCount == 0) return;
@@ -36,7 +39,7 @@ public class Animation : MonoBehaviour
 
             animator.SetBool("Touch", true);
         }
-        if (this.transform.position == arOrigin.transform.position)
+        if (agent.transform.position == arOrigin.transform.position)
         {
             animator.SetBool("Touch", false);
         }
