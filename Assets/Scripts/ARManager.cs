@@ -132,5 +132,10 @@ public class ARManager : MonoBehaviour
         }
     }
 
+    void PlayerMove()
+    {
+        arOrigin.transform.position = agent.transform.position;
+    }
+
     #endregion
 }
