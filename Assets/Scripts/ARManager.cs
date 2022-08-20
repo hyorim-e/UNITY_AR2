@@ -133,7 +133,7 @@ public class ARManager : MonoBehaviour
         Touch touch = Input.GetTouch(0);
         if (touch.phase != TouchPhase.Began) return;
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
         //if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
             animator.SetBool("Touch", true);
