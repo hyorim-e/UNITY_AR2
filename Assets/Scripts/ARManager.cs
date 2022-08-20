@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.AI;
 
 public class ARManager : MonoBehaviour
 {
@@ -28,29 +29,12 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
-
-    #region 플레이어를 중심으로 이동
-
-    public GameObject TouchParticle;
-
-    public void MoveTarget()
-    {
-        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
-        {
-            //agent.SetDestination(hit.point);
-            Destroy(Instantiate(TouchParticle, hit.point, Quaternion.identity), 3);
-        }
-    }
-
-    #endregion
-
-
     void Update()
     {
         //PlacePrefab(); // 화면 터치 시 공 생성
         PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
+        MoveTarget(); // 터치 시 플레이어 이동
     }
-
 
     #region 바닥 활성화
 
@@ -125,5 +109,28 @@ public class ARManager : MonoBehaviour
             //print($"밝기 : {brightness.Value} \n빛의 세기 : {fixBrightness} \n밝음 : {isBright}");
         }
     }
+    #endregion
+
+    #region 플레이어를 중심으로 이동
+
+    public NavMeshAgent agent;
+    public GameObject TouchParticle;
+
+    public void MoveTarget()
+    {
+        if (Input.touchCount == 0) return;
+
+        Touch touch = Input.GetTouch(0);
+        if (touch.phase != TouchPhase.Began) return;
+
+        //if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
+        if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
+        {
+            Pose hitPose = hits[0].pose;
+            agent.SetDestination(hitPose.position);
+            Destroy(Instantiate(TouchParticle, hitPose.position, Quaternion.identity), 3);
+        }
+    }
+
     #endregion
 }
