@@ -36,13 +36,21 @@ extern void ARManager_FrameUpdated_m7DFE681A53B5C8C6B5940F1601096883C83E28B6 (vo
 extern void ARManager_MoveTarget_m7A1B34258D6CC1FD63C787FC2430882565D81BE3 (void);
 // 0x0000000C System.Void ARManager::PlayerMove()
 extern void ARManager_PlayerMove_m5C7817853405C269382C865EEDF35C67793E5BA4 (void);
-// 0x0000000D System.Void ARManager::.ctor()
+// 0x0000000D System.Void ARManager::Start()
+extern void ARManager_Start_m076359B9D8D438AB7042625E623EBE616B7FB6E3 (void);
+// 0x0000000E System.Void ARManager::OnApplicationQuit()
+extern void ARManager_OnApplicationQuit_m2AAFD6AA06340F3FD5AAA22DFF70E81683784C2A (void);
+// 0x0000000F System.Void ARManager::SetMapCenter(UnityEngine.Vector3)
+extern void ARManager_SetMapCenter_m4AC08C3A9E0F24BB23C9185B577FF99660923BCA (void);
+// 0x00000010 System.Void ARManager::SetMapRadius(System.Single)
+extern void ARManager_SetMapRadius_mFF4288B1C7224925920E61D7C858BB7B86040FF0 (void);
+// 0x00000011 System.Void ARManager::.ctor()
 extern void ARManager__ctor_m53D041B8379A885E4596A2980F29676BC9BC5931 (void);
-// 0x0000000E System.Void Readme::.ctor()
+// 0x00000012 System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x0000000F System.Void Readme/Section::.ctor()
+// 0x00000013 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-static Il2CppMethodPointer s_methodPointers[15] = 
+static Il2CppMethodPointer s_methodPointers[19] = 
 {
 	ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23,
 	ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073,
@@ -56,11 +64,15 @@ static Il2CppMethodPointer s_methodPointers[15] =
 	ARManager_FrameUpdated_m7DFE681A53B5C8C6B5940F1601096883C83E28B6,
 	ARManager_MoveTarget_m7A1B34258D6CC1FD63C787FC2430882565D81BE3,
 	ARManager_PlayerMove_m5C7817853405C269382C865EEDF35C67793E5BA4,
+	ARManager_Start_m076359B9D8D438AB7042625E623EBE616B7FB6E3,
+	ARManager_OnApplicationQuit_m2AAFD6AA06340F3FD5AAA22DFF70E81683784C2A,
+	ARManager_SetMapCenter_m4AC08C3A9E0F24BB23C9185B577FF99660923BCA,
+	ARManager_SetMapRadius_mFF4288B1C7224925920E61D7C858BB7B86040FF0,
 	ARManager__ctor_m53D041B8379A885E4596A2980F29676BC9BC5931,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 };
-static const int32_t s_InvokerIndices[15] = 
+static const int32_t s_InvokerIndices[19] = 
 {
 	6494,
 	6494,
@@ -76,13 +88,17 @@ static const int32_t s_InvokerIndices[15] =
 	6494,
 	6494,
 	6494,
+	5293,
+	5240,
+	6494,
+	6494,
 	6494,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	15,
+	19,
 	s_methodPointers,
 	0,
 	NULL,

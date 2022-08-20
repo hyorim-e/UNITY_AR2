@@ -42,8 +42,7 @@ public class ARManager : MonoBehaviour
     {
         //PlacePrefab(); // 화면 터치 시 공 생성
         PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
-        MoveTarget(); // 터치 시 플레이어 이동
-
+        PlayerMove();
     }
 
     #region 바닥 활성화
@@ -130,21 +129,15 @@ public class ARManager : MonoBehaviour
     {
         //if (Input.touchCount == 0) return;
 
-        Touch touch = Input.GetTouch(0);
-        if (touch.phase != TouchPhase.Began) return;
-
         bool isAlived = Vector3.Distance(arOrigin.transform.position, agent.transform.position) <= 0.1f;
         if (isAlived) animator.SetBool("Touch", false);
 
-        //if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
-        if (arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit))
         {
             animator.SetBool("Touch", true);
 
-            Pose hitPose = hits[0].pose;
-            agent.SetDestination(hitPose.position);
-
-            Destroy(Instantiate(TouchParticle, hitPose.position, Quaternion.identity), 3);
+            agent.SetDestination(hit.point);
+            Destroy(Instantiate(TouchParticle, hit.point, Quaternion.identity), 3);
         }
     }
 
