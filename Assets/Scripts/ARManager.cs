@@ -64,7 +64,7 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
-    #region 바닥 표시기
+    #region 바닥 표시기(인디케이터)
 
     public Transform Indicator;
     List<ARRaycastHit> indicatorHits = new List<ARRaycastHit>();
@@ -86,5 +86,23 @@ public class ARManager : MonoBehaviour
         Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
     }
 
+    #endregion
+
+    #region 원점 설정
+
+    public ARSessionOrigin arOrigin;
+    List<ARRaycastHit> originHits = new List<ARRaycastHit>();
+
+    public void PlaceOrigin()
+    {
+        arRaycaster.Raycast(new Vector2(Screen.width * 0.5f, Screen.height * 0.5f), originHits, TrackableType.Planes);
+        if(originHits.Count > 0)
+        {
+            Pose hitpose = originHits[0].pose;
+
+            // 괄호 안에 들어가는 것이 원점이 됨
+            arOrigin.MakeContentAppearAt(arOrigin.transform, hitpose.position, hitpose.rotation);
+        }
+    }
     #endregion
 }
