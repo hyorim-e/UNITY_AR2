@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class ARManager : MonoBehaviour
 {
@@ -173,6 +174,13 @@ public class ARManager : MonoBehaviour
             MapMts[i].SetFloat("_Radius", r);
     }
 
+    #endregion
+
+    #region 버튼 클릭 시 씬 변경
+    public void OnClickButton() 
+    {
+        SceneManager.LoadScene("ARScene");
+    }
     #endregion
 }
 
