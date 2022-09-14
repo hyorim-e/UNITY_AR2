@@ -1,8 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 
+public static class MoviePrefab
+{
+    public static GameObject moviePrefab;
+}
 public class ImageTracker : MonoBehaviour
 {
     private ARTrackedImageManager TIManager;
@@ -22,6 +27,8 @@ public class ImageTracker : MonoBehaviour
             GameObject newObject = Instantiate(obj);
             newObject.name = obj.name;
             newObject.SetActive(false);
+
+            MoviePrefab.moviePrefab = newObject; //
 
             spawnedObject.Add(newObject.name, newObject);
         }
@@ -61,14 +68,5 @@ public class ImageTracker : MonoBehaviour
         spawnedObject[referenceImageName].transform.rotation = trackedImage.transform.rotation;
 
         spawnedObject[referenceImageName].SetActive(true);
-    }
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
     }
 }

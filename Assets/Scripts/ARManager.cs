@@ -12,10 +12,11 @@ public class ARManager : MonoBehaviour
     private Animator animator;
     public GameObject character;
 
-    #region 바닥에 프리팹 놓기
+    #region 바닥에 프리팹 놓기(임시 공->무비 프리팹 업데이트)
 
     public ARRaycastManager arRaycaster;
     public GameObject spawnPrefab;
+
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     void PlacePrefab()
@@ -28,18 +29,17 @@ public class ARManager : MonoBehaviour
         if(arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
             Pose hitPose = hits[0].pose;
-            Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
+            //Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
+            Instantiate(MoviePrefab.moviePrefab, hitPose.position, hitPose.rotation);
         }
     }
 
     #endregion
 
-    ///*
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
     }
-    //*/
 
     void Update()
     {

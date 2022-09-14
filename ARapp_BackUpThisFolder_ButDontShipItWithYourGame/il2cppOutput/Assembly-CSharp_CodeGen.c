@@ -80,17 +80,19 @@ extern void ImageTracker_OnDisable_m423865D8E1B2D7AE7367F97852DFC82DBAEE5631 (vo
 extern void ImageTracker_OnTrackedImageChanged_m3BD64EAE08AA472A1AD4B054728678B3DE1E80FA (void);
 // 0x00000022 System.Void ImageTracker::UpdateSpawnObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void ImageTracker_UpdateSpawnObject_m7B7F48AE4694C54C1B273E1DF213FDFD75F943B2 (void);
-// 0x00000023 System.Void ImageTracker::Start()
-extern void ImageTracker_Start_mB3B6B396041AFA304EB77A2841B9B4EC1E952F92 (void);
-// 0x00000024 System.Void ImageTracker::Update()
-extern void ImageTracker_Update_mFFA46141C9F88E855E464EDCA3272797224ADEB4 (void);
-// 0x00000025 System.Void ImageTracker::.ctor()
+// 0x00000023 System.Void ImageTracker::.ctor()
 extern void ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856 (void);
-// 0x00000026 System.Void Readme::.ctor()
+// 0x00000024 System.Void ManagerData::Start()
+extern void ManagerData_Start_m372D89C0504B205A654A0944336BC34D435842AA (void);
+// 0x00000025 System.Void ManagerData::Update()
+extern void ManagerData_Update_m92B9970A536A604D4FC3030104842A8AAC9571E0 (void);
+// 0x00000026 System.Void ManagerData::.ctor()
+extern void ManagerData__ctor_mAFC13C03F8DB9E8E0AC7945DF3169DE642007682 (void);
+// 0x00000027 System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x00000027 System.Void Readme/Section::.ctor()
+// 0x00000028 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-static Il2CppMethodPointer s_methodPointers[39] = 
+static Il2CppMethodPointer s_methodPointers[40] = 
 {
 	ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23,
 	ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073,
@@ -126,13 +128,14 @@ static Il2CppMethodPointer s_methodPointers[39] =
 	ImageTracker_OnDisable_m423865D8E1B2D7AE7367F97852DFC82DBAEE5631,
 	ImageTracker_OnTrackedImageChanged_m3BD64EAE08AA472A1AD4B054728678B3DE1E80FA,
 	ImageTracker_UpdateSpawnObject_m7B7F48AE4694C54C1B273E1DF213FDFD75F943B2,
-	ImageTracker_Start_mB3B6B396041AFA304EB77A2841B9B4EC1E952F92,
-	ImageTracker_Update_mFFA46141C9F88E855E464EDCA3272797224ADEB4,
 	ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856,
+	ManagerData_Start_m372D89C0504B205A654A0944336BC34D435842AA,
+	ManagerData_Update_m92B9970A536A604D4FC3030104842A8AAC9571E0,
+	ManagerData__ctor_mAFC13C03F8DB9E8E0AC7945DF3169DE642007682,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
 };
-static const int32_t s_InvokerIndices[39] = 
+static const int32_t s_InvokerIndices[40] = 
 {
 	8484,
 	8484,
@@ -173,12 +176,13 @@ static const int32_t s_InvokerIndices[39] =
 	8484,
 	8484,
 	8484,
+	8484,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	39,
+	40,
 	s_methodPointers,
 	0,
 	NULL,

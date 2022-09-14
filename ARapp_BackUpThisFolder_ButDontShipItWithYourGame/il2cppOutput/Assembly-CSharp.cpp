@@ -152,6 +152,8 @@ struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
 struct ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9;
 // UnityEngine.Light
 struct Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3;
+// ManagerData
+struct ManagerData_t3C6671FCEECC9A55673D924B73F780ACB61204D7;
 // UnityEngine.Material
 struct Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3;
 // System.Reflection.MethodInfo
@@ -208,6 +210,7 @@ IL2CPP_EXTERN_C RuntimeClass* Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t0754071572EFE7A5C92A59495D2524FC935364E3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PlayerPos_tAD16A9B21FC7922BF5809A443DCF44DBCDABD5C1_il2cpp_TypeInfo_var;
@@ -329,6 +332,17 @@ struct List_1_tFA730335FF46512E4245B2F46892CA318B394FAE_StaticFields
 	ARTrackedImageU5BU5D_tD227987C766F9B880B8EF0E9ADF5918CDFB72367* ___s_emptyArray_5;
 };
 struct Il2CppArrayBounds;
+
+// MoviePrefab
+struct MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7  : public RuntimeObject
+{
+};
+
+struct MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_StaticFields
+{
+	// UnityEngine.GameObject MoviePrefab::moviePrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___moviePrefab_0;
+};
 
 // System.String
 struct String_t  : public RuntimeObject
@@ -1785,6 +1799,11 @@ struct ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9  : public MonoBeha
 	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___spawnedObject_6;
 };
 
+// ManagerData
+struct ManagerData_t3C6671FCEECC9A55673D924B73F780ACB61204D7  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
 // UnityEngine.XR.ARFoundation.ARTrackableManager`5<UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystem,UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystemDescriptor,UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystem/Provider,UnityEngine.XR.ARSubsystems.XRTrackedImage,UnityEngine.XR.ARFoundation.ARTrackedImage>
 struct ARTrackableManager_5_t1395957883D0FA3B96AA1B31F7D9D15573DA46F5  : public SubsystemLifecycleManager_3_t17DE984A5507806C3E89F7255F02922D8A7F6FD2
 {
@@ -2358,6 +2377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager_PlacePrefab_m3F2427ACE6FF951D1
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m443F0D48247776D4257E06597AF794BCF6D8020F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m2537AA64AEAC12995F52F5B412866556B83CFBE0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -2413,7 +2433,7 @@ IL_0019:
 		L_6 = ARRaycastManager_Raycast_mF56A1E2D7CBB61131E4D844ADA9D0CC1F6B53EAC(L_3, L_4, L_5, ((int32_t)15), NULL);
 		if (!L_6)
 		{
-			goto IL_0062;
+			goto IL_0061;
 		}
 	}
 	{
@@ -2426,8 +2446,8 @@ IL_0019:
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_9;
 		L_9 = ARRaycastHit_get_pose_m84C13E71E21FE12CBA9AAD98DC28B1E414C9EFFD((&V_2), NULL);
 		V_1 = L_9;
-		// Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___spawnPrefab_7;
+		// Instantiate(MoviePrefab.moviePrefab, hitPose.position, hitPose.rotation);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = ((MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_StaticFields*)il2cpp_codegen_static_fields_for(MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_il2cpp_TypeInfo_var))->___moviePrefab_0;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_11 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = L_11.___position_0;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_13 = V_1;
@@ -2437,7 +2457,7 @@ IL_0019:
 		L_15 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m2537AA64AEAC12995F52F5B412866556B83CFBE0(L_10, L_12, L_14, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m2537AA64AEAC12995F52F5B412866556B83CFBE0_RuntimeMethod_var);
 	}
 
-IL_0062:
+IL_0061:
 	{
 		// }
 		return;
@@ -3378,6 +3398,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHideRendererCoU3Ed__3_Syste
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void ImageTracker::Awake()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker_Awake_mF0965772758938187CDDE525DCB020EAD0EAF5C1 (ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9* __this, const RuntimeMethod* method) 
 {
@@ -3388,6 +3416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker_Awake_mF0965772758938187CDD
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_mE5ED48EAB67073C645CD87B5E6ACA2E6BF7975AF_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m85AB837A51705B9DF96923F388345B9461B9882B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mC898F7E3D9541F17BD8B79579FDD431C0651E12D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -3412,7 +3441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker_Awake_mF0965772758938187CDD
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_2 = __this->___placeablePrefabs_5;
 		V_0 = L_2;
 		V_1 = 0;
-		goto IL_0056;
+		goto IL_005c;
 	}
 
 IL_0022:
@@ -3442,26 +3471,30 @@ IL_0022:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = V_3;
 		NullCheck(L_12);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
+		// MoviePrefab.moviePrefab = newObject;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = V_3;
+		((MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_StaticFields*)il2cpp_codegen_static_fields_for(MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_il2cpp_TypeInfo_var))->___moviePrefab_0 = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&((MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_StaticFields*)il2cpp_codegen_static_fields_for(MoviePrefab_t7A81AE8C8F6873DFD4857FE250CD6E4E2F77C9B7_il2cpp_TypeInfo_var))->___moviePrefab_0), (void*)L_13);
 		// spawnedObject.Add(newObject.name, newObject);
-		Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* L_13 = __this->___spawnedObject_6;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14 = V_3;
+		Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* L_14 = __this->___spawnedObject_6;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = V_3;
+		NullCheck(L_15);
+		String_t* L_16;
+		L_16 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_15, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = V_3;
 		NullCheck(L_14);
-		String_t* L_15;
-		L_15 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_14, NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_3;
-		NullCheck(L_13);
-		Dictionary_2_Add_mE5ED48EAB67073C645CD87B5E6ACA2E6BF7975AF(L_13, L_15, L_16, Dictionary_2_Add_mE5ED48EAB67073C645CD87B5E6ACA2E6BF7975AF_RuntimeMethod_var);
-		int32_t L_17 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_17, 1));
+		Dictionary_2_Add_mE5ED48EAB67073C645CD87B5E6ACA2E6BF7975AF(L_14, L_16, L_17, Dictionary_2_Add_mE5ED48EAB67073C645CD87B5E6ACA2E6BF7975AF_RuntimeMethod_var);
+		int32_t L_18 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
-IL_0056:
+IL_005c:
 	{
 		// foreach (GameObject obj in placeablePrefabs)
-		int32_t L_18 = V_1;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_19 = V_0;
-		NullCheck(L_19);
-		if ((((int32_t)L_18) < ((int32_t)((int32_t)(((RuntimeArray*)L_19)->max_length)))))
+		int32_t L_19 = V_1;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_20 = V_0;
+		NullCheck(L_20);
+		if ((((int32_t)L_19) < ((int32_t)((int32_t)(((RuntimeArray*)L_20)->max_length)))))
 		{
 			goto IL_0022;
 		}
@@ -3787,24 +3820,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker_UpdateSpawnObject_m7B7F48AE
 		return;
 	}
 }
-// System.Void ImageTracker::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker_Start_mB3B6B396041AFA304EB77A2841B9B4EC1E952F92 (ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9* __this, const RuntimeMethod* method) 
-{
-	{
-		// }
-		return;
-	}
-}
-// System.Void ImageTracker::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker_Update_mFFA46141C9F88E855E464EDCA3272797224ADEB4 (ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9* __this, const RuntimeMethod* method) 
-{
-	{
-		// }
-		return;
-	}
-}
 // System.Void ImageTracker::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856 (ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void ManagerData::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagerData_Start_m372D89C0504B205A654A0944336BC34D435842AA (ManagerData_t3C6671FCEECC9A55673D924B73F780ACB61204D7* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void ManagerData::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagerData_Update_m92B9970A536A604D4FC3030104842A8AAC9571E0 (ManagerData_t3C6671FCEECC9A55673D924B73F780ACB61204D7* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void ManagerData::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManagerData__ctor_mAFC13C03F8DB9E8E0AC7945DF3169DE642007682 (ManagerData_t3C6671FCEECC9A55673D924B73F780ACB61204D7* __this, const RuntimeMethod* method) 
 {
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
