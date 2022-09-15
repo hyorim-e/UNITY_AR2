@@ -9192,7 +9192,7 @@ IL_0063:
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_00b3:
+FINALLY_00c6:
 			{// begin finally (depth: 1)
 				Enumerator_Dispose_m2FE7AF2CCE1E952B89A1EB377E86129292900498((&V_5), Enumerator_Dispose_m2FE7AF2CCE1E952B89A1EB377E86129292900498_RuntimeMethod_var);
 				return;
@@ -9201,7 +9201,7 @@ FINALLY_00b3:
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_00a8_1;
+				goto IL_00bb_1;
 			}
 
 IL_007d_1:
@@ -9210,34 +9210,56 @@ IL_007d_1:
 				NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0 L_17;
 				L_17 = Enumerator_get_Current_m53F624A2FF2D39EBC1E45791328D92CB3A5C72E6_inline((&V_5), Enumerator_get_Current_m53F624A2FF2D39EBC1E45791328D92CB3A5C72E6_RuntimeMethod_var);
 				V_6 = L_17;
+				// if (hitArray.Length > 0)
+				int32_t L_18;
+				L_18 = IL2CPP_NATIVEARRAY_GET_LENGTH(((&V_6))->___m_Length_1);
+				if ((((int32_t)L_18) <= ((int32_t)0)))
+				{
+					goto IL_00ab_1;
+				}
+			}
+			{
 				// NativeArray<XRRaycastHit>.Copy(hitArray, 0, allHits, dstIndex, hitArray.Length);
-				NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0 L_18 = V_6;
-				NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0 L_19 = V_1;
-				int32_t L_20 = V_2;
-				int32_t L_21;
-				L_21 = IL2CPP_NATIVEARRAY_GET_LENGTH(((&V_6))->___m_Length_1);
-				NativeArray_1_Copy_mB9E8EC71B5D4DDDB0D3B628157890F5C3AD1236D(L_18, 0, L_19, L_20, L_21, NativeArray_1_Copy_mB9E8EC71B5D4DDDB0D3B628157890F5C3AD1236D_RuntimeMethod_var);
-				// hitArray.Dispose();
-				NativeArray_1_Dispose_m80961963BF541F388F0067D545B948EDAEA543AE((&V_6), NativeArray_1_Dispose_m80961963BF541F388F0067D545B948EDAEA543AE_RuntimeMethod_var);
+				NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0 L_19 = V_6;
+				NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0 L_20 = V_1;
+				int32_t L_21 = V_2;
+				int32_t L_22;
+				L_22 = IL2CPP_NATIVEARRAY_GET_LENGTH(((&V_6))->___m_Length_1);
+				NativeArray_1_Copy_mB9E8EC71B5D4DDDB0D3B628157890F5C3AD1236D(L_19, 0, L_20, L_21, L_22, NativeArray_1_Copy_mB9E8EC71B5D4DDDB0D3B628157890F5C3AD1236D_RuntimeMethod_var);
 				// dstIndex += hitArray.Length;
-				int32_t L_22 = V_2;
-				int32_t L_23;
-				L_23 = IL2CPP_NATIVEARRAY_GET_LENGTH(((&V_6))->___m_Length_1);
-				V_2 = ((int32_t)il2cpp_codegen_add(L_22, L_23));
+				int32_t L_23 = V_2;
+				int32_t L_24;
+				L_24 = IL2CPP_NATIVEARRAY_GET_LENGTH(((&V_6))->___m_Length_1);
+				V_2 = ((int32_t)il2cpp_codegen_add(L_23, L_24));
 			}
 
-IL_00a8_1:
+IL_00ab_1:
+			{
+				// if (hitArray.IsCreated)
+				bool L_25;
+				L_25 = NativeArray_1_get_IsCreated_m74801BC75EFFE1FB8815613CAC0CB2DDB4AD936A((&V_6), NativeArray_1_get_IsCreated_m74801BC75EFFE1FB8815613CAC0CB2DDB4AD936A_RuntimeMethod_var);
+				if (!L_25)
+				{
+					goto IL_00bb_1;
+				}
+			}
+			{
+				// hitArray.Dispose();
+				NativeArray_1_Dispose_m80961963BF541F388F0067D545B948EDAEA543AE((&V_6), NativeArray_1_Dispose_m80961963BF541F388F0067D545B948EDAEA543AE_RuntimeMethod_var);
+			}
+
+IL_00bb_1:
 			{
 				// foreach (var hitArray in s_NativeRaycastHits)
-				bool L_24;
-				L_24 = Enumerator_MoveNext_mD22678ED701901AA695FFFB6DDC389CE2FF1BDFE((&V_5), Enumerator_MoveNext_mD22678ED701901AA695FFFB6DDC389CE2FF1BDFE_RuntimeMethod_var);
-				if (L_24)
+				bool L_26;
+				L_26 = Enumerator_MoveNext_mD22678ED701901AA695FFFB6DDC389CE2FF1BDFE((&V_5), Enumerator_MoveNext_mD22678ED701901AA695FFFB6DDC389CE2FF1BDFE_RuntimeMethod_var);
+				if (L_26)
 				{
 					goto IL_007d_1;
 				}
 			}
 			{
-				goto IL_00c1;
+				goto IL_00d4;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -9246,11 +9268,11 @@ IL_00a8_1:
 		}
 	}
 
-IL_00c1:
+IL_00d4:
 	{
 		// return allHits;
-		NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0 L_25 = V_1;
-		return L_25;
+		NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0 L_27 = V_1;
+		return L_27;
 	}
 }
 // System.Boolean UnityEngine.XR.ARFoundation.ARRaycastManager::TransformAndDisposeNativeHitResults(Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRRaycastHit>,System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Vector3)

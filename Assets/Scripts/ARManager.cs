@@ -29,8 +29,8 @@ public class ARManager : MonoBehaviour
         if(arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
             Pose hitPose = hits[0].pose;
-            //Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
-            Instantiate(MoviePrefab.moviePrefab, hitPose.position, hitPose.rotation);
+            Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
+            //Instantiate(MoviePrefab.moviePrefab, hitPose.position, hitPose.rotation);
         }
     }
 

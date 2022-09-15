@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 
 public static class MoviePrefab
@@ -10,7 +9,7 @@ public static class MoviePrefab
 }
 public class ImageTracker : MonoBehaviour
 {
-    private ARTrackedImageManager TIManager;
+    private ARTrackedImageManager trackedImageManager;
 
     [SerializeField]
     private GameObject[] placeablePrefabs;
@@ -19,7 +18,7 @@ public class ImageTracker : MonoBehaviour
 
     private void Awake()
     {
-        TIManager = GetComponent<ARTrackedImageManager>();
+        trackedImageManager = GetComponent<ARTrackedImageManager>();
         spawnedObject = new Dictionary<string, GameObject>();
 
         foreach (GameObject obj in placeablePrefabs)
@@ -28,20 +27,23 @@ public class ImageTracker : MonoBehaviour
             newObject.name = obj.name;
             newObject.SetActive(false);
 
-            MoviePrefab.moviePrefab = newObject; //
+            //MoviePrefab.moviePrefab = newObject; //
 
             spawnedObject.Add(newObject.name, newObject);
         }
+
+        //spawnedObject["TheHost"].SetActive(true);
     }
 
     private void OnEnable()
     {
-        TIManager.trackedImagesChanged += OnTrackedImageChanged;
+        //spawnedObject["TheHost"].SetActive(true);
+        trackedImageManager.trackedImagesChanged += OnTrackedImageChanged;
     }
 
     private void OnDisable()
     {
-        TIManager.trackedImagesChanged -= OnTrackedImageChanged;
+        //trackedImageManager.trackedImagesChanged -= OnTrackedImageChanged;
     }
 
     void OnTrackedImageChanged(ARTrackedImagesChangedEventArgs eventArgs)
