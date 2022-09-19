@@ -86,7 +86,15 @@ extern void ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856 (void);
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 // 0x00000025 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-static Il2CppMethodPointer s_methodPointers[37] = 
+// 0x00000026 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
+extern void AnimatorParamatersChange_Start_m871E4A208B70403948907DD6EFF16B5C89AF6558 (void);
+// 0x00000027 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
+extern void AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD (void);
+// 0x00000028 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
+extern void AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD (void);
+// 0x00000029 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
+extern void AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF (void);
+static Il2CppMethodPointer s_methodPointers[41] = 
 {
 	ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23,
 	ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073,
@@ -125,52 +133,60 @@ static Il2CppMethodPointer s_methodPointers[37] =
 	ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	AnimatorParamatersChange_Start_m871E4A208B70403948907DD6EFF16B5C89AF6558,
+	AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD,
+	AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD,
+	AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF,
 };
-static const int32_t s_InvokerIndices[37] = 
+static const int32_t s_InvokerIndices[41] = 
 {
-	8484,
-	8484,
-	8484,
-	6689,
-	8484,
-	8484,
-	8484,
-	8484,
-	8484,
-	6647,
-	8484,
-	8484,
-	8484,
-	8484,
-	6948,
-	6890,
-	8484,
-	8484,
-	8484,
-	8484,
-	8484,
-	8333,
-	8484,
-	6780,
-	8484,
-	8212,
-	8333,
-	8484,
-	8333,
-	8484,
-	8484,
-	8484,
-	6669,
-	6817,
-	8484,
-	8484,
-	8484,
+	8487,
+	8487,
+	8487,
+	6692,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	6650,
+	8487,
+	8487,
+	8487,
+	8487,
+	6951,
+	6893,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8336,
+	8487,
+	6783,
+	8487,
+	8215,
+	8336,
+	8487,
+	8336,
+	8487,
+	8487,
+	8487,
+	6672,
+	6820,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	37,
+	41,
 	s_methodPointers,
 	0,
 	NULL,
