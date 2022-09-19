@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
+/*
 public static class MoviePrefab
 {
     public static GameObject moviePrefab;
 }
+*/
+
 public class ImageTracker : MonoBehaviour
 {
     private ARTrackedImageManager trackedImageManager;

@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 984980637}
   arRaycaster: {fileID: 287020270}
-  spawnPrefab: {fileID: 5962619530372552158, guid: 5ba775a923dd326468c97aad3694275f, type: 3}
+  spawnPrefab: {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
   arPlane: {fileID: 287020269}
   Indicator: {fileID: 1555711194}
   arOrigin: {fileID: 287020267}
@@ -5063,7 +5063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &947455054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6594,7 +6594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1177580783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11261,7 +11261,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACF5 \uC0DD\uC131"
+  m_Text: "\uBC30\uCE58\uD558\uAE30"
 --- !u!222 &1919598785
 CanvasRenderer:
   m_ObjectHideFlags: 0
