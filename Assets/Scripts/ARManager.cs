@@ -7,6 +7,10 @@ using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+public static class SpawnPrefab
+{
+    public static GameObject spawnPrefab;
+}
 public class ARManager : MonoBehaviour
 {
     private Animator animator;
@@ -15,7 +19,7 @@ public class ARManager : MonoBehaviour
     #region 바닥에 프리팹 놓기(임시 공->무비 프리팹 업데이트)
 
     public ARRaycastManager arRaycaster;
-    public GameObject spawnPrefab;
+    //public GameObject spawnPrefab;
 
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
@@ -29,7 +33,7 @@ public class ARManager : MonoBehaviour
         if(arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
             Pose hitPose = hits[0].pose;
-            Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
+            Instantiate(SpawnPrefab.spawnPrefab, hitPose.position, hitPose.rotation);
             //Instantiate(MoviePrefab.moviePrefab, hitPose.position, hitPose.rotation);
         }
     }
@@ -79,7 +83,7 @@ public class ARManager : MonoBehaviour
     public void PlaceIndicatorPrefab()
     {
         Pose hitPose = indicatorHits[0].pose;
-        Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
+        Instantiate(SpawnPrefab.spawnPrefab, hitPose.position, hitPose.rotation);
     }
 
     #endregion
