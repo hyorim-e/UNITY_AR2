@@ -1908,6 +1908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 984980637}
   arRaycaster: {fileID: 287020270}
+  spawnPrefab: {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
   arPlane: {fileID: 287020269}
   Indicator: {fileID: 1555711194}
   arOrigin: {fileID: 287020267}
@@ -6661,7 +6662,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 335874712}
         m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
-        m_MethodName: PlacePrefab
+        m_MethodName: PlaceIndicatorPrefab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
