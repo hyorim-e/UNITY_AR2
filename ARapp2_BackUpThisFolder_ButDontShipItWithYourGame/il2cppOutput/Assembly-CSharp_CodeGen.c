@@ -12,90 +12,111 @@
 
 
 
-// 0x00000001 System.Void ARManager::PlacePrefab()
+// 0x00000001 System.Void Animation_Test::Start()
+extern void Animation_Test_Start_m54DA7CF05337871959835B7E5DBAD78A8A7276A5 (void);
+// 0x00000002 System.Void Animation_Test::IdleAni()
+extern void Animation_Test_IdleAni_mDC3778E36E40DC1A023C81AD26A26459BC0A0C13 (void);
+// 0x00000003 System.Void Animation_Test::RunAni()
+extern void Animation_Test_RunAni_m03DF663FEAB3171BEDEDB1D9D053D08FD8A67EBA (void);
+// 0x00000004 System.Void Animation_Test::AttackAni()
+extern void Animation_Test_AttackAni_m511A0C3910223DFA088BB2A2C11722CDD3A30167 (void);
+// 0x00000005 System.Void Animation_Test::DamageAni()
+extern void Animation_Test_DamageAni_m447AC63C5AD5A743853BE49EC45875884ADB145C (void);
+// 0x00000006 System.Void Animation_Test::DeathAni()
+extern void Animation_Test_DeathAni_mAAD34C22006C7924CA187F8526AC248A1848DE5C (void);
+// 0x00000007 System.Void Animation_Test::.ctor()
+extern void Animation_Test__ctor_mECC11A2610DD4D7B609F4A349EF3D97B1C924F48 (void);
+// 0x00000008 System.Void ARManager::PlacePrefab()
 extern void ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23 (void);
-// 0x00000002 System.Void ARManager::Awake()
+// 0x00000009 System.Void ARManager::Awake()
 extern void ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073 (void);
-// 0x00000003 System.Void ARManager::Update()
+// 0x0000000A System.Void ARManager::Update()
 extern void ARManager_Update_mDD46A69CED64360F68ADEAB5E28804C5F31A4736 (void);
-// 0x00000004 System.Void ARManager::ShowPlane(System.Boolean)
+// 0x0000000B System.Void ARManager::ShowPlane(System.Boolean)
 extern void ARManager_ShowPlane_mC3EDA69537BD689B4E08EA2A42082E529F62A27F (void);
-// 0x00000005 System.Void ARManager::PlaceIndicator()
+// 0x0000000C System.Void ARManager::PlaceIndicator()
 extern void ARManager_PlaceIndicator_m3820C22FAC2811EA8115F4643BA3B76F6D869013 (void);
-// 0x00000006 System.Void ARManager::PlaceIndicatorPrefab()
+// 0x0000000D System.Void ARManager::PlaceIndicatorPrefab()
 extern void ARManager_PlaceIndicatorPrefab_mE45400BBC30E78504163D467076C138EF8A10E5A (void);
-// 0x00000007 System.Void ARManager::PlaceOrigin()
+// 0x0000000E System.Void ARManager::PlaceOrigin()
 extern void ARManager_PlaceOrigin_mEE9E3D7ADF00A00402676A032C5E4D2E2DA4355C (void);
-// 0x00000008 System.Void ARManager::OnEnable()
+// 0x0000000F System.Void ARManager::OnEnable()
 extern void ARManager_OnEnable_m6E48FBCF82C16B1FF82C560BA8B35EDC03FE63FC (void);
-// 0x00000009 System.Void ARManager::OnDisable()
+// 0x00000010 System.Void ARManager::OnDisable()
 extern void ARManager_OnDisable_mE63CB94A8FDCD6612C0BFEFFA7F01634F992E76B (void);
-// 0x0000000A System.Void ARManager::FrameUpdated(UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs)
+// 0x00000011 System.Void ARManager::FrameUpdated(UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs)
 extern void ARManager_FrameUpdated_m7DFE681A53B5C8C6B5940F1601096883C83E28B6 (void);
-// 0x0000000B System.Void ARManager::MoveTarget()
+// 0x00000012 System.Void ARManager::MoveTarget()
 extern void ARManager_MoveTarget_m7A1B34258D6CC1FD63C787FC2430882565D81BE3 (void);
-// 0x0000000C System.Void ARManager::PlayerMove()
+// 0x00000013 System.Void ARManager::PlayerMove()
 extern void ARManager_PlayerMove_m5C7817853405C269382C865EEDF35C67793E5BA4 (void);
-// 0x0000000D System.Void ARManager::Start()
+// 0x00000014 System.Void ARManager::Start()
 extern void ARManager_Start_m076359B9D8D438AB7042625E623EBE616B7FB6E3 (void);
-// 0x0000000E System.Void ARManager::OnApplicationQuit()
+// 0x00000015 System.Void ARManager::OnApplicationQuit()
 extern void ARManager_OnApplicationQuit_m2AAFD6AA06340F3FD5AAA22DFF70E81683784C2A (void);
-// 0x0000000F System.Void ARManager::SetMapCenter(UnityEngine.Vector3)
+// 0x00000016 System.Void ARManager::SetMapCenter(UnityEngine.Vector3)
 extern void ARManager_SetMapCenter_m4AC08C3A9E0F24BB23C9185B577FF99660923BCA (void);
-// 0x00000010 System.Void ARManager::SetMapRadius(System.Single)
+// 0x00000017 System.Void ARManager::SetMapRadius(System.Single)
 extern void ARManager_SetMapRadius_mFF4288B1C7224925920E61D7C858BB7B86040FF0 (void);
-// 0x00000011 System.Void ARManager::OnClickButton()
+// 0x00000018 System.Void ARManager::OnClickButton()
 extern void ARManager_OnClickButton_mE211151339510156500216BA5C06909D66A16173 (void);
-// 0x00000012 System.Void ARManager::.ctor()
+// 0x00000019 System.Void ARManager::.ctor()
 extern void ARManager__ctor_m53D041B8379A885E4596A2980F29676BC9BC5931 (void);
-// 0x00000013 System.Void ARSceneMove::OnClickButton()
+// 0x0000001A System.Void ARSceneMove::OnClickButton()
 extern void ARSceneMove_OnClickButton_m1F4A60BBBA002ECAEC54BFCE43117DF85FC41A42 (void);
-// 0x00000014 System.Void ARSceneMove::.ctor()
+// 0x0000001B System.Void ARSceneMove::.ctor()
 extern void ARSceneMove__ctor_mBD2D0788111B53A6039B59A4365C293765322846 (void);
-// 0x00000015 System.Void HideObject::Start()
+// 0x0000001C System.Void HideObject::Start()
 extern void HideObject_Start_mF35FFE69A4872EAC0074361205449F15BB079A67 (void);
-// 0x00000016 System.Collections.IEnumerator HideObject::HideRendererCo()
+// 0x0000001D System.Collections.IEnumerator HideObject::HideRendererCo()
 extern void HideObject_HideRendererCo_m3A01DC1CA85B57218EF2BBD76D196B620CF84975 (void);
-// 0x00000017 System.Void HideObject::.ctor()
+// 0x0000001E System.Void HideObject::.ctor()
 extern void HideObject__ctor_m0A3723FA07F77B8A553EAD7E37B036819DCB26C0 (void);
-// 0x00000018 System.Void HideObject/<HideRendererCo>d__3::.ctor(System.Int32)
+// 0x0000001F System.Void HideObject/<HideRendererCo>d__3::.ctor(System.Int32)
 extern void U3CHideRendererCoU3Ed__3__ctor_mBB7EDB18AAB19D28E2103317A32EB942111D5C21 (void);
-// 0x00000019 System.Void HideObject/<HideRendererCo>d__3::System.IDisposable.Dispose()
+// 0x00000020 System.Void HideObject/<HideRendererCo>d__3::System.IDisposable.Dispose()
 extern void U3CHideRendererCoU3Ed__3_System_IDisposable_Dispose_m4B08E50A0BA6EDC1BA5C4E806D4FD0EE34130778 (void);
-// 0x0000001A System.Boolean HideObject/<HideRendererCo>d__3::MoveNext()
+// 0x00000021 System.Boolean HideObject/<HideRendererCo>d__3::MoveNext()
 extern void U3CHideRendererCoU3Ed__3_MoveNext_m2823A120D130231BFB22278F688E4B5590AA8234 (void);
-// 0x0000001B System.Object HideObject/<HideRendererCo>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000022 System.Object HideObject/<HideRendererCo>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CHideRendererCoU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m83BB17667F98262FE930B1504B2295EA15E0C3A8 (void);
-// 0x0000001C System.Void HideObject/<HideRendererCo>d__3::System.Collections.IEnumerator.Reset()
+// 0x00000023 System.Void HideObject/<HideRendererCo>d__3::System.Collections.IEnumerator.Reset()
 extern void U3CHideRendererCoU3Ed__3_System_Collections_IEnumerator_Reset_m30FEC4F8D9EC9467A411D413691F1325235B89F7 (void);
-// 0x0000001D System.Object HideObject/<HideRendererCo>d__3::System.Collections.IEnumerator.get_Current()
+// 0x00000024 System.Object HideObject/<HideRendererCo>d__3::System.Collections.IEnumerator.get_Current()
 extern void U3CHideRendererCoU3Ed__3_System_Collections_IEnumerator_get_Current_m601F16B470421E85806C35919FEEEDACC1E76C39 (void);
-// 0x0000001E System.Void ImageTracker::Awake()
+// 0x00000025 System.Void ImageTracker::Awake()
 extern void ImageTracker_Awake_mF0965772758938187CDDE525DCB020EAD0EAF5C1 (void);
-// 0x0000001F System.Void ImageTracker::OnEnable()
+// 0x00000026 System.Void ImageTracker::OnEnable()
 extern void ImageTracker_OnEnable_mF68EC247C896E301D5F8A2C928EFD898364035BE (void);
-// 0x00000020 System.Void ImageTracker::OnDisable()
+// 0x00000027 System.Void ImageTracker::OnDisable()
 extern void ImageTracker_OnDisable_m423865D8E1B2D7AE7367F97852DFC82DBAEE5631 (void);
-// 0x00000021 System.Void ImageTracker::OnTrackedImageChanged(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+// 0x00000028 System.Void ImageTracker::OnTrackedImageChanged(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void ImageTracker_OnTrackedImageChanged_m3BD64EAE08AA472A1AD4B054728678B3DE1E80FA (void);
-// 0x00000022 System.Void ImageTracker::UpdateSpawnObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
+// 0x00000029 System.Void ImageTracker::UpdateSpawnObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void ImageTracker_UpdateSpawnObject_m7B7F48AE4694C54C1B273E1DF213FDFD75F943B2 (void);
-// 0x00000023 System.Void ImageTracker::.ctor()
+// 0x0000002A System.Void ImageTracker::.ctor()
 extern void ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856 (void);
-// 0x00000024 System.Void Readme::.ctor()
+// 0x0000002B System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x00000025 System.Void Readme/Section::.ctor()
+// 0x0000002C System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-// 0x00000026 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
+// 0x0000002D System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
 extern void AnimatorParamatersChange_Start_m871E4A208B70403948907DD6EFF16B5C89AF6558 (void);
-// 0x00000027 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
+// 0x0000002E System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
 extern void AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD (void);
-// 0x00000028 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
+// 0x0000002F System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
 extern void AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD (void);
-// 0x00000029 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
+// 0x00000030 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
 extern void AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF (void);
-static Il2CppMethodPointer s_methodPointers[41] = 
+static Il2CppMethodPointer s_methodPointers[48] = 
 {
+	Animation_Test_Start_m54DA7CF05337871959835B7E5DBAD78A8A7276A5,
+	Animation_Test_IdleAni_mDC3778E36E40DC1A023C81AD26A26459BC0A0C13,
+	Animation_Test_RunAni_m03DF663FEAB3171BEDEDB1D9D053D08FD8A67EBA,
+	Animation_Test_AttackAni_m511A0C3910223DFA088BB2A2C11722CDD3A30167,
+	Animation_Test_DamageAni_m447AC63C5AD5A743853BE49EC45875884ADB145C,
+	Animation_Test_DeathAni_mAAD34C22006C7924CA187F8526AC248A1848DE5C,
+	Animation_Test__ctor_mECC11A2610DD4D7B609F4A349EF3D97B1C924F48,
 	ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23,
 	ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073,
 	ARManager_Update_mDD46A69CED64360F68ADEAB5E28804C5F31A4736,
@@ -138,8 +159,15 @@ static Il2CppMethodPointer s_methodPointers[41] =
 	AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD,
 	AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF,
 };
-static const int32_t s_InvokerIndices[41] = 
+static const int32_t s_InvokerIndices[48] = 
 {
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
 	8487,
 	8487,
 	8487,
@@ -186,7 +214,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	41,
+	48,
 	s_methodPointers,
 	0,
 	NULL,
