@@ -62,6 +62,6 @@ public class ImageTracker : MonoBehaviour
 
         spawnedObject[referenceImageName].SetActive(true);
 
-        SpawnPrefab.spawnPrefab = spawnedObject[referenceImageName];
+        //SpawnPrefab.spawnPrefab = spawnedObject[referenceImageName];
     }
 }

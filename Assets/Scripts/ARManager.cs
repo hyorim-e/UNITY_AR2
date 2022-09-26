@@ -19,7 +19,7 @@ public class ARManager : MonoBehaviour
     #region 바닥에 프리팹 놓기(임시 공->무비 프리팹 업데이트)
 
     public ARRaycastManager arRaycaster;
-    //public GameObject spawnPrefab;
+    public GameObject spawnPrefab;
 
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
@@ -33,8 +33,8 @@ public class ARManager : MonoBehaviour
         if(arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
         {
             Pose hitPose = hits[0].pose;
-            Instantiate(SpawnPrefab.spawnPrefab, hitPose.position, hitPose.rotation);
-            SpawnPrefab.spawnPrefab.SetActive(true);
+            Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
+            //SpawnPrefab.spawnPrefab.SetActive(true);
         }
     }
 
