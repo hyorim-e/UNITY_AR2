@@ -49,7 +49,7 @@ public class ImageTracker : MonoBehaviour
         }
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
         {
-            spawnedObject[trackedImage.name].SetActive(false);
+            spawnedObject[trackedImage.referenceImage.name].SetActive(false);
         }
     }
 

@@ -23,7 +23,7 @@ public class ARManager : MonoBehaviour
 
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    void PlacePrefab()
+    public void PlacePrefab()
     {
         if (Input.touchCount == 0) return;
 
@@ -34,7 +34,7 @@ public class ARManager : MonoBehaviour
         {
             Pose hitPose = hits[0].pose;
             Instantiate(SpawnPrefab.spawnPrefab, hitPose.position, hitPose.rotation);
-            //Instantiate(MoviePrefab.moviePrefab, hitPose.position, hitPose.rotation);
+            SpawnPrefab.spawnPrefab.SetActive(true);
         }
     }
 
