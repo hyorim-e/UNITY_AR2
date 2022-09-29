@@ -16,7 +16,7 @@ public class ARManager : MonoBehaviour
     private Animator animator;
     public GameObject character;
 
-    #region 클릭으로 바닥에 프리팹 놓기(임시 공->무비 프리팹 업데이트)
+    #region 클릭으로 바닥에 프리팹 놓기
 
     public ARRaycastManager arRaycaster;
     public GameObject spawnPrefab;
@@ -78,14 +78,18 @@ public class ARManager : MonoBehaviour
             Indicator.rotation = indicatorHits[0].pose.rotation;
         }
     }
+    #endregion
 
+    #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
-    }
 
+        Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
+    }
     #endregion
+
 
     #region 원점 설정
 
