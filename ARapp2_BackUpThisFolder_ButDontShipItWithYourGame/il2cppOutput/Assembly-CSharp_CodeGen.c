@@ -108,7 +108,23 @@ extern void AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442D
 extern void AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD (void);
 // 0x00000030 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
 extern void AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF (void);
-static Il2CppMethodPointer s_methodPointers[48] = 
+// 0x00000031 System.Void BLINK.AnimationDemo::Update()
+extern void AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836 (void);
+// 0x00000032 System.Void BLINK.AnimationDemo::NextAnimation()
+extern void AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532 (void);
+// 0x00000033 System.Void BLINK.AnimationDemo::PreviousAnimation()
+extern void AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708 (void);
+// 0x00000034 System.Void BLINK.AnimationDemo::ReplayAnimation()
+extern void AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8 (void);
+// 0x00000035 System.Void BLINK.AnimationDemo::ResetAllBool()
+extern void AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C (void);
+// 0x00000036 System.Void BLINK.AnimationDemo::PlayAnimation()
+extern void AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE (void);
+// 0x00000037 System.Void BLINK.AnimationDemo::.ctor()
+extern void AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C (void);
+// 0x00000038 System.Void BLINK.AnimationDemo/AnimationEntry::.ctor()
+extern void AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4 (void);
+static Il2CppMethodPointer s_methodPointers[56] = 
 {
 	Animation_Test_Start_m54DA7CF05337871959835B7E5DBAD78A8A7276A5,
 	Animation_Test_IdleAni_mDC3778E36E40DC1A023C81AD26A26459BC0A0C13,
@@ -158,8 +174,16 @@ static Il2CppMethodPointer s_methodPointers[48] =
 	AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD,
 	AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD,
 	AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF,
+	AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836,
+	AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532,
+	AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708,
+	AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8,
+	AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C,
+	AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE,
+	AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C,
+	AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4,
 };
-static const int32_t s_InvokerIndices[48] = 
+static const int32_t s_InvokerIndices[56] = 
 {
 	8487,
 	8487,
@@ -209,12 +233,20 @@ static const int32_t s_InvokerIndices[48] =
 	8487,
 	8487,
 	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
+	8487,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	48,
+	56,
 	s_methodPointers,
 	0,
 	NULL,
