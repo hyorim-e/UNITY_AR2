@@ -16,6 +16,10 @@ public class ARManager : MonoBehaviour
     private Animator animator;
     public GameObject character;
 
+    private Renderer indicatorRdr;
+    public GameObject indicator;
+
+    public Material[] material;
     #region 클릭으로 바닥에 프리팹 놓기
 
     public ARRaycastManager arRaycaster;
@@ -42,10 +46,15 @@ public class ARManager : MonoBehaviour
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
+        indicatorRdr = indicator.GetComponent<Renderer>();
+        indicatorRdr.enabled = true;
+        indicatorRdr.sharedMaterial = material[0];
+        //indicator.SetActive(false); // 하이어라키에서 비활성화해놔서 필요 없을듯
     }
 
     void Update()
     {
+        //Debug.Log("indicatorRdr =" + indicatorRdr);
         //PlacePrefab(); // 화면 터치 시 공 생성
         PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
         PlayerMove();
@@ -65,7 +74,7 @@ public class ARManager : MonoBehaviour
 
     #region 바닥 표시기(인디케이터)
 
-    public Transform Indicator;
+    public Transform IndicatorTr;
     List<ARRaycastHit> indicatorHits = new List<ARRaycastHit>();
 
     void PlaceIndicator()
@@ -74,8 +83,8 @@ public class ARManager : MonoBehaviour
 
         if (indicatorHits.Count > 0)
         {
-            Indicator.position = indicatorHits[0].pose.position;
-            Indicator.rotation = indicatorHits[0].pose.rotation;
+            IndicatorTr.position = indicatorHits[0].pose.position;
+            IndicatorTr.rotation = indicatorHits[0].pose.rotation;
         }
     }
     #endregion
@@ -83,10 +92,15 @@ public class ARManager : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
+        //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절
+
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
 
+        // 프리팹 배치 시 파티클
         Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
+
+        Debug.Log("배치완료");
     }
     #endregion
 
