@@ -30987,20 +30987,20 @@ struct ARInputManager_tAB4CB9CAC8C8198EAF1BAAFC7C1F6C0F726CE98D_StaticFields
 // ARManager
 struct ARManager_t082C478673DF5F5786DFB25006CC1643E8471245  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.Animator ARManager::animator
-	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___animator_4;
-	// UnityEngine.GameObject ARManager::character
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___character_5;
-	// UnityEngine.Renderer ARManager::indicatorRdr
-	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___indicatorRdr_6;
-	// UnityEngine.GameObject ARManager::indicator
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___indicator_7;
-	// UnityEngine.Material[] ARManager::material
-	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___material_8;
 	// UnityEngine.XR.ARFoundation.ARRaycastManager ARManager::arRaycaster
-	ARRaycastManager_tD9459374F0F5BD9E2E4A8A1C665E7F33F9C2EE44* ___arRaycaster_9;
+	ARRaycastManager_tD9459374F0F5BD9E2E4A8A1C665E7F33F9C2EE44* ___arRaycaster_4;
 	// UnityEngine.GameObject ARManager::spawnPrefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnPrefab_10;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnPrefab_5;
+	// UnityEngine.Animator ARManager::animator
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___animator_6;
+	// UnityEngine.GameObject ARManager::character
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___character_7;
+	// UnityEngine.Renderer ARManager::indicatorRdr
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___indicatorRdr_8;
+	// UnityEngine.GameObject ARManager::indicator
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___indicator_9;
+	// UnityEngine.Material[] ARManager::material
+	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* ___material_10;
 	// System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit> ARManager::hits
 	List_1_t0754071572EFE7A5C92A59495D2524FC935364E3* ___hits_11;
 	// UnityEngine.XR.ARFoundation.ARPlaneManager ARManager::arPlane

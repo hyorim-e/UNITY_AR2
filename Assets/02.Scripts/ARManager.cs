@@ -13,6 +13,9 @@ public static class SpawnPrefab
 }
 public class ARManager : MonoBehaviour
 {
+    public ARRaycastManager arRaycaster;
+    public GameObject spawnPrefab;
+
     private Animator animator;
     public GameObject character;
 
@@ -20,10 +23,8 @@ public class ARManager : MonoBehaviour
     public GameObject indicator;
 
     public Material[] material;
-    #region 클릭으로 바닥에 프리팹 놓기
 
-    public ARRaycastManager arRaycaster;
-    public GameObject spawnPrefab;
+    #region 클릭으로 바닥에 프리팹 놓기
 
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
@@ -48,7 +49,6 @@ public class ARManager : MonoBehaviour
         animator = character.GetComponent<Animator>();
         indicatorRdr = indicator.GetComponent<Renderer>();
         indicatorRdr.enabled = true;
-        indicatorRdr.sharedMaterial = material[0];
         //indicator.SetActive(false); // 하이어라키에서 비활성화해놔서 필요 없을듯
     }
 
@@ -79,6 +79,8 @@ public class ARManager : MonoBehaviour
 
     void PlaceIndicator()
     {
+        indicatorRdr.sharedMaterial = material[0];
+
         arRaycaster.Raycast(new Vector2(Screen.width * 0.5f, Screen.height * 0.5f), indicatorHits, TrackableType.Planes);
 
         if (indicatorHits.Count > 0)
@@ -93,6 +95,8 @@ public class ARManager : MonoBehaviour
     public void PlaceIndicatorPrefab()
     {
         //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절
+        
+        spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
@@ -103,7 +107,6 @@ public class ARManager : MonoBehaviour
         Debug.Log("배치완료");
     }
     #endregion
-
 
     #region 원점 설정
 
