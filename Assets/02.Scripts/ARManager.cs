@@ -24,6 +24,10 @@ public class ARManager : MonoBehaviour
 
     public Material[] material;
 
+    public Button makePrefabBtn;
+    public Button PosterRecognizeBtn;
+    private bool isMakePrefabBtnClick;
+
     #region 클릭으로 바닥에 프리팹 놓기
 
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -56,7 +60,10 @@ public class ARManager : MonoBehaviour
     {
         //Debug.Log("indicatorRdr =" + indicatorRdr);
         //PlacePrefab(); // 화면 터치 시 공 생성
-        PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
+        if (isMakePrefabBtnClick)
+        {
+            PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
+        }
         PlayerMove();
     }
 
@@ -72,7 +79,15 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
-    #region 바닥 표시기(인디케이터)
+    #region 배치 미리보기 진입
+    public void OnClickMakePrefabBtn()
+    {
+        isMakePrefabBtnClick = true;
+        makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
+    }
+    #endregion
+
+    #region 배치 미리보기 (바닥 표시기(인디케이터))
 
     public Transform IndicatorTr;
     List<ARRaycastHit> indicatorHits = new List<ARRaycastHit>();
@@ -94,7 +109,7 @@ public class ARManager : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
-        //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절
+        //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절 (2D 방식)
         
         spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
@@ -104,7 +119,14 @@ public class ARManager : MonoBehaviour
         // 프리팹 배치 시 파티클
         Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
 
-        Debug.Log("배치완료");
+        makePrefabBtn.onClick.RemoveAllListeners();
+        makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
+        isMakePrefabBtnClick = false;
+
+        makePrefabBtn.interactable = false;
+        PosterRecognizeBtn.interactable = true;
+
+        //Debug.Log("배치완료");
     }
     #endregion
 
@@ -200,9 +222,11 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
-    #region 버튼 클릭 시 씬 변경
+    #region 인식하기 버튼 클릭 시 씬 변경
     public void OnClickButton() 
     {
+        PosterRecognizeBtn.interactable = false;
+        makePrefabBtn.interactable = true;
         SceneManager.LoadScene("ARScene");
     }
     #endregion

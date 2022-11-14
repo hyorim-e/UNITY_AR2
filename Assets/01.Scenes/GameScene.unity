@@ -3977,13 +3977,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6609e238b7b6b224fb8196b3e9d3ffde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arRaycaster: {fileID: 287020270}
+  spawnPrefab: {fileID: 897696857}
   character: {fileID: 984980637}
   indicator: {fileID: 2076815009}
   material:
   - {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
   - {fileID: 2100000, guid: da7272eb982174944905bc546feabe8c, type: 2}
-  arRaycaster: {fileID: 287020270}
-  spawnPrefab: {fileID: 897696857}
+  makePrefabBtn: {fileID: 1177580784}
+  PosterRecognizeBtn: {fileID: 0}
   arPlane: {fileID: 287020269}
   IndicatorTr: {fileID: 592176070}
   arOrigin: {fileID: 287020267}
@@ -10928,12 +10930,12 @@ GameObject:
   - component: {fileID: 947455056}
   - component: {fileID: 947455055}
   m_Layer: 5
-  m_Name: PosterButton
+  m_Name: PosterRecognizeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &947455054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10952,7 +10954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -169, y: -183}
+  m_AnchoredPosition: {x: -169, y: -188}
   m_SizeDelta: {x: 85, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947455055
@@ -14041,7 +14043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1177580783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14109,7 +14111,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 335874712}
         m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
-        m_MethodName: PlaceIndicatorPrefab
+        m_MethodName: OnClickMakePrefabBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25549,7 +25551,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.99e-43, y: 0, z: 6e-44, w: 1.18e-43}
+  m_BoundingSphereOverride: {x: 0, y: 0.25000072, z: 0, w: 0.75}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
