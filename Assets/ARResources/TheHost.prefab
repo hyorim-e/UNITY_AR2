@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1140655785789331282}
   - component: {fileID: 1140655785779474840}
   m_Layer: 0
-  m_Name: TheHost_Ticket
+  m_Name: TheHost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

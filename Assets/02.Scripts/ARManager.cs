@@ -14,7 +14,10 @@ public static class SpawnPrefab
 public class ARManager : MonoBehaviour
 {
     public ARRaycastManager arRaycaster;
-    public GameObject spawnPrefab;
+    [SerializeField]
+    private GameObject[] spawnPrefabList;
+    //public GameObject spawnPrefab;
+    private GameObject spawnPrefab;
 
     private Animator animator;
     public GameObject character;
@@ -109,8 +112,18 @@ public class ARManager : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
+        foreach(GameObject prefab in spawnPrefabList) {
+            if (prefab.name.Equals(PlayerPrefs.GetString(prefab.name)))
+            {
+                spawnPrefab = prefab;
+                break;
+            } 
+        }
+        //PlayerPrefs.GetString(");
+
+
         //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절 (2D 방식)
-        
+
         spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
         Pose hitPose = indicatorHits[0].pose;

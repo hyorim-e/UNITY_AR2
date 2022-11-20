@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502655, g: 0.37139302, b: 0.49600938, a: 1}
+  m_IndirectSpecularColor: {r: 0.2850269, g: 0.3713935, b: 0.49601045, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3978,14 +3978,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arRaycaster: {fileID: 287020270}
-  spawnPrefab: {fileID: 897696857}
+  spawnPrefabList:
+  - {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
+  - {fileID: 4691359005820059523, guid: aecc9a37a362648499ee5ec515cf6c5d, type: 3}
+  - {fileID: 654295223907599209, guid: 29ddd3a1bddb3ae4a8aa8ec56cb3f58a, type: 3}
   character: {fileID: 984980637}
   indicator: {fileID: 2076815009}
   material:
   - {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
   - {fileID: 2100000, guid: da7272eb982174944905bc546feabe8c, type: 2}
   makePrefabBtn: {fileID: 1177580784}
-  PosterRecognizeBtn: {fileID: 0}
+  PosterRecognizeBtn: {fileID: 947455055}
   arPlane: {fileID: 287020269}
   IndicatorTr: {fileID: 592176070}
   arOrigin: {fileID: 287020267}
@@ -14043,7 +14046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1177580783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14062,7 +14065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -169, y: -188}
+  m_AnchoredPosition: {x: -169, y: -538.4}
   m_SizeDelta: {x: 85, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177580784
