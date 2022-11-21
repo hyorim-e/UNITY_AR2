@@ -84,63 +84,69 @@ extern void ImageTracker_OnTrackedImageChanged_m3BD64EAE08AA472A1AD4B054728678B3
 extern void ImageTracker_UpdateSpawnObject_m7B7F48AE4694C54C1B273E1DF213FDFD75F943B2 (void);
 // 0x00000024 System.Void ImageTracker::.ctor()
 extern void ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856 (void);
-// 0x00000025 System.Void StartSceneManager::OnClickButton()
+// 0x00000025 System.Void MyDataStruct::.ctor()
+extern void MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74 (void);
+// 0x00000026 UnityEngine.GameObject MyDataStruct::GetName(UnityEngine.GameObject)
+extern void MyDataStruct_GetName_mE61D5745CFD4742C055BB9F2C65662ABF8B1DDB4 (void);
+// 0x00000027 System.Void MyDataStruct::SetPrefab(UnityEngine.GameObject)
+extern void MyDataStruct_SetPrefab_m231421C47E32FA25C22B4FA8ACD5869C039A8C5E (void);
+// 0x00000028 System.Void StartSceneManager::OnClickButton()
 extern void StartSceneManager_OnClickButton_m81B47780384CBDAC87B692A160391F3FD87EE184 (void);
-// 0x00000026 System.Void StartSceneManager::.ctor()
+// 0x00000029 System.Void StartSceneManager::.ctor()
 extern void StartSceneManager__ctor_m01AA0645159EBC37096F759D7BB52361B1920DA5 (void);
-// 0x00000027 System.Void Animation_Test::Start()
+// 0x0000002A System.Void Animation_Test::Start()
 extern void Animation_Test_Start_m54DA7CF05337871959835B7E5DBAD78A8A7276A5 (void);
-// 0x00000028 System.Void Animation_Test::IdleAni()
+// 0x0000002B System.Void Animation_Test::IdleAni()
 extern void Animation_Test_IdleAni_mDC3778E36E40DC1A023C81AD26A26459BC0A0C13 (void);
-// 0x00000029 System.Void Animation_Test::RunAni()
+// 0x0000002C System.Void Animation_Test::RunAni()
 extern void Animation_Test_RunAni_m03DF663FEAB3171BEDEDB1D9D053D08FD8A67EBA (void);
-// 0x0000002A System.Void Animation_Test::AttackAni()
+// 0x0000002D System.Void Animation_Test::AttackAni()
 extern void Animation_Test_AttackAni_m511A0C3910223DFA088BB2A2C11722CDD3A30167 (void);
-// 0x0000002B System.Void Animation_Test::DamageAni()
+// 0x0000002E System.Void Animation_Test::DamageAni()
 extern void Animation_Test_DamageAni_m447AC63C5AD5A743853BE49EC45875884ADB145C (void);
-// 0x0000002C System.Void Animation_Test::DeathAni()
+// 0x0000002F System.Void Animation_Test::DeathAni()
 extern void Animation_Test_DeathAni_mAAD34C22006C7924CA187F8526AC248A1848DE5C (void);
-// 0x0000002D System.Void Animation_Test::.ctor()
+// 0x00000030 System.Void Animation_Test::.ctor()
 extern void Animation_Test__ctor_mECC11A2610DD4D7B609F4A349EF3D97B1C924F48 (void);
-// 0x0000002E System.Void scriptTexttest::Start()
+// 0x00000031 System.Void scriptTexttest::Start()
 extern void scriptTexttest_Start_m26DFD38940EA1BD3041A4A5C6EBA6F2EF7E86341 (void);
-// 0x0000002F System.Void scriptTexttest::.ctor()
+// 0x00000032 System.Void scriptTexttest::.ctor()
 extern void scriptTexttest__ctor_m46D5CE5D84ACCEC2F20C86B79D63AD3EA9522345 (void);
-// 0x00000030 System.Void Move::Start()
+// 0x00000033 System.Void Move::Start()
 extern void Move_Start_mE30888A3AEA16959603B218AE8DF258387F55F8E (void);
-// 0x00000031 System.Void Move::Update()
+// 0x00000034 System.Void Move::Update()
 extern void Move_Update_mA8230EF12ABFDB1275E464746004DD9E8DCBB444 (void);
-// 0x00000032 System.Void Move::.ctor()
+// 0x00000035 System.Void Move::.ctor()
 extern void Move__ctor_mB2C06FD84ADF53D6C062FD9230344443C0ACF7A1 (void);
-// 0x00000033 System.Void Readme::.ctor()
+// 0x00000036 System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x00000034 System.Void Readme/Section::.ctor()
+// 0x00000037 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-// 0x00000035 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
+// 0x00000038 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
 extern void AnimatorParamatersChange_Start_m871E4A208B70403948907DD6EFF16B5C89AF6558 (void);
-// 0x00000036 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
+// 0x00000039 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
 extern void AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD (void);
-// 0x00000037 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
+// 0x0000003A System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
 extern void AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD (void);
-// 0x00000038 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
+// 0x0000003B System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
 extern void AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF (void);
-// 0x00000039 System.Void BLINK.AnimationDemo::Update()
+// 0x0000003C System.Void BLINK.AnimationDemo::Update()
 extern void AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836 (void);
-// 0x0000003A System.Void BLINK.AnimationDemo::NextAnimation()
+// 0x0000003D System.Void BLINK.AnimationDemo::NextAnimation()
 extern void AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532 (void);
-// 0x0000003B System.Void BLINK.AnimationDemo::PreviousAnimation()
+// 0x0000003E System.Void BLINK.AnimationDemo::PreviousAnimation()
 extern void AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708 (void);
-// 0x0000003C System.Void BLINK.AnimationDemo::ReplayAnimation()
+// 0x0000003F System.Void BLINK.AnimationDemo::ReplayAnimation()
 extern void AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8 (void);
-// 0x0000003D System.Void BLINK.AnimationDemo::ResetAllBool()
+// 0x00000040 System.Void BLINK.AnimationDemo::ResetAllBool()
 extern void AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C (void);
-// 0x0000003E System.Void BLINK.AnimationDemo::PlayAnimation()
+// 0x00000041 System.Void BLINK.AnimationDemo::PlayAnimation()
 extern void AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE (void);
-// 0x0000003F System.Void BLINK.AnimationDemo::.ctor()
+// 0x00000042 System.Void BLINK.AnimationDemo::.ctor()
 extern void AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C (void);
-// 0x00000040 System.Void BLINK.AnimationDemo/AnimationEntry::.ctor()
+// 0x00000043 System.Void BLINK.AnimationDemo/AnimationEntry::.ctor()
 extern void AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4 (void);
-static Il2CppMethodPointer s_methodPointers[64] = 
+static Il2CppMethodPointer s_methodPointers[67] = 
 {
 	ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23,
 	ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073,
@@ -178,6 +184,9 @@ static Il2CppMethodPointer s_methodPointers[64] =
 	ImageTracker_OnTrackedImageChanged_m3BD64EAE08AA472A1AD4B054728678B3DE1E80FA,
 	ImageTracker_UpdateSpawnObject_m7B7F48AE4694C54C1B273E1DF213FDFD75F943B2,
 	ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856,
+	MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74,
+	MyDataStruct_GetName_mE61D5745CFD4742C055BB9F2C65662ABF8B1DDB4,
+	MyDataStruct_SetPrefab_m231421C47E32FA25C22B4FA8ACD5869C039A8C5E,
 	StartSceneManager_OnClickButton_m81B47780384CBDAC87B692A160391F3FD87EE184,
 	StartSceneManager__ctor_m01AA0645159EBC37096F759D7BB52361B1920DA5,
 	Animation_Test_Start_m54DA7CF05337871959835B7E5DBAD78A8A7276A5,
@@ -207,7 +216,7 @@ static Il2CppMethodPointer s_methodPointers[64] =
 	AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C,
 	AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4,
 };
-static const int32_t s_InvokerIndices[64] = 
+static const int32_t s_InvokerIndices[67] = 
 {
 	8265,
 	8265,
@@ -246,6 +255,9 @@ static const int32_t s_InvokerIndices[64] =
 	6650,
 	8265,
 	8265,
+	5922,
+	6650,
+	8265,
 	8265,
 	8265,
 	8265,
@@ -278,7 +290,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	64,
+	67,
 	s_methodPointers,
 	0,
 	NULL,

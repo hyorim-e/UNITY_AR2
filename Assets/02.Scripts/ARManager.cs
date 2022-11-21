@@ -7,15 +7,11 @@ using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-public static class SpawnPrefab
-{
-    public static GameObject spawnPrefab;
-}
 public class ARManager : MonoBehaviour
 {
     public ARRaycastManager arRaycaster;
-    [SerializeField]
-    private GameObject[] spawnPrefabList;
+    //[SerializeField]
+    //private GameObject[] spawnPrefabList;
     //public GameObject spawnPrefab;
     private GameObject spawnPrefab;
 
@@ -112,7 +108,9 @@ public class ARManager : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
+        /*
         foreach(GameObject prefab in spawnPrefabList) {
+            //prefabString = PlayerPrefs.GetString(prefab.name);
             if (prefab.name.Equals(PlayerPrefs.GetString(prefab.name)))
             {
                 spawnPrefab = prefab;
@@ -120,10 +118,12 @@ public class ARManager : MonoBehaviour
             } 
         }
         //PlayerPrefs.GetString(");
+        */
 
+        spawnPrefab = MyDataStruct.PlaceablePrefab;
+        spawnPrefab.SetActive(true);
 
         //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절 (2D 방식)
-
         spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
         Pose hitPose = indicatorHits[0].pose;
