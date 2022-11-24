@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
+using static MyDataStruct;
 
 public class ImageTracker : MonoBehaviour
 {
+    public Text debugText;
     private ARTrackedImageManager trackedImageManager;
 
     [SerializeField]
@@ -75,6 +78,10 @@ public class ImageTracker : MonoBehaviour
 
     void UpdateSpawnObject(ARTrackedImage trackedImage)
     {
+        if(trackedImage != null)
+        {
+            debugText.text = "trackedImage != null";
+        }
         string referenceImageName = trackedImage.referenceImage.name; // ReferenceImageLibrary에서 설정된 이름 받아옴
 
         spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // 스폰된 오브젝트(프리팹)의 위치와 트래킹된 이미지의 위치 일치시키기
@@ -84,5 +91,6 @@ public class ImageTracker : MonoBehaviour
 
         MyDataStruct.RecognizePrefab = spawnedObject[referenceImageName];
         MyDataStruct.RecognizePrefab.name = referenceImageName;
+
     }
 }

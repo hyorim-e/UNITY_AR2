@@ -25,11 +25,15 @@ public class MyDataStruct
         //PrefabNameList = new List<string>();
         //AnimalList = new List<string>();
 
-        foreach(GameObject prefab in PrefabList)
-            table.Add(prefab.name, prefab);
+        if (RecognizePrefab)
+        {
+            foreach(GameObject prefab in PrefabList)
+                table.Add(prefab.name, prefab);
 
-        SetPrefab(GetName(RecognizePrefab));
+            SetPrefab(GetName(RecognizePrefab));
 
+        }
+        
         //FileManager fM = new FileManager();
         //fM.Start();
 
