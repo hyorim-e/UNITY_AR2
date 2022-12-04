@@ -27,6 +27,8 @@ public class ARManager : MonoBehaviour
     public Button PosterRecognizeBtn;
     private bool isMakePrefabBtnClick;
 
+    public Text debugText;
+
     #region 클릭으로 바닥에 프리팹 놓기
 
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -50,6 +52,8 @@ public class ARManager : MonoBehaviour
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
+
+        indicator = spawnPrefab;
         indicatorRdr = indicator.GetComponent<Renderer>();
         indicatorRdr.enabled = true;
         //indicator.SetActive(false); // 하이어라키에서 비활성화해놔서 필요 없을듯
@@ -123,8 +127,13 @@ public class ARManager : MonoBehaviour
         spawnPrefab = MyDataStruct.PlaceablePrefab;
         spawnPrefab.SetActive(true);
 
+        if (MyDataStruct.PlaceablePrefab != null)
+        {
+            debugText.text = "spawnPrefab != null";
+        }
+
         //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절 (2D 방식)
-        spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
+        //spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);

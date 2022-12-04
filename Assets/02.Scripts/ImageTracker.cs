@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
-using static MyDataStruct;
 
 public class ImageTracker : MonoBehaviour
 {
@@ -18,12 +17,13 @@ public class ImageTracker : MonoBehaviour
     private Dictionary<string, GameObject> spawnedObject;
     //private Dictionary<Dictionary<string, GameObject>, int> prefabsNumDict;
 
+    public GameObject MyDataStruct_obj;
+
     private void Awake()
     {
 
         trackedImageManager = GetComponent<ARTrackedImageManager>();
         spawnedObject = new Dictionary<string, GameObject>();
-        //prefabsNumDict = new Dictionary<Dictionary<string, GameObject>, int>();;
 
         foreach (GameObject obj in placeablePrefabs)
         {
@@ -32,8 +32,9 @@ public class ImageTracker : MonoBehaviour
             newObject.SetActive(false);
 
             spawnedObject.Add(newObject.name, newObject);
-
-            MyDataStruct.PrefabList.Add(Instantiate(obj));
+            
+            //MyDataStruct.PrefabList.Add(Instantiate(obj));
+            MyDataStruct.table.Add(newObject.name, newObject);
 
             //prefabsNumDict.Add(spawnedObject, prefabNum);
             //PlayerPrefs.SetInt(newObject.name, prefabNum);
@@ -41,7 +42,7 @@ public class ImageTracker : MonoBehaviour
             // SetString(string key, string value);
             // SetInt(string key, int value);
             // key = 프리팹(이미지) 이름, value = 번호 
-            
+
         }
 
         //foreach (KeyValuePair<Dictionary<string, GameObject>, int> data in prefabsNumDict)
@@ -65,6 +66,22 @@ public class ImageTracker : MonoBehaviour
         foreach (ARTrackedImage trackedImage in eventArgs.added) // .added 트래킹되는 이미지가 추가되었을 때
         {
             UpdateSpawnObject(trackedImage);
+
+            if (trackedImage != null)
+            {
+                debugText.text = "trackedImage != null";
+            }
+            /*//MyDataStruct.RecognizePrefab = trackedImage;
+            MyDataStruct.RecognizePrefab.name = trackedImage.name;
+
+            if (MyDataStruct.RecognizePrefab)
+            {
+                foreach (GameObject prefab in MyDataStruct.PrefabList)
+                    MyDataStruct.table.Add(prefab.name, prefab);
+
+                MyDataStruct_obj.GetComponent<MyDataStruct>().SetPrefab(MyDataStruct_obj.GetComponent<MyDataStruct>().GetName(MyDataStruct.RecognizePrefab));
+
+            }*/
         }
         foreach (ARTrackedImage trackedImage in eventArgs.updated) // .updated 트래킹되는 이미지가 변경되었을 때
         {
@@ -78,10 +95,6 @@ public class ImageTracker : MonoBehaviour
 
     void UpdateSpawnObject(ARTrackedImage trackedImage)
     {
-        if(trackedImage != null)
-        {
-            debugText.text = "trackedImage != null";
-        }
         string referenceImageName = trackedImage.referenceImage.name; // ReferenceImageLibrary에서 설정된 이름 받아옴
 
         spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // 스폰된 오브젝트(프리팹)의 위치와 트래킹된 이미지의 위치 일치시키기
@@ -89,8 +102,9 @@ public class ImageTracker : MonoBehaviour
 
         spawnedObject[referenceImageName].SetActive(true);
 
-        MyDataStruct.RecognizePrefab = spawnedObject[referenceImageName];
-        MyDataStruct.RecognizePrefab.name = referenceImageName;
+        MyDataStruct.RecognizePrefabName = referenceImageName;
+        MyDataStruct_obj.GetComponent<MyDataStruct>().GetName();
+        MyDataStruct_obj.GetComponent<MyDataStruct>().SetPrefab();
 
     }
 }

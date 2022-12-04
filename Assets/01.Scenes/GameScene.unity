@@ -3985,6 +3985,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: da7272eb982174944905bc546feabe8c, type: 2}
   makePrefabBtn: {fileID: 1177580784}
   PosterRecognizeBtn: {fileID: 947455055}
+  debugText: {fileID: 851560181}
   arPlane: {fileID: 287020269}
   IndicatorTr: {fileID: 592176070}
   arOrigin: {fileID: 287020267}

@@ -3846,25 +3846,6 @@ struct MutableRuntimeReferenceImageLibraryExtensions_tB7C294A4CF3EFC04BEA0377486
 {
 };
 
-// MyDataStruct
-struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317  : public RuntimeObject
-{
-	// System.Collections.Hashtable MyDataStruct::table
-	Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* ___table_1;
-	// System.Boolean MyDataStruct::has
-	bool ___has_3;
-};
-
-struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
-{
-	// System.Collections.Generic.List`1<UnityEngine.GameObject> MyDataStruct::PrefabList
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___PrefabList_0;
-	// UnityEngine.GameObject MyDataStruct::RecognizePrefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___RecognizePrefab_2;
-	// UnityEngine.GameObject MyDataStruct::PlaceablePrefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlaceablePrefab_4;
-};
-
 // System.Xml.Schema.NamespaceList
 struct NamespaceList_t4908A013B5E0E5822341B7271D6FEEE7C72F2260  : public RuntimeObject
 {
@@ -31561,12 +31542,16 @@ struct HideObject_t3D62783C1918EE249265A4BFF090566855C12D4F  : public MonoBehavi
 // ImageTracker
 struct ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.UI.Text ImageTracker::debugText
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText_4;
 	// UnityEngine.XR.ARFoundation.ARTrackedImageManager ImageTracker::trackedImageManager
-	ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* ___trackedImageManager_4;
+	ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* ___trackedImageManager_5;
 	// UnityEngine.GameObject[] ImageTracker::placeablePrefabs
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___placeablePrefabs_5;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___placeablePrefabs_6;
 	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.GameObject> ImageTracker::spawnedObject
-	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___spawnedObject_6;
+	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___spawnedObject_7;
+	// UnityEngine.GameObject ImageTracker::MyDataStruct_obj
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___MyDataStruct_obj_8;
 };
 
 // UnityEngine.Rendering.LensFlareComponentSRP
@@ -31637,6 +31622,27 @@ struct Move_t854202AD2D0D0CBADCAA68583489F1054C5BC0E4  : public MonoBehaviour_t5
 {
 	// System.Single Move::Target
 	float ___Target_4;
+};
+
+// MyDataStruct
+struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// System.Boolean MyDataStruct::has
+	bool ___has_8;
+};
+
+struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
+{
+	// System.Collections.Generic.List`1<UnityEngine.GameObject> MyDataStruct::PrefabList
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___PrefabList_4;
+	// System.Collections.Hashtable MyDataStruct::table
+	Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* ___table_5;
+	// System.String MyDataStruct::RecognizePrefabName
+	String_t* ___RecognizePrefabName_6;
+	// UnityEngine.GameObject MyDataStruct::RecognizePrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___RecognizePrefab_7;
+	// UnityEngine.GameObject MyDataStruct::PlaceablePrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___PlaceablePrefab_9;
 };
 
 // UnityEngine.Timeline.PlayableTrack
