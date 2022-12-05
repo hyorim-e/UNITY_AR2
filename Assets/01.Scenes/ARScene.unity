@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b505bd1bfd8c87049a5fc66ac480a7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: {fileID: 2043570322}
+  debugText_AR: {fileID: 2043570322}
   placeablePrefabs:
   - {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
   - {fileID: 4691359005820059523, guid: aecc9a37a362648499ee5ec515cf6c5d, type: 3}

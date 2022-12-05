@@ -8,14 +8,13 @@ using UnityEngine.UI;
 
 public class ImageTracker : MonoBehaviour
 {
-    public Text debugText;
+    public Text debugText_AR;
     private ARTrackedImageManager trackedImageManager;
 
     [SerializeField]
     private GameObject[] placeablePrefabs;
 
     private Dictionary<string, GameObject> spawnedObject;
-    //private Dictionary<Dictionary<string, GameObject>, int> prefabsNumDict;
 
     public GameObject MyDataStruct_obj;
 
@@ -24,6 +23,7 @@ public class ImageTracker : MonoBehaviour
 
         trackedImageManager = GetComponent<ARTrackedImageManager>();
         spawnedObject = new Dictionary<string, GameObject>();
+        //MyDataStruct.table = new Dictionary<string, GameObject>();
 
         foreach (GameObject obj in placeablePrefabs)
         {
@@ -32,9 +32,8 @@ public class ImageTracker : MonoBehaviour
             newObject.SetActive(false);
 
             spawnedObject.Add(newObject.name, newObject);
-            
-            //MyDataStruct.PrefabList.Add(Instantiate(obj));
             MyDataStruct.table.Add(newObject.name, newObject);
+            //MyDataStruct.PrefabList.Add(Instantiate(obj));
 
             //prefabsNumDict.Add(spawnedObject, prefabNum);
             //PlayerPrefs.SetInt(newObject.name, prefabNum);
@@ -69,9 +68,9 @@ public class ImageTracker : MonoBehaviour
 
             if (trackedImage != null)
             {
-                debugText.text = "trackedImage != null";
+                debugText_AR.text = "trackedImage != null";
             }
-            /*//MyDataStruct.RecognizePrefab = trackedImage;
+            /*
             MyDataStruct.RecognizePrefab.name = trackedImage.name;
 
             if (MyDataStruct.RecognizePrefab)
@@ -83,10 +82,12 @@ public class ImageTracker : MonoBehaviour
 
             }*/
         }
+
         foreach (ARTrackedImage trackedImage in eventArgs.updated) // .updated 트래킹되는 이미지가 변경되었을 때
         {
             UpdateSpawnObject(trackedImage);
         }
+
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
         {
             spawnedObject[trackedImage.referenceImage.name].SetActive(false);
@@ -106,5 +107,10 @@ public class ImageTracker : MonoBehaviour
         MyDataStruct_obj.GetComponent<MyDataStruct>().GetName();
         MyDataStruct_obj.GetComponent<MyDataStruct>().SetPrefab();
 
+    }
+
+    private void Update()
+    {
+        
     }
 }

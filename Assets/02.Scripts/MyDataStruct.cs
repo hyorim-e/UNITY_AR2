@@ -10,7 +10,8 @@ public class MyDataStruct : MonoBehaviour
     //public static List<string> PrefabList;
     //private static List<string> AnimalList;
 
-    public static Hashtable table = new Hashtable();
+    //public static Hashtable table = new Hashtable();
+    public static Dictionary<string, GameObject> table = new Dictionary<string, GameObject>();
 
     public static string RecognizePrefabName;
     public static GameObject RecognizePrefab;
@@ -19,6 +20,11 @@ public class MyDataStruct : MonoBehaviour
 
     public static GameObject PlaceablePrefab;
 
+    private void Awake()
+    {
+        //table = new Hashtable();
+        //table = new Dictionary<string, GameObject>();
+    }
     public MyDataStruct()
     {
         //PrefabList = new List<GameObject>();
@@ -32,7 +38,7 @@ public class MyDataStruct : MonoBehaviour
 
     public void GetName()
     {
-        has = table.Contains(RecognizePrefabName); // 해당 키값 포함되어 있는지 true or false
+        has = table.ContainsKey(RecognizePrefabName); // 해당 키값 포함되어 있는지 true or false
         //foreach(GameObject prefab in PrefabList)
         //{
             //if (name.CompareTo(prefab.name) == 0)
@@ -45,7 +51,7 @@ public class MyDataStruct : MonoBehaviour
     {
         if (has)
         {
-            PlaceablePrefab = (GameObject)table[RecognizePrefabName];
+            PlaceablePrefab = table[RecognizePrefabName];
         }
     }
 }

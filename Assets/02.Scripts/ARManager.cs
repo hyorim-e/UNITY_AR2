@@ -27,7 +27,7 @@ public class ARManager : MonoBehaviour
     public Button PosterRecognizeBtn;
     private bool isMakePrefabBtnClick;
 
-    public Text debugText;
+    public Text debugText_Game;
 
     #region 클릭으로 바닥에 프리팹 놓기
 
@@ -53,16 +53,24 @@ public class ARManager : MonoBehaviour
     {
         animator = character.GetComponent<Animator>();
 
-        indicator = spawnPrefab;
+        /*indicator = MyDataStruct.PlaceablePrefab;
         indicatorRdr = indicator.GetComponent<Renderer>();
-        indicatorRdr.enabled = true;
+        indicatorRdr.enabled = true;*/
         //indicator.SetActive(false); // 하이어라키에서 비활성화해놔서 필요 없을듯
     }
 
     void Update()
     {
-        //Debug.Log("indicatorRdr =" + indicatorRdr);
-        //PlacePrefab(); // 화면 터치 시 공 생성
+        if (MyDataStruct.table[MyDataStruct.RecognizePrefabName] != null)
+        {
+            debugText_Game.text = "table != null";
+        }
+        else if (MyDataStruct.table[MyDataStruct.RecognizePrefabName] == null)
+        {
+            debugText_Game.text = "table == null";
+        }
+            //Debug.Log("indicatorRdr =" + indicatorRdr);
+            //PlacePrefab(); // 화면 터치 시 공 생성
         if (isMakePrefabBtnClick)
         {
             PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
@@ -112,6 +120,9 @@ public class ARManager : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
+        indicator = MyDataStruct.PlaceablePrefab;
+        indicatorRdr = indicator.GetComponent<Renderer>();
+        indicatorRdr.enabled = true;
         /*
         foreach(GameObject prefab in spawnPrefabList) {
             //prefabString = PlayerPrefs.GetString(prefab.name);
@@ -124,12 +135,17 @@ public class ARManager : MonoBehaviour
         //PlayerPrefs.GetString(");
         */
 
+        /*if (spawnPrefab = MyDataStruct.PlaceablePrefab)
+        {
+            Debug.Log("Game Object True");
+        }*/
         spawnPrefab = MyDataStruct.PlaceablePrefab;
+        //spawnPrefab = (GameObject)MyDataStruct.table[MyDataStruct.RecognizePrefabName];
         spawnPrefab.SetActive(true);
 
         if (MyDataStruct.PlaceablePrefab != null)
         {
-            debugText.text = "spawnPrefab != null";
+            debugText_Game.text = "PlaceablePrefab != null";
         }
 
         //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절 (2D 방식)
