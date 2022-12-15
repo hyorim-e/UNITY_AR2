@@ -59,7 +59,7 @@ public class ARManager : MonoBehaviour
     void Update()
     {
         //Debug.Log("indicatorRdr =" + indicatorRdr);
-        //PlacePrefab(); // 화면 터치 시 공 생성
+        PlacePrefab(); // 화면 터치 시 공 생성
         if (isMakePrefabBtnClick)
         {
             PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
@@ -197,7 +197,7 @@ public class ARManager : MonoBehaviour
         SetMapCenter(PlayerPos.playerPos);
     }
 
-    #endregion
+    #endregion 
 
     #region 머테리얼 숨기기
 
