@@ -65,12 +65,15 @@ public class ARManager : MonoBehaviour
         {
             debugText_Game.text = "table != null";
         }
-        else if (MyDataStruct.table[MyDataStruct.RecognizePrefabName] == null)
-        {
-            debugText_Game.text = "table == null";
-        }
-            //Debug.Log("indicatorRdr =" + indicatorRdr);
-            //PlacePrefab(); // 화면 터치 시 공 생성
+
+        debugText_Game.text = MyDataStruct.table[MyDataStruct.RecognizePrefabName].ToString();
+
+        //else if (MyDataStruct.table[MyDataStruct.RecognizePrefabName] == null)
+        //{
+        //debugText_Game.text = "table == null";
+        //}
+        //Debug.Log("indicatorRdr =" + indicatorRdr);
+        //PlacePrefab(); // 화면 터치 시 공 생성
         if (isMakePrefabBtnClick)
         {
             PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성

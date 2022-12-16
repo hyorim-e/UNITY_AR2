@@ -35,6 +35,11 @@ public class ImageTracker : MonoBehaviour
             MyDataStruct.table.Add(newObject.name, newObject);
             //MyDataStruct.PrefabList.Add(Instantiate(obj));
 
+            if (MyDataStruct.table != null)
+            {
+                debugText_AR.text = "table != null";
+            }
+
             //prefabsNumDict.Add(spawnedObject, prefabNum);
             //PlayerPrefs.SetInt(newObject.name, prefabNum);
             //PlayerPrefs.SetString(prefabNum.ToString(), newObject.name);
@@ -68,7 +73,7 @@ public class ImageTracker : MonoBehaviour
 
             if (trackedImage != null)
             {
-                debugText_AR.text = "trackedImage != null";
+                //debugText_AR.text = "trackedImage != null";
             }
             /*
             MyDataStruct.RecognizePrefab.name = trackedImage.name;
