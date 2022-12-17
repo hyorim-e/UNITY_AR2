@@ -7,10 +7,11 @@ using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+/*
 public static class SpawnPrefab
 {
     public static GameObject spawnPrefab;
-}
+}*/
 public class ARManager : MonoBehaviour
 {
     public ARRaycastManager arRaycaster;
@@ -21,7 +22,7 @@ public class ARManager : MonoBehaviour
 
     //private Renderer indicatorRdr;
     public GameObject indicator;
-
+    private Transform IndicatorTr;
     public Material[] material;
 
     public Button makePrefabBtn;
@@ -54,6 +55,9 @@ public class ARManager : MonoBehaviour
         //indicatorRdr = indicator.GetComponent<Renderer>();
         //indicatorRdr.enabled = true;
         //indicator.SetActive(false); // 하이어라키에서 비활성화해놔서 필요 없을듯
+        indicator = Instantiate(indicator);
+        IndicatorTr = indicator.transform;
+        indicator.SetActive(false);
     }
 
     void Update()
@@ -83,17 +87,19 @@ public class ARManager : MonoBehaviour
     public void OnClickMakePrefabBtn()
     {
         isMakePrefabBtnClick = true;
+        indicator.SetActive(true);
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
     }
     #endregion
 
     #region 배치 미리보기 (바닥 표시기(인디케이터))
 
-    public Transform IndicatorTr;
+    //public Transform IndicatorTr;
     List<ARRaycastHit> indicatorHits = new List<ARRaycastHit>();
 
     void PlaceIndicator()
     {
+        //indicatorRdr.sharedMaterial = material[0];
         indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
 
         arRaycaster.Raycast(new Vector2(Screen.width * 0.5f, Screen.height * 0.5f), indicatorHits, TrackableType.Planes);
@@ -109,8 +115,10 @@ public class ARManager : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
+        indicator.SetActive(false);
+
         //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절 (2D 방식)
-        
+
         spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
         Pose hitPose = indicatorHits[0].pose;
