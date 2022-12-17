@@ -19,7 +19,7 @@ public class ARManager : MonoBehaviour
     private Animator animator;
     public GameObject character;
 
-    private Renderer indicatorRdr;
+    //private Renderer indicatorRdr;
     public GameObject indicator;
 
     public Material[] material;
@@ -51,8 +51,8 @@ public class ARManager : MonoBehaviour
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
-        indicatorRdr = indicator.GetComponent<Renderer>();
-        indicatorRdr.enabled = true;
+        //indicatorRdr = indicator.GetComponent<Renderer>();
+        //indicatorRdr.enabled = true;
         //indicator.SetActive(false); // 하이어라키에서 비활성화해놔서 필요 없을듯
     }
 
@@ -94,7 +94,7 @@ public class ARManager : MonoBehaviour
 
     void PlaceIndicator()
     {
-        indicatorRdr.sharedMaterial = material[0];
+        indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
 
         arRaycaster.Raycast(new Vector2(Screen.width * 0.5f, Screen.height * 0.5f), indicatorHits, TrackableType.Planes);
 
