@@ -7,27 +7,27 @@ using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+/*
+public static class SpawnPrefab
+{
+    public static GameObject spawnPrefab;
+}*/
 public class ARManager : MonoBehaviour
 {
     public ARRaycastManager arRaycaster;
-    //[SerializeField]
-    //private GameObject[] spawnPrefabList;
-    //public GameObject spawnPrefab;
-    private GameObject spawnPrefab;
+    public GameObject spawnPrefab;
 
     private Animator animator;
     public GameObject character;
 
-    private Renderer indicatorRdr;
+    //private Renderer indicatorRdr;
     public GameObject indicator;
-
+    private Transform IndicatorTr;
     public Material[] material;
 
     public Button makePrefabBtn;
     public Button PosterRecognizeBtn;
     private bool isMakePrefabBtnClick;
-
-    public Text debugText_Game;
 
     #region 클릭으로 바닥에 프리팹 놓기
 
@@ -52,26 +52,16 @@ public class ARManager : MonoBehaviour
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
-
-        /*indicator = MyDataStruct.PlaceablePrefab;
-        indicatorRdr = indicator.GetComponent<Renderer>();
-        indicatorRdr.enabled = true;*/
+        //indicatorRdr = indicator.GetComponent<Renderer>();
+        //indicatorRdr.enabled = true;
         //indicator.SetActive(false); // 하이어라키에서 비활성화해놔서 필요 없을듯
+        indicator = Instantiate(indicator);
+        IndicatorTr = indicator.transform;
+        indicator.SetActive(false);
     }
 
     void Update()
     {
-        if (MyDataStruct.table[MyDataStruct.RecognizePrefabName] != null)
-        {
-            debugText_Game.text = "table != null";
-        }
-
-        debugText_Game.text = MyDataStruct.table[MyDataStruct.RecognizePrefabName].ToString();
-
-        //else if (MyDataStruct.table[MyDataStruct.RecognizePrefabName] == null)
-        //{
-        //debugText_Game.text = "table == null";
-        //}
         //Debug.Log("indicatorRdr =" + indicatorRdr);
         //PlacePrefab(); // 화면 터치 시 공 생성
         if (isMakePrefabBtnClick)
@@ -97,18 +87,20 @@ public class ARManager : MonoBehaviour
     public void OnClickMakePrefabBtn()
     {
         isMakePrefabBtnClick = true;
+        indicator.SetActive(true);
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
     }
     #endregion
 
     #region 배치 미리보기 (바닥 표시기(인디케이터))
 
-    public Transform IndicatorTr;
+    //public Transform IndicatorTr;
     List<ARRaycastHit> indicatorHits = new List<ARRaycastHit>();
 
     void PlaceIndicator()
     {
-        indicatorRdr.sharedMaterial = material[0];
+        //indicatorRdr.sharedMaterial = material[0];
+        indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
 
         arRaycaster.Raycast(new Vector2(Screen.width * 0.5f, Screen.height * 0.5f), indicatorHits, TrackableType.Planes);
 
@@ -123,36 +115,11 @@ public class ARManager : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
-        indicator = MyDataStruct.PlaceablePrefab;
-        indicatorRdr = indicator.GetComponent<Renderer>();
-        indicatorRdr.enabled = true;
-        /*
-        foreach(GameObject prefab in spawnPrefabList) {
-            //prefabString = PlayerPrefs.GetString(prefab.name);
-            if (prefab.name.Equals(PlayerPrefs.GetString(prefab.name)))
-            {
-                spawnPrefab = prefab;
-                break;
-            } 
-        }
-        //PlayerPrefs.GetString(");
-        */
-
-        /*if (spawnPrefab = MyDataStruct.PlaceablePrefab)
-        {
-            Debug.Log("Game Object True");
-        }*/
-        spawnPrefab = MyDataStruct.PlaceablePrefab;
-        //spawnPrefab = (GameObject)MyDataStruct.table[MyDataStruct.RecognizePrefabName];
-        spawnPrefab.SetActive(true);
-
-        if (MyDataStruct.PlaceablePrefab != null)
-        {
-            debugText_Game.text = "PlaceablePrefab != null";
-        }
+        indicator.SetActive(false);
 
         //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4번째 인자 값 변경하여 투명도 조절 (2D 방식)
-        //spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
+
+        spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
@@ -164,8 +131,8 @@ public class ARManager : MonoBehaviour
         makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
         isMakePrefabBtnClick = false;
 
-        makePrefabBtn.interactable = false;
-        PosterRecognizeBtn.interactable = true;
+        //makePrefabBtn.interactable = false;
+        //PosterRecognizeBtn.interactable = true;
 
         //Debug.Log("배치완료");
     }
