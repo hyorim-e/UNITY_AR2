@@ -123,8 +123,8 @@ public class ARManager : MonoBehaviour
         makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
         isMakePrefabBtnClick = false;
 
-        makePrefabBtn.interactable = false;
-        PosterRecognizeBtn.interactable = true;
+        //makePrefabBtn.interactable = false;
+        //PosterRecognizeBtn.interactable = true;
 
         //Debug.Log("배치완료");
     }
