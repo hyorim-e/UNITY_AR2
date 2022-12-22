@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,7 +18,7 @@ public class ImageTracker : MonoBehaviour
 
     public GameObject MyDataStruct_obj;
 
-    private void Awake()
+    private void Start()
     {
 
         trackedImageManager = GetComponent<ARTrackedImageManager>();
@@ -45,7 +45,7 @@ public class ImageTracker : MonoBehaviour
             //PlayerPrefs.SetString(prefabNum.ToString(), newObject.name);
             // SetString(string key, string value);
             // SetInt(string key, int value);
-            // key = ÇÁ¸®ÆÕ(ÀÌ¹ÌÁö) ÀÌ¸§, value = ¹øÈ£ 
+            // key = í”„ë¦¬íŒ¹(ì´ë¯¸ì§€) ì´ë¦„, value = ë²ˆí˜¸ 
 
         }
 
@@ -67,7 +67,7 @@ public class ImageTracker : MonoBehaviour
 
     void OnTrackedImageChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        foreach (ARTrackedImage trackedImage in eventArgs.added) // .added Æ®·¡Å·µÇ´Â ÀÌ¹ÌÁö°¡ Ãß°¡µÇ¾úÀ» ¶§
+        foreach (ARTrackedImage trackedImage in eventArgs.added) // .added íŠ¸ë˜í‚¹ë˜ëŠ” ì´ë¯¸ì§€ê°€ ì¶”ê°€ë˜ì—ˆì„ ë•Œ
         {
             UpdateSpawnObject(trackedImage);
 
@@ -88,12 +88,12 @@ public class ImageTracker : MonoBehaviour
             }*/
         }
 
-        foreach (ARTrackedImage trackedImage in eventArgs.updated) // .updated Æ®·¡Å·µÇ´Â ÀÌ¹ÌÁö°¡ º¯°æµÇ¾úÀ» ¶§
+        foreach (ARTrackedImage trackedImage in eventArgs.updated) // .updated íŠ¸ë˜í‚¹ë˜ëŠ” ì´ë¯¸ì§€ê°€ ë³€ê²½ë˜ì—ˆì„ ë•Œ
         {
             UpdateSpawnObject(trackedImage);
         }
 
-        foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed Æ®·¡Å·µÇ´Â ÀÌ¹ÌÁö°¡ »èÁ¦µÇ¾úÀ» ¶§
+        foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed íŠ¸ë˜í‚¹ë˜ëŠ” ì´ë¯¸ì§€ê°€ ì‚­ì œë˜ì—ˆì„ ë•Œ
         {
             spawnedObject[trackedImage.referenceImage.name].SetActive(false);
         }
@@ -101,9 +101,9 @@ public class ImageTracker : MonoBehaviour
 
     void UpdateSpawnObject(ARTrackedImage trackedImage)
     {
-        string referenceImageName = trackedImage.referenceImage.name; // ReferenceImageLibrary¿¡¼­ ¼³Á¤µÈ ÀÌ¸§ ¹Ş¾Æ¿È
+        string referenceImageName = trackedImage.referenceImage.name; // ReferenceImageLibraryì—ì„œ ì„¤ì •ëœ ì´ë¦„ ë°›ì•„ì˜´
 
-        spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // ½ºÆùµÈ ¿ÀºêÁ§Æ®(ÇÁ¸®ÆÕ)ÀÇ À§Ä¡¿Í Æ®·¡Å·µÈ ÀÌ¹ÌÁöÀÇ À§Ä¡ ÀÏÄ¡½ÃÅ°±â
+        spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // ìŠ¤í°ëœ ì˜¤ë¸Œì íŠ¸(í”„ë¦¬íŒ¹)ì˜ ìœ„ì¹˜ì™€ íŠ¸ë˜í‚¹ëœ ì´ë¯¸ì§€ì˜ ìœ„ì¹˜ ì¼ì¹˜ì‹œí‚¤ê¸°
         spawnedObject[referenceImageName].transform.rotation = trackedImage.transform.rotation;
 
         spawnedObject[referenceImageName].SetActive(true);
@@ -112,10 +112,8 @@ public class ImageTracker : MonoBehaviour
         MyDataStruct_obj.GetComponent<MyDataStruct>().GetName();
         MyDataStruct_obj.GetComponent<MyDataStruct>().SetPrefab();
 
+        //spawnedObject[referenceImageName];
+
     }
 
-    private void Update()
-    {
-        
-    }
 }

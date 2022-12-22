@@ -14,6 +14,8 @@ public static class SpawnPrefab
 }*/
 public class ARManager : MonoBehaviour
 {
+    public Text debugText_Game;
+
     public ARRaycastManager arRaycaster;
     public GameObject spawnPrefab;
 
@@ -69,6 +71,8 @@ public class ARManager : MonoBehaviour
             PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
         }
         PlayerMove();
+
+        debugText_Game.text = "table == null";
     }
 
     #region 바닥 활성화

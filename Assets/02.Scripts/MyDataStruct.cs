@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,7 +38,7 @@ public class MyDataStruct : MonoBehaviour
 
     public void GetName()
     {
-        has = table.ContainsKey(RecognizePrefabName); // ÇØ´ç Å°°ª Æ÷ÇÔµÇ¾î ÀÖ´ÂÁö true or false
+        has = table.ContainsKey(RecognizePrefabName); // í•´ë‹¹ í‚¤ê°’ í¬í•¨ë˜ì–´ ìˆëŠ”ì§€ true or false
         //foreach(GameObject prefab in PrefabList)
         //{
             //if (name.CompareTo(prefab.name) == 0)
