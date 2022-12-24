@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 1200300511}
   - component: {fileID: 1200300510}
   - component: {fileID: 1200300513}
+  - component: {fileID: 1200300514}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -486,17 +487,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200300509}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b505bd1bfd8c87049a5fc66ac480a7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText_AR: {fileID: 2043570322}
   placeablePrefabs:
   - {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
   - {fileID: 4691359005820059523, guid: aecc9a37a362648499ee5ec515cf6c5d, type: 3}
   - {fileID: 654295223907599209, guid: 29ddd3a1bddb3ae4a8aa8ec56cb3f58a, type: 3}
+  debugText_AR: {fileID: 2043570322}
   MyDataStruct_obj: {fileID: 1397773107}
+--- !u!114 &1200300514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200300509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff88425b64fdd9e44835e5fc39e671fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeablePrefabs:
+  - {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
+  - {fileID: 4691359005820059523, guid: aecc9a37a362648499ee5ec515cf6c5d, type: 3}
+  - {fileID: 654295223907599209, guid: 29ddd3a1bddb3ae4a8aa8ec56cb3f58a, type: 3}
+  debugText_AR: {fileID: 2043570322}
 --- !u!1 &1274601930
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1397773108
 MonoBehaviour:
   m_ObjectHideFlags: 0

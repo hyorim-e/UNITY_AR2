@@ -4043,6 +4043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6609e238b7b6b224fb8196b3e9d3ffde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugText_Game: {fileID: 851560181}
   arRaycaster: {fileID: 287020270}
   spawnPrefab: {fileID: 6593655745406057965, guid: 8383ae6555ea5ab46bfc118c011da737, type: 3}
   character: {fileID: 984980637}
@@ -9840,7 +9841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &851560180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25957,7 +25958,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0.25000072, z: 0, w: 0.75}
+  m_BoundingSphereOverride: {x: 7.17e-43, y: NaN, z: 1.6928744e+22, w: 1.7851134e+31}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

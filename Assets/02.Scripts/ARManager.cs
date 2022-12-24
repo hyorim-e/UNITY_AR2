@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,11 +7,6 @@ using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-/*
-public static class SpawnPrefab
-{
-    public static GameObject spawnPrefab;
-}*/
 public class ARManager : MonoBehaviour
 {
     public Text debugText_Game;
@@ -22,7 +17,6 @@ public class ARManager : MonoBehaviour
     private Animator animator;
     public GameObject character;
 
-    //private Renderer indicatorRdr;
     public GameObject indicator;
     private Transform IndicatorTr;
     public Material[] material;
@@ -31,8 +25,8 @@ public class ARManager : MonoBehaviour
     public Button PosterRecognizeBtn;
     private bool isMakePrefabBtnClick;
 
-    #region Å¬¸¯À¸·Î ¹Ù´Ú¿¡ ÇÁ¸®ÆÕ ³õ±â
-
+    #region í´ë¦­ìœ¼ë¡œ ë°”ë‹¥ì— í”„ë¦¬íŒ¹ ë†“ê¸°
+    /*
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     public void PlacePrefab()
@@ -48,15 +42,13 @@ public class ARManager : MonoBehaviour
             Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
         }
     }
-
+    */
     #endregion
 
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
-        //indicatorRdr = indicator.GetComponent<Renderer>();
-        //indicatorRdr.enabled = true;
-        //indicator.SetActive(false); // ÇÏÀÌ¾î¶óÅ°¿¡¼­ ºñÈ°¼ºÈ­ÇØ³ö¼­ ÇÊ¿ä ¾øÀ»µí
+
         indicator = Instantiate(indicator);
         IndicatorTr = indicator.transform;
         indicator.SetActive(false);
@@ -64,18 +56,17 @@ public class ARManager : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("indicatorRdr =" + indicatorRdr);
-        //PlacePrefab(); // È­¸é ÅÍÄ¡ ½Ã °ø »ı¼º
+        //PlacePrefab(); // í™”ë©´ í„°ì¹˜ ì‹œ ê³µ ìƒì„±
         if (isMakePrefabBtnClick)
         {
-            PlaceIndicator(); // ¹öÆ° ÅÍÄ¡ ½Ã Ç¥½ÃµÇ´Â ÀÎµğÄÉÀÌÅÍ ºÎºĞ¿¡ °ø »ı¼º
+            PlaceIndicator(); // ë²„íŠ¼ í„°ì¹˜ ì‹œ í‘œì‹œë˜ëŠ” ì¸ë””ì¼€ì´í„° ë¶€ë¶„ì— ê³µ ìƒì„±
         }
         PlayerMove();
 
-        debugText_Game.text = "table == null";
+        debugText_Game.text = "text";
     }
 
-    #region ¹Ù´Ú È°¼ºÈ­
+    #region ë°”ë‹¥ í™œì„±í™”
 
     public ARPlaneManager arPlane;
 
@@ -87,7 +78,7 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
-    #region ¹èÄ¡ ¹Ì¸®º¸±â ÁøÀÔ
+    #region ë°°ì¹˜ ë¯¸ë¦¬ë³´ê¸° ì§„ì…
     public void OnClickMakePrefabBtn()
     {
         isMakePrefabBtnClick = true;
@@ -96,14 +87,12 @@ public class ARManager : MonoBehaviour
     }
     #endregion
 
-    #region ¹èÄ¡ ¹Ì¸®º¸±â (¹Ù´Ú Ç¥½Ã±â(ÀÎµğÄÉÀÌÅÍ))
+    #region ë°°ì¹˜ ë¯¸ë¦¬ë³´ê¸° (ë°”ë‹¥ í‘œì‹œê¸°(ì¸ë””ì¼€ì´í„°))
 
-    //public Transform IndicatorTr;
     List<ARRaycastHit> indicatorHits = new List<ARRaycastHit>();
 
     void PlaceIndicator()
     {
-        //indicatorRdr.sharedMaterial = material[0];
         indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
 
         arRaycaster.Raycast(new Vector2(Screen.width * 0.5f, Screen.height * 0.5f), indicatorHits, TrackableType.Planes);
@@ -116,33 +105,28 @@ public class ARManager : MonoBehaviour
     }
     #endregion
 
-    #region ¹öÆ°À¸·Î ÇÁ¸®ÆÕ ¹èÄ¡
+    #region ë²„íŠ¼ìœ¼ë¡œ í”„ë¦¬íŒ¹ ë°°ì¹˜
     public void PlaceIndicatorPrefab()
     {
         indicator.SetActive(false);
-
-        //indicatorRdr.material.color = new Color(1, 1, 1, 0.5f); // 4¹øÂ° ÀÎÀÚ °ª º¯°æÇÏ¿© Åõ¸íµµ Á¶Àı (2D ¹æ½Ä)
 
         spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
 
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
 
-        // ÇÁ¸®ÆÕ ¹èÄ¡ ½Ã ÆÄÆ¼Å¬
+        // í”„ë¦¬íŒ¹ ë°°ì¹˜ ì‹œ íŒŒí‹°í´
         Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
 
         makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
         isMakePrefabBtnClick = false;
 
-        //makePrefabBtn.interactable = false;
-        //PosterRecognizeBtn.interactable = true;
-
-        //Debug.Log("¹èÄ¡¿Ï·á");
+        //Debug.Log("PlaceIndicatorPrefab ë²„íŠ¼ìœ¼ë¡œ í”„ë¦¬íŒ¹ ë°°ì¹˜ ì‹¤í–‰");
     }
     #endregion
 
-    #region ¿øÁ¡ ¼³Á¤
+    #region ì›ì  ì„¤ì •
 
     public ARSessionOrigin arOrigin;
     List<ARRaycastHit> originHits = new List<ARRaycastHit>();
@@ -154,13 +138,13 @@ public class ARManager : MonoBehaviour
         {
             Pose hitpose = originHits[0].pose;
 
-            // °ıÈ£ ¾È¿¡ µé¾î°¡´Â °ÍÀÌ ¿øÁ¡ÀÌ µÊ
+            // ê´„í˜¸ ì•ˆì— ë“¤ì–´ê°€ëŠ” ê²ƒì´ ì›ì ì´ ë¨
             arOrigin.MakeContentAppearAt(arOrigin.transform, hitpose.position, hitpose.rotation);
         }
     }
     #endregion
 
-    #region ºû °¨Áö
+    #region ë¹› ê°ì§€
 
     public ARCameraManager arCameraManager;
     public Light currentLight;
@@ -176,12 +160,12 @@ public class ARManager : MonoBehaviour
             bool isBright = brightness.Value > 0.3f;
             float fixBrightness = brightness.Value * 4f;
             currentLight.intensity = fixBrightness;
-            //print($"¹à±â : {brightness.Value} \nºûÀÇ ¼¼±â : {fixBrightness} \n¹àÀ½ : {isBright}");
+            //print($"ë°ê¸° : {brightness.Value} \në¹›ì˜ ì„¸ê¸° : {fixBrightness} \në°ìŒ : {isBright}");
         }
     }
     #endregion
 
-    #region ÇÃ·¹ÀÌ¾î¸¦ Áß½ÉÀ¸·Î ÀÌµ¿
+    #region í”Œë ˆì´ì–´ë¥¼ ì¤‘ì‹¬ìœ¼ë¡œ ì´ë™
 
     public NavMeshAgent agent;
     public GameObject TouchParticle;
@@ -204,14 +188,14 @@ public class ARManager : MonoBehaviour
 
     void PlayerMove()
     {
-        PlayerPos.playerPos = agent.transform.position;
-        arOrigin.transform.position = PlayerPos.playerPos;
-        SetMapCenter(PlayerPos.playerPos);
+        PublicVars.playerPos = agent.transform.position;
+        arOrigin.transform.position = PublicVars.playerPos;
+        SetMapCenter(PublicVars.playerPos);
     }
 
     #endregion
 
-    #region ¸ÓÅ×¸®¾ó ¼û±â±â
+    #region ë¨¸í…Œë¦¬ì–¼ ìˆ¨ê¸°ê¸°
 
     public Material[] MapMts;
 
@@ -234,7 +218,7 @@ public class ARManager : MonoBehaviour
 
     #endregion
 
-    #region ÀÎ½ÄÇÏ±â ¹öÆ° Å¬¸¯ ½Ã ¾À º¯°æ
+    #region ì¸ì‹í•˜ê¸° ë²„íŠ¼ í´ë¦­ ì‹œ ì”¬ ë³€ê²½
     public void OnClickButton() 
     {
         PosterRecognizeBtn.interactable = false;
@@ -244,7 +228,15 @@ public class ARManager : MonoBehaviour
     #endregion
 }
 
-public static class PlayerPos
+
+/*public static class PlayerPos
 {
     public static Vector3 playerPos;
+}*/
+public static class PublicVars
+{
+    public static Vector3 playerPos;
+
+    public static Dictionary<string, GameObject> spawnedObjectDic;
+    public static GameObject spawnedObject;
 }
