@@ -4024,6 +4024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 335874713}
   - component: {fileID: 335874712}
+  - component: {fileID: 335874714}
   m_Layer: 0
   m_Name: ARManger
   m_TagString: Untagged
@@ -4038,27 +4039,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335874711}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6609e238b7b6b224fb8196b3e9d3ffde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText_Game: {fileID: 851560181}
   arRaycaster: {fileID: 287020270}
   spawnPrefab: {fileID: 6593655745406057965, guid: 8383ae6555ea5ab46bfc118c011da737, type: 3}
   character: {fileID: 984980637}
+  agent: {fileID: 984980640}
+  TouchParticle: {fileID: 1421641858}
   indicator: {fileID: 6593655745406057965, guid: 8383ae6555ea5ab46bfc118c011da737, type: 3}
   material:
   - {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
   - {fileID: 2100000, guid: da7272eb982174944905bc546feabe8c, type: 2}
   makePrefabBtn: {fileID: 1177580784}
   PosterRecognizeBtn: {fileID: 947455055}
+  debugText_Game: {fileID: 851560181}
   arPlane: {fileID: 287020269}
   arOrigin: {fileID: 287020267}
   arCameraManager: {fileID: 643259285}
   currentLight: {fileID: 2138677392}
-  agent: {fileID: 984980640}
-  TouchParticle: {fileID: 1421641858}
   MapMts:
   - {fileID: 2100000, guid: 0af924faf2efd6b4395688e112abee89, type: 2}
 --- !u!4 &335874713
@@ -4076,6 +4077,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335874714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335874711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3b2a3d3a8d6e546b388499a03ca0c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arRaycaster: {fileID: 287020270}
+  spawnPrefab: {fileID: 6593655745406057965, guid: 8383ae6555ea5ab46bfc118c011da737, type: 3}
+  character: {fileID: 1144978573833690, guid: 1e8e1924bb442334c9125455634bb567, type: 3}
+  agent: {fileID: 984980640}
+  TouchParticle: {fileID: 1421641858}
+  indicator: {fileID: 6593655745406057965, guid: 8383ae6555ea5ab46bfc118c011da737, type: 3}
+  material:
+  - {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
+  - {fileID: 2100000, guid: da7272eb982174944905bc546feabe8c, type: 2}
+  makePrefabBtn: {fileID: 1177580784}
+  PosterRecognizeBtn: {fileID: 947455055}
+  debugText_Game: {fileID: 851560181}
+  arPlane: {fileID: 287020269}
+  arOrigin: {fileID: 287020267}
+  arCameraManager: {fileID: 643259285}
+  currentLight: {fileID: 2138677392}
+  MapMts:
+  - {fileID: 2100000, guid: 0af924faf2efd6b4395688e112abee89, type: 2}
 --- !u!1001 &341470196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7180,8 +7211,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 335874712}
-        m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
+      - m_Target: {fileID: 335874714}
+        m_TargetAssemblyTypeName: ARManager2, Assembly-CSharp
         m_MethodName: PlaceOrigin
         m_Mode: 1
         m_Arguments:
@@ -11143,8 +11174,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 335874712}
-        m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
+      - m_Target: {fileID: 335874714}
+        m_TargetAssemblyTypeName: ARManager2, Assembly-CSharp
         m_MethodName: OnClickButton
         m_Mode: 1
         m_Arguments:
@@ -11784,8 +11815,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 335874712}
-        m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
+      - m_Target: {fileID: 335874714}
+        m_TargetAssemblyTypeName: ARManager2, Assembly-CSharp
         m_MethodName: MoveTarget
         m_Mode: 1
         m_Arguments:
@@ -12151,19 +12182,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 335874712}
-        m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
-        m_MethodName: ShowPlane
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
 --- !u!1001 &998491462
 PrefabInstance:
@@ -14286,8 +14305,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 335874712}
-        m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
+      - m_Target: {fileID: 335874714}
+        m_TargetAssemblyTypeName: ARManager2, Assembly-CSharp
         m_MethodName: OnClickMakePrefabBtn
         m_Mode: 1
         m_Arguments:

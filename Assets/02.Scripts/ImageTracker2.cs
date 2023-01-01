@@ -23,7 +23,7 @@ public class ImageTracker2 : MonoBehaviour
         spawnedObject = new Dictionary<string, GameObject>();
 
 
-        PublicVars.spawnedObjectDic = new Dictionary<string, GameObject>();
+        //PublicVars.spawnedObjectDic = new Dictionary<string, GameObject>();
 
         foreach (GameObject obj in placeablePrefabs)
         {
@@ -41,6 +41,17 @@ public class ImageTracker2 : MonoBehaviour
         }
 
         debugText_AR.text = "ImageTracker2";
+    }
+
+    private void Start()
+    {
+        PublicVars.spawnedObject = spawnedObject["TheHost"];
+        //PublicVars.spawnedObject.AddComponent("DontDestroyObject");
+    }
+
+    private void Update()
+    {
+        debugText_AR.text = PublicVars.spawnedObject.name;
     }
 
     private void OnEnable()
@@ -72,8 +83,8 @@ public class ImageTracker2 : MonoBehaviour
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
         {
-            //spawnedObject[trackedImage.name].SetActive(false);
-            PublicVars.spawnedObjectDic[trackedImage.name].SetActive(false);
+            spawnedObject[trackedImage.name].SetActive(false);
+            //PublicVars.spawnedObjectDic[trackedImage.name].SetActive(false);
         }
     }
 
@@ -94,7 +105,9 @@ public class ImageTracker2 : MonoBehaviour
 
 
         PublicVars.spawnedObject = spawnedObject[referenceImageName];
+        PublicVars.originMt = PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
 
-        debugText_AR.text = PublicVars.spawnedObject.name;
+        //debugText_AR.text = PublicVars.spawnedObject.name;
+        debugText_AR.text = "originMt = " + PublicVars.originMt.name;
     }
 }

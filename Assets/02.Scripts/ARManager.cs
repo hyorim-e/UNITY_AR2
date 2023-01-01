@@ -9,13 +9,14 @@ using UnityEngine.SceneManagement;
 
 public class ARManager : MonoBehaviour
 {
-    public Text debugText_Game;
-
     public ARRaycastManager arRaycaster;
     public GameObject spawnPrefab;
 
     private Animator animator;
     public GameObject character;
+
+    public NavMeshAgent agent;
+    public GameObject TouchParticle;
 
     public GameObject indicator;
     private Transform IndicatorTr;
@@ -24,6 +25,8 @@ public class ARManager : MonoBehaviour
     public Button makePrefabBtn;
     public Button PosterRecognizeBtn;
     private bool isMakePrefabBtnClick;
+
+    public Text debugText_Game;
 
     #region 클릭으로 바닥에 프리팹 놓기
     /*
@@ -81,8 +84,12 @@ public class ARManager : MonoBehaviour
     #region 배치 미리보기 진입
     public void OnClickMakePrefabBtn()
     {
+        indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
+
         isMakePrefabBtnClick = true;
         indicator.SetActive(true);
+
+        makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
     }
     #endregion
@@ -93,8 +100,6 @@ public class ARManager : MonoBehaviour
 
     void PlaceIndicator()
     {
-        indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
-
         arRaycaster.Raycast(new Vector2(Screen.width * 0.5f, Screen.height * 0.5f), indicatorHits, TrackableType.Planes);
 
         if (indicatorHits.Count > 0)
@@ -167,9 +172,6 @@ public class ARManager : MonoBehaviour
 
     #region 플레이어를 중심으로 이동
 
-    public NavMeshAgent agent;
-    public GameObject TouchParticle;
-
     public void MoveTarget()
     {
         if (Input.touchCount == 0) return;
@@ -221,22 +223,13 @@ public class ARManager : MonoBehaviour
     #region 인식하기 버튼 클릭 시 씬 변경
     public void OnClickButton() 
     {
-        PosterRecognizeBtn.interactable = false;
-        makePrefabBtn.interactable = true;
         SceneManager.LoadScene("ARScene");
     }
     #endregion
 }
 
 
-/*public static class PlayerPos
+public static class PlayerPos
 {
     public static Vector3 playerPos;
-}*/
-public static class PublicVars
-{
-    public static Vector3 playerPos;
-
-    public static Dictionary<string, GameObject> spawnedObjectDic;
-    public static GameObject spawnedObject;
 }
