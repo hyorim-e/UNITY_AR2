@@ -28,26 +28,6 @@ public class ARManager2 : MonoBehaviour
 
     public Text debugText_Game;
 
-    #region 클릭으로 바닥에 프리팹 놓기
-    /*
-    List<ARRaycastHit> hits = new List<ARRaycastHit>();
-
-    public void PlacePrefab()
-    {
-        if (Input.touchCount == 0) return;
-
-        Touch touch = Input.GetTouch(0);
-        if (touch.phase != TouchPhase.Began) return;
-
-        if(arRaycaster.Raycast(touch.position, hits, TrackableType.Planes))
-        {
-            Pose hitPose = hits[0].pose;
-            Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
-        }
-    }
-    */
-    #endregion
-
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
@@ -130,9 +110,8 @@ public class ARManager2 : MonoBehaviour
         //Instantiate(PublicVars.spawnedObject, IndicatorTr.position, IndicatorTr.rotation);
         //PublicVars.spawnedObject.transform.position = IndicatorTr.position;
         //PublicVars.spawnedObject.transform.rotation = IndicatorTr.rotation;
-        Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation);
-        MyDataStruct.spawnedObject.SetActive(true);
-
+        Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation).SetActive(true);
+        //MyDataStruct.spawnedObject.SetActive(true);
 
         // 프리팹 배치 시 파티클
         //Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
@@ -232,13 +211,6 @@ public class ARManager2 : MonoBehaviour
             MapMts[i].SetFloat("_Radius", r);
     }
 
-    #endregion
-
-    #region 인식하기 버튼 클릭 시 씬 변경
-    public void OnClickButton()
-    {
-        SceneManager.LoadScene("ARScene");
-    }
     #endregion
 }
 
