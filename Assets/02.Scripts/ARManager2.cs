@@ -66,7 +66,8 @@ public class ARManager2 : MonoBehaviour
         }
         PlayerMove();
 
-        debugText_Game.text = PublicVars.spawnedObject.name;
+        //debugText_Game.text = PublicVars.spawnedObject.name;
+        //debugText_Game.text = MyDataStruct.spawnedObject.name;
         //Debug.Log(PublicVars.spawnedObject);
     }
 
@@ -93,7 +94,8 @@ public class ARManager2 : MonoBehaviour
         makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
 
-        PublicVars.spawnedObject.SetActive(true);
+        //PublicVars.spawnedObject.SetActive(true);
+        //MyDataStruct.spawnedObject.SetActive(true);
     }
     #endregion
 
@@ -125,9 +127,12 @@ public class ARManager2 : MonoBehaviour
         //Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
         //Instantiate(PublicVars.spawnedObject, hitPose.position, hitPose.rotation);
         //Instantiate(spawnPrefab, IndicatorTr.position, IndicatorTr.rotation); // 유니티 에디터 내 Play 테스트용
-        Instantiate(PublicVars.spawnedObject, IndicatorTr.position, IndicatorTr.rotation);
+        //Instantiate(PublicVars.spawnedObject, IndicatorTr.position, IndicatorTr.rotation);
         //PublicVars.spawnedObject.transform.position = IndicatorTr.position;
         //PublicVars.spawnedObject.transform.rotation = IndicatorTr.rotation;
+        Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation);
+        MyDataStruct.spawnedObject.SetActive(true);
+
 
         // 프리팹 배치 시 파티클
         //Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
@@ -238,11 +243,11 @@ public class ARManager2 : MonoBehaviour
 }
 
 //public static class PublicVars
-public class PublicVars : MonoBehaviour
+public static class PublicVars
 {
     public static Vector3 playerPos;
 
     //public static Dictionary<string, GameObject> spawnedObjectDic;
-    public static GameObject spawnedObject;
+    //public static GameObject spawnedObject;
     public static Material originMt;
 }

@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class MyDataStruct : MonoBehaviour
 {
-    public static List<GameObject> PrefabList;
+    public static GameObject spawnedObject;
+
+    /*public static List<GameObject> PrefabList;
     //public static List<String> PrefabNameList;
     //public static List<string> PrefabList;
     //private static List<string> AnimalList;
@@ -53,7 +55,7 @@ public class MyDataStruct : MonoBehaviour
         {
             PlaceablePrefab = table[RecognizePrefabName];
         }
-    }
+    }*/
 }
 
 /*

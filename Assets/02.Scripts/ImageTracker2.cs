@@ -30,7 +30,7 @@ public class ImageTracker2 : MonoBehaviour
             GameObject newObject = Instantiate(obj);
             newObject.name = obj.name;
             newObject.SetActive(false);
-
+            
             spawnedObject.Add(newObject.name, newObject);
             //PublicVars.spawnedObjectDic.Add(newObject.name, newObject);
 
@@ -45,13 +45,15 @@ public class ImageTracker2 : MonoBehaviour
 
     private void Start()
     {
-        PublicVars.spawnedObject = spawnedObject["TheHost"];
+        //PublicVars.spawnedObject = spawnedObject["TheHost"];
+        MyDataStruct.spawnedObject = spawnedObject["TheHost"];
         //PublicVars.spawnedObject.AddComponent("DontDestroyObject");
     }
 
     private void Update()
     {
-        debugText_AR.text = PublicVars.spawnedObject.name;
+        //debugText_AR.text = PublicVars.spawnedObject.name;
+        debugText_AR.text = MyDataStruct.spawnedObject.name;
     }
 
     private void OnEnable()
@@ -97,15 +99,16 @@ public class ImageTracker2 : MonoBehaviour
         spawnedObject[referenceImageName].transform.rotation = trackedImage.transform.rotation;
 
         spawnedObject[referenceImageName].SetActive(true);
-        
+
 
         /*PublicVars.spawnedObjectDic[referenceImageName].transform.SetPositionAndRotation(trackedImage.transform.position, trackedImage.transform.rotation);
 
         PublicVars.spawnedObjectDic[referenceImageName].SetActive(true);*/
 
 
-        PublicVars.spawnedObject = spawnedObject[referenceImageName];
-        PublicVars.originMt = PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
+        MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
+        //PublicVars.originMt = PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
+
 
         //debugText_AR.text = PublicVars.spawnedObject.name;
         debugText_AR.text = "originMt = " + PublicVars.originMt.name;
