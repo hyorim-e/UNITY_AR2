@@ -103,18 +103,13 @@ public class ARManager2 : MonoBehaviour
         //spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
         //PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = PublicVars.originMt;
 
-        //Pose hitPose = indicatorHits[0].pose;
-        //Instantiate(spawnPrefab, hitPose.position, hitPose.rotation);
-        //Instantiate(PublicVars.spawnedObject, hitPose.position, hitPose.rotation);
-        //Instantiate(spawnPrefab, IndicatorTr.position, IndicatorTr.rotation); // 유니티 에디터 내 Play 테스트용
-        //Instantiate(PublicVars.spawnedObject, IndicatorTr.position, IndicatorTr.rotation);
-        //PublicVars.spawnedObject.transform.position = IndicatorTr.position;
-        //PublicVars.spawnedObject.transform.rotation = IndicatorTr.rotation;
-        Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation).SetActive(true);
+        Pose hitPose = indicatorHits[0].pose;
+        Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation).SetActive(true);
+        //Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation).SetActive(true); // 유니티 에디터 내 Play 테스트용
         //MyDataStruct.spawnedObject.SetActive(true);
 
         // 프리팹 배치 시 파티클
-        //Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
+        Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
 
         makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
