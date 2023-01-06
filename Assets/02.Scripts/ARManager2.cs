@@ -216,5 +216,5 @@ public static class PublicVars
 
     //public static Dictionary<string, GameObject> spawnedObjectDic;
     //public static GameObject spawnedObject;
-    public static Material originMt;
+    //public static Material originMt;
 }

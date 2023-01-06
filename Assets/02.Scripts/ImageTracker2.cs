@@ -22,9 +22,6 @@ public class ImageTracker2 : MonoBehaviour
         trackedImageManager = GetComponent<ARTrackedImageManager>();
         spawnedObject = new Dictionary<string, GameObject>();
 
-
-        //PublicVars.spawnedObjectDic = new Dictionary<string, GameObject>();
-
         foreach (GameObject obj in placeablePrefabs)
         {
             GameObject newObject = Instantiate(obj);
@@ -32,12 +29,7 @@ public class ImageTracker2 : MonoBehaviour
             newObject.SetActive(false);
             
             spawnedObject.Add(newObject.name, newObject);
-            //PublicVars.spawnedObjectDic.Add(newObject.name, newObject);
-
-            /*if (MyDataStruct.table != null)
-            {
-                debugText_AR.text = "table != null";
-            }*/
+            spawnedObject.Add(newObject.name, newObject);
         }
 
         debugText_AR.text = "ImageTracker2";
@@ -45,9 +37,7 @@ public class ImageTracker2 : MonoBehaviour
 
     private void Start()
     {
-        //PublicVars.spawnedObject = spawnedObject["TheHost"];
-        MyDataStruct.spawnedObject = spawnedObject["TheHost"];
-        //PublicVars.spawnedObject.AddComponent("DontDestroyObject");
+
     }
 
     private void Update()
@@ -107,10 +97,11 @@ public class ImageTracker2 : MonoBehaviour
 
 
         MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
-        //PublicVars.originMt = PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
+        MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
+        //MyDataStruct.spawnedObject.AddComponent("DontDestroyObject");
 
 
         //debugText_AR.text = PublicVars.spawnedObject.name;
-        debugText_AR.text = "originMt = " + PublicVars.originMt.name;
+        debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
     }
 }

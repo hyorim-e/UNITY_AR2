@@ -18899,8 +18899,6 @@ struct PublicVars_tAF71A90B019877EDD61AB44F92CFB4EBC8D8E906_StaticFields
 {
 	// UnityEngine.Vector3 PublicVars::playerPos
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___playerPos_0;
-	// UnityEngine.Material PublicVars::originMt
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_1;
 };
 
 // System.Xml.Schema.QmarkNode
@@ -31726,6 +31724,8 @@ struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
 {
 	// UnityEngine.GameObject MyDataStruct::spawnedObject
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_4;
+	// UnityEngine.Material MyDataStruct::originMt
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_5;
 };
 
 // UnityEngine.Timeline.PlayableTrack
