@@ -31726,6 +31726,8 @@ struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_4;
 	// UnityEngine.Material MyDataStruct::originMt
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_5;
+	// UnityEngine.GameObject MyDataStruct::indicator
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___indicator_6;
 };
 
 // UnityEngine.Timeline.PlayableTrack

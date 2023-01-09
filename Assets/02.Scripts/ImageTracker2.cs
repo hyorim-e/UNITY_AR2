@@ -29,7 +29,6 @@ public class ImageTracker2 : MonoBehaviour
             newObject.SetActive(false);
             
             spawnedObject.Add(newObject.name, newObject);
-            spawnedObject.Add(newObject.name, newObject);
         }
 
         debugText_AR.text = "ImageTracker2";
@@ -37,7 +36,7 @@ public class ImageTracker2 : MonoBehaviour
 
     private void Start()
     {
-
+        MyDataStruct.spawnedObject = spawnedObject["TheHost"];
     }
 
     private void Update()

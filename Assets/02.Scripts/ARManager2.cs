@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
 public class ARManager2 : MonoBehaviour
 {
@@ -32,9 +31,14 @@ public class ARManager2 : MonoBehaviour
     {
         animator = character.GetComponent<Animator>();
 
-        indicator = Instantiate(indicator);
+        //indicator = Instantiate(indicator);
         IndicatorTr = indicator.transform;
-        indicator.SetActive(false);
+        //indicator.SetActive(false);
+    }
+
+    void Start()
+    {
+        SetMapRadius(40f); // 머테리얼 숨기기
     }
 
     void Update()
@@ -66,16 +70,16 @@ public class ARManager2 : MonoBehaviour
     #region 배치 미리보기 진입
     public void OnClickMakePrefabBtn()
     {
+        indicator = Instantiate(MyDataStruct.spawnedObject);
+        indicator.SetActive(false);
         indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
 
-        isMakePrefabBtnClick = true;
-        indicator.SetActive(true);
+        isMakePrefabBtnClick = true;     
 
         makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
 
-        //PublicVars.spawnedObject.SetActive(true);
-        //MyDataStruct.spawnedObject.SetActive(true);
+        indicator.SetActive(true);
     }
     #endregion
 
@@ -103,13 +107,12 @@ public class ARManager2 : MonoBehaviour
         //spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
         //PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = PublicVars.originMt;
 
-        Pose hitPose = indicatorHits[0].pose;
-        Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation).SetActive(true);
-        //Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation).SetActive(true); // 유니티 에디터 내 Play 테스트용
-        //MyDataStruct.spawnedObject.SetActive(true);
+        //Pose hitPose = indicatorHits[0].pose;
+        //Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation).SetActive(true);
+        Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation).SetActive(true); // 유니티 에디터 내 Play 테스트용
 
         // 프리팹 배치 시 파티클
-        Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
+        //Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
 
         makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
@@ -188,8 +191,7 @@ public class ARManager2 : MonoBehaviour
     #region 머테리얼 숨기기
 
     public Material[] MapMts;
-
-    void Start() => SetMapRadius(40f);
+      
     void OnApplicationQuit() => SetMapRadius(float.MaxValue);
 
     void SetMapCenter(Vector3 vec)

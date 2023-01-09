@@ -50,30 +50,30 @@ extern void ARManager_OnClickButton_mE211151339510156500216BA5C06909D66A16173 (v
 extern void ARManager__ctor_m53D041B8379A885E4596A2980F29676BC9BC5931 (void);
 // 0x00000013 System.Void ARManager2::Awake()
 extern void ARManager2_Awake_m7C34AE5460FDE183B2B9B013D5B9D3222D898AB0 (void);
-// 0x00000014 System.Void ARManager2::Update()
-extern void ARManager2_Update_m0A61C4DF0624FE1A1E00AA7E9DA84090A1C4A3C2 (void);
-// 0x00000015 System.Void ARManager2::ShowPlane(System.Boolean)
-extern void ARManager2_ShowPlane_m4EAD5EA0D775E01D7AE6D0D8330AC56614F3C6E8 (void);
-// 0x00000016 System.Void ARManager2::OnClickMakePrefabBtn()
-extern void ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B (void);
-// 0x00000017 System.Void ARManager2::PlaceIndicator()
-extern void ARManager2_PlaceIndicator_mB59817D7FB2AF92C666EDF61632743D25CC3F910 (void);
-// 0x00000018 System.Void ARManager2::PlaceIndicatorPrefab()
-extern void ARManager2_PlaceIndicatorPrefab_m95BF18CDB64380AD47A15B0E77527748C6ED657F (void);
-// 0x00000019 System.Void ARManager2::PlaceOrigin()
-extern void ARManager2_PlaceOrigin_mAADC4F7CF64B2D262C0D35279A91C91E9CF706AE (void);
-// 0x0000001A System.Void ARManager2::OnEnable()
-extern void ARManager2_OnEnable_mDC2918172E5566247CCC4F3BC1CF4B0AE84C39F3 (void);
-// 0x0000001B System.Void ARManager2::OnDisable()
-extern void ARManager2_OnDisable_mA2FF5291897CD5AFB0050BF2EE3E5C7D4FEF92A6 (void);
-// 0x0000001C System.Void ARManager2::FrameUpdated(UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs)
-extern void ARManager2_FrameUpdated_mC3121CC8E7DA7F32E041FAF2258F51A20562D032 (void);
-// 0x0000001D System.Void ARManager2::MoveTarget()
-extern void ARManager2_MoveTarget_mC34EB9E43A6E778BD4B4DFF487900D3DD37947FE (void);
-// 0x0000001E System.Void ARManager2::PlayerMove()
-extern void ARManager2_PlayerMove_mB60D6C63E8CF8C872F6DAF14BB7A9E10D967DDCA (void);
-// 0x0000001F System.Void ARManager2::Start()
+// 0x00000014 System.Void ARManager2::Start()
 extern void ARManager2_Start_mA0DDBDCCF092FB94E45B553D8FCC47591D8CC654 (void);
+// 0x00000015 System.Void ARManager2::Update()
+extern void ARManager2_Update_m0A61C4DF0624FE1A1E00AA7E9DA84090A1C4A3C2 (void);
+// 0x00000016 System.Void ARManager2::ShowPlane(System.Boolean)
+extern void ARManager2_ShowPlane_m4EAD5EA0D775E01D7AE6D0D8330AC56614F3C6E8 (void);
+// 0x00000017 System.Void ARManager2::OnClickMakePrefabBtn()
+extern void ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B (void);
+// 0x00000018 System.Void ARManager2::PlaceIndicator()
+extern void ARManager2_PlaceIndicator_mB59817D7FB2AF92C666EDF61632743D25CC3F910 (void);
+// 0x00000019 System.Void ARManager2::PlaceIndicatorPrefab()
+extern void ARManager2_PlaceIndicatorPrefab_m95BF18CDB64380AD47A15B0E77527748C6ED657F (void);
+// 0x0000001A System.Void ARManager2::PlaceOrigin()
+extern void ARManager2_PlaceOrigin_mAADC4F7CF64B2D262C0D35279A91C91E9CF706AE (void);
+// 0x0000001B System.Void ARManager2::OnEnable()
+extern void ARManager2_OnEnable_mDC2918172E5566247CCC4F3BC1CF4B0AE84C39F3 (void);
+// 0x0000001C System.Void ARManager2::OnDisable()
+extern void ARManager2_OnDisable_mA2FF5291897CD5AFB0050BF2EE3E5C7D4FEF92A6 (void);
+// 0x0000001D System.Void ARManager2::FrameUpdated(UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs)
+extern void ARManager2_FrameUpdated_mC3121CC8E7DA7F32E041FAF2258F51A20562D032 (void);
+// 0x0000001E System.Void ARManager2::MoveTarget()
+extern void ARManager2_MoveTarget_mC34EB9E43A6E778BD4B4DFF487900D3DD37947FE (void);
+// 0x0000001F System.Void ARManager2::PlayerMove()
+extern void ARManager2_PlayerMove_mB60D6C63E8CF8C872F6DAF14BB7A9E10D967DDCA (void);
 // 0x00000020 System.Void ARManager2::OnApplicationQuit()
 extern void ARManager2_OnApplicationQuit_mDE67EA240FAF098F0CD37478FF54BDDB6F18D120 (void);
 // 0x00000021 System.Void ARManager2::SetMapCenter(UnityEngine.Vector3)
@@ -221,6 +221,7 @@ static Il2CppMethodPointer s_methodPointers[94] =
 	ARManager_OnClickButton_mE211151339510156500216BA5C06909D66A16173,
 	ARManager__ctor_m53D041B8379A885E4596A2980F29676BC9BC5931,
 	ARManager2_Awake_m7C34AE5460FDE183B2B9B013D5B9D3222D898AB0,
+	ARManager2_Start_mA0DDBDCCF092FB94E45B553D8FCC47591D8CC654,
 	ARManager2_Update_m0A61C4DF0624FE1A1E00AA7E9DA84090A1C4A3C2,
 	ARManager2_ShowPlane_m4EAD5EA0D775E01D7AE6D0D8330AC56614F3C6E8,
 	ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B,
@@ -232,7 +233,6 @@ static Il2CppMethodPointer s_methodPointers[94] =
 	ARManager2_FrameUpdated_mC3121CC8E7DA7F32E041FAF2258F51A20562D032,
 	ARManager2_MoveTarget_mC34EB9E43A6E778BD4B4DFF487900D3DD37947FE,
 	ARManager2_PlayerMove_mB60D6C63E8CF8C872F6DAF14BB7A9E10D967DDCA,
-	ARManager2_Start_mA0DDBDCCF092FB94E45B553D8FCC47591D8CC654,
 	ARManager2_OnApplicationQuit_mDE67EA240FAF098F0CD37478FF54BDDB6F18D120,
 	ARManager2_SetMapCenter_m9DC2F1A2FCC61936AB8E718652683A18E0AED2F2,
 	ARManager2_SetMapRadius_m307C8FC55C2327D89185A0B731302E37F764A1B4,
@@ -319,6 +319,7 @@ static const int32_t s_InvokerIndices[94] =
 	8265,
 	8265,
 	8265,
+	8265,
 	6530,
 	8265,
 	8265,
@@ -327,7 +328,6 @@ static const int32_t s_InvokerIndices[94] =
 	8265,
 	8265,
 	6488,
-	8265,
 	8265,
 	8265,
 	8265,

@@ -20474,6 +20474,8 @@ struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_4;
 	// UnityEngine.Material MyDataStruct::originMt
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_5;
+	// UnityEngine.GameObject MyDataStruct::indicator
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___indicator_6;
 };
 
 // UnityEngine.Timeline.SignalReceiver
@@ -25742,9 +25744,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7386[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7387[4] = 
 {
 	static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___trackedImageManager_4)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___placeablePrefabs_5)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___spawnedObject_6)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___debugText_AR_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7388[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7388[3] = 
 {
-	static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_4)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___originMt_5)),};
+	static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_4)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___originMt_5)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___indicator_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7390[6] = 
 {
 	0,0,0,0,0,static_cast<int32_t>(offsetof(Animation_Test_tE3053D19176B9B11A49DF94A7D58A0086C17740A, ___anim_9)),};
