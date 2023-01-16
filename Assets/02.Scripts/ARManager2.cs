@@ -32,7 +32,7 @@ public class ARManager2 : MonoBehaviour
         animator = character.GetComponent<Animator>();
 
         //indicator = Instantiate(indicator);
-        IndicatorTr = indicator.transform;
+        IndicatorTr = indicator.transform; // 유니티 에디터 내 Play 시 주석 해제 필요
         //indicator.SetActive(false);
     }
 
@@ -70,16 +70,20 @@ public class ARManager2 : MonoBehaviour
     #region 배치 미리보기 진입
     public void OnClickMakePrefabBtn()
     {
-        indicator = Instantiate(MyDataStruct.spawnedObject);
-        indicator.SetActive(false);
+        //Material indicatorMt = indicator.GetComponentInChildren<Renderer>().sharedMaterial;
+
+        if (indicator != MyDataStruct.spawnedObject)
+            indicator = Instantiate(MyDataStruct.spawnedObject);
+        //indicator = MyDataStruct.spawnedObject;
+        //indicator.SetActive(false);
         indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
+
+        indicator.SetActive(true);
 
         isMakePrefabBtnClick = true;     
 
         makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
-
-        indicator.SetActive(true);
     }
     #endregion
 
@@ -103,6 +107,7 @@ public class ARManager2 : MonoBehaviour
     public void PlaceIndicatorPrefab()
     {
         indicator.SetActive(false);
+        //Destroy(indicator);
 
         //spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
         //PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = PublicVars.originMt;
@@ -211,7 +216,7 @@ public class ARManager2 : MonoBehaviour
     #endregion
 }
 
-//public static class PublicVars
+//public static class PlayerPos
 public static class PublicVars
 {
     public static Vector3 playerPos;
