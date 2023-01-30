@@ -14,6 +14,7 @@ public class BtnManager : MonoBehaviour
 
     public GameObject Canvas_ARRecog;
     public GameObject Canvas_Game;
+    public GameObject Canvas_Inven;
 
     public GameObject plane;
     public GameObject gameDeco;
@@ -32,7 +33,7 @@ public class BtnManager : MonoBehaviour
         gameDeco.SetActive(false);
     }
 
-    public void OnClickGameBtn()
+    public void OnClickGameBtn() // 게임 씬으로 가는 버튼
     {
         ARManager.SetActive(true);
 
@@ -44,5 +45,17 @@ public class BtnManager : MonoBehaviour
 
         plane.SetActive(true);
         gameDeco.SetActive(true);
+    }
+
+    public void OnClickInvenBtn()
+    {
+        Canvas_Game.SetActive(false);
+        Canvas_Inven.SetActive(true);
+    }
+
+    public void OnClickInvenExitBtn()
+    {
+        Canvas_Inven.SetActive(false);
+        Canvas_Game.SetActive(true);
     }
 }

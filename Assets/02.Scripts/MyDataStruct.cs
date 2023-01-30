@@ -9,6 +9,10 @@ public class MyDataStruct : MonoBehaviour
     public static Material originMt;
 
     public static GameObject indicator;
+
+    public static int invenIndex;
+
+
     //private Transform IndicatorTr;
 
     /*public static List<GameObject> PrefabList;

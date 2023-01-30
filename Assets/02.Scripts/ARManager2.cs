@@ -25,6 +25,12 @@ public class ARManager2 : MonoBehaviour
     public Button PosterRecognizeBtn;
     private bool isMakePrefabBtnClick;
 
+    public GameObject inven_1;
+    public Transform inven;
+    public GameObject[] invenList;
+    private Transform[] temp;
+    public Sprite R1;
+
     public Text debugText_Game;
 
     private void Awake()
@@ -34,11 +40,17 @@ public class ARManager2 : MonoBehaviour
         //indicator = Instantiate(indicator);
         IndicatorTr = indicator.transform; // 유니티 에디터 내 Play 시 주석 해제 필요
         //indicator.SetActive(false);
+
+        MyDataStruct.invenIndex = 0;
     }
 
     void Start()
     {
         SetMapRadius(40f); // 머테리얼 숨기기
+
+        for(int i = 0; i<=30; i++)
+            temp[i] = inven.GetChild(i);
+
     }
 
     void Update()
@@ -211,6 +223,17 @@ public class ARManager2 : MonoBehaviour
     {
         for (int i = 0; i < MapMts.Length; i++)
             MapMts[i].SetFloat("_Radius", r);
+    }
+
+    #endregion
+
+    #region 인벤토리
+    public void OnClickinventory()
+    {
+        //Debug.Log(inven_1.GetComponent<Image>().sprite.name);
+        inven_1.SetActive(true);
+
+
     }
 
     #endregion
