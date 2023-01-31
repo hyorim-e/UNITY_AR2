@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18154702, g: 0.22719009, b: 0.30740646, a: 1}
+  m_IndirectSpecularColor: {r: 0.1815466, g: 0.22718954, b: 0.3074053, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -842,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &66128039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7981,7 +7981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &648362469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17539,6 +17539,9 @@ MonoBehaviour:
   makePrefabBtn: {fileID: 263658286}
   PosterRecognizeBtn: {fileID: 2054502493}
   debugText_Game: {fileID: 2012423981}
+  cell: {fileID: 1258787480}
+  sp1: {fileID: 21300000, guid: 507ac5be3b0299a4097be36672eefc1a, type: 3}
+  sp2: {fileID: 21300000, guid: 2381d9040b5d4294193726d1f0421e9b, type: 3}
   arPlane: {fileID: 1525515748}
   arOrigin: {fileID: 1525515749}
   arCameraManager: {fileID: 1630951407}

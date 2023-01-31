@@ -27,6 +27,10 @@ public class ARManager2 : MonoBehaviour
 
     public Text debugText_Game;
 
+    //public GameObject cell;
+    public Transform cell;
+    public Sprite sp1, sp2;
+
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
@@ -53,6 +57,18 @@ public class ARManager2 : MonoBehaviour
         //debugText_Game.text = PublicVars.spawnedObject.name;
         //debugText_Game.text = MyDataStruct.spawnedObject.name;
         //Debug.Log(PublicVars.spawnedObject);
+
+
+        if (Input.GetKeyDown(KeyCode.A))
+            //cell.GetComponentInChildren<SpriteRenderer>().sprite = sp1;
+            cell.GetComponentInChildren<Image>().sprite = sp1;
+            //cell.GetChild(1).GetComponent<Image>().sprite = sp1;
+
+
+        //GetComponent<SpriteRenderer>().sprite = sp1;
+        if (Input.GetKeyDown(KeyCode.D))
+            //GetComponent<SpriteRenderer>().sprite = sp2;
+            cell.GetComponentInChildren<Image>().sprite = sp2;
     }
 
     #region 바닥 활성화
