@@ -1,11 +1,14 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MyDataStruct : MonoBehaviour
 {
-    public static List<GameObject> PrefabList;
+    public static GameObject spawnedObject;
+    public static Material originMt;
+
+    /*public static List<GameObject> PrefabList;
     //public static List<String> PrefabNameList;
     //public static List<string> PrefabList;
     //private static List<string> AnimalList;
@@ -38,7 +41,7 @@ public class MyDataStruct : MonoBehaviour
 
     public void GetName()
     {
-        has = table.ContainsKey(RecognizePrefabName); // ÇØ´ç Å°°ª Æ÷ÇÔµÇ¾î ÀÖ´ÂÁö true or false
+        has = table.ContainsKey(RecognizePrefabName); // í•´ë‹¹ í‚¤ê°’ í¬í•¨ë˜ì–´ ìˆëŠ”ì§€ true or false
         //foreach(GameObject prefab in PrefabList)
         //{
             //if (name.CompareTo(prefab.name) == 0)
@@ -53,7 +56,7 @@ public class MyDataStruct : MonoBehaviour
         {
             PlaceablePrefab = table[RecognizePrefabName];
         }
-    }
+    }*/
 }
 
 /*

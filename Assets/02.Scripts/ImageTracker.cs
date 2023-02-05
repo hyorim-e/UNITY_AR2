@@ -32,13 +32,13 @@ public class ImageTracker : MonoBehaviour
             newObject.SetActive(false);
 
             spawnedObject.Add(newObject.name, newObject);
-            MyDataStruct.table.Add(newObject.name, newObject);
+            //MyDataStruct.table.Add(newObject.name, newObject);
             //MyDataStruct.PrefabList.Add(Instantiate(obj));
 
-            if (MyDataStruct.table != null)
+            /*if (MyDataStruct.table != null)
             {
                 debugText_AR.text = "table != null";
-            }
+            }*/
 
             //prefabsNumDict.Add(spawnedObject, prefabNum);
             //PlayerPrefs.SetInt(newObject.name, prefabNum);
@@ -108,9 +108,9 @@ public class ImageTracker : MonoBehaviour
 
         spawnedObject[referenceImageName].SetActive(true);
 
-        MyDataStruct.RecognizePrefabName = referenceImageName;
-        MyDataStruct_obj.GetComponent<MyDataStruct>().GetName();
-        MyDataStruct_obj.GetComponent<MyDataStruct>().SetPrefab();
+        //MyDataStruct.RecognizePrefabName = referenceImageName;
+        //MyDataStruct_obj.GetComponent<MyDataStruct>().GetName();
+        //MyDataStruct_obj.GetComponent<MyDataStruct>().SetPrefab();
 
     }
 
