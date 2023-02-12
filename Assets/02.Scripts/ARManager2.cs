@@ -209,7 +209,7 @@ public class ARManager2 : MonoBehaviour
     #endregion
 }
 
-//public static class PublicVars
+//public static class PlayerPos
 public static class PublicVars
 {
     public static Vector3 playerPos;

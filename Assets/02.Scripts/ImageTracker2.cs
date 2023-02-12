@@ -14,7 +14,6 @@ public class ImageTracker2 : MonoBehaviour
 
     private Dictionary<string, GameObject> spawnedObject;
 
-
     public Text debugText_AR;
 
     private void Awake()
@@ -29,16 +28,16 @@ public class ImageTracker2 : MonoBehaviour
             newObject.SetActive(false);
             
             spawnedObject.Add(newObject.name, newObject);
-            spawnedObject.Add(newObject.name, newObject);
+            //spawnedObject.Add(newObject.name, newObject);
         }
 
         debugText_AR.text = "ImageTracker2";
     }
 
-    private void Start()
+    /*private void Start()
     {
 
-    }
+    }*/
 
     private void Update()
     {
@@ -103,5 +102,10 @@ public class ImageTracker2 : MonoBehaviour
 
         //debugText_AR.text = PublicVars.spawnedObject.name;
         debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
+    }
+
+    public void RemoveSpawnedObject()
+    {
+        spawnedObject[MyDataStruct.spawnedObject.name].SetActive(false);
     }
 }
