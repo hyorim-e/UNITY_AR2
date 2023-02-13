@@ -15,7 +15,6 @@ public class ARManager2 : MonoBehaviour
     private Animator animator;
     public GameObject character;
 
-    public NavMeshAgent agent;
     public GameObject TouchParticle;
 
     public GameObject indicator;
@@ -159,6 +158,8 @@ public class ARManager2 : MonoBehaviour
     #endregion
 
     #region 플레이어를 중심으로 이동
+
+    public NavMeshAgent agent;
 
     public void MoveTarget()
     {

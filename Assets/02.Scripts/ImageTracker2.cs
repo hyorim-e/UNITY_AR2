@@ -75,7 +75,6 @@ public class ImageTracker2 : MonoBehaviour
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
         {
             spawnedObject[trackedImage.name].SetActive(false);
-            //PublicVars.spawnedObjectDic[trackedImage.name].SetActive(false);
         }
     }
 

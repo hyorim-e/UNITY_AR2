@@ -8,14 +8,17 @@ public class InventoryManager : MonoBehaviour
     public Sprite[] MoviePosterList;
     public Image[] InvenList;
 
-    private int InvenListIndex = 0;
+    private int InvenListIndex;
+    // 여기서 초기화하면 앱 껐다 켜도 리셋이 안됨. Awake에서 해야 하는 듯.
+
+    public GameObject Inventory;
 
     public Text debugText1;
     public Text debugText2;
 
     private void Awake()
     {
-        //InvenListIndex = 0;
+        InvenListIndex = 0;
     }
     void Start()
     {
@@ -44,5 +47,7 @@ public class InventoryManager : MonoBehaviour
             }
             // 첫 번째 칸 여우는 잘 바뀌는데 두 번째 칸 토끼가 포스터랑 겹치게 나옴.
         }
+
+        Inventory.SetActive(true);
     }
 }
