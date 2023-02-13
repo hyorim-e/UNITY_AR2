@@ -7,6 +7,6 @@ public class StartSceneManager : MonoBehaviour
 {
     public void OnClickButton()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("MergeScene");
     }
 }
