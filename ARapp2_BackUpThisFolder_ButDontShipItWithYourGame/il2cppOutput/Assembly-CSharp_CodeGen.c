@@ -140,89 +140,101 @@ extern void ImageTracker2_OnDisable_m31F48B7C49C17E75CFFE2ED6768A25E7E8849FA6 (v
 extern void ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB08465F362B (void);
 // 0x00000040 System.Void ImageTracker2::UpdateSpawnObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void ImageTracker2_UpdateSpawnObject_mDF6CB01557FC9AE16E408B131CCBEC31F2D82E13 (void);
-// 0x00000041 System.Void ImageTracker2::.ctor()
+// 0x00000041 System.Void ImageTracker2::RemoveSpawnedObject()
+extern void ImageTracker2_RemoveSpawnedObject_mCEA23BE197377194B33EE9CB4BBC8C8D8AE44C7D (void);
+// 0x00000042 System.Void ImageTracker2::.ctor()
 extern void ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1 (void);
-// 0x00000042 System.Void MyDataStruct::.ctor()
+// 0x00000043 System.Void InventoryManager::Awake()
+extern void InventoryManager_Awake_mC4DEEDBBD790D4BB57FD3D2F0A106076EB0E989F (void);
+// 0x00000044 System.Void InventoryManager::Start()
+extern void InventoryManager_Start_m5B5EBEAFB2E80EFF500B0478AB2A86BA992B40A4 (void);
+// 0x00000045 System.Void InventoryManager::Update()
+extern void InventoryManager_Update_m948A3500AB20B1B48F7632C3889A489326C49871 (void);
+// 0x00000046 System.Void InventoryManager::InventoryUpdate()
+extern void InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8 (void);
+// 0x00000047 System.Void InventoryManager::.ctor()
+extern void InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13 (void);
+// 0x00000048 System.Void MyDataStruct::.ctor()
 extern void MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74 (void);
-// 0x00000043 System.Void Sound::Start()
+// 0x00000049 System.Void Sound::Start()
 extern void Sound_Start_m47CF0F83A25EB683839F81138F490ED199A39BD5 (void);
-// 0x00000044 System.Void Sound::footstepSound()
+// 0x0000004A System.Void Sound::footstepSound()
 extern void Sound_footstepSound_m1136146D4C581FF19CB77CA2A959D917A6A32306 (void);
-// 0x00000045 System.Void Sound::buttonClickSound()
+// 0x0000004B System.Void Sound::buttonClickSound()
 extern void Sound_buttonClickSound_mE4A33F117609947D77BE0BC3E95BE818A1A4BE76 (void);
-// 0x00000046 System.Void Sound::startbuttonClickSound()
+// 0x0000004C System.Void Sound::startbuttonClickSound()
 extern void Sound_startbuttonClickSound_mDAAC36A938A272828B6EE731B8411CC53392EE9C (void);
-// 0x00000047 System.Void Sound::.ctor()
+// 0x0000004D System.Void Sound::.ctor()
 extern void Sound__ctor_m5DD7C9F71B98D5670BBDD05F6D6FCDF43DC9EA8F (void);
-// 0x00000048 System.Void StartSceneManager::OnClickButton()
+// 0x0000004E System.Void StartSceneManager::OnClickButton()
 extern void StartSceneManager_OnClickButton_m81B47780384CBDAC87B692A160391F3FD87EE184 (void);
-// 0x00000049 System.Void StartSceneManager::.ctor()
+// 0x0000004F System.Void StartSceneManager::.ctor()
 extern void StartSceneManager__ctor_m01AA0645159EBC37096F759D7BB52361B1920DA5 (void);
-// 0x0000004A System.Void TabPanel::ClickTab(System.Int32)
+// 0x00000050 System.Void TabPanel::ClickTab(System.Int32)
 extern void TabPanel_ClickTab_m429683D35F4749A3F8E68FAB8543A75574857382 (void);
-// 0x0000004B System.Void TabPanel::.ctor()
+// 0x00000051 System.Void TabPanel::.ctor()
 extern void TabPanel__ctor_m0BA830B833AA1D4F208100B802750D7AE1DCD800 (void);
-// 0x0000004C System.Void WeatherChange::Start()
+// 0x00000052 System.Void WeatherChange::Start()
 extern void WeatherChange_Start_mDEC4C8575C3C13B6AA1D6CCEF4B009B96D2251F7 (void);
-// 0x0000004D System.Void WeatherChange::ChangeWeather(WeatherChange/Weather)
+// 0x00000053 System.Void WeatherChange::ChangeWeather(WeatherChange/Weather)
 extern void WeatherChange_ChangeWeather_m7E6D21476AAEC12ABC4A418F1CAFD067F4BB3AFF (void);
-// 0x0000004E System.Void WeatherChange::Update()
+// 0x00000054 System.Void WeatherChange::Update()
 extern void WeatherChange_Update_m68628BC4F9C5F781CF6412CD8F86A77E8212394E (void);
-// 0x0000004F System.Void WeatherChange::.ctor()
+// 0x00000055 System.Void WeatherChange::.ctor()
 extern void WeatherChange__ctor_mE5AE59DCDDE8E3687FD3FB08CD6DA359849C45B9 (void);
-// 0x00000050 System.Void Animation_Test::Start()
+// 0x00000056 System.Void Animation_Test::Start()
 extern void Animation_Test_Start_m54DA7CF05337871959835B7E5DBAD78A8A7276A5 (void);
-// 0x00000051 System.Void Animation_Test::IdleAni()
+// 0x00000057 System.Void Animation_Test::IdleAni()
 extern void Animation_Test_IdleAni_mDC3778E36E40DC1A023C81AD26A26459BC0A0C13 (void);
-// 0x00000052 System.Void Animation_Test::RunAni()
+// 0x00000058 System.Void Animation_Test::RunAni()
 extern void Animation_Test_RunAni_m03DF663FEAB3171BEDEDB1D9D053D08FD8A67EBA (void);
-// 0x00000053 System.Void Animation_Test::AttackAni()
+// 0x00000059 System.Void Animation_Test::AttackAni()
 extern void Animation_Test_AttackAni_m511A0C3910223DFA088BB2A2C11722CDD3A30167 (void);
-// 0x00000054 System.Void Animation_Test::DamageAni()
+// 0x0000005A System.Void Animation_Test::DamageAni()
 extern void Animation_Test_DamageAni_m447AC63C5AD5A743853BE49EC45875884ADB145C (void);
-// 0x00000055 System.Void Animation_Test::DeathAni()
+// 0x0000005B System.Void Animation_Test::DeathAni()
 extern void Animation_Test_DeathAni_mAAD34C22006C7924CA187F8526AC248A1848DE5C (void);
-// 0x00000056 System.Void Animation_Test::.ctor()
+// 0x0000005C System.Void Animation_Test::.ctor()
 extern void Animation_Test__ctor_mECC11A2610DD4D7B609F4A349EF3D97B1C924F48 (void);
-// 0x00000057 System.Void scriptTexttest::Start()
+// 0x0000005D System.Void scriptTexttest::Start()
 extern void scriptTexttest_Start_m26DFD38940EA1BD3041A4A5C6EBA6F2EF7E86341 (void);
-// 0x00000058 System.Void scriptTexttest::.ctor()
+// 0x0000005E System.Void scriptTexttest::.ctor()
 extern void scriptTexttest__ctor_m46D5CE5D84ACCEC2F20C86B79D63AD3EA9522345 (void);
-// 0x00000059 System.Void Move::Start()
+// 0x0000005F System.Void Move::Start()
 extern void Move_Start_mE30888A3AEA16959603B218AE8DF258387F55F8E (void);
-// 0x0000005A System.Void Move::Update()
+// 0x00000060 System.Void Move::Update()
 extern void Move_Update_mA8230EF12ABFDB1275E464746004DD9E8DCBB444 (void);
-// 0x0000005B System.Void Move::.ctor()
+// 0x00000061 System.Void Move::.ctor()
 extern void Move__ctor_mB2C06FD84ADF53D6C062FD9230344443C0ACF7A1 (void);
-// 0x0000005C System.Void Readme::.ctor()
+// 0x00000062 System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x0000005D System.Void Readme/Section::.ctor()
+// 0x00000063 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-// 0x0000005E System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
+// 0x00000064 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
 extern void AnimatorParamatersChange_Start_m871E4A208B70403948907DD6EFF16B5C89AF6558 (void);
-// 0x0000005F System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
+// 0x00000065 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
 extern void AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD (void);
-// 0x00000060 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
+// 0x00000066 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
 extern void AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD (void);
-// 0x00000061 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
+// 0x00000067 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
 extern void AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF (void);
-// 0x00000062 System.Void BLINK.AnimationDemo::Update()
+// 0x00000068 System.Void BLINK.AnimationDemo::Update()
 extern void AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836 (void);
-// 0x00000063 System.Void BLINK.AnimationDemo::NextAnimation()
+// 0x00000069 System.Void BLINK.AnimationDemo::NextAnimation()
 extern void AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532 (void);
-// 0x00000064 System.Void BLINK.AnimationDemo::PreviousAnimation()
+// 0x0000006A System.Void BLINK.AnimationDemo::PreviousAnimation()
 extern void AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708 (void);
-// 0x00000065 System.Void BLINK.AnimationDemo::ReplayAnimation()
+// 0x0000006B System.Void BLINK.AnimationDemo::ReplayAnimation()
 extern void AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8 (void);
-// 0x00000066 System.Void BLINK.AnimationDemo::ResetAllBool()
+// 0x0000006C System.Void BLINK.AnimationDemo::ResetAllBool()
 extern void AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C (void);
-// 0x00000067 System.Void BLINK.AnimationDemo::PlayAnimation()
+// 0x0000006D System.Void BLINK.AnimationDemo::PlayAnimation()
 extern void AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE (void);
-// 0x00000068 System.Void BLINK.AnimationDemo::.ctor()
+// 0x0000006E System.Void BLINK.AnimationDemo::.ctor()
 extern void AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C (void);
-// 0x00000069 System.Void BLINK.AnimationDemo/AnimationEntry::.ctor()
+// 0x0000006F System.Void BLINK.AnimationDemo/AnimationEntry::.ctor()
 extern void AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4 (void);
-static Il2CppMethodPointer s_methodPointers[105] = 
+static Il2CppMethodPointer s_methodPointers[111] = 
 {
 	ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23,
 	ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073,
@@ -288,7 +300,13 @@ static Il2CppMethodPointer s_methodPointers[105] =
 	ImageTracker2_OnDisable_m31F48B7C49C17E75CFFE2ED6768A25E7E8849FA6,
 	ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB08465F362B,
 	ImageTracker2_UpdateSpawnObject_mDF6CB01557FC9AE16E408B131CCBEC31F2D82E13,
+	ImageTracker2_RemoveSpawnedObject_mCEA23BE197377194B33EE9CB4BBC8C8D8AE44C7D,
 	ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1,
+	InventoryManager_Awake_mC4DEEDBBD790D4BB57FD3D2F0A106076EB0E989F,
+	InventoryManager_Start_m5B5EBEAFB2E80EFF500B0478AB2A86BA992B40A4,
+	InventoryManager_Update_m948A3500AB20B1B48F7632C3889A489326C49871,
+	InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8,
+	InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13,
 	MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74,
 	Sound_Start_m47CF0F83A25EB683839F81138F490ED199A39BD5,
 	Sound_footstepSound_m1136146D4C581FF19CB77CA2A959D917A6A32306,
@@ -330,7 +348,7 @@ static Il2CppMethodPointer s_methodPointers[105] =
 	AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C,
 	AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4,
 };
-static const int32_t s_InvokerIndices[105] = 
+static const int32_t s_InvokerIndices[111] = 
 {
 	8265,
 	8265,
@@ -405,6 +423,12 @@ static const int32_t s_InvokerIndices[105] =
 	8265,
 	8265,
 	8265,
+	8265,
+	8265,
+	8265,
+	8265,
+	8265,
+	8265,
 	6614,
 	8265,
 	8265,
@@ -442,7 +466,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	105,
+	111,
 	s_methodPointers,
 	0,
 	NULL,
