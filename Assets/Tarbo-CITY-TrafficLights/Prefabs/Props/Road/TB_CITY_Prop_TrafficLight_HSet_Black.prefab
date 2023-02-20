@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4535164993608774}
   - component: {fileID: 33303468540368632}
   - component: {fileID: 23084562101266258}
+  - component: {fileID: 2891755353918673000}
   m_Layer: 0
   m_Name: TB_CITY_Prop_TrafficLight_HSet_Black
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2891755353918673000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127940098476992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

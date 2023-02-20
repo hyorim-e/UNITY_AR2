@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4187923427298270}
   - component: {fileID: 33060391559633762}
   - component: {fileID: 23485335233934788}
+  - component: {fileID: 3589760151455128162}
   m_Layer: 0
   m_Name: Wall_clumb
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3589760151455128162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044819720681884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053685978927202
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +107,7 @@ GameObject:
   - component: {fileID: 4202800652126958}
   - component: {fileID: 33513259094608788}
   - component: {fileID: 23506566968413786}
+  - component: {fileID: 7428335452317050595}
   m_Layer: 0
   m_Name: Shutter_4 (4)
   m_TagString: Untagged
@@ -166,6 +180,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7428335452317050595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053685978927202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1073767535429202
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +203,7 @@ GameObject:
   - component: {fileID: 4809802921681916}
   - component: {fileID: 33415905584811770}
   - component: {fileID: 23004214712839454}
+  - component: {fileID: 1446571761288277716}
   m_Layer: 0
   m_Name: Windows
   m_TagString: Untagged
@@ -249,6 +276,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1446571761288277716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073767535429202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087407286678240
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +299,7 @@ GameObject:
   - component: {fileID: 4399167721376684}
   - component: {fileID: 33111933052499642}
   - component: {fileID: 23549717097573452}
+  - component: {fileID: 7725241606671183681}
   m_Layer: 0
   m_Name: Airing_3 (1)
   m_TagString: Untagged
@@ -332,6 +372,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7725241606671183681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087407286678240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1102696763516022
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +395,7 @@ GameObject:
   - component: {fileID: 4226258554680156}
   - component: {fileID: 33258276815748078}
   - component: {fileID: 23767375781168232}
+  - component: {fileID: 6180848659732987926}
   m_Layer: 0
   m_Name: Shutter_4 (3)
   m_TagString: Untagged
@@ -415,6 +468,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6180848659732987926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102696763516022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1205592427175424
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +544,7 @@ GameObject:
   - component: {fileID: 4004017937059044}
   - component: {fileID: 33913091715655522}
   - component: {fileID: 23849389059185484}
+  - component: {fileID: 6786550954858903316}
   m_Layer: 0
   m_Name: Plinth
   m_TagString: Untagged
@@ -551,6 +617,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6786550954858903316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211617601883160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1227027548145966
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +640,7 @@ GameObject:
   - component: {fileID: 4558859044623808}
   - component: {fileID: 33302566800740716}
   - component: {fileID: 23836193250912742}
+  - component: {fileID: 4455175309649869686}
   m_Layer: 0
   m_Name: Shutter_4 (2)
   m_TagString: Untagged
@@ -634,6 +713,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4455175309649869686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227027548145966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1271626191360216
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +736,7 @@ GameObject:
   - component: {fileID: 4139147941304360}
   - component: {fileID: 33138342627777446}
   - component: {fileID: 23403827556301176}
+  - component: {fileID: 1220188431537878967}
   m_Layer: 0
   m_Name: Wall_clumb (3)
   m_TagString: Untagged
@@ -717,6 +809,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1220188431537878967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271626191360216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1273171652489456
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +832,7 @@ GameObject:
   - component: {fileID: 4884155967570370}
   - component: {fileID: 33236641888054874}
   - component: {fileID: 23479384909885388}
+  - component: {fileID: 2261103542437594561}
   m_Layer: 0
   m_Name: Walls_1
   m_TagString: Untagged
@@ -800,6 +905,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2261103542437594561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273171652489456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1293733485356834
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +928,7 @@ GameObject:
   - component: {fileID: 4975513300262310}
   - component: {fileID: 33782000467899576}
   - component: {fileID: 23630668824056660}
+  - component: {fileID: 4657264693098643618}
   m_Layer: 0
   m_Name: Shutter_4 (5)
   m_TagString: Untagged
@@ -883,6 +1001,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4657264693098643618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293733485356834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1400311683199156
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +1024,7 @@ GameObject:
   - component: {fileID: 4305460958997980}
   - component: {fileID: 33446924839592646}
   - component: {fileID: 23877194736125350}
+  - component: {fileID: 9175860590960733042}
   m_Layer: 0
   m_Name: Decor
   m_TagString: Untagged
@@ -966,6 +1097,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9175860590960733042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400311683199156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437040691713000
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +1120,7 @@ GameObject:
   - component: {fileID: 4215626966538380}
   - component: {fileID: 33079870674669014}
   - component: {fileID: 23731763926552668}
+  - component: {fileID: 7728169142413101496}
   m_Layer: 0
   m_Name: Roof
   m_TagString: Untagged
@@ -1049,6 +1193,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7728169142413101496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437040691713000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1492085962962124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1216,7 @@ GameObject:
   - component: {fileID: 4564662047926710}
   - component: {fileID: 33248093169368166}
   - component: {fileID: 23305682221127650}
+  - component: {fileID: 8523499914179934437}
   m_Layer: 0
   m_Name: Shutter_4 (1)
   m_TagString: Untagged
@@ -1132,6 +1289,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8523499914179934437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492085962962124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1610463798641090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1312,7 @@ GameObject:
   - component: {fileID: 4905405582294874}
   - component: {fileID: 33894646757105866}
   - component: {fileID: 23341562644264472}
+  - component: {fileID: 295721771145357611}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1215,6 +1385,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &295721771145357611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610463798641090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1614255248419252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1408,7 @@ GameObject:
   - component: {fileID: 4409251984203462}
   - component: {fileID: 33401941681483378}
   - component: {fileID: 23119549744604430}
+  - component: {fileID: 8403026435887106596}
   m_Layer: 0
   m_Name: Airing_3
   m_TagString: Untagged
@@ -1298,6 +1481,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8403026435887106596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614255248419252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621777319192114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1504,7 @@ GameObject:
   - component: {fileID: 4417520368372710}
   - component: {fileID: 33191035554631732}
   - component: {fileID: 23033966327289822}
+  - component: {fileID: 8873412201283529627}
   m_Layer: 0
   m_Name: Shutter_4
   m_TagString: Untagged
@@ -1381,6 +1577,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8873412201283529627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621777319192114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1769249278176092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1600,7 @@ GameObject:
   - component: {fileID: 4599341549134728}
   - component: {fileID: 33458401865911854}
   - component: {fileID: 23628124031238832}
+  - component: {fileID: 7183311995944962852}
   m_Layer: 0
   m_Name: Stairs
   m_TagString: Untagged
@@ -1464,6 +1673,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7183311995944962852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769249278176092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1803637690442146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,6 +1696,7 @@ GameObject:
   - component: {fileID: 4599658687480798}
   - component: {fileID: 33275340216313814}
   - component: {fileID: 23488378765148554}
+  - component: {fileID: 6423693197209098709}
   m_Layer: 0
   m_Name: Fencing
   m_TagString: Untagged
@@ -1547,6 +1769,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6423693197209098709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803637690442146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1833884596797992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,6 +1792,7 @@ GameObject:
   - component: {fileID: 4641969652018432}
   - component: {fileID: 33373211575173162}
   - component: {fileID: 23850797216703820}
+  - component: {fileID: 4397239656793676502}
   m_Layer: 0
   m_Name: Doors
   m_TagString: Untagged
@@ -1630,6 +1865,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4397239656793676502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833884596797992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1851050550341234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1888,7 @@ GameObject:
   - component: {fileID: 4143091052019122}
   - component: {fileID: 33175606931386892}
   - component: {fileID: 23236452271354740}
+  - component: {fileID: 5084186576289318943}
   m_Layer: 0
   m_Name: Walls_2
   m_TagString: Untagged
@@ -1713,6 +1961,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5084186576289318943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851050550341234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858183689991978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1984,7 @@ GameObject:
   - component: {fileID: 4315828581804040}
   - component: {fileID: 33428860973349444}
   - component: {fileID: 23432432367079314}
+  - component: {fileID: 6162744767345992110}
   m_Layer: 0
   m_Name: Wall_clumb (2)
   m_TagString: Untagged
@@ -1796,6 +2057,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6162744767345992110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858183689991978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1950403762278626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +2080,7 @@ GameObject:
   - component: {fileID: 4805760843556412}
   - component: {fileID: 33747354367534556}
   - component: {fileID: 23327195222414612}
+  - component: {fileID: 7436995278041998925}
   m_Layer: 0
   m_Name: Wall_clumb (1)
   m_TagString: Untagged
@@ -1879,3 +2153,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7436995278041998925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950403762278626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
