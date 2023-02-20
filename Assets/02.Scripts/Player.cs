@@ -9,7 +9,10 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;
     Animator anim;
+   
     Vector3 moveVec;
+    float verticalMove;
+    float horizontalMove;
 
     void Awake()
     {
@@ -36,5 +39,4 @@ public class Player : MonoBehaviour
     {
         anim.SetFloat("Move", moveVec.sqrMagnitude);
     }
-
 }
