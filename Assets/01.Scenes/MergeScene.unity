@@ -53530,7 +53530,7 @@ MonoBehaviour:
   material:
   - {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
   - {fileID: 2100000, guid: da7272eb982174944905bc546feabe8c, type: 2}
-  makePrefabBtn: {fileID: 263658286}
+  makePrefabBtn: {fileID: 938068786}
   PosterRecognizeBtn: {fileID: 2054502493}
   debugText_Game: {fileID: 2012423981}
   arPlane: {fileID: 1525515748}

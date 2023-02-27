@@ -10,7 +10,6 @@ using UnityEngine.SceneManagement;
 public class ARManager2 : MonoBehaviour
 {
     public ARRaycastManager arRaycaster;
-    public GameObject spawnPrefab;
 
     private Animator animator;
     public GameObject character;
@@ -31,10 +30,11 @@ public class ARManager2 : MonoBehaviour
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
-
+        /*
         indicator = Instantiate(indicator);
         IndicatorTr = indicator.transform;
         indicator.SetActive(false);
+        */
     }
 
     void Update()
@@ -66,15 +66,17 @@ public class ARManager2 : MonoBehaviour
     #region 배치 미리보기 진입
     public void OnClickMakePrefabBtn()
     {
+        indicator = MyDataStruct.spawnedObject;
+        IndicatorTr = indicator.transform;
+
         indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
 
         isMakePrefabBtnClick = true;
         indicator.SetActive(true);
-
-        makePrefabBtn.onClick.RemoveAllListeners();
+ 
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
+        makePrefabBtn.onClick.RemoveAllListeners();
 
-        //PublicVars.spawnedObject.SetActive(true);
         //MyDataStruct.spawnedObject.SetActive(true);
     }
     #endregion
@@ -100,8 +102,8 @@ public class ARManager2 : MonoBehaviour
     {
         indicator.SetActive(false);
 
-        //spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
-        //PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = PublicVars.originMt;
+        //MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
+        MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = MyDataStruct.originMt;
 
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation).SetActive(true);
@@ -111,9 +113,9 @@ public class ARManager2 : MonoBehaviour
         // 프리팹 배치 시 파티클
         Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
 
-        makePrefabBtn.onClick.RemoveAllListeners();
-        makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
         isMakePrefabBtnClick = false;
+        makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
+        makePrefabBtn.onClick.RemoveAllListeners();     
 
         //Debug.Log("PlaceIndicatorPrefab 버튼으로 프리팹 배치 실행");
     }
