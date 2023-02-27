@@ -17,7 +17,7 @@ public class ARManager2 : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject TouchParticle;
 
-    public GameObject indicator;
+    private GameObject indicator;
     private Transform IndicatorTr;
     public Material[] material;
 
@@ -75,7 +75,7 @@ public class ARManager2 : MonoBehaviour
         indicator.SetActive(true);
  
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
-        makePrefabBtn.onClick.RemoveAllListeners();
+        makePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
 
         //MyDataStruct.spawnedObject.SetActive(true);
     }
@@ -106,6 +106,7 @@ public class ARManager2 : MonoBehaviour
         MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = MyDataStruct.originMt;
 
         Pose hitPose = indicatorHits[0].pose;
+
         Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation).SetActive(true);
         //Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation).SetActive(true); // 유니티 에디터 내 Play 테스트용
         //MyDataStruct.spawnedObject.SetActive(true);
@@ -114,8 +115,9 @@ public class ARManager2 : MonoBehaviour
         Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
 
         isMakePrefabBtnClick = false;
+
         makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
-        makePrefabBtn.onClick.RemoveAllListeners();     
+        makePrefabBtn.onClick.RemoveListener(PlaceIndicatorPrefab);     
 
         //Debug.Log("PlaceIndicatorPrefab 버튼으로 프리팹 배치 실행");
     }
