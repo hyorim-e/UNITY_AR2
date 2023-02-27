@@ -156,85 +156,173 @@ extern void InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF
 extern void InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13 (void);
 // 0x00000048 System.Void MyDataStruct::.ctor()
 extern void MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74 (void);
-// 0x00000049 System.Void Sound::Start()
+// 0x00000049 System.Void Player::Awake()
+extern void Player_Awake_m512A28E1559EB8AEEB2E1DB873F9F99FCC96BA67 (void);
+// 0x0000004A System.Void Player::FixedUpdate()
+extern void Player_FixedUpdate_mEDDB0539FCD5145298CB87D4592DFFF98503AF9B (void);
+// 0x0000004B System.Void Player::LateUpdate()
+extern void Player_LateUpdate_mECF802BE10DFD26BE9C6CFB651634E76316955B3 (void);
+// 0x0000004C System.Void Player::.ctor()
+extern void Player__ctor_m0A83E0706592FC871B0CF188B37AFC6649F3D85D (void);
+// 0x0000004D System.Void SettingsMenu::Start()
+extern void SettingsMenu_Start_mE2F6C7DC6F8D450A9CB8F4DB9E432132B7CD8E5A (void);
+// 0x0000004E System.Void SettingsMenu::ResetPositions()
+extern void SettingsMenu_ResetPositions_m038B8A4DA08591A20B6297930E27D92F20394C87 (void);
+// 0x0000004F System.Void SettingsMenu::ToggleMenu()
+extern void SettingsMenu_ToggleMenu_m33644A4C4599AA6D0D6587507F53B04684C33FF8 (void);
+// 0x00000050 System.Void SettingsMenu::OnItemClick(System.Int32)
+extern void SettingsMenu_OnItemClick_m2BBBF2C7D23C157950B0125D71E5D8CB24BA7D7E (void);
+// 0x00000051 System.Void SettingsMenu::OnDestroy()
+extern void SettingsMenu_OnDestroy_m4A6204AE5168470B7D1B2428910441A81D11A86E (void);
+// 0x00000052 System.Void SettingsMenu::.ctor()
+extern void SettingsMenu__ctor_mAB642D09DCFB585F2998C81DE33DD08C5C420E1C (void);
+// 0x00000053 System.Void SettingsMenuItem::Awake()
+extern void SettingsMenuItem_Awake_m52CDBF533BCDB41F9557AD0108B658024C8AA630 (void);
+// 0x00000054 System.Void SettingsMenuItem::OnItemClick()
+extern void SettingsMenuItem_OnItemClick_mD5E59AF59B0A56D8053B7CF68C06965265E3A041 (void);
+// 0x00000055 System.Void SettingsMenuItem::OnDestroy()
+extern void SettingsMenuItem_OnDestroy_m55C22A1B607F76172581B71298D03A592BE89B9D (void);
+// 0x00000056 System.Void SettingsMenuItem::.ctor()
+extern void SettingsMenuItem__ctor_mD90BCE81C6344E7D3509F95342B031350E0397FF (void);
+// 0x00000057 System.Void Sound::Start()
 extern void Sound_Start_m47CF0F83A25EB683839F81138F490ED199A39BD5 (void);
-// 0x0000004A System.Void Sound::footstepSound()
+// 0x00000058 System.Void Sound::footstepSound()
 extern void Sound_footstepSound_m1136146D4C581FF19CB77CA2A959D917A6A32306 (void);
-// 0x0000004B System.Void Sound::buttonClickSound()
+// 0x00000059 System.Void Sound::buttonClickSound()
 extern void Sound_buttonClickSound_mE4A33F117609947D77BE0BC3E95BE818A1A4BE76 (void);
-// 0x0000004C System.Void Sound::startbuttonClickSound()
+// 0x0000005A System.Void Sound::startbuttonClickSound()
 extern void Sound_startbuttonClickSound_mDAAC36A938A272828B6EE731B8411CC53392EE9C (void);
-// 0x0000004D System.Void Sound::.ctor()
+// 0x0000005B System.Void Sound::.ctor()
 extern void Sound__ctor_m5DD7C9F71B98D5670BBDD05F6D6FCDF43DC9EA8F (void);
-// 0x0000004E System.Void StartSceneManager::OnClickButton()
+// 0x0000005C System.Void StartSceneManager::OnClickButton()
 extern void StartSceneManager_OnClickButton_m81B47780384CBDAC87B692A160391F3FD87EE184 (void);
-// 0x0000004F System.Void StartSceneManager::.ctor()
+// 0x0000005D System.Void StartSceneManager::.ctor()
 extern void StartSceneManager__ctor_m01AA0645159EBC37096F759D7BB52361B1920DA5 (void);
-// 0x00000050 System.Void TabPanel::ClickTab(System.Int32)
+// 0x0000005E System.Void TabPanel::ClickTab(System.Int32)
 extern void TabPanel_ClickTab_m429683D35F4749A3F8E68FAB8543A75574857382 (void);
-// 0x00000051 System.Void TabPanel::.ctor()
+// 0x0000005F System.Void TabPanel::.ctor()
 extern void TabPanel__ctor_m0BA830B833AA1D4F208100B802750D7AE1DCD800 (void);
-// 0x00000052 System.Void WeatherChange::Start()
+// 0x00000060 System.Void WeatherChange::Start()
 extern void WeatherChange_Start_mDEC4C8575C3C13B6AA1D6CCEF4B009B96D2251F7 (void);
-// 0x00000053 System.Void WeatherChange::ChangeWeather(WeatherChange/Weather)
+// 0x00000061 System.Void WeatherChange::ChangeWeather(WeatherChange/Weather)
 extern void WeatherChange_ChangeWeather_m7E6D21476AAEC12ABC4A418F1CAFD067F4BB3AFF (void);
-// 0x00000054 System.Void WeatherChange::Update()
+// 0x00000062 System.Void WeatherChange::Update()
 extern void WeatherChange_Update_m68628BC4F9C5F781CF6412CD8F86A77E8212394E (void);
-// 0x00000055 System.Void WeatherChange::.ctor()
+// 0x00000063 System.Void WeatherChange::.ctor()
 extern void WeatherChange__ctor_mE5AE59DCDDE8E3687FD3FB08CD6DA359849C45B9 (void);
-// 0x00000056 System.Void Animation_Test::Start()
+// 0x00000064 System.Void Animation_Test::Start()
 extern void Animation_Test_Start_m54DA7CF05337871959835B7E5DBAD78A8A7276A5 (void);
-// 0x00000057 System.Void Animation_Test::IdleAni()
+// 0x00000065 System.Void Animation_Test::IdleAni()
 extern void Animation_Test_IdleAni_mDC3778E36E40DC1A023C81AD26A26459BC0A0C13 (void);
-// 0x00000058 System.Void Animation_Test::RunAni()
+// 0x00000066 System.Void Animation_Test::RunAni()
 extern void Animation_Test_RunAni_m03DF663FEAB3171BEDEDB1D9D053D08FD8A67EBA (void);
-// 0x00000059 System.Void Animation_Test::AttackAni()
+// 0x00000067 System.Void Animation_Test::AttackAni()
 extern void Animation_Test_AttackAni_m511A0C3910223DFA088BB2A2C11722CDD3A30167 (void);
-// 0x0000005A System.Void Animation_Test::DamageAni()
+// 0x00000068 System.Void Animation_Test::DamageAni()
 extern void Animation_Test_DamageAni_m447AC63C5AD5A743853BE49EC45875884ADB145C (void);
-// 0x0000005B System.Void Animation_Test::DeathAni()
+// 0x00000069 System.Void Animation_Test::DeathAni()
 extern void Animation_Test_DeathAni_mAAD34C22006C7924CA187F8526AC248A1848DE5C (void);
-// 0x0000005C System.Void Animation_Test::.ctor()
+// 0x0000006A System.Void Animation_Test::.ctor()
 extern void Animation_Test__ctor_mECC11A2610DD4D7B609F4A349EF3D97B1C924F48 (void);
-// 0x0000005D System.Void scriptTexttest::Start()
+// 0x0000006B System.Single Joystick::get_Horizontal()
+extern void Joystick_get_Horizontal_m78CF4472B86063E54254AC8AE0A52126E4008AFA (void);
+// 0x0000006C System.Single Joystick::get_Vertical()
+extern void Joystick_get_Vertical_mA2B0917896CF9CE47A6D342D1734E43441C3D4BE (void);
+// 0x0000006D UnityEngine.Vector2 Joystick::get_Direction()
+extern void Joystick_get_Direction_m52502695D42BDAB6075089BDE442ABE72EAC81EC (void);
+// 0x0000006E System.Single Joystick::get_HandleRange()
+extern void Joystick_get_HandleRange_mB38F0D3B6ADE2D1557D7A3D6759C469F17509D77 (void);
+// 0x0000006F System.Void Joystick::set_HandleRange(System.Single)
+extern void Joystick_set_HandleRange_m686B579A1F02EFCD4878BEA27EA606FC23CD2505 (void);
+// 0x00000070 System.Single Joystick::get_DeadZone()
+extern void Joystick_get_DeadZone_mCE52B635A8CF24F6DD867C14E34094515DE6AEFC (void);
+// 0x00000071 System.Void Joystick::set_DeadZone(System.Single)
+extern void Joystick_set_DeadZone_mD5699A14E5284026F303C8AF8D3457DFA9920F19 (void);
+// 0x00000072 AxisOptions Joystick::get_AxisOptions()
+extern void Joystick_get_AxisOptions_mA74F5FEE31C158E5179F0B108272ED28A661E388 (void);
+// 0x00000073 System.Void Joystick::set_AxisOptions(AxisOptions)
+extern void Joystick_set_AxisOptions_m541692280806ECF76F7C2C710973AF9D8AB334C6 (void);
+// 0x00000074 System.Boolean Joystick::get_SnapX()
+extern void Joystick_get_SnapX_m51CAFDCC399606BA82986908700AAA45668A0F40 (void);
+// 0x00000075 System.Void Joystick::set_SnapX(System.Boolean)
+extern void Joystick_set_SnapX_mB2090989F6AC933B30823751D74E799FC8D9B87A (void);
+// 0x00000076 System.Boolean Joystick::get_SnapY()
+extern void Joystick_get_SnapY_m35AFC1AD1DF5EDE5FCE8BAFEBE91AD51D7451613 (void);
+// 0x00000077 System.Void Joystick::set_SnapY(System.Boolean)
+extern void Joystick_set_SnapY_m7419D5EB972285A9E5E446CD668BEC266D11CD86 (void);
+// 0x00000078 System.Void Joystick::Start()
+extern void Joystick_Start_m5E46F090910AB69BE9838BFDB91A4F6E6934480C (void);
+// 0x00000079 System.Void Joystick::OnPointerDown(UnityEngine.EventSystems.PointerEventData)
+extern void Joystick_OnPointerDown_mF176903D532D9129C90BBBD00FD7714BA3A0D8E6 (void);
+// 0x0000007A System.Void Joystick::OnDrag(UnityEngine.EventSystems.PointerEventData)
+extern void Joystick_OnDrag_m39E69636AEDC0E471EAD1371A99F4694ECDBA1E9 (void);
+// 0x0000007B System.Void Joystick::HandleInput(System.Single,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Camera)
+extern void Joystick_HandleInput_m15A4E86369A1AF0A4A5727DEC0FD93212A99901C (void);
+// 0x0000007C System.Void Joystick::FormatInput()
+extern void Joystick_FormatInput_mDDF7AF40138CF227F0106811C8749180FBF45342 (void);
+// 0x0000007D System.Single Joystick::SnapFloat(System.Single,AxisOptions)
+extern void Joystick_SnapFloat_mADE5AF21C67A2298A08CD12F9A8ED73AFA866987 (void);
+// 0x0000007E System.Void Joystick::OnPointerUp(UnityEngine.EventSystems.PointerEventData)
+extern void Joystick_OnPointerUp_mEDED4DA77D954CBAC11CF82B57AB7A4DBFCDE22C (void);
+// 0x0000007F UnityEngine.Vector2 Joystick::ScreenPointToAnchoredPosition(UnityEngine.Vector2)
+extern void Joystick_ScreenPointToAnchoredPosition_mC1EB7560E844BF682674E4E7BD640604BC12B024 (void);
+// 0x00000080 System.Void Joystick::.ctor()
+extern void Joystick__ctor_m9BBE494CA4714F24227F33CB54C10B4DA78BF06B (void);
+// 0x00000081 System.Single VariableJoystick::get_MoveThreshold()
+extern void VariableJoystick_get_MoveThreshold_m8C9D3A63DB3B6CF1F0139C3504EC2E7AC4E7CF99 (void);
+// 0x00000082 System.Void VariableJoystick::set_MoveThreshold(System.Single)
+extern void VariableJoystick_set_MoveThreshold_m23DC4187B405EB690D297379E2113568B40C705A (void);
+// 0x00000083 System.Void VariableJoystick::SetMode(JoystickType)
+extern void VariableJoystick_SetMode_mB9D0B9B6E2E4F431E36AED6F5AC989305ADDB1EE (void);
+// 0x00000084 System.Void VariableJoystick::Start()
+extern void VariableJoystick_Start_m21743760641EA0317ACCD95949B99825446FE74D (void);
+// 0x00000085 System.Void VariableJoystick::OnPointerDown(UnityEngine.EventSystems.PointerEventData)
+extern void VariableJoystick_OnPointerDown_m8ABE5C8EFBC8DB3A2EE135FFF3C0F67C533AF4B5 (void);
+// 0x00000086 System.Void VariableJoystick::OnPointerUp(UnityEngine.EventSystems.PointerEventData)
+extern void VariableJoystick_OnPointerUp_m65296D82A6C2E1BDC2D622B9C922FAE8E4544526 (void);
+// 0x00000087 System.Void VariableJoystick::HandleInput(System.Single,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Camera)
+extern void VariableJoystick_HandleInput_mD1BCF9A068737A9C057EE8CEB7E6DEB682CC03AB (void);
+// 0x00000088 System.Void VariableJoystick::.ctor()
+extern void VariableJoystick__ctor_m6C7B41973BE20A94F16DB5DCC9AA805C5D8DF852 (void);
+// 0x00000089 System.Void scriptTexttest::Start()
 extern void scriptTexttest_Start_m26DFD38940EA1BD3041A4A5C6EBA6F2EF7E86341 (void);
-// 0x0000005E System.Void scriptTexttest::.ctor()
+// 0x0000008A System.Void scriptTexttest::.ctor()
 extern void scriptTexttest__ctor_m46D5CE5D84ACCEC2F20C86B79D63AD3EA9522345 (void);
-// 0x0000005F System.Void Move::Start()
+// 0x0000008B System.Void Move::Start()
 extern void Move_Start_mE30888A3AEA16959603B218AE8DF258387F55F8E (void);
-// 0x00000060 System.Void Move::Update()
+// 0x0000008C System.Void Move::Update()
 extern void Move_Update_mA8230EF12ABFDB1275E464746004DD9E8DCBB444 (void);
-// 0x00000061 System.Void Move::.ctor()
+// 0x0000008D System.Void Move::.ctor()
 extern void Move__ctor_mB2C06FD84ADF53D6C062FD9230344443C0ACF7A1 (void);
-// 0x00000062 System.Void Readme::.ctor()
+// 0x0000008E System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x00000063 System.Void Readme/Section::.ctor()
+// 0x0000008F System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-// 0x00000064 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
+// 0x00000090 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
 extern void AnimatorParamatersChange_Start_m871E4A208B70403948907DD6EFF16B5C89AF6558 (void);
-// 0x00000065 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
+// 0x00000091 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
 extern void AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD (void);
-// 0x00000066 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
+// 0x00000092 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
 extern void AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD (void);
-// 0x00000067 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
+// 0x00000093 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
 extern void AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF (void);
-// 0x00000068 System.Void BLINK.AnimationDemo::Update()
+// 0x00000094 System.Void BLINK.AnimationDemo::Update()
 extern void AnimationDemo_Update_mA445BB743156E99BEAA11699E65E2A13EF029836 (void);
-// 0x00000069 System.Void BLINK.AnimationDemo::NextAnimation()
+// 0x00000095 System.Void BLINK.AnimationDemo::NextAnimation()
 extern void AnimationDemo_NextAnimation_m776D26825E68D396CC422DBBF93D324D2C32E532 (void);
-// 0x0000006A System.Void BLINK.AnimationDemo::PreviousAnimation()
+// 0x00000096 System.Void BLINK.AnimationDemo::PreviousAnimation()
 extern void AnimationDemo_PreviousAnimation_mBBC03BE9A22B75E03A03F47A9D5E5DFB4B63E708 (void);
-// 0x0000006B System.Void BLINK.AnimationDemo::ReplayAnimation()
+// 0x00000097 System.Void BLINK.AnimationDemo::ReplayAnimation()
 extern void AnimationDemo_ReplayAnimation_m60A6219B2AE011FCB433C72A2BB2C5FF08335DE8 (void);
-// 0x0000006C System.Void BLINK.AnimationDemo::ResetAllBool()
+// 0x00000098 System.Void BLINK.AnimationDemo::ResetAllBool()
 extern void AnimationDemo_ResetAllBool_m93D4CB5475DE208FDEC7FD6A78480FB81921280C (void);
-// 0x0000006D System.Void BLINK.AnimationDemo::PlayAnimation()
+// 0x00000099 System.Void BLINK.AnimationDemo::PlayAnimation()
 extern void AnimationDemo_PlayAnimation_m024CB135C01DCDE60EEBF515ECC931FE0F6678FE (void);
-// 0x0000006E System.Void BLINK.AnimationDemo::.ctor()
+// 0x0000009A System.Void BLINK.AnimationDemo::.ctor()
 extern void AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C (void);
-// 0x0000006F System.Void BLINK.AnimationDemo/AnimationEntry::.ctor()
+// 0x0000009B System.Void BLINK.AnimationDemo/AnimationEntry::.ctor()
 extern void AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4 (void);
-static Il2CppMethodPointer s_methodPointers[111] = 
+static Il2CppMethodPointer s_methodPointers[155] = 
 {
 	ARManager_PlacePrefab_m3F2427ACE6FF951D16CFD323DDE421B01F704F23,
 	ARManager_Awake_m7A4306FE51EC99D2434E368F8A2B57A11CDEF073,
@@ -308,6 +396,20 @@ static Il2CppMethodPointer s_methodPointers[111] =
 	InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8,
 	InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13,
 	MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74,
+	Player_Awake_m512A28E1559EB8AEEB2E1DB873F9F99FCC96BA67,
+	Player_FixedUpdate_mEDDB0539FCD5145298CB87D4592DFFF98503AF9B,
+	Player_LateUpdate_mECF802BE10DFD26BE9C6CFB651634E76316955B3,
+	Player__ctor_m0A83E0706592FC871B0CF188B37AFC6649F3D85D,
+	SettingsMenu_Start_mE2F6C7DC6F8D450A9CB8F4DB9E432132B7CD8E5A,
+	SettingsMenu_ResetPositions_m038B8A4DA08591A20B6297930E27D92F20394C87,
+	SettingsMenu_ToggleMenu_m33644A4C4599AA6D0D6587507F53B04684C33FF8,
+	SettingsMenu_OnItemClick_m2BBBF2C7D23C157950B0125D71E5D8CB24BA7D7E,
+	SettingsMenu_OnDestroy_m4A6204AE5168470B7D1B2428910441A81D11A86E,
+	SettingsMenu__ctor_mAB642D09DCFB585F2998C81DE33DD08C5C420E1C,
+	SettingsMenuItem_Awake_m52CDBF533BCDB41F9557AD0108B658024C8AA630,
+	SettingsMenuItem_OnItemClick_mD5E59AF59B0A56D8053B7CF68C06965265E3A041,
+	SettingsMenuItem_OnDestroy_m55C22A1B607F76172581B71298D03A592BE89B9D,
+	SettingsMenuItem__ctor_mD90BCE81C6344E7D3509F95342B031350E0397FF,
 	Sound_Start_m47CF0F83A25EB683839F81138F490ED199A39BD5,
 	Sound_footstepSound_m1136146D4C581FF19CB77CA2A959D917A6A32306,
 	Sound_buttonClickSound_mE4A33F117609947D77BE0BC3E95BE818A1A4BE76,
@@ -328,6 +430,36 @@ static Il2CppMethodPointer s_methodPointers[111] =
 	Animation_Test_DamageAni_m447AC63C5AD5A743853BE49EC45875884ADB145C,
 	Animation_Test_DeathAni_mAAD34C22006C7924CA187F8526AC248A1848DE5C,
 	Animation_Test__ctor_mECC11A2610DD4D7B609F4A349EF3D97B1C924F48,
+	Joystick_get_Horizontal_m78CF4472B86063E54254AC8AE0A52126E4008AFA,
+	Joystick_get_Vertical_mA2B0917896CF9CE47A6D342D1734E43441C3D4BE,
+	Joystick_get_Direction_m52502695D42BDAB6075089BDE442ABE72EAC81EC,
+	Joystick_get_HandleRange_mB38F0D3B6ADE2D1557D7A3D6759C469F17509D77,
+	Joystick_set_HandleRange_m686B579A1F02EFCD4878BEA27EA606FC23CD2505,
+	Joystick_get_DeadZone_mCE52B635A8CF24F6DD867C14E34094515DE6AEFC,
+	Joystick_set_DeadZone_mD5699A14E5284026F303C8AF8D3457DFA9920F19,
+	Joystick_get_AxisOptions_mA74F5FEE31C158E5179F0B108272ED28A661E388,
+	Joystick_set_AxisOptions_m541692280806ECF76F7C2C710973AF9D8AB334C6,
+	Joystick_get_SnapX_m51CAFDCC399606BA82986908700AAA45668A0F40,
+	Joystick_set_SnapX_mB2090989F6AC933B30823751D74E799FC8D9B87A,
+	Joystick_get_SnapY_m35AFC1AD1DF5EDE5FCE8BAFEBE91AD51D7451613,
+	Joystick_set_SnapY_m7419D5EB972285A9E5E446CD668BEC266D11CD86,
+	Joystick_Start_m5E46F090910AB69BE9838BFDB91A4F6E6934480C,
+	Joystick_OnPointerDown_mF176903D532D9129C90BBBD00FD7714BA3A0D8E6,
+	Joystick_OnDrag_m39E69636AEDC0E471EAD1371A99F4694ECDBA1E9,
+	Joystick_HandleInput_m15A4E86369A1AF0A4A5727DEC0FD93212A99901C,
+	Joystick_FormatInput_mDDF7AF40138CF227F0106811C8749180FBF45342,
+	Joystick_SnapFloat_mADE5AF21C67A2298A08CD12F9A8ED73AFA866987,
+	Joystick_OnPointerUp_mEDED4DA77D954CBAC11CF82B57AB7A4DBFCDE22C,
+	Joystick_ScreenPointToAnchoredPosition_mC1EB7560E844BF682674E4E7BD640604BC12B024,
+	Joystick__ctor_m9BBE494CA4714F24227F33CB54C10B4DA78BF06B,
+	VariableJoystick_get_MoveThreshold_m8C9D3A63DB3B6CF1F0139C3504EC2E7AC4E7CF99,
+	VariableJoystick_set_MoveThreshold_m23DC4187B405EB690D297379E2113568B40C705A,
+	VariableJoystick_SetMode_mB9D0B9B6E2E4F431E36AED6F5AC989305ADDB1EE,
+	VariableJoystick_Start_m21743760641EA0317ACCD95949B99825446FE74D,
+	VariableJoystick_OnPointerDown_m8ABE5C8EFBC8DB3A2EE135FFF3C0F67C533AF4B5,
+	VariableJoystick_OnPointerUp_m65296D82A6C2E1BDC2D622B9C922FAE8E4544526,
+	VariableJoystick_HandleInput_mD1BCF9A068737A9C057EE8CEB7E6DEB682CC03AB,
+	VariableJoystick__ctor_m6C7B41973BE20A94F16DB5DCC9AA805C5D8DF852,
 	scriptTexttest_Start_m26DFD38940EA1BD3041A4A5C6EBA6F2EF7E86341,
 	scriptTexttest__ctor_m46D5CE5D84ACCEC2F20C86B79D63AD3EA9522345,
 	Move_Start_mE30888A3AEA16959603B218AE8DF258387F55F8E,
@@ -348,125 +480,169 @@ static Il2CppMethodPointer s_methodPointers[111] =
 	AnimationDemo__ctor_mD2740D09B9B011AE5B51F505F7D3FC5782B2272C,
 	AnimationEntry__ctor_m90069274C1557D02C5922A0A14DF0EC5CC3C2FF4,
 };
-static const int32_t s_InvokerIndices[111] = 
+static const int32_t s_InvokerIndices[155] = 
 {
-	8265,
-	8265,
-	8265,
-	6530,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	6488,
-	8265,
-	8265,
-	8265,
-	8265,
-	6771,
-	6722,
-	8265,
-	8265,
-	8265,
-	8265,
-	6530,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	6488,
-	8265,
-	8265,
-	8265,
-	8265,
-	6771,
-	6722,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8125,
-	8265,
-	6614,
-	8265,
-	8008,
-	8125,
-	8265,
-	8125,
-	8265,
-	8265,
-	8265,
-	6510,
-	6650,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	6510,
-	6650,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	6614,
-	8265,
-	8265,
-	6614,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
-	8265,
+	8432,
+	8432,
+	8432,
+	6693,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	6651,
+	8432,
+	8432,
+	8432,
+	8432,
+	6936,
+	6887,
+	8432,
+	8432,
+	8432,
+	8432,
+	6693,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	6651,
+	8432,
+	8432,
+	8432,
+	8432,
+	6936,
+	6887,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8292,
+	8432,
+	6779,
+	8432,
+	8173,
+	8292,
+	8432,
+	8292,
+	8432,
+	8432,
+	8432,
+	6673,
+	6815,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	6673,
+	6815,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	6779,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	6779,
+	8432,
+	8432,
+	6779,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8369,
+	8369,
+	8420,
+	8369,
+	6887,
+	8369,
+	6887,
+	8257,
+	6779,
+	8173,
+	6693,
+	8173,
+	6693,
+	8432,
+	6815,
+	6815,
+	1557,
+	8432,
+	3145,
+	6815,
+	6298,
+	8432,
+	8369,
+	6887,
+	6779,
+	8432,
+	6815,
+	6815,
+	1557,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
+	8432,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	111,
+	155,
 	s_methodPointers,
 	0,
 	NULL,
