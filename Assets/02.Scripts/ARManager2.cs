@@ -46,6 +46,8 @@ public class ARManager2 : MonoBehaviour
         }
         PlayerMove();
 
+        debugText_Game.text = MyDataStruct.spawnedObject_Indicator.name;
+
         //debugText_Game.text = PublicVars.spawnedObject.name;
         //debugText_Game.text = MyDataStruct.spawnedObject.name;
         //Debug.Log(PublicVars.spawnedObject);
@@ -66,13 +68,12 @@ public class ARManager2 : MonoBehaviour
     #region 배치 미리보기 진입
     public void OnClickMakePrefabBtn()
     {
-        indicator = MyDataStruct.spawnedObject;
-        IndicatorTr = indicator.transform;
-
-        indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
+        //indicator = MyDataStruct.spawnedObject_Indicator;
+        //IndicatorTr = indicator.transform;
 
         isMakePrefabBtnClick = true;
-        indicator.SetActive(true);
+        MyDataStruct.spawnedObject_Indicator.SetActive(true);
+        //indicator.SetActive(true);
  
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
         makePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
@@ -91,8 +92,10 @@ public class ARManager2 : MonoBehaviour
 
         if (indicatorHits.Count > 0)
         {
-            IndicatorTr.position = indicatorHits[0].pose.position;
-            IndicatorTr.rotation = indicatorHits[0].pose.rotation;
+            MyDataStruct.spawnedObject_Indicator.transform.position = indicatorHits[0].pose.position;
+            MyDataStruct.spawnedObject_Indicator.transform.rotation = indicatorHits[0].pose.rotation;
+            //IndicatorTr.position = indicatorHits[0].pose.position;
+            //IndicatorTr.rotation = indicatorHits[0].pose.rotation;
         }
     }
     #endregion
@@ -100,10 +103,7 @@ public class ARManager2 : MonoBehaviour
     #region 버튼으로 프리팹 배치
     public void PlaceIndicatorPrefab()
     {
-        indicator.SetActive(false);
-
-        //MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
-        MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = MyDataStruct.originMt;
+        MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
         Pose hitPose = indicatorHits[0].pose;
 
