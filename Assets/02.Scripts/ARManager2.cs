@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class ARManager2 : MonoBehaviour
 {
     public ARRaycastManager arRaycaster;
+    public GameObject spawnPrefab;
 
     private Animator animator;
     public GameObject character;
@@ -17,7 +18,7 @@ public class ARManager2 : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject TouchParticle;
 
-    private GameObject indicator;
+    public GameObject indicator;
     private Transform IndicatorTr;
     public Material[] material;
 
@@ -31,9 +32,9 @@ public class ARManager2 : MonoBehaviour
     {
         animator = character.GetComponent<Animator>();
 
-        //indicator = Instantiate(indicator);
-        //IndicatorTr = indicator.transform;
-        //indicator.SetActive(false);
+        indicator = Instantiate(indicator);
+        IndicatorTr = indicator.transform;
+        indicator.SetActive(false);
     }
 
     void Update()
@@ -65,17 +66,15 @@ public class ARManager2 : MonoBehaviour
     #region 배치 미리보기 진입
     public void OnClickMakePrefabBtn()
     {
-        indicator = MyDataStruct.spawnedObject;
-        IndicatorTr = indicator.transform;
-
         indicator.GetComponentInChildren<Renderer>().sharedMaterial = material[0];
 
         isMakePrefabBtnClick = true;
         indicator.SetActive(true);
 
+        makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
-        makePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
 
+        //PublicVars.spawnedObject.SetActive(true);
         //MyDataStruct.spawnedObject.SetActive(true);
     }
     #endregion
@@ -101,8 +100,8 @@ public class ARManager2 : MonoBehaviour
     {
         indicator.SetActive(false);
 
-        //MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
-        MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = MyDataStruct.originMt;
+        //spawnPrefab.GetComponentInChildren<Renderer>().sharedMaterial = material[1];
+        //PublicVars.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial = PublicVars.originMt;
 
         Pose hitPose = indicatorHits[0].pose;
         Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation).SetActive(true);
@@ -112,9 +111,9 @@ public class ARManager2 : MonoBehaviour
         // 프리팹 배치 시 파티클
         Destroy(Instantiate(TouchParticle, hitPose.position, hitPose.rotation), 3);
 
-        isMakePrefabBtnClick = false;
+        makePrefabBtn.onClick.RemoveAllListeners();
         makePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
-        makePrefabBtn.onClick.RemoveListener(PlaceIndicatorPrefab);
+        isMakePrefabBtnClick = false;
 
         //Debug.Log("PlaceIndicatorPrefab 버튼으로 프리팹 배치 실행");
     }
