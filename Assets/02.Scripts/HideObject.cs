@@ -16,7 +16,7 @@ IEnumerator HideRendererCo()
     {
         while (true)
         {
-            RR.enabled = (PublicVars.playerPos - transform.position).sqrMagnitude < 2116;
+            RR.enabled = (PlayerPos.playerPos - transform.position).sqrMagnitude < 2116;
             yield return Delay04;
         }
     }
