@@ -102,16 +102,17 @@ public class SettingsMenu : MonoBehaviour
         switch (index)
         {
             case 0: // first button
-                Debug.Log("Music");
+                Debug.Log("컬렉션북");
                 break;
 
             case 1: // second button
-                Debug.Log("Sound");
+                Debug.Log("보관함");
                 break;
-
+        
             case 2: // third button
-                Debug.Log("Vibration");
+                Debug.Log("설정");
                 break;
+        
         }
     }
 

@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 89207018}
   - component: {fileID: 89207017}
-  - component: {fileID: 89207016}
   m_Layer: 0
   m_Name: buttonclick
   m_TagString: Untagged
@@ -141,21 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &89207016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89207015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 953eb01cbf3cf7543ab868b8a74e2e75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  footstepsSound: {fileID: 0}
-  buttonSound: {fileID: 0}
-  startbuttonSound: {fileID: 0}
 --- !u!82 &89207017
 AudioSource:
   m_ObjectHideFlags: 0
@@ -938,9 +922,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 89207016}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: startbuttonClickSound
+      - m_Target: {fileID: 89207017}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

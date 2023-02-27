@@ -18,6 +18,8 @@ public class BtnManager : MonoBehaviour
     public GameObject plane;
     public GameObject gameDeco;
 
+    public GameObject weather;
+
     public void OnClickRecogBtn()
     {
         ARManager.SetActive(false);
@@ -44,5 +46,10 @@ public class BtnManager : MonoBehaviour
 
         plane.SetActive(true);
         gameDeco.SetActive(true);
+    }
+
+    public void OnClickPlaceButton()
+    {
+        weather.SetActive(true);
     }
 }

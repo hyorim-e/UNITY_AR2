@@ -4,30 +4,19 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public AudioSource footstepsSound;
-    public AudioSource buttonSound;
-    public AudioSource startbuttonSound;
+    public AudioSource BGM;
+    public AudioSource ButtonClick;
+    public AudioSource FootSound;
 
-    void Start()
+    public void BGMVolume(float volume)
     {
-        footstepsSound = GetComponent<AudioSource>();
-        buttonSound = GetComponent<AudioSource>();
-        startbuttonSound = GetComponent<AudioSource>();
+        BGM.volume = volume;
     }
 
-    public void footstepSound()
+    public void OnSoundEffect(float volume)
     {
-        footstepsSound.Play();
-    }
-
-    public void buttonClickSound()
-    {
-        buttonSound.Play();
-    }
-
-    public void startbuttonClickSound()
-    {
-        startbuttonSound.Play();
+        ButtonClick.volume = volume;
+        FootSound.volume = volume;
     }
 }
 
