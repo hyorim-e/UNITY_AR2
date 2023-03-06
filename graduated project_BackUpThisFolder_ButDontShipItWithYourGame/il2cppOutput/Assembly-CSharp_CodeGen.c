@@ -144,26 +144,26 @@ extern void ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB0
 extern void ImageTracker2_UpdateSpawnObject_mDF6CB01557FC9AE16E408B131CCBEC31F2D82E13 (void);
 // 0x00000042 System.Void ImageTracker2::RemoveSpawnedObject()
 extern void ImageTracker2_RemoveSpawnedObject_mCEA23BE197377194B33EE9CB4BBC8C8D8AE44C7D (void);
-// 0x00000043 System.Void ImageTracker2::.ctor()
+// 0x00000043 System.Void ImageTracker2::SetIndicator()
+extern void ImageTracker2_SetIndicator_m9BC4DE11B2B73E6D9D956E51012BC5644E1FD9D7 (void);
+// 0x00000044 System.Void ImageTracker2::.ctor()
 extern void ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1 (void);
-// 0x00000044 System.Void InventoryManager::Awake()
+// 0x00000045 System.Void InventoryManager::Awake()
 extern void InventoryManager_Awake_mC4DEEDBBD790D4BB57FD3D2F0A106076EB0E989F (void);
-// 0x00000045 System.Void InventoryManager::Start()
+// 0x00000046 System.Void InventoryManager::Start()
 extern void InventoryManager_Start_m5B5EBEAFB2E80EFF500B0478AB2A86BA992B40A4 (void);
-// 0x00000046 System.Void InventoryManager::Update()
+// 0x00000047 System.Void InventoryManager::Update()
 extern void InventoryManager_Update_m948A3500AB20B1B48F7632C3889A489326C49871 (void);
-// 0x00000047 System.Void InventoryManager::InventoryUpdate()
+// 0x00000048 System.Void InventoryManager::InventoryUpdate()
 extern void InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8 (void);
-// 0x00000048 System.Void InventoryManager::.ctor()
+// 0x00000049 System.Void InventoryManager::.ctor()
 extern void InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13 (void);
-// 0x00000049 System.Void MyDataStruct::.ctor()
+// 0x0000004A System.Void MyDataStruct::.ctor()
 extern void MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74 (void);
-// 0x0000004A System.Void Player::Awake()
+// 0x0000004B System.Void Player::Awake()
 extern void Player_Awake_m512A28E1559EB8AEEB2E1DB873F9F99FCC96BA67 (void);
-// 0x0000004B System.Void Player::FixedUpdate()
+// 0x0000004C System.Void Player::FixedUpdate()
 extern void Player_FixedUpdate_mEDDB0539FCD5145298CB87D4592DFFF98503AF9B (void);
-// 0x0000004C System.Void Player::LateUpdate()
-extern void Player_LateUpdate_mECF802BE10DFD26BE9C6CFB651634E76316955B3 (void);
 // 0x0000004D System.Void Player::.ctor()
 extern void Player__ctor_m0A83E0706592FC871B0CF188B37AFC6649F3D85D (void);
 // 0x0000004E System.Void SettingsMenu::Start()
@@ -388,6 +388,7 @@ static Il2CppMethodPointer s_methodPointers[154] =
 	ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB08465F362B,
 	ImageTracker2_UpdateSpawnObject_mDF6CB01557FC9AE16E408B131CCBEC31F2D82E13,
 	ImageTracker2_RemoveSpawnedObject_mCEA23BE197377194B33EE9CB4BBC8C8D8AE44C7D,
+	ImageTracker2_SetIndicator_m9BC4DE11B2B73E6D9D956E51012BC5644E1FD9D7,
 	ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1,
 	InventoryManager_Awake_mC4DEEDBBD790D4BB57FD3D2F0A106076EB0E989F,
 	InventoryManager_Start_m5B5EBEAFB2E80EFF500B0478AB2A86BA992B40A4,
@@ -397,7 +398,6 @@ static Il2CppMethodPointer s_methodPointers[154] =
 	MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74,
 	Player_Awake_m512A28E1559EB8AEEB2E1DB873F9F99FCC96BA67,
 	Player_FixedUpdate_mEDDB0539FCD5145298CB87D4592DFFF98503AF9B,
-	Player_LateUpdate_mECF802BE10DFD26BE9C6CFB651634E76316955B3,
 	Player__ctor_m0A83E0706592FC871B0CF188B37AFC6649F3D85D,
 	SettingsMenu_Start_mE2F6C7DC6F8D450A9CB8F4DB9E432132B7CD8E5A,
 	SettingsMenu_ResetPositions_m038B8A4DA08591A20B6297930E27D92F20394C87,
