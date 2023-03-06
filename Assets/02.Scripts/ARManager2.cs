@@ -46,7 +46,7 @@ public class ARManager2 : MonoBehaviour
         }
         PlayerMove();
 
-        debugText_Game.text = MyDataStruct.spawnedObject_Indicator.name;
+        //debugText_Game.text = MyDataStruct.spawnedObject_Indicator.name;
 
         //debugText_Game.text = PublicVars.spawnedObject.name;
         //debugText_Game.text = MyDataStruct.spawnedObject.name;
