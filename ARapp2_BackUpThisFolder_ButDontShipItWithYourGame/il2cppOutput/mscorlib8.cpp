@@ -9267,6 +9267,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Decimal_op_Explicit_mD8E11417E7C50756B
 		return L_1;
 	}
 }
+// System.Decimal System.Decimal::op_Addition(System.Decimal,System.Decimal)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F Decimal_op_Addition_m79AD1C3ED1E6345D50110EA4D20DAE724724B9DA (Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F ___d10, Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F ___d21, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DecCalc_t0E9BD1BAF25BAD15940FF4BAB400D012A8DEBCA9_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F_il2cpp_TypeInfo_var);
+		DecCalc_t0E9BD1BAF25BAD15940FF4BAB400D012A8DEBCA9* L_0;
+		L_0 = Decimal_AsMutable_m8E50AF9E0B15E2BE669898272B3D252B56D10ABD((&___d10), NULL);
+		DecCalc_t0E9BD1BAF25BAD15940FF4BAB400D012A8DEBCA9* L_1;
+		L_1 = Decimal_AsMutable_m8E50AF9E0B15E2BE669898272B3D252B56D10ABD((&___d21), NULL);
+		il2cpp_codegen_runtime_class_init_inline(DecCalc_t0E9BD1BAF25BAD15940FF4BAB400D012A8DEBCA9_il2cpp_TypeInfo_var);
+		DecCalc_DecAddSub_m7A9364D191BDFC2D5F9AA0130AC2684578A9BE8D(L_0, L_1, (bool)0, NULL);
+		Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F L_2 = ___d10;
+		return L_2;
+	}
+}
 // System.Decimal System.Decimal::op_Subtraction(System.Decimal,System.Decimal)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F Decimal_op_Subtraction_m50F5DC718BD003A09A5BC62BAA3DECD0745AD3F1 (Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F ___d10, Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F ___d21, const RuntimeMethod* method) 
 {
