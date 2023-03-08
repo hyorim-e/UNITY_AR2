@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18154702, g: 0.22719009, b: 0.30740646, a: 1}
+  m_IndirectSpecularColor: {r: 0.18154663, g: 0.22718959, b: 0.30740538, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10972,7 +10972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joy: {fileID: 383642450}
-  speed: 10
+  speed: 20
   footSound: {fileID: 8300000, guid: e0d56d5b0b16e4d4d99380f8d73d6b1c, type: 3}
 --- !u!54 &298889912
 Rigidbody:
@@ -29846,7 +29846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257, y: -28}
+  m_AnchoredPosition: {x: 120, y: -28}
   m_SizeDelta: {x: 1561.833, y: 1159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &857014371
