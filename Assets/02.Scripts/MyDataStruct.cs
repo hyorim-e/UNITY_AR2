@@ -9,7 +9,6 @@ public class MyDataStruct : MonoBehaviour
     public static GameObject spawnedObject_Indicator;
     public static Material originMt;
 
-    public static Dictionary<string, GameObject> indicatorList;
 
     /*public static List<GameObject> PrefabList;
     //public static List<String> PrefabNameList;

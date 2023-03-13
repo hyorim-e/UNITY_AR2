@@ -34941,8 +34941,6 @@ struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_Indicator_5;
 	// UnityEngine.Material MyDataStruct::originMt
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_6;
-	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.GameObject> MyDataStruct::indicatorList
-	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___indicatorList_7;
 };
 
 // UnityEngine.Timeline.PlayableTrack

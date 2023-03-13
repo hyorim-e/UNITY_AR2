@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
 public class ARManager2 : MonoBehaviour
 {

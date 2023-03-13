@@ -24,7 +24,6 @@ public class ImageTracker2 : MonoBehaviour
     {
         trackedImageManager = GetComponent<ARTrackedImageManager>();
         spawnedObject = new Dictionary<string, GameObject>();
-        MyDataStruct.indicatorList = new Dictionary<string, GameObject>();
 
         // 배치할 오리지널 오브젝트
         foreach (GameObject obj in placeablePrefabs)
@@ -34,22 +33,6 @@ public class ImageTracker2 : MonoBehaviour
             newObject.SetActive(false);
             
             spawnedObject.Add(newObject.name, newObject);
-        }
-
-        // 배치 시 미리보기 될 오브젝트
-        foreach (GameObject obj in placeablePrefabs)
-        {
-            GameObject newObject = Instantiate(obj);
-            newObject.name = obj.name;
-            newObject.SetActive(false);
-
-            MyDataStruct.indicatorList.Add(newObject.name, newObject);
-        }
-
-        // 인디케이터 리스트 모두 돌면서 머터리얼 변경
-        foreach (KeyValuePair<string, GameObject> data in MyDataStruct.indicatorList)
-        {
-            data.Value.GetComponentInChildren<Renderer>().material = indicatorMt;
         }
 
         debugText_AR.text = "ImageTracker2";
@@ -116,7 +99,7 @@ public class ImageTracker2 : MonoBehaviour
 
 
         MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
-        MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().material;
+        MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
         
         debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
     }
@@ -128,15 +111,15 @@ public class ImageTracker2 : MonoBehaviour
 
     public void SetIndicator()
     {
-        foreach (KeyValuePair<string, GameObject> data in MyDataStruct.indicatorList)
+        foreach(GameObject obj in placeablePrefabs)
         {
-            if (data.Key == MyDataStruct.spawnedObject.name)
+            if(obj.name == referenceImageName)
             {
-                MyDataStruct.spawnedObject_Indicator = data.Value;
-                MyDataStruct.spawnedObject_Indicator.name = data.Key;
+                MyDataStruct.spawnedObject_Indicator = Instantiate(obj);
+                MyDataStruct.spawnedObject_Indicator.name = obj.name;
                 MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
-                //MyDataStruct.spawnedObject_Indicator.GetComponentInChildren<Renderer>().material = indicatorMt;
+                MyDataStruct.spawnedObject_Indicator.GetComponentInChildren<Renderer>().material = indicatorMt;
             }
         }
     }

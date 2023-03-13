@@ -23392,8 +23392,6 @@ struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_Indicator_5;
 	// UnityEngine.Material MyDataStruct::originMt
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_6;
-	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.GameObject> MyDataStruct::indicatorList
-	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___indicatorList_7;
 };
 
 // Player
@@ -29293,9 +29291,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7566[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7567[5] = 
 {
 	static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___MoviePosterList_4)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenList_5)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenListIndex_6)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText1_7)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText2_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7568[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7568[3] = 
 {
-	static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_4)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_Indicator_5)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___originMt_6)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___indicatorList_7)),};
+	static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_4)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_Indicator_5)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___originMt_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7569[9] = 
 {
 	static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___joy_4)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___speed_5)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___footSound_6)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___rigid_7)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___anim_8)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___moveVec_9)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___verticalMove_10)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___horizontalMove_11)),static_cast<int32_t>(offsetof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74, ___audioSource_12)),};
