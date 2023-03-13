@@ -17,7 +17,8 @@ public class WeatherChange : MonoBehaviour
         next_weather = 1; // 다음 날씨는 비
     }
 
-    public void ChangeWeather(Weather weatherType)
+    #region 랜덤으로 날씨 설정
+    public void ChangeWeather(Weather weatherType)   
     {
         if (weatherType != this.currentWeather)
         {
@@ -43,6 +44,7 @@ public class WeatherChange : MonoBehaviour
         //매개변수로 받은 날씨가 현재 날씨와 같지 않다면 매개변수로 받은 날씨로 변경 
     }
 
+  
     void Update()
     {
         this.weather_time -= Time.deltaTime; //10초동안은 그 날씨 유지
@@ -74,4 +76,5 @@ public class WeatherChange : MonoBehaviour
             }
         }
     }
+    #endregion
 }
