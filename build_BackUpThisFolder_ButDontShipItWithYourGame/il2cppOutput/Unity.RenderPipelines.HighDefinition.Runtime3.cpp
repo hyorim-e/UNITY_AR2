@@ -59,8 +59,6 @@ struct VirtualFuncInvoker1
 struct Action_1_t6AC29B34E68BC53AA807670D868CBB59CD5D995F;
 // System.Action`1<UnityEngine.Rendering.HighDefinition.RenderPipelineMaterial>
 struct Action_1_tA7C22CE10197665CEB50E809487010AA5D079AFC;
-// System.Action`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99;
 // UnityEngine.Rendering.ConstantBuffer`1<UnityEngine.Rendering.HighDefinition.ShaderVariablesGlobal>
 struct ConstantBuffer_1_tF457AEB7FF6C18D69D1FEC6B3B433E104FEB72C4;
 // System.Collections.Generic.Dictionary`2<System.ValueTuple`2<UnityEngine.Camera,System.Int32>,UnityEngine.Rendering.HighDefinition.HDCamera>
@@ -97,10 +95,12 @@ struct DynamicArray_1_tA05417E2FC5DC96EFA24AA82594700863757AF24;
 struct Func_1_t689BF3C3651C7F9A5D37CEC1D6124F6364662F6C;
 // System.Func`4<UnityEngine.Light,UnityEngine.Camera,UnityEngine.Vector3,System.Single>
 struct Func_4_t10E373E09E0663CA58211D9753566AB17B869CFE;
+// System.Func`4<System.Object,System.Int32,System.Object,System.Object>
+struct Func_4_tA1C45EAAB63FE0D5603883C6D74C341093130832;
+// System.Func`4<System.Object,System.Object,UnityEngine.Vector3,System.Single>
+struct Func_4_t332C0058075A9D0A2F5170831803531EC540225C;
 // System.Func`4<System.String,System.Int32,UnityEngine.Rendering.RTHandleSystem,UnityEngine.Rendering.RTHandle>
 struct Func_4_t07FDFA160EEA71E022A4133C7AA05D33FB9FEB0A;
-// System.Func`4<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>
-struct Func_4_t572D62CCA845BDAD9BC3ABCD839C1AE78144D079;
 // System.Collections.Generic.HashSet`1<UnityEngine.Rendering.HighDefinition.HDAdditionalLightData>
 struct HashSet_1_t310C555DE15EF49EE3D0F3A5C3A9E1EE36BD2A64;
 // System.Collections.Generic.HashSet`1<UnityEngine.Rendering.RTHandle>
@@ -415,6 +415,8 @@ struct LightVolumeDataU5BU5D_t61844BAFB0132A6B2644BB9799226C160ECE4663;
 struct MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D;
 // UnityEngine.Matrix4x4[]
 struct Matrix4x4U5BU5D_t9C51C93425FABC022B506D2DB3A5FA70F9752C4D;
+// System.Object[]
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
 // UnityEngine.Plane[]
 struct PlaneU5BU5D_t4EEF66BAA8B0140EFFF34F6183CE7F80546592BE;
 // UnityEngine.Rendering.RTHandle[]
@@ -447,8 +449,6 @@ struct Vector2IntU5BU5D_tF9E2BDAC11B246DF7EEB9137B826A0CBEBD59534;
 struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C;
 // UnityEngine.Vector4[]
 struct Vector4U5BU5D_tC0F3A7115F85007510F6D173968200CD31BCF7AD;
-// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
-struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 // UnityEngine.Rendering.DebugUI/Widget[]
 struct WidgetU5BU5D_t39DEA55B87EF43C59C5699E0340B34185BA1E4A2;
 // UnityEngine.Rendering.HighDefinition.DecalSystem/TextureScaleBias[]
@@ -12564,22 +12564,40 @@ struct Vector2IntU5BU5D_tF9E2BDAC11B246DF7EEB9137B826A0CBEBD59534  : public Runt
 };
 
 
-// System.Void UnityEngine.Rendering.ConstantBuffer::Push<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(UnityEngine.Rendering.CommandBuffer,CBType&,UnityEngine.ComputeShader,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_Push_TisIl2CppFullySharedGenericStruct_mCD7C98DF736C269428B10EE453F8DCEBF249B3F0_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct* ___data1, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs2, int32_t ___shaderId3, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Rendering.ConstantBuffer::Set<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(UnityEngine.Rendering.CommandBuffer,UnityEngine.ComputeShader,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_Set_TisIl2CppFullySharedGenericStruct_m03A85F4869CD2799EC59DF236795461DF50B75F2_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs1, int32_t ___shaderId2, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_PushGlobal_TisIl2CppFullySharedGenericStruct_mF0F905382D78F501F20B3933C4F1A1141338FDC5_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct* ___data1, int32_t ___shaderId2, const RuntimeMethod* method) ;
-// System.Void System.Action`1<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m685A441EC9FAC9D554B26FA83A08F4BEF96DFF0E_gshared (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::Push<UnityEngine.Rendering.HighDefinition.ShaderVariablesAmbientOcclusion>(UnityEngine.Rendering.CommandBuffer,CBType&,UnityEngine.ComputeShader,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_Push_TisShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB_mBB97B1BF1548B52E7FC4E50C174A3EE030E41E82_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB* ___data1, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs2, int32_t ___shaderId3, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::Set<UnityEngine.Rendering.HighDefinition.ShaderVariablesAmbientOcclusion>(UnityEngine.Rendering.CommandBuffer,UnityEngine.ComputeShader,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_Set_TisShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB_mD86DA9C812527B56CAC12043BEBF9B7A5A3CE9D8_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs1, int32_t ___shaderId2, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesRaytracing>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_PushGlobal_TisShaderVariablesRaytracing_tCD939378DEB0EE78E6BD4CD460734BE7E21CDAE4_m1D789D3453BDD792716F5BAFD3AAECECFD30D46A_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesRaytracing_tCD939378DEB0EE78E6BD4CD460734BE7E21CDAE4* ___data1, int32_t ___shaderId2, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesBilateralUpsample>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_PushGlobal_TisShaderVariablesBilateralUpsample_t3B0C434F9A93654059B6D240FD1923FBF10A8CFA_mC459AA72D54BBF20090D42037AD9214ADD434962_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesBilateralUpsample_t3B0C434F9A93654059B6D240FD1923FBF10A8CFA* ___data1, int32_t ___shaderId2, const RuntimeMethod* method) ;
+// System.Void System.Action`1<UnityEngine.Rendering.AsyncGPUReadbackRequest>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m347338A163A1A0840FA150F7ACCC029D46339777_gshared (Action_1_t6AC29B34E68BC53AA807670D868CBB59CD5D995F* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::Push<UnityEngine.Rendering.HighDefinition.ShaderVariablesVolumetric>(UnityEngine.Rendering.CommandBuffer,CBType&,UnityEngine.ComputeShader,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_Push_TisShaderVariablesVolumetric_t8D5D8F4ED54979AF40EDF95C258E731EDEC86931_m8A2A98A1F3F08F69EC69D32E8136D458F584424B_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesVolumetric_t8D5D8F4ED54979AF40EDF95C258E731EDEC86931* ___data1, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs2, int32_t ___shaderId3, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::Set<UnityEngine.Rendering.HighDefinition.ShaderVariablesLightList>(UnityEngine.Rendering.CommandBuffer,UnityEngine.ComputeShader,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_Set_TisShaderVariablesLightList_t628A0287D1F14C61E8F9370F92E1AE1F2F949118_m98768666993FC086227B379490E06382FFA3B561_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs1, int32_t ___shaderId2, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesDebugDisplay>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_PushGlobal_TisShaderVariablesDebugDisplay_t8495B115F456DFCE8FA218AAC745328EC12D4A93_m6C46ECE78FEF85C4DC32F0907C95A57394629F72_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesDebugDisplay_t8495B115F456DFCE8FA218AAC745328EC12D4A93* ___data1, int32_t ___shaderId2, const RuntimeMethod* method) ;
 // T UnityEngine.Rendering.VolumeStack::GetComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* VolumeStack_GetComponent_TisRuntimeObject_m8D5395D64A3CF1D54202CD9C021F6515580DB6AE_gshared (VolumeStack_t5DE94743BDB63D97EF5587DBDAE46468233F36E8* __this, const RuntimeMethod* method) ;
-// T[] UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphObjectPool::GetTempArray<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* RenderGraphObjectPool_GetTempArray_TisIl2CppFullySharedGenericAny_mF3D4143FF8E633BBBEEA820CD9EE365C203B221D_gshared (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A* __this, int32_t ___size0, const RuntimeMethod* method) ;
-// UnityEngine.Rendering.ProfilingSampler UnityEngine.Rendering.ProfilingSampler::Get<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType>(TEnum)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProfilingSampler_t420D4672EDB44E0EF980B31ADFD9E5747200FECE* ProfilingSampler_Get_TisIl2CppFullySharedGenericStruct_mF554E63B3C28F5F113B29174ED27CE1E970A9D15_gshared (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct ___marker0, const RuntimeMethod* method) ;
-// System.Void System.Func`4<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType,Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_4__ctor_mBBC8F424C8EFF3F35CA9B3557CC2E8C06CAAA249_gshared (Func_4_t572D62CCA845BDAD9BC3ABCD839C1AE78144D079* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesGlobal>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_PushGlobal_TisShaderVariablesGlobal_t1ED96D9F204BB3577D505C7F1C845726B1009540_mDDFAC9ADE62A7CA57AC4CD136152F6A39F1019CA_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesGlobal_t1ED96D9F204BB3577D505C7F1C845726B1009540* ___data1, int32_t ___shaderId2, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesXR>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_PushGlobal_TisShaderVariablesXR_t80A2FFAE6813A890710DFB5F6FC07A6BB505ADE1_mB76ACEA92378C2B78A4A7DD8FE0E3E38AA06E120_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesXR_t80A2FFAE6813A890710DFB5F6FC07A6BB505ADE1* ___data1, int32_t ___shaderId2, const RuntimeMethod* method) ;
+// T[] UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphObjectPool::GetTempArray<UnityEngine.Rendering.RenderTargetIdentifier>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTargetIdentifierU5BU5D_t179798C153B7CE381B41C57863F98CB24023C4CE* RenderGraphObjectPool_GetTempArray_TisRenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B_m619960A5E6237195A6A0E1EE5E8D38FE7E97E9EC_gshared (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A* __this, int32_t ___size0, const RuntimeMethod* method) ;
+// UnityEngine.Rendering.ProfilingSampler UnityEngine.Rendering.ProfilingSampler::Get<System.Int32Enum>(TEnum)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ProfilingSampler_t420D4672EDB44E0EF980B31ADFD9E5747200FECE* ProfilingSampler_Get_TisInt32Enum_tCBAC8BA2BFF3A845FA599F303093BBBA374B6F0C_mB471B2C3913C24395882A89E7531861344E571DC_gshared (int32_t ___marker0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rendering.ConstantBuffer::Push<UnityEngine.Rendering.HighDefinition.ShaderVariablesScreenSpaceReflection>(UnityEngine.Rendering.CommandBuffer,CBType&,UnityEngine.ComputeShader,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConstantBuffer_Push_TisShaderVariablesScreenSpaceReflection_tA0A0C725A618D20BEBA8B0ADC06643C85D9F1DA5_m33BE5EEA14457BA079308397DD63F4504ADFF515_gshared (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesScreenSpaceReflection_tA0A0C725A618D20BEBA8B0ADC06643C85D9F1DA5* ___data1, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs2, int32_t ___shaderId3, const RuntimeMethod* method) ;
+// T[] UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphObjectPool::GetTempArray<System.Object>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* RenderGraphObjectPool_GetTempArray_TisRuntimeObject_m94D675D9EB46E1275586C963548B2C6CD96615CC_gshared (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A* __this, int32_t ___size0, const RuntimeMethod* method) ;
+// System.Void System.Func`4<System.Object,System.Object,UnityEngine.Vector3,System.Single>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_4__ctor_m6F2B4733AC89D456287CE6FCC617F05B75EB7429_gshared (Func_4_t332C0058075A9D0A2F5170831803531EC540225C* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
+// System.Void System.Func`4<System.Object,System.Int32,System.Object,System.Object>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_4__ctor_m9E9D68F9A3BEF634799BA6FEA9D9F69EEDF3921D_gshared (Func_4_tA1C45EAAB63FE0D5603883C6D74C341093130832* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
 
 // System.Void UnityEngine.Rendering.HighDefinition.HDRenderPipeline/<>c::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m14ABE7DDA10B52003A2950E5754D109345E37E12 (U3CU3Ec_t514E85FE677350A32B8CC87FC018C8A9F3F04857* __this, const RuntimeMethod* method) ;
@@ -12588,7 +12606,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC8
 // System.Void UnityEngine.Rendering.ConstantBuffer::Push<UnityEngine.Rendering.HighDefinition.ShaderVariablesAmbientOcclusion>(UnityEngine.Rendering.CommandBuffer,CBType&,UnityEngine.ComputeShader,System.Int32)
 inline void ConstantBuffer_Push_TisShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB_mBB97B1BF1548B52E7FC4E50C174A3EE030E41E82 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB* ___data1, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs2, int32_t ___shaderId3, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Push_TisIl2CppFullySharedGenericStruct_mCD7C98DF736C269428B10EE453F8DCEBF249B3F0_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___cs2, ___shaderId3, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Push_TisShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB_mBB97B1BF1548B52E7FC4E50C174A3EE030E41E82_gshared)(___cmd0, ___data1, ___cs2, ___shaderId3, method);
 }
 // UnityEngine.Rendering.RenderTargetIdentifier UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle::op_Implicit(UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B TextureHandle_op_Implicit_mC29818753DD8EEED56054693514CE10964E580E6 (TextureHandle_t87D7D063E5E22E38632961AB2B6F89978942BE09 ___texture0, const RuntimeMethod* method) ;
@@ -12599,7 +12617,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommandBuffer_DispatchCompute_mF9F5605B7
 // System.Void UnityEngine.Rendering.ConstantBuffer::Set<UnityEngine.Rendering.HighDefinition.ShaderVariablesAmbientOcclusion>(UnityEngine.Rendering.CommandBuffer,UnityEngine.ComputeShader,System.Int32)
 inline void ConstantBuffer_Set_TisShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB_mD86DA9C812527B56CAC12043BEBF9B7A5A3CE9D8 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs1, int32_t ___shaderId2, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Set_TisIl2CppFullySharedGenericStruct_m03A85F4869CD2799EC59DF236795461DF50B75F2_gshared)(___cmd0, ___cs1, ___shaderId2, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Set_TisShaderVariablesAmbientOcclusion_tA90F627D9D2AB69DCC7AB6F316725DC0A0D581FB_mD86DA9C812527B56CAC12043BEBF9B7A5A3CE9D8_gshared)(___cmd0, ___cs1, ___shaderId2, method);
 }
 // System.Void UnityEngine.Rendering.CommandBuffer::SetComputeFloatParam(UnityEngine.ComputeShader,System.Int32,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommandBuffer_SetComputeFloatParam_m0DBB0B5057ACC774CCE6E05A9D70BF98C62D63A8 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___computeShader0, int32_t ___nameID1, float ___val2, const RuntimeMethod* method) ;
@@ -12616,14 +12634,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB27
 // System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesRaytracing>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
 inline void ConstantBuffer_PushGlobal_TisShaderVariablesRaytracing_tCD939378DEB0EE78E6BD4CD460734BE7E21CDAE4_m1D789D3453BDD792716F5BAFD3AAECECFD30D46A (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesRaytracing_tCD939378DEB0EE78E6BD4CD460734BE7E21CDAE4* ___data1, int32_t ___shaderId2, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisIl2CppFullySharedGenericStruct_mF0F905382D78F501F20B3933C4F1A1141338FDC5_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___shaderId2, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesRaytracing_tCD939378DEB0EE78E6BD4CD460734BE7E21CDAE4*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisShaderVariablesRaytracing_tCD939378DEB0EE78E6BD4CD460734BE7E21CDAE4_m1D789D3453BDD792716F5BAFD3AAECECFD30D46A_gshared)(___cmd0, ___data1, ___shaderId2, method);
 }
 // System.Void UnityEngine.Rendering.CommandBuffer::SetComputeTextureParam(UnityEngine.ComputeShader,System.Int32,System.Int32,UnityEngine.Rendering.RenderTargetIdentifier,System.Int32,UnityEngine.Rendering.RenderTextureSubElement)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommandBuffer_SetComputeTextureParam_mC646598ADE39ECEFF7C088DB6D3F5A064087BEC5 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* __this, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___computeShader0, int32_t ___kernelIndex1, int32_t ___nameID2, RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B ___rt3, int32_t ___mipLevel4, int32_t ___element5, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesBilateralUpsample>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
 inline void ConstantBuffer_PushGlobal_TisShaderVariablesBilateralUpsample_t3B0C434F9A93654059B6D240FD1923FBF10A8CFA_mC459AA72D54BBF20090D42037AD9214ADD434962 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesBilateralUpsample_t3B0C434F9A93654059B6D240FD1923FBF10A8CFA* ___data1, int32_t ___shaderId2, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisIl2CppFullySharedGenericStruct_mF0F905382D78F501F20B3933C4F1A1141338FDC5_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___shaderId2, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesBilateralUpsample_t3B0C434F9A93654059B6D240FD1923FBF10A8CFA*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisShaderVariablesBilateralUpsample_t3B0C434F9A93654059B6D240FD1923FBF10A8CFA_mC459AA72D54BBF20090D42037AD9214ADD434962_gshared)(___cmd0, ___data1, ___shaderId2, method);
 }
 // System.Void UnityEngine.Rendering.HighDefinition.HDRenderPipeline::ExecuteSSSAreaRayTrace(UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.HighDefinition.HDRenderPipeline/RTShadowAreaPassData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HDRenderPipeline_ExecuteSSSAreaRayTrace_m182B7B06C0709CAFA687CDFCA89829327CC49DE3 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, RTShadowAreaPassData_tB4DFF4D2DE9ABEFCEADB62B851347CC66CF5261A* ___data1, const RuntimeMethod* method) ;
@@ -12660,7 +12678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SkyManager_RenderSkyOnlyToCubemap_m8835F
 // System.Void System.Action`1<UnityEngine.Rendering.AsyncGPUReadbackRequest>::.ctor(System.Object,System.IntPtr)
 inline void Action_1__ctor_m347338A163A1A0840FA150F7ACCC029D46339777 (Action_1_t6AC29B34E68BC53AA807670D868CBB59CD5D995F* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m685A441EC9FAC9D554B26FA83A08F4BEF96DFF0E_gshared)((Action_1_t923A20D1D4F6B55B2ED5AE21B90F1A0CE0450D99*)__this, ___object0, ___method1, method);
+	((  void (*) (Action_1_t6AC29B34E68BC53AA807670D868CBB59CD5D995F*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m347338A163A1A0840FA150F7ACCC029D46339777_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Void UnityEngine.Rendering.CommandBuffer::RequestAsyncReadback(UnityEngine.ComputeBuffer,System.Action`1<UnityEngine.Rendering.AsyncGPUReadbackRequest>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommandBuffer_RequestAsyncReadback_m0541CA8CA2CFB14EB850C585ADA720CD713957BA (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* __this, ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* ___src0, Action_1_t6AC29B34E68BC53AA807670D868CBB59CD5D995F* ___callback1, const RuntimeMethod* method) ;
@@ -12683,12 +12701,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTargetIdentifier_tA528663AC6EB3911D8E91
 // System.Void UnityEngine.Rendering.ConstantBuffer::Push<UnityEngine.Rendering.HighDefinition.ShaderVariablesVolumetric>(UnityEngine.Rendering.CommandBuffer,CBType&,UnityEngine.ComputeShader,System.Int32)
 inline void ConstantBuffer_Push_TisShaderVariablesVolumetric_t8D5D8F4ED54979AF40EDF95C258E731EDEC86931_m8A2A98A1F3F08F69EC69D32E8136D458F584424B (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesVolumetric_t8D5D8F4ED54979AF40EDF95C258E731EDEC86931* ___data1, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs2, int32_t ___shaderId3, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Push_TisIl2CppFullySharedGenericStruct_mCD7C98DF736C269428B10EE453F8DCEBF249B3F0_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___cs2, ___shaderId3, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesVolumetric_t8D5D8F4ED54979AF40EDF95C258E731EDEC86931*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Push_TisShaderVariablesVolumetric_t8D5D8F4ED54979AF40EDF95C258E731EDEC86931_m8A2A98A1F3F08F69EC69D32E8136D458F584424B_gshared)(___cmd0, ___data1, ___cs2, ___shaderId3, method);
 }
 // System.Void UnityEngine.Rendering.ConstantBuffer::Set<UnityEngine.Rendering.HighDefinition.ShaderVariablesLightList>(UnityEngine.Rendering.CommandBuffer,UnityEngine.ComputeShader,System.Int32)
 inline void ConstantBuffer_Set_TisShaderVariablesLightList_t628A0287D1F14C61E8F9370F92E1AE1F2F949118_m98768666993FC086227B379490E06382FFA3B561 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs1, int32_t ___shaderId2, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Set_TisIl2CppFullySharedGenericStruct_m03A85F4869CD2799EC59DF236795461DF50B75F2_gshared)(___cmd0, ___cs1, ___shaderId2, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Set_TisShaderVariablesLightList_t628A0287D1F14C61E8F9370F92E1AE1F2F949118_m98768666993FC086227B379490E06382FFA3B561_gshared)(___cmd0, ___cs1, ___shaderId2, method);
 }
 // System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Implicit_m18E1885C296CC868AC918101523697CFE6413C79 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___exists0, const RuntimeMethod* method) ;
@@ -12721,7 +12739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTHandle_t135537761C47BC929F032B3C8F4D55EA111
 // System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesDebugDisplay>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
 inline void ConstantBuffer_PushGlobal_TisShaderVariablesDebugDisplay_t8495B115F456DFCE8FA218AAC745328EC12D4A93_m6C46ECE78FEF85C4DC32F0907C95A57394629F72 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesDebugDisplay_t8495B115F456DFCE8FA218AAC745328EC12D4A93* ___data1, int32_t ___shaderId2, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisIl2CppFullySharedGenericStruct_mF0F905382D78F501F20B3933C4F1A1141338FDC5_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___shaderId2, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesDebugDisplay_t8495B115F456DFCE8FA218AAC745328EC12D4A93*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisShaderVariablesDebugDisplay_t8495B115F456DFCE8FA218AAC745328EC12D4A93_m6C46ECE78FEF85C4DC32F0907C95A57394629F72_gshared)(___cmd0, ___data1, ___shaderId2, method);
 }
 // UnityEngine.Rendering.RendererUtils.RendererList UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListHandle::op_Implicit(UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RendererList_t84DD8775E9B0759757DE88FBCB50A06A7C80D20E RendererListHandle_op_Implicit_m773844C3742FA469FDAD459576166538B28ADC25 (RendererListHandle_t21AFDDE69B0048546497B890088B880F8080C62D ___rendererList0, const RuntimeMethod* method) ;
@@ -12900,20 +12918,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HDCamera_UpdateShaderVariablesGlobalCB_m
 // System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesGlobal>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
 inline void ConstantBuffer_PushGlobal_TisShaderVariablesGlobal_t1ED96D9F204BB3577D505C7F1C845726B1009540_mDDFAC9ADE62A7CA57AC4CD136152F6A39F1019CA (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesGlobal_t1ED96D9F204BB3577D505C7F1C845726B1009540* ___data1, int32_t ___shaderId2, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisIl2CppFullySharedGenericStruct_mF0F905382D78F501F20B3933C4F1A1141338FDC5_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___shaderId2, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesGlobal_t1ED96D9F204BB3577D505C7F1C845726B1009540*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisShaderVariablesGlobal_t1ED96D9F204BB3577D505C7F1C845726B1009540_mDDFAC9ADE62A7CA57AC4CD136152F6A39F1019CA_gshared)(___cmd0, ___data1, ___shaderId2, method);
 }
 // System.Void UnityEngine.Rendering.HighDefinition.HDCamera::UpdateShaderVariablesXRCB(UnityEngine.Rendering.HighDefinition.ShaderVariablesXR&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HDCamera_UpdateShaderVariablesXRCB_mD7881276DEBC69EF2DB9384D4DCD8059488CC521 (HDCamera_tBC007562B3FAC78F6024CB2419791365AC959F6F* __this, ShaderVariablesXR_t80A2FFAE6813A890710DFB5F6FC07A6BB505ADE1* ___cb0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Rendering.ConstantBuffer::PushGlobal<UnityEngine.Rendering.HighDefinition.ShaderVariablesXR>(UnityEngine.Rendering.CommandBuffer,CBType&,System.Int32)
 inline void ConstantBuffer_PushGlobal_TisShaderVariablesXR_t80A2FFAE6813A890710DFB5F6FC07A6BB505ADE1_mB76ACEA92378C2B78A4A7DD8FE0E3E38AA06E120 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesXR_t80A2FFAE6813A890710DFB5F6FC07A6BB505ADE1* ___data1, int32_t ___shaderId2, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisIl2CppFullySharedGenericStruct_mF0F905382D78F501F20B3933C4F1A1141338FDC5_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___shaderId2, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesXR_t80A2FFAE6813A890710DFB5F6FC07A6BB505ADE1*, int32_t, const RuntimeMethod*))ConstantBuffer_PushGlobal_TisShaderVariablesXR_t80A2FFAE6813A890710DFB5F6FC07A6BB505ADE1_mB76ACEA92378C2B78A4A7DD8FE0E3E38AA06E120_gshared)(___cmd0, ___data1, ___shaderId2, method);
 }
 // T[] UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphObjectPool::GetTempArray<UnityEngine.Rendering.RenderTargetIdentifier>(System.Int32)
 inline RenderTargetIdentifierU5BU5D_t179798C153B7CE381B41C57863F98CB24023C4CE* RenderGraphObjectPool_GetTempArray_TisRenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B_m619960A5E6237195A6A0E1EE5E8D38FE7E97E9EC (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A* __this, int32_t ___size0, const RuntimeMethod* method)
 {
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* il2cppRetVal = ((  __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* (*) (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A*, int32_t, const RuntimeMethod*))RenderGraphObjectPool_GetTempArray_TisIl2CppFullySharedGenericAny_mF3D4143FF8E633BBBEEA820CD9EE365C203B221D_gshared)((RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A*)__this, ___size0, method);
-	return (RenderTargetIdentifierU5BU5D_t179798C153B7CE381B41C57863F98CB24023C4CE*)il2cppRetVal;
+	return ((  RenderTargetIdentifierU5BU5D_t179798C153B7CE381B41C57863F98CB24023C4CE* (*) (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A*, int32_t, const RuntimeMethod*))RenderGraphObjectPool_GetTempArray_TisRenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B_m619960A5E6237195A6A0E1EE5E8D38FE7E97E9EC_gshared)(__this, ___size0, method);
 }
 // System.Void UnityEngine.Rendering.CommandBuffer::SetGlobalTexture(System.Int32,UnityEngine.Rendering.RenderTargetIdentifier)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommandBuffer_SetGlobalTexture_m65E012CB3C35EA43533CB4FF4C6F6498FDE229CD (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* __this, int32_t ___nameID0, RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B ___value1, const RuntimeMethod* method) ;
@@ -12938,7 +12955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CommandBuffer_DisableShaderKeyword_m2B66
 // UnityEngine.Rendering.ProfilingSampler UnityEngine.Rendering.ProfilingSampler::Get<UnityEngine.Rendering.HighDefinition.HDProfileId>(TEnum)
 inline ProfilingSampler_t420D4672EDB44E0EF980B31ADFD9E5747200FECE* ProfilingSampler_Get_TisHDProfileId_tEAB9F04082D3598D6FABEDD4BDFD81F3920B81AD_m989F76E124841DEAB8BB604BC363C40A105513FA (int32_t ___marker0, const RuntimeMethod* method)
 {
-	return ((  ProfilingSampler_t420D4672EDB44E0EF980B31ADFD9E5747200FECE* (*) (/*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType*/Il2CppFullySharedGenericStruct, const RuntimeMethod*))ProfilingSampler_Get_TisIl2CppFullySharedGenericStruct_mF554E63B3C28F5F113B29174ED27CE1E970A9D15_gshared)((Il2CppFullySharedGenericStruct)&___marker0, method);
+	return ((  ProfilingSampler_t420D4672EDB44E0EF980B31ADFD9E5747200FECE* (*) (int32_t, const RuntimeMethod*))ProfilingSampler_Get_TisInt32Enum_tCBAC8BA2BFF3A845FA599F303093BBBA374B6F0C_mB471B2C3913C24395882A89E7531861344E571DC_gshared)(___marker0, method);
 }
 // System.Void UnityEngine.Rendering.ProfilingScope::.ctor(UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.ProfilingSampler)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfilingScope__ctor_mE15813DF7651C1A3B6AFD6465AD4B973E8F1DBFC (ProfilingScope_t57898BA31E8EF8F083EF84E0DA2737AC61CBC5BD* __this, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ProfilingSampler_t420D4672EDB44E0EF980B31ADFD9E5747200FECE* ___sampler1, const RuntimeMethod* method) ;
@@ -12953,7 +12970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlueNoise_BindDitheredRNGData1SPP_m17164
 // System.Void UnityEngine.Rendering.ConstantBuffer::Push<UnityEngine.Rendering.HighDefinition.ShaderVariablesScreenSpaceReflection>(UnityEngine.Rendering.CommandBuffer,CBType&,UnityEngine.ComputeShader,System.Int32)
 inline void ConstantBuffer_Push_TisShaderVariablesScreenSpaceReflection_tA0A0C725A618D20BEBA8B0ADC06643C85D9F1DA5_m33BE5EEA14457BA079308397DD63F4504ADFF515 (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd0, ShaderVariablesScreenSpaceReflection_tA0A0C725A618D20BEBA8B0ADC06643C85D9F1DA5* ___data1, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8* ___cs2, int32_t ___shaderId3, const RuntimeMethod* method)
 {
-	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, /*Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericStructType&*/Il2CppFullySharedGenericStruct*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Push_TisIl2CppFullySharedGenericStruct_mCD7C98DF736C269428B10EE453F8DCEBF249B3F0_gshared)(___cmd0, (Il2CppFullySharedGenericStruct*)___data1, ___cs2, ___shaderId3, method);
+	((  void (*) (CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7*, ShaderVariablesScreenSpaceReflection_tA0A0C725A618D20BEBA8B0ADC06643C85D9F1DA5*, ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8*, int32_t, const RuntimeMethod*))ConstantBuffer_Push_TisShaderVariablesScreenSpaceReflection_tA0A0C725A618D20BEBA8B0ADC06643C85D9F1DA5_m33BE5EEA14457BA079308397DD63F4504ADFF515_gshared)(___cmd0, ___data1, ___cs2, ___shaderId3, method);
 }
 // UnityEngine.ComputeBuffer UnityEngine.Rendering.HighDefinition.HDRenderPipeline/LightLoopLightData::get_directionalLightData()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* LightLoopLightData_get_directionalLightData_m4CFD4024A4AB4F1B21B7E20E05FBC6CA0A6EF32A_inline (LightLoopLightData_t97781F491AAF78E9D0B89B41C19472156A412283* __this, const RuntimeMethod* method) ;
@@ -13006,8 +13023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HDUtils_DrawFullScreen_m9E09910C0C28AEC7
 // T[] UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphObjectPool::GetTempArray<UnityEngine.Rendering.RTHandle>(System.Int32)
 inline RTHandleU5BU5D_tE4B403B060D159B839BF74E8B59F8DCD52CF97DF* RenderGraphObjectPool_GetTempArray_TisRTHandle_t135537761C47BC929F032B3C8F4D55EA1111B07B_m5A8543BB5C188EFF74B3C113231E76A2EDF178DE (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A* __this, int32_t ___size0, const RuntimeMethod* method)
 {
-	__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* il2cppRetVal = ((  __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* (*) (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A*, int32_t, const RuntimeMethod*))RenderGraphObjectPool_GetTempArray_TisIl2CppFullySharedGenericAny_mF3D4143FF8E633BBBEEA820CD9EE365C203B221D_gshared)((RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A*)__this, ___size0, method);
-	return (RTHandleU5BU5D_tE4B403B060D159B839BF74E8B59F8DCD52CF97DF*)il2cppRetVal;
+	return ((  RTHandleU5BU5D_tE4B403B060D159B839BF74E8B59F8DCD52CF97DF* (*) (RenderGraphObjectPool_t266B5D9BA6D695C3E7E1A3919F3304504C5BCC7A*, int32_t, const RuntimeMethod*))RenderGraphObjectPool_GetTempArray_TisRuntimeObject_m94D675D9EB46E1275586C963548B2C6CD96615CC_gshared)(__this, ___size0, method);
 }
 // System.Void UnityEngine.ComputeBuffer::SetCounterValue(System.UInt32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ComputeBuffer_SetCounterValue_m35EB61D0A2CDF4A826176F995C1A4D3B6B3B26A3 (ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233* __this, uint32_t ___counterValue0, const RuntimeMethod* method) ;
@@ -13022,7 +13038,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LensFlareCommonSRP_ComputeOcclusion_m5FA
 // System.Void System.Func`4<UnityEngine.Light,UnityEngine.Camera,UnityEngine.Vector3,System.Single>::.ctor(System.Object,System.IntPtr)
 inline void Func_4__ctor_mCB654A521C926308B7947FC97B239C5A7847D677 (Func_4_t10E373E09E0663CA58211D9753566AB17B869CFE* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_4_t572D62CCA845BDAD9BC3ABCD839C1AE78144D079*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_4__ctor_mBBC8F424C8EFF3F35CA9B3557CC2E8C06CAAA249_gshared)((Func_4_t572D62CCA845BDAD9BC3ABCD839C1AE78144D079*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_4_t10E373E09E0663CA58211D9753566AB17B869CFE*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_4__ctor_m6F2B4733AC89D456287CE6FCC617F05B75EB7429_gshared)(__this, ___object0, ___method1, method);
 }
 // System.Void UnityEngine.Rendering.LensFlareCommonSRP::DoLensFlareDataDrivenCommon(UnityEngine.Material,UnityEngine.Rendering.LensFlareCommonSRP,UnityEngine.Camera,System.Single,System.Single,System.Boolean,System.Single,System.Single,System.Boolean,UnityEngine.Vector3,UnityEngine.Matrix4x4,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.RenderTargetIdentifier,System.Func`4<UnityEngine.Light,UnityEngine.Camera,UnityEngine.Vector3,System.Single>,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LensFlareCommonSRP_DoLensFlareDataDrivenCommon_m15611A3C8EC2005E50C2BD5807A996728E27A65E (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___lensFlareShader0, LensFlareCommonSRP_t216404EC3242B43B3A8486A9D03A70302E79C135* ___lensFlares1, Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___cam2, float ___actualWidth3, float ___actualHeight4, bool ___usePanini5, float ___paniniDistance6, float ___paniniCropToFit7, bool ___isCameraRelative8, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___cameraPositionWS9, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___viewProjMatrix10, CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* ___cmd11, RenderTargetIdentifier_tA528663AC6EB3911D8E91AA40F7070FA5455442B ___colorBuffer12, Func_4_t10E373E09E0663CA58211D9753566AB17B869CFE* ___GetLensFlareLightAttenuation13, int32_t ____FlareOcclusionTex14, int32_t ____FlareOcclusionIndex15, int32_t ____FlareTex16, int32_t ____FlareColorValue17, int32_t ____FlareData018, int32_t ____FlareData119, int32_t ____FlareData220, int32_t ____FlareData321, int32_t ____FlareData422, bool ___debugView23, const RuntimeMethod* method) ;
@@ -13117,7 +13133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTHandle_t135537761C47BC929F032B3C8F4D55EA111
 // System.Void System.Func`4<System.String,System.Int32,UnityEngine.Rendering.RTHandleSystem,UnityEngine.Rendering.RTHandle>::.ctor(System.Object,System.IntPtr)
 inline void Func_4__ctor_m61BF196A04485FB8FE8A8EEC0005BDD3C42E7EB5 (Func_4_t07FDFA160EEA71E022A4133C7AA05D33FB9FEB0A* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
-	((  void (*) (Func_4_t572D62CCA845BDAD9BC3ABCD839C1AE78144D079*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_4__ctor_mBBC8F424C8EFF3F35CA9B3557CC2E8C06CAAA249_gshared)((Func_4_t572D62CCA845BDAD9BC3ABCD839C1AE78144D079*)__this, ___object0, ___method1, method);
+	((  void (*) (Func_4_t07FDFA160EEA71E022A4133C7AA05D33FB9FEB0A*, RuntimeObject*, intptr_t, const RuntimeMethod*))Func_4__ctor_m9E9D68F9A3BEF634799BA6FEA9D9F69EEDF3921D_gshared)(__this, ___object0, ___method1, method);
 }
 // UnityEngine.Rendering.RTHandle UnityEngine.Rendering.HighDefinition.HDCamera::AllocHistoryFrameRT(System.Int32,System.Func`4<System.String,System.Int32,UnityEngine.Rendering.RTHandleSystem,UnityEngine.Rendering.RTHandle>,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTHandle_t135537761C47BC929F032B3C8F4D55EA1111B07B* HDCamera_AllocHistoryFrameRT_m12FB3C409328FC5B29F6833E9EAA8B2B08ED4B25 (HDCamera_tBC007562B3FAC78F6024CB2419791365AC959F6F* __this, int32_t ___id0, Func_4_t07FDFA160EEA71E022A4133C7AA05D33FB9FEB0A* ___allocator1, int32_t ___bufferCount2, const RuntimeMethod* method) ;
