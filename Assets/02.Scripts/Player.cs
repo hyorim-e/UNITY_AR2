@@ -10,12 +10,10 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;
     Animator anim;
-   
     Vector3 moveVec;
-    float verticalMove;
-    float horizontalMove;
-
     AudioSource audioSource;
+
+    bool isPlayingFootstep = false;
 
     void Awake()
     {
@@ -29,37 +27,51 @@ public class Player : MonoBehaviour
         float x = joy.Horizontal;
         float z = joy.Vertical;
 
-      /*  moveVec = new Vector3(x, 0, z) * speed * Time.deltaTime;
+        moveVec = new Vector3(x, 0, z) * speed * Time.deltaTime;
         rigid.MovePosition(rigid.position + moveVec);
 
-        if (moveVec.sqrMagnitude == 0)
+        if (moveVec.magnitude == 0)
             return;
 
         Quaternion dirQuat = Quaternion.LookRotation(moveVec);
         Quaternion moveQuat = Quaternion.Slerp(rigid.rotation, dirQuat, 0.3f);
-      */
-        Vector3 moveVector = new Vector3(x, 0f, z);
-        bool isMove = moveVector.magnitude > 0;
-        anim.SetBool("isMove", isMove);
-        
-        if (isMove)
+        rigid.MoveRotation(moveQuat);
+
+        /*  Vector3 moveVector = new Vector3(x, 0f, z);
+          bool isMove = moveVector.magnitude > 0;
+          anim.SetBool("isMove", isMove);
+
+          if (isMove)
+          {
+              anim.transform.forward = moveVector;
+              if (!audioSource.isPlaying)
+              {
+                  AudioSource.PlayClipAtPoint(footSound, transform.position);
+              }
+              else
+              {
+                  audioSource.Stop();
+              }
+          }
+
+         transform.Translate(new Vector3(x, 0f, z).normalized * Time.deltaTime * 5f); */
+
+        if (!isPlayingFootstep)
         {
-            anim.transform.forward = moveVector;
-            if (!audioSource.isPlaying)
-            {
-                AudioSource.PlayClipAtPoint(footSound, transform.position);
-            }
-            else
-            {
-                audioSource.Stop();
-            }
+            audioSource.PlayOneShot(footSound);
+            isPlayingFootstep = true;
+            Invoke("ResetFootstep", footSound.length);
         }
-        
-        transform.Translate(new Vector3(x, 0f, z).normalized * Time.deltaTime * 5f);
     }
 
- /*   void LateUpdate()
+    void ResetFootstep()
     {
-        anim.SetFloat("Move", moveVec.sqrMagnitude);
-    }*/
+        isPlayingFootstep = false;
+    }
+
+
+    void LateUpdate()
+    {
+        anim.SetBool("isMove", moveVec.magnitude > 0);
+    }
 }
