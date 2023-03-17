@@ -769,6 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140655785789273874}
   - component: {fileID: 1140655785775391796}
+  - component: {fileID: 6211341064791656071}
   m_Layer: 0
   m_Name: NightMareDragon
   m_TagString: Untagged
@@ -914,6 +915,18 @@ SkinnedMeshRenderer:
     m_Center: {x: -66.486176, y: -80.032745, z: -2.3920593}
     m_Extent: {x: 591.7075, y: 271.15985, z: 377.18967}
   m_DirtyAABB: 0
+--- !u!114 &6211341064791656071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140655785788971376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1140655785788972726
 GameObject:
   m_ObjectHideFlags: 0
