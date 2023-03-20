@@ -12,39 +12,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
   m_Name: Readme
   m_EditorClassIdentifier: 
-  icon: {fileID: 2800000, guid: 7801804018a7dcf42abb827444e18660, type: 3}
-  title: Universal Render Pipeline Template
+  icon: {fileID: 2800000, guid: 25dd2b6ab58c00b46becb679c25416db, type: 3}
+  title: Realtime Rascals
   sections:
-  - heading: Universal Render Pipeline
-    text: 'The Universal Project Template configures Project settings for Projects where performance, wide platform support, and ease of customizing graphics are the primary considerations.'
-    linkText: 
-    url: 
-  - heading:
-    text: 'This Template uses the Universal Render Pipeline (URP) and Shader Graph.'
-    linkText: 
-    url: 
-  - heading:
-    text: 'URP is prebuilt Scriptable Render Pipeline that is quick and easy to customize, and lets you create optimized graphics across a wide range of platforms. URP also includes an optimized 2D renderer complete with 2D lights and pixel perfect rendering, and an integrated post-processing solution.'
-    linkText: 
-    url: 
-  - heading:
-    text: 'Shader Graph is a tool that allows you to create shaders using a visual node editor instead of writing code.'
+  - heading: 
+    text: 'The Realtime Rascals is an animated project with a set of ready-to-use
+      characters and environments to enable creators to experience the power of animated
+      storytelling in real-time. '
     linkText: 
     url: 
   - heading: 
-    text: 'This template contains a sample Scene that contains examples of how to configure lighting settings, Materials, Shaders, and post-processing effects in URP, several preconfigured Universal Render Pipeline Assets that let you quickly swap between graphics quality levels, and Presets that have been optimized for use with URP.'
-    linkText:
-    url:
+    text: The Realtime Rascals assets were designed to allow creators to download,
+      extend or customize them. This creates the potential for creators to use the
+      Realtime Rascals to create their own stories without the need for a large team
+      or big studio infrastructure such as render farms. The Realtime Rascals were
+      also created so professionals can experiment on how to integrate Unity into
+      their current offline pipelines and enhance creativity and productivity using
+      Realtime Technology.
+    linkText: 
+    url: 
+  - heading: Resources
+    text: The Realtime Rascal Assets will be used in a series of Live Sessions that
+      takes a deep dive into every part of the animated storytelling process, from
+      previs to final pixels. The sessions then explore how to take your stories
+      into new media such as XR.
+    linkText: 
+    url: 
   - heading: 
-    text: 'This template contains a sample Scene that contains examples of how to configure lighting settings, Materials, Shaders, and post-processing effects in URP, several preconfigured Universal Render Pipeline Assets that let you quickly swap between graphics quality levels, and Presets that have been optimized for use with URP.'
-    linkText:
-    url:
+    text: "Whether you\u2019re a student who wants to be at the forefront of the
+      fast-changing entertainment industry or a professional looking to upskill,
+      these assets will help you to deepen your knowledge and skill set throughout
+      the entire real-time animation workflow. "
+    linkText: 'Road to Realtime: Realtime Rascals Home Page'
+    url: https://create.unity.com/road-to-realtime
   - heading: 
-    text: 'To read more about URP and its built-in features, see the '
-    linkText: URP documentation.
-    url: https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/index.html
+    text: 
+    linkText: 
+    url: 
   - heading: 
-    text: 'For more information about Shader Graph, see the '
-    linkText: Shader Graph documentation
-    url: https://docs.unity3d.com/Packages/com.unity.shadergraph@latest
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+  - heading: 
+    text: 
+    linkText: 
+    url: 
   loadedLayout: 1
