@@ -41,11 +41,6 @@ public class ImageTracker2 : MonoBehaviour
         debugText_AR.text = "ImageTracker2";
     }
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         //debugText_AR.text = MyDataStruct.spawnedObject.name;
@@ -67,14 +62,12 @@ public class ImageTracker2 : MonoBehaviour
         {
             UpdateSpawnObject(trackedImage);
 
+            InstParticle(trackedImage);
+
             /*if (trackedImage != null)
             {
                 debugText_AR.text = "trackedImage != null";
             }*/
-
-            ParticleSystem particles = Instantiate(particle, trackedImage.transform.position, Quaternion.identity);
-            particles.transform.parent = trackedImage.transform;
-            particles.gameObject.SetActive(true);
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated) // .updated 트래킹되는 이미지가 변경되었을 때
@@ -95,7 +88,6 @@ public class ImageTracker2 : MonoBehaviour
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
         {
             spawnedObject[trackedImage.name].SetActive(false);
-            //PublicVars.spawnedObjectDic[trackedImage.name].SetActive(false);
 
             Destroy(trackedImage.transform.GetChild(0).gameObject);
         }
@@ -111,15 +103,9 @@ public class ImageTracker2 : MonoBehaviour
 
         spawnedObject[referenceImageName].SetActive(true);
 
-
-        /*PublicVars.spawnedObjectDic[referenceImageName].transform.SetPositionAndRotation(trackedImage.transform.position, trackedImage.transform.rotation);
-
-        PublicVars.spawnedObjectDic[referenceImageName].SetActive(true);*/
-
-
         MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
         MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
-        
+
         debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
     }
 
@@ -141,5 +127,13 @@ public class ImageTracker2 : MonoBehaviour
                 MyDataStruct.spawnedObject_Indicator.GetComponentInChildren<Renderer>().material = indicatorMt;
             }
         }
+    }
+
+    private void InstParticle(ARTrackedImage trackedImage)
+    {
+        Destroy(Instantiate(particle, trackedImage.transform.position, trackedImage.transform.rotation), 3);
+        //Instantiate(particle, trackedImage.transform.position, Quaternion.identity)
+        particle.transform.position = trackedImage.transform.position;
+        particle.transform.rotation = trackedImage.transform.rotation;
     }
 }
