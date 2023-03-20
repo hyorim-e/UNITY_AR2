@@ -34795,14 +34795,16 @@ struct ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD  : public MonoBeh
 	ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* ___trackedImageManager_4;
 	// UnityEngine.GameObject[] ImageTracker2::placeablePrefabs
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___placeablePrefabs_5;
+	// UnityEngine.ParticleSystem ImageTracker2::particle
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___particle_6;
 	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.GameObject> ImageTracker2::spawnedObject
-	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___spawnedObject_6;
+	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___spawnedObject_7;
 	// UnityEngine.Material ImageTracker2::indicatorMt
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___indicatorMt_7;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___indicatorMt_8;
 	// System.String ImageTracker2::referenceImageName
-	String_t* ___referenceImageName_8;
+	String_t* ___referenceImageName_9;
 	// UnityEngine.UI.Text ImageTracker2::debugText_AR
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText_AR_9;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText_AR_10;
 };
 
 // InventoryClick
@@ -42731,6 +42733,10 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7893;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7893 = { sizeof(Il2CppComObject), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7894;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7894 = { sizeof(__Il2CppComDelegate_tD0DD2BBA6AC8F151D32B6DFD02F6BDA339F8DC4D), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7895;
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7895 = { sizeof(Il2CppFullySharedGenericAny), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7896;
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7896 = { sizeof(Il2CppFullySharedGenericStruct)+ sizeof(RuntimeObject), -1, 0, 0 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -12,6 +12,9 @@ public class ImageTracker2 : MonoBehaviour
     [SerializeField]
     private GameObject[] placeablePrefabs;
 
+    [SerializeField]
+    private ParticleSystem particle;
+
     private Dictionary<string, GameObject> spawnedObject;
 
     public Material indicatorMt;
@@ -68,17 +71,33 @@ public class ImageTracker2 : MonoBehaviour
             {
                 debugText_AR.text = "trackedImage != null";
             }*/
+
+            ParticleSystem particles = Instantiate(particle, trackedImage.transform.position, Quaternion.identity);
+            particles.transform.parent = trackedImage.transform;
+            particles.gameObject.SetActive(true);
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.updated) // .updated 트래킹되는 이미지가 변경되었을 때
         {
             UpdateSpawnObject(trackedImage);
+
+            if (trackedImage.trackingState == TrackingState.Tracking)
+            {
+                trackedImage.transform.GetChild(0).gameObject.SetActive(true);
+            }
+            // If the tracked image is lost, deactivate the particle system
+            else if (trackedImage.trackingState == TrackingState.None)
+            {
+                trackedImage.transform.GetChild(0).gameObject.SetActive(false);
+            }
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
         {
             spawnedObject[trackedImage.name].SetActive(false);
             //PublicVars.spawnedObjectDic[trackedImage.name].SetActive(false);
+
+            Destroy(trackedImage.transform.GetChild(0).gameObject);
         }
     }
 

@@ -10462,7 +10462,7 @@ RectTransform:
   - {fileID: 639178658}
   - {fileID: 661022740}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -59002,6 +59002,7 @@ MonoBehaviour:
   - {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
   - {fileID: 4691359005820059523, guid: aecc9a37a362648499ee5ec515cf6c5d, type: 3}
   - {fileID: 654295223907599209, guid: 29ddd3a1bddb3ae4a8aa8ec56cb3f58a, type: 3}
+  particle: {fileID: 1963267574761631509, guid: a1bb6d28dc1057c4a965bada342f9652, type: 3}
   indicatorMt: {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
   debugText_AR: {fileID: 1696995977}
 --- !u!114 &1454210993
