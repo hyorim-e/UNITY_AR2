@@ -61,7 +61,9 @@ public class SettingsMenu : MonoBehaviour
         }
     }
 
-    void ToggleMenu()
+    //[ContextMenu] 또는 [ExecuteInEditMode] ([SerializeField]는 변수용)
+    [ExecuteInEditMode]
+    public void ToggleMenu()
     {
         isExpanded = !isExpanded;
 
