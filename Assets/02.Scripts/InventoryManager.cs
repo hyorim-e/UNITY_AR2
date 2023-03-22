@@ -25,12 +25,11 @@ public class InventoryManager : MonoBehaviour
     {
         //InvenListIndex = 0; 
         // Start에서 초기화하면 인벤토리 껐다 킬 때마다 계속 0으로 갱신되는 듯함. 그래서 계속 인벤토리 첫 칸만 바뀌는 듯.
-
     }
 
     void Update()
     {
-            
+        
     }
 
     public void InventoryUpdate()
@@ -43,10 +42,24 @@ public class InventoryManager : MonoBehaviour
 
             if (MoviePoster.name == MyDataStruct.spawnedObject.name)
             {
-                InvenList[InvenListIndex].sprite = MoviePoster;
-                InvenListIndex += 1;
-            }
-            // 첫 번째 칸 여우는 잘 바뀌는데 두 번째 칸 토끼가 포스터랑 겹치게 나옴.
+                debugText2.text = "MoviePoster.name == MyDataStruct.spawnedIbject.name";
+
+                // 인벤토리에 빈 슬롯이 있는지 확인
+                if (InvenListIndex < InvenList.Length)
+                {
+
+                    // 스프라이트를 다음 사용 가능한 슬롯에 할당
+                    InvenList[InvenListIndex].sprite = MoviePoster;
+                    InvenListIndex += 1;
+
+                    
+                }
+                else
+                {
+                    debugText1.text = "Inventory full";
+                }
+            }    
         }
+        //debugText2.text = "InventoryUpdate Function Done";
     }
 }

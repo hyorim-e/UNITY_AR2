@@ -34911,14 +34911,12 @@ struct InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945  : public Mono
 // InventorySlotClick
 struct InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.GameObject InventorySlotClick::Inventory
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Inventory_4;
 	// System.String InventorySlotClick::imageName
-	String_t* ___imageName_5;
+	String_t* ___imageName_4;
 	// UnityEngine.GameObject InventorySlotClick::selectedObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___selectedObject_6;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___selectedObject_5;
 	// UnityEngine.UI.Text InventorySlotClick::text
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___text_7;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___text_6;
 };
 
 // Joystick
@@ -34946,19 +34944,6 @@ struct Joystick_tE3193C48A43E3F5577CBD4E9A8204BBFF2FEEB7A  : public MonoBehaviou
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___cam_13;
 	// UnityEngine.Vector2 Joystick::input
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___input_14;
-};
-
-// JoystickSound
-struct JoystickSound_tE6FE622EE470F30FCC79C764306EFB5E698C6357  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// UnityEngine.AudioClip JoystickSound::soundClip
-	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___soundClip_4;
-	// System.Single JoystickSound::cooldownTime
-	float ___cooldownTime_5;
-	// UnityEngine.AudioSource JoystickSound::audioSource
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audioSource_6;
-	// System.Single JoystickSound::lastPlayTime
-	float ___lastPlayTime_7;
 };
 
 // UnityEngine.Rendering.LensFlareComponentSRP
@@ -35331,6 +35316,19 @@ struct WeatherChange_tC37651B1677C5DD77FCBF2BD7CD459110C30EE1D  : public MonoBeh
 	float ___weather_time_7;
 	// System.Int32 WeatherChange::next_weather
 	int32_t ___next_weather_8;
+};
+
+// etcMove
+struct etcMove_t54510F944E37B2E29C7341C754BCBEC7F8E9C823  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// System.Single etcMove::speed
+	float ___speed_4;
+	// System.Single etcMove::moveInterval
+	float ___moveInterval_5;
+	// System.Single etcMove::moveTimer
+	float ___moveTimer_6;
+	// UnityEngine.GameObject[] etcMove::objectsToMove
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___objectsToMove_7;
 };
 
 // scriptTexttest
@@ -42066,19 +42064,19 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7515 = { sizeof(ARSceneMove_
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7516;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7516 = { sizeof(BtnManager_t0CDA86D9A904B84FDE5ED50D9B037EFFFED569AD), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7517;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7517 = { sizeof(U3CHideRendererCoU3Ed__3_t9E7C89A6EEB4387C47F93D99A6DB2774BB0F6883), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7517 = { sizeof(etcMove_t54510F944E37B2E29C7341C754BCBEC7F8E9C823), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7518;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7518 = { sizeof(HideObject_t3D62783C1918EE249265A4BFF090566855C12D4F), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7518 = { sizeof(U3CHideRendererCoU3Ed__3_t9E7C89A6EEB4387C47F93D99A6DB2774BB0F6883), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7519;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7519 = { sizeof(ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7519 = { sizeof(HideObject_t3D62783C1918EE249265A4BFF090566855C12D4F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7520;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7520 = { sizeof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7520 = { sizeof(ImageTracker_tF34BA2E8F57A80FC83349A8A17C0D33C54B533B9), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7521;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7521 = { sizeof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7521 = { sizeof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7522;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7522 = { sizeof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7522 = { sizeof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7523;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7523 = { sizeof(JoystickSound_tE6FE622EE470F30FCC79C764306EFB5E698C6357), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7523 = { sizeof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7524;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7524 = { sizeof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317), -1, sizeof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7525;
