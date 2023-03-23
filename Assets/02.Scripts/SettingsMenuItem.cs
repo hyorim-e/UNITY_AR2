@@ -7,6 +7,7 @@ public class SettingsMenuItem : MonoBehaviour
 {
     [HideInInspector] public Image img;
     [HideInInspector] public Transform trans;
+    [HideInInspector] public Text txt;
 
     SettingsMenu settingsMenu;
     Button button;
@@ -16,6 +17,7 @@ public class SettingsMenuItem : MonoBehaviour
     void Awake()
     {
         img = GetComponent<Image>();
+        txt = GetComponentInChildren<Text>();
         trans = transform;
 
         settingsMenu = trans.parent.GetComponent<SettingsMenu>();
@@ -23,6 +25,8 @@ public class SettingsMenuItem : MonoBehaviour
 
         button = GetComponent<Button>();
         button.onClick.AddListener(OnItemClick);
+
+        Debug.Log(txt.name);
     }
 
     void OnItemClick()

@@ -42,6 +42,8 @@ public class SettingsMenu : MonoBehaviour
         for (int i = 0; i < itemsCount; i++)
         {
             menuItems[i] = transform.GetChild(i + 1).GetComponent<SettingsMenuItem>();
+            menuItems[i].img.enabled = false;
+            menuItems[i].txt.enabled = false;
         }
 
         mainButton = transform.GetChild(0).GetComponent<Button>();
@@ -70,12 +72,16 @@ public class SettingsMenu : MonoBehaviour
         // menu opened
         if (isExpanded)
         {
-
             for (int i = 0; i < itemsCount; i++)
             {
+                menuItems[i].img.enabled = true;
+                menuItems[i].txt.enabled = true;
+
                 // menuItems[i].trans.position = mainButtonPosition + spacing * (i + 1);
                 menuItems[i].trans.DOMove(mainButtonPosition + spacing * (i + 1), expandDuration).SetEase(expandEase);
                 menuItems[i].img.DOFade(1f, expandFadeDuration).From(0f);
+                menuItems[i].txt.DOFade(1f, expandFadeDuration).From(0f);
+
             }
         }
 
@@ -87,6 +93,7 @@ public class SettingsMenu : MonoBehaviour
                 // menuItems[i].trans.position = mainButtonPosition;
                 menuItems[i].trans.DOMove(mainButtonPosition, collapseDuration).SetEase(collapseEase);
                 menuItems[i].img.DOFade(0f, collapseFadeDuration);
+                menuItems[i].txt.DOFade(0f, collapseFadeDuration);
             }
         }
 
