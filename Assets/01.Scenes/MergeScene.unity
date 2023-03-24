@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18154702, g: 0.22719009, b: 0.30740646, a: 1}
+  m_IndirectSpecularColor: {r: 0.1815466, g: 0.22718954, b: 0.3074053, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27614,7 +27614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77362b9f607ac404596b5581f7774d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 269748778}
+  debugText: {fileID: 269748778}
 --- !u!1 &684349729
 GameObject:
   m_ObjectHideFlags: 0
@@ -50062,7 +50062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77362b9f607ac404596b5581f7774d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 269748778}
+  debugText: {fileID: 0}
 --- !u!1 &1216250195
 GameObject:
   m_ObjectHideFlags: 0
@@ -54810,6 +54810,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56946ede1ff647340b2c0ca1d1831eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1335117269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1335117270}
+  m_Layer: 0
+  m_Name: AR Session Origin_ARRecog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1335117270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335117269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1454210996}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1337458428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59415,7 +59447,7 @@ GameObject:
   - component: {fileID: 1454210993}
   - component: {fileID: 1454210992}
   m_Layer: 0
-  m_Name: AR Session Origin_ARRecog
+  m_Name: AR Session Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59433,10 +59465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff88425b64fdd9e44835e5fc39e671fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeablePrefabs:
-  - {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
-  - {fileID: 4691359005820059523, guid: aecc9a37a362648499ee5ec515cf6c5d, type: 3}
-  - {fileID: 654295223907599209, guid: 29ddd3a1bddb3ae4a8aa8ec56cb3f58a, type: 3}
   particle: {fileID: 1963267574761631509, guid: a1bb6d28dc1057c4a965bada342f9652, type: 3}
   indicatorMt: {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
   debugText_AR: {fileID: 1696995977}
@@ -59493,14 +59521,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454210991}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1408114284}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1335117270}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1456423951 stripped
 Transform:
@@ -66817,7 +66845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 75e58fcd7a49cf84db3f7bf65742af7b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

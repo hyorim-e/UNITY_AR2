@@ -9,13 +9,15 @@ public class ImageTracker2 : MonoBehaviour
 {
     private ARTrackedImageManager trackedImageManager;
 
-    [SerializeField]
-    private GameObject[] placeablePrefabs;
+    //[SerializeField]
+    [HideInInspector]
+    public GameObject[] placeablePrefabs;
 
     [SerializeField]
     private ParticleSystem particle;
 
-    private Dictionary<string, GameObject> spawnedObject;
+    [HideInInspector]
+    public Dictionary<string, GameObject> spawnedObject;
 
     public Material indicatorMt;
 
@@ -39,11 +41,6 @@ public class ImageTracker2 : MonoBehaviour
         }
 
         debugText_AR.text = "ImageTracker2";
-    }
-
-    private void Update()
-    {
-        //debugText_AR.text = MyDataStruct.spawnedObject.name;
     }
 
     private void OnEnable()

@@ -7,7 +7,22 @@ public class InventorySlotClick : MonoBehaviour
 {
     private string imageName;
     private GameObject selectedObject;
-    public Text text;
+    public Text debugText;
+
+    ImageTracker2 imageTracker2_sc;
+
+
+    private void Awake()
+    {
+        imageTracker2_sc = GameObject.Find("AR Session Origin_ARRecog").GetComponentInChildren<ImageTracker2>();
+        // Find로 찾으려면 찾는 오브젝트가 활성화돼 있어야 가능.
+        // 근데 AR Session Origin_ARRecog가 활성화돼 있으면 안돼서(AR Session Origin_Game랑 겹침)
+        // AR Session Origin_ARRecog를 빈 오브젝트로 감싸서 자식으로 만들고 네이밍 다시 했음.
+        // 근데 일단 GetComponent하기 전에 setActive true로 킨 다음 컴포넌트 가져오고 다시 false해야 하는 듯?
+        /*GameObject.Find("AR Session Origin_ARRecog").SetActive(true);
+        imageTracker2_sc = GameObject.Find("AR Session Origin_ARRecog").GetComponentInChildren<ImageTracker2>();
+        GameObject.Find("AR Session Origin_ARRecog").SetActive(false);*/
+    }
 
     public void OnClick()
     {
@@ -16,16 +31,29 @@ public class InventorySlotClick : MonoBehaviour
         // ARManager2.cs 의 OnClickMakePrefabBtn() (배치하기 눌렀을 때 배치 미리보기 나오는 기능) 실행 안됨.
         // 배치하기 버튼으로는 기능 잘됨.
 
-        imageName = this.gameObject.GetComponentInChildren<Sprite>().name;
+        imageName = transform.GetChild(1).GetComponentInChildren<Image>().sprite.name;
 
-        text.text = imageName;
+        //debugText.text = imageName;
+        Debug.Log("imageName => " + imageName);
+        // imageName이 그냥 UISprite라고 출력됨.(원래 영화포스터 이름 나와야 함) 
+        // 그래서 아래 imageName으로 키값 쓰는 코드에서 NullReferenceException 오류 발생.
+        // 여길 고쳐야 아래 코드도 정상적으로 돌아갈 듯.
 
-        // transform으로 찾아들어가면 비활성화된 오브젝트 접근 가능하다고 함.
-        selectedObject = transform.Find(imageName).gameObject;
+        // 분명 InChildren 했는데 자식이 아니라 본인 버튼의 Image 컴포넌트의 Sprite 찾아오는 것 같음.
+        // ※GetComponentInChildren는 무조건 자식 중 첫 번째 꺼 받아오는거임※
+        // ※자식 고르려면 transform의 GetChild 사용해서 접근해야 함※
+
+        // selectedObject = transform.Find(imageName).gameObject;
         //selectedObject = GameObject.Find(imageName);
-        
+        //selectedObject = imageTracker2_sc.spawnedObject[imageName];
+        foreach(GameObject prefab in imageTracker2_sc.placeablePrefabs)
+        {
+            if (imageName == prefab.name)
+                //selectedObject = prefab;
+                MyDataStruct.spawnedObject = prefab;
+        }
 
-        MyDataStruct.spawnedObject = selectedObject;
+        //MyDataStruct.spawnedObject = selectedObject;
 
         // ImageTracker2.cs 의 SetIndicator() 실행
         // ARManager2.cs 의 OnClickMakePrefabBtn() 실행
