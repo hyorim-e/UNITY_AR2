@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class InventorySlotClick : MonoBehaviour
 {
     private string imageName;
-    private GameObject selectedObject;
     public Text debugText;
 
     ImageTracker2 imageTracker2_sc;
+    ARManager2 arManager2_sc;
 
 
     private void Awake()
     {
-        imageTracker2_sc = GameObject.Find("AR Session Origin_ARRecog").GetComponentInChildren<ImageTracker2>();
+        imageTracker2_sc = GameObject.Find("AR Session Origin_ARRecog").transform.Find("AR Session Origin").GetComponent<ImageTracker2>();
         // Find로 찾으려면 찾는 오브젝트가 활성화돼 있어야 가능.
         // 근데 AR Session Origin_ARRecog가 활성화돼 있으면 안돼서(AR Session Origin_Game랑 겹침)
         // AR Session Origin_ARRecog를 빈 오브젝트로 감싸서 자식으로 만들고 네이밍 다시 했음.
-        // 근데 일단 GetComponent하기 전에 setActive true로 킨 다음 컴포넌트 가져오고 다시 false해야 하는 듯?
-        /*GameObject.Find("AR Session Origin_ARRecog").SetActive(true);
-        imageTracker2_sc = GameObject.Find("AR Session Origin_ARRecog").GetComponentInChildren<ImageTracker2>();
-        GameObject.Find("AR Session Origin_ARRecog").SetActive(false);*/
+        arManager2_sc = GameObject.Find("ARManager").GetComponent<ARManager2>();
+
+        Debug.Log(imageTracker2_sc);
+        Debug.Log(arManager2_sc);
     }
 
     public void OnClick()
@@ -41,22 +41,20 @@ public class InventorySlotClick : MonoBehaviour
 
         // 분명 InChildren 했는데 자식이 아니라 본인 버튼의 Image 컴포넌트의 Sprite 찾아오는 것 같음.
         // ※GetComponentInChildren는 무조건 자식 중 첫 번째 꺼 받아오는거임※
-        // ※자식 고르려면 transform의 GetChild 사용해서 접근해야 함※
+        // ※자식 고르려면 transform의 GetChild(n) 사용해서 접근해야 함※
 
         // selectedObject = transform.Find(imageName).gameObject;
         //selectedObject = GameObject.Find(imageName);
         //selectedObject = imageTracker2_sc.spawnedObject[imageName];
-        foreach(GameObject prefab in imageTracker2_sc.placeablePrefabs)
-        {
-            if (imageName == prefab.name)
-                //selectedObject = prefab;
-                MyDataStruct.spawnedObject = prefab;
+
+        Debug.Log(imageTracker2_sc.spawnedObject[imageName].name);
+
+        if (imageTracker2_sc.spawnedObject[imageName]) // 인벤토리에서 클릭한 이미지에 따른 프리팹 존재하면
+        {    
+            MyDataStruct.spawnedObject = imageTracker2_sc.spawnedObject[imageName];
         }
 
-        //MyDataStruct.spawnedObject = selectedObject;
-
-        // ImageTracker2.cs 의 SetIndicator() 실행
-        // ARManager2.cs 의 OnClickMakePrefabBtn() 실행
-
+        imageTracker2_sc.SetIndicator();
+        arManager2_sc.OnClickMakePrefabBtn();
     }
 }

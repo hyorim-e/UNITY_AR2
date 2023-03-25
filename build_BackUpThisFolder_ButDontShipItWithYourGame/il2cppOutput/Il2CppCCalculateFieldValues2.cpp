@@ -788,6 +788,8 @@ struct ABSPathDecoder_t6B479550CEF6C183ACCA13F11E29E019270AB61C;
 struct ARCameraManager_t6E957EA922911B8447D086D9FB1F860EC967BD9F;
 // UnityEngine.XR.ARFoundation.ARFace
 struct ARFace_t73C068C9C8422F79A858EC41C322D399305B8453;
+// ARManager2
+struct ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30;
 // UnityEngine.XR.ARFoundation.AROcclusionManager
 struct AROcclusionManager_t9EDE9F76050AF892E2AC6704D0F76EDAC370609D;
 // UnityEngine.XR.ARFoundation.ARPlane
@@ -1002,6 +1004,8 @@ struct ITimeControl_t1D123FAB88690CC243DECB0DEEC20A459224680E;
 struct ITweenPlugin_t6CC45CF7D7F91626F1BD45D75418FF1AC2DC5166;
 // UnityEngine.UI.Image
 struct Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E;
+// ImageTracker2
+struct ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD;
 // UnityEngine.UI.InputField
 struct InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140;
 // UnityEngine.UI.LayoutElement
@@ -23427,10 +23431,12 @@ struct InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283  : public Mo
 {
 	// System.String InventorySlotClick::imageName
 	String_t* ___imageName_4;
-	// UnityEngine.GameObject InventorySlotClick::selectedObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___selectedObject_5;
-	// UnityEngine.UI.Text InventorySlotClick::text
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___text_6;
+	// UnityEngine.UI.Text InventorySlotClick::debugText
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText_5;
+	// ImageTracker2 InventorySlotClick::imageTracker2_sc
+	ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* ___imageTracker2_sc_6;
+	// ARManager2 InventorySlotClick::arManager2_sc
+	ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* ___arManager2_sc_7;
 };
 
 // Joystick
@@ -23543,12 +23549,14 @@ struct SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379  : public Mono
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___img_4;
 	// UnityEngine.Transform SettingsMenuItem::trans
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___trans_5;
+	// UnityEngine.UI.Text SettingsMenuItem::txt
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___txt_6;
 	// SettingsMenu SettingsMenuItem::settingsMenu
-	SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA* ___settingsMenu_6;
+	SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA* ___settingsMenu_7;
 	// UnityEngine.UI.Button SettingsMenuItem::button
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___button_7;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___button_8;
 	// System.Int32 SettingsMenuItem::index
-	int32_t ___index_8;
+	int32_t ___index_9;
 };
 
 // UnityEngine.Timeline.SignalReceiver
@@ -29312,9 +29320,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7521[7] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7522[5] = 
 {
 	static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___MoviePosterList_4)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenList_5)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenListIndex_6)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText1_7)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText2_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7523[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7523[4] = 
 {
-	static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___imageName_4)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___selectedObject_5)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___text_6)),};
+	static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___imageName_4)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___debugText_5)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___imageTracker2_sc_6)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___arManager2_sc_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7524[3] = 
 {
 	static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_4)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___spawnedObject_Indicator_5)),static_cast<int32_t>(offsetof(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields, ___originMt_6)),};
@@ -29324,9 +29332,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7525[8] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7526[14] = 
 {
 	static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___spacing_4)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___rotationDuration_5)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___rotationEase_6)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___expandDuration_7)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___collapseDuration_8)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___expandEase_9)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___collapseEase_10)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___expandFadeDuration_11)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___collapseFadeDuration_12)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___mainButton_13)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___menuItems_14)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___isExpanded_15)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___mainButtonPosition_16)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___itemsCount_17)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7527[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7527[6] = 
 {
-	static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___img_4)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___trans_5)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___settingsMenu_6)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___button_7)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___index_8)),};
+	static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___img_4)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___trans_5)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___txt_6)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___settingsMenu_7)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___button_8)),static_cast<int32_t>(offsetof(SettingsMenuItem_t25B67855C9DEAE467923C07CFA7D242B7190C379, ___index_9)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7528[3] = 
 {
 	static_cast<int32_t>(offsetof(Sound_t06FB644265ECCFDDC2E12D87F6111B3760FC17A0, ___BGM_4)),static_cast<int32_t>(offsetof(Sound_t06FB644265ECCFDDC2E12D87F6111B3760FC17A0, ___ButtonClick_5)),static_cast<int32_t>(offsetof(Sound_t06FB644265ECCFDDC2E12D87F6111B3760FC17A0, ___FootSound_6)),};

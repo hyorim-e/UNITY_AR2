@@ -134,34 +134,34 @@ extern void ImageTracker_Update_mFFA46141C9F88E855E464EDCA3272797224ADEB4 (void)
 extern void ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856 (void);
 // 0x0000003D System.Void ImageTracker2::Awake()
 extern void ImageTracker2_Awake_mC245B9771433B646EDF3ACFEBC14FD43B75BB299 (void);
-// 0x0000003E System.Void ImageTracker2::Update()
-extern void ImageTracker2_Update_m0C7D341E3563FFA5B7849A3E76727F6E3211E10A (void);
-// 0x0000003F System.Void ImageTracker2::OnEnable()
+// 0x0000003E System.Void ImageTracker2::OnEnable()
 extern void ImageTracker2_OnEnable_mF3BBD009C0F269A28307B1DED727B6FC1B80B8E4 (void);
-// 0x00000040 System.Void ImageTracker2::OnDisable()
+// 0x0000003F System.Void ImageTracker2::OnDisable()
 extern void ImageTracker2_OnDisable_m31F48B7C49C17E75CFFE2ED6768A25E7E8849FA6 (void);
-// 0x00000041 System.Void ImageTracker2::OnTrackedImageChanged(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
+// 0x00000040 System.Void ImageTracker2::OnTrackedImageChanged(UnityEngine.XR.ARFoundation.ARTrackedImagesChangedEventArgs)
 extern void ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB08465F362B (void);
-// 0x00000042 System.Void ImageTracker2::UpdateSpawnObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
+// 0x00000041 System.Void ImageTracker2::UpdateSpawnObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void ImageTracker2_UpdateSpawnObject_mDF6CB01557FC9AE16E408B131CCBEC31F2D82E13 (void);
-// 0x00000043 System.Void ImageTracker2::RemoveSpawnedObject()
+// 0x00000042 System.Void ImageTracker2::RemoveSpawnedObject()
 extern void ImageTracker2_RemoveSpawnedObject_mCEA23BE197377194B33EE9CB4BBC8C8D8AE44C7D (void);
-// 0x00000044 System.Void ImageTracker2::SetIndicator()
+// 0x00000043 System.Void ImageTracker2::SetIndicator()
 extern void ImageTracker2_SetIndicator_m9BC4DE11B2B73E6D9D956E51012BC5644E1FD9D7 (void);
-// 0x00000045 System.Void ImageTracker2::InstParticle(UnityEngine.XR.ARFoundation.ARTrackedImage)
+// 0x00000044 System.Void ImageTracker2::InstParticle(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void ImageTracker2_InstParticle_mFDF81F5AB7F926A18747EC8EE7C794C4F0A3521E (void);
-// 0x00000046 System.Void ImageTracker2::.ctor()
+// 0x00000045 System.Void ImageTracker2::.ctor()
 extern void ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1 (void);
-// 0x00000047 System.Void InventoryManager::Awake()
+// 0x00000046 System.Void InventoryManager::Awake()
 extern void InventoryManager_Awake_mC4DEEDBBD790D4BB57FD3D2F0A106076EB0E989F (void);
-// 0x00000048 System.Void InventoryManager::Start()
+// 0x00000047 System.Void InventoryManager::Start()
 extern void InventoryManager_Start_m5B5EBEAFB2E80EFF500B0478AB2A86BA992B40A4 (void);
-// 0x00000049 System.Void InventoryManager::Update()
+// 0x00000048 System.Void InventoryManager::Update()
 extern void InventoryManager_Update_m948A3500AB20B1B48F7632C3889A489326C49871 (void);
-// 0x0000004A System.Void InventoryManager::InventoryUpdate()
+// 0x00000049 System.Void InventoryManager::InventoryUpdate()
 extern void InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8 (void);
-// 0x0000004B System.Void InventoryManager::.ctor()
+// 0x0000004A System.Void InventoryManager::.ctor()
 extern void InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13 (void);
+// 0x0000004B System.Void InventorySlotClick::Awake()
+extern void InventorySlotClick_Awake_m41E33C5119BC3820FFD6F2BD45F383E37A9C0244 (void);
 // 0x0000004C System.Void InventorySlotClick::OnClick()
 extern void InventorySlotClick_OnClick_mC5E719C9D07005D9EEA080C42CA964F53AF637C1 (void);
 // 0x0000004D System.Void InventorySlotClick::.ctor()
@@ -409,7 +409,6 @@ static Il2CppMethodPointer s_methodPointers[167] =
 	ImageTracker_Update_mFFA46141C9F88E855E464EDCA3272797224ADEB4,
 	ImageTracker__ctor_m713E662C7F699779787AF5C331ED1A8F32E53856,
 	ImageTracker2_Awake_mC245B9771433B646EDF3ACFEBC14FD43B75BB299,
-	ImageTracker2_Update_m0C7D341E3563FFA5B7849A3E76727F6E3211E10A,
 	ImageTracker2_OnEnable_mF3BBD009C0F269A28307B1DED727B6FC1B80B8E4,
 	ImageTracker2_OnDisable_m31F48B7C49C17E75CFFE2ED6768A25E7E8849FA6,
 	ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB08465F362B,
@@ -423,6 +422,7 @@ static Il2CppMethodPointer s_methodPointers[167] =
 	InventoryManager_Update_m948A3500AB20B1B48F7632C3889A489326C49871,
 	InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8,
 	InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13,
+	InventorySlotClick_Awake_m41E33C5119BC3820FFD6F2BD45F383E37A9C0244,
 	InventorySlotClick_OnClick_mC5E719C9D07005D9EEA080C42CA964F53AF637C1,
 	InventorySlotClick__ctor_m2B0FC4BE3B22BB24AF341BB67012D7AFB168941D,
 	MyDataStruct__ctor_m58BD6905ADA6FC9FD5C0952E8928B77870D63A74,
@@ -581,12 +581,12 @@ static const int32_t s_InvokerIndices[167] =
 	8432,
 	8432,
 	8432,
-	8432,
 	6673,
 	6815,
 	8432,
 	8432,
 	6815,
+	8432,
 	8432,
 	8432,
 	8432,

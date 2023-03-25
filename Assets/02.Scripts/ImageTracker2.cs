@@ -9,8 +9,8 @@ public class ImageTracker2 : MonoBehaviour
 {
     private ARTrackedImageManager trackedImageManager;
 
+    //[HideInInspector]
     //[SerializeField]
-    [HideInInspector]
     public GameObject[] placeablePrefabs;
 
     [SerializeField]
@@ -115,7 +115,7 @@ public class ImageTracker2 : MonoBehaviour
     {
         foreach(GameObject obj in placeablePrefabs)
         {
-            if(obj.name == referenceImageName)
+            if(obj.name == MyDataStruct.spawnedObject.name)
             {
                 MyDataStruct.spawnedObject_Indicator = Instantiate(obj);
                 MyDataStruct.spawnedObject_Indicator.name = obj.name;
