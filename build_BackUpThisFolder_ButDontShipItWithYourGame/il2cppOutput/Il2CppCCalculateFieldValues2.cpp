@@ -23420,10 +23420,12 @@ struct InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945  : public Mono
 	ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* ___InvenList_5;
 	// System.Int32 InventoryManager::InvenListIndex
 	int32_t ___InvenListIndex_6;
+	// UnityEngine.UI.Button InventoryManager::invenCloseBtn
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___invenCloseBtn_7;
 	// UnityEngine.UI.Text InventoryManager::debugText1
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText1_7;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText1_8;
 	// UnityEngine.UI.Text InventoryManager::debugText2
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText2_8;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText2_9;
 };
 
 // InventorySlotClick
@@ -29317,9 +29319,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7520[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7521[7] = 
 {
 	static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___trackedImageManager_4)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___placeablePrefabs_5)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___particle_6)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___spawnedObject_7)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___indicatorMt_8)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___referenceImageName_9)),static_cast<int32_t>(offsetof(ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD, ___debugText_AR_10)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7522[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7522[6] = 
 {
-	static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___MoviePosterList_4)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenList_5)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenListIndex_6)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText1_7)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText2_8)),};
+	static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___MoviePosterList_4)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenList_5)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___InvenListIndex_6)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___invenCloseBtn_7)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText1_8)),static_cast<int32_t>(offsetof(InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945, ___debugText2_9)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7523[4] = 
 {
 	static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___imageName_4)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___debugText_5)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___imageTracker2_sc_6)),static_cast<int32_t>(offsetof(InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283, ___arManager2_sc_7)),};

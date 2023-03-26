@@ -34906,10 +34906,12 @@ struct InventoryManager_t7A39808946F0799F4EABCBFCE3653CBC57F99945  : public Mono
 	ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* ___InvenList_5;
 	// System.Int32 InventoryManager::InvenListIndex
 	int32_t ___InvenListIndex_6;
+	// UnityEngine.UI.Button InventoryManager::invenCloseBtn
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___invenCloseBtn_7;
 	// UnityEngine.UI.Text InventoryManager::debugText1
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText1_7;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText1_8;
 	// UnityEngine.UI.Text InventoryManager::debugText2
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText2_8;
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___debugText2_9;
 };
 
 // InventorySlotClick

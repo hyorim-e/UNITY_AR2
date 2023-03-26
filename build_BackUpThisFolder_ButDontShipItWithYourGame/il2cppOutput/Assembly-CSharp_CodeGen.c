@@ -154,10 +154,10 @@ extern void ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1 (void)
 extern void InventoryManager_Awake_mC4DEEDBBD790D4BB57FD3D2F0A106076EB0E989F (void);
 // 0x00000047 System.Void InventoryManager::Start()
 extern void InventoryManager_Start_m5B5EBEAFB2E80EFF500B0478AB2A86BA992B40A4 (void);
-// 0x00000048 System.Void InventoryManager::Update()
-extern void InventoryManager_Update_m948A3500AB20B1B48F7632C3889A489326C49871 (void);
-// 0x00000049 System.Void InventoryManager::InventoryUpdate()
+// 0x00000048 System.Void InventoryManager::InventoryUpdate()
 extern void InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8 (void);
+// 0x00000049 System.Void InventoryManager::IndexCheck()
+extern void InventoryManager_IndexCheck_m111C9CCDC79F235D1C4DB038CDE8967325917F9B (void);
 // 0x0000004A System.Void InventoryManager::.ctor()
 extern void InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13 (void);
 // 0x0000004B System.Void InventorySlotClick::Awake()
@@ -419,8 +419,8 @@ static Il2CppMethodPointer s_methodPointers[167] =
 	ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1,
 	InventoryManager_Awake_mC4DEEDBBD790D4BB57FD3D2F0A106076EB0E989F,
 	InventoryManager_Start_m5B5EBEAFB2E80EFF500B0478AB2A86BA992B40A4,
-	InventoryManager_Update_m948A3500AB20B1B48F7632C3889A489326C49871,
 	InventoryManager_InventoryUpdate_m841D62814C757104A6B0173F8DEAAFDDEF7D43E8,
+	InventoryManager_IndexCheck_m111C9CCDC79F235D1C4DB038CDE8967325917F9B,
 	InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13,
 	InventorySlotClick_Awake_m41E33C5119BC3820FFD6F2BD45F383E37A9C0244,
 	InventorySlotClick_OnClick_mC5E719C9D07005D9EEA080C42CA964F53AF637C1,
