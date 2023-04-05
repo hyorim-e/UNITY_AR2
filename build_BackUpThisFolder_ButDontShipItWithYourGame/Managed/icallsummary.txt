@@ -948,6 +948,7 @@ UnityEngine.ParticleSystem::set_randomSeed
 UnityEngine.ParticleSystem::set_useAutoRandomSeed
 UnityEngine.ParticleSystem/MainModule::get_loop_Injected
 UnityEngine.ParticleSystem/MainModule::get_duration_Injected
+UnityEngine.ParticleSystem/MainModule::get_simulationSpeed_Injected
 UnityEngine.ParticleSystem/MainModule::get_startColor_Injected
 UnityEngine.ParticleSystem/MainModule::get_startSize_Injected
 UnityEngine.ParticleSystem/SubEmittersModule::get_subEmittersCount_Injected
