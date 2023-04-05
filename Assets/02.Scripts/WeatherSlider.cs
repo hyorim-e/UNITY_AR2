@@ -11,50 +11,39 @@ public class WeatherSlider : MonoBehaviour
     public ParticleSystem rain;
     public ParticleSystem snow;
 
-    public float rain_simulationSpeed;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        rain_simulationSpeed = rain.main.simulationSpeed;
-
-        // rainSlider.on
-
-        rainSlider.onValueChanged.RemoveAllListeners();
-        rainSlider.minValue = 0;
-        rainSlider.maxValue = 100;
-        Debug.Log(rain.main.simulationSpeed);
-
-        rainSlider.value = rain_simulationSpeed;
-        rainSlider.onValueChanged.AddListener(delegate { OnRainSlider(); });
+        rainSlider.onValueChanged.AddListener(OnRainSlider);
+        snowSlider.onValueChanged.AddListener(OnSnowSlider);
     }
 
-    public void OnRainSlider()
+
+    public void OnRainSlider(float value)
     {
-        // rain = GetComponent<ParticleSystem>();
-        // float rain_simulationSpeed = rain.main.simulationSpeed;
-        // rainSlider.onValueChanged.RemoveAllListeners();
-        /*
-        rainSlider.value = rain.main.simulationSpeed;
-        rainSlider.minValue = 0;
-        rainSlider.maxValue = 100;
-        Debug.Log(rain.main.simulationSpeed);
-        */
-        //rainSlider.value = rain.main.simulationSpeed;
-        rain_simulationSpeed = rainSlider.value;
-        //rain.main.simulationSpeed = rainSlider.value;
+        // rain 파티클의 MainModule을 가져옴
+        ParticleSystem.MainModule mainModule = rain.main;
 
+        // 시뮬레이션 속도 변경
+        mainModule.simulationSpeed = value;
+
+        rainSlider.minValue = 2.5f;
+        rainSlider.maxValue = 7.5f;
     }
 
-    /*
-    public void OnSnowSlider()
+
+    public void OnSnowSlider(float value)
     {
-        // snow = GetComponent<ParticleSystem>();
-        // float snow_simulationSpeed = snow.main.simulationSpeed;
+        // snow 파티클의 MainModule을 가져옴
+        ParticleSystem.MainModule mainModule = snow.main;
 
-        snowSlider.value = snow.main.simulationSpeed;
-        snowSlider.minValue = 0;
-        snowSlider.maxValue = 100;
+        // 시뮬레이션 속도 변경
+        mainModule.simulationSpeed = value;
+
+        snowSlider.minValue = 0.3f;
+        snowSlider.maxValue = 1.0f;
     }
-    */
+
 }
