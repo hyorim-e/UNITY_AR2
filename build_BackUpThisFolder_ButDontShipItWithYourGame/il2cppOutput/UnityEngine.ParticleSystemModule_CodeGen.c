@@ -66,8 +66,8 @@ extern void MainModule_get_loop_m4F75CD377C0555635995F7C1F8D580517473EDF8 (void)
 extern void MainModule_get_startSize_m7D92E17A7D36FB18A9D3ADA54D2D1DEDE89601FC (void);
 // 0x0000001B UnityEngine.ParticleSystem/MinMaxGradient UnityEngine.ParticleSystem/MainModule::get_startColor()
 extern void MainModule_get_startColor_m24E66E583EB51341A885ABAE84114CBB37018781 (void);
-// 0x0000001C System.Single UnityEngine.ParticleSystem/MainModule::get_simulationSpeed()
-extern void MainModule_get_simulationSpeed_mF8660A6B965EA99FD0A37BE83CA77F019C088368 (void);
+// 0x0000001C System.Void UnityEngine.ParticleSystem/MainModule::set_simulationSpeed(System.Single)
+extern void MainModule_set_simulationSpeed_mFB44E06BF3F0D423636A6F37642CCC5722EBE0C6 (void);
 // 0x0000001D System.Single UnityEngine.ParticleSystem/MainModule::get_duration_Injected(UnityEngine.ParticleSystem/MainModule&)
 extern void MainModule_get_duration_Injected_m8FFE76F870FE2DEE726419BF3D938ECF415B3510 (void);
 // 0x0000001E System.Boolean UnityEngine.ParticleSystem/MainModule::get_loop_Injected(UnityEngine.ParticleSystem/MainModule&)
@@ -76,8 +76,8 @@ extern void MainModule_get_loop_Injected_m981D150F1CB1259422834C967802AB03E6D098
 extern void MainModule_get_startSize_Injected_m4450C02AC6B7E27E925D97761AFE732FE0F8F43C (void);
 // 0x00000020 System.Void UnityEngine.ParticleSystem/MainModule::get_startColor_Injected(UnityEngine.ParticleSystem/MainModule&,UnityEngine.ParticleSystem/MinMaxGradient&)
 extern void MainModule_get_startColor_Injected_m0E98B135389A5259B00D43751CB7802DFA2C0A6D (void);
-// 0x00000021 System.Single UnityEngine.ParticleSystem/MainModule::get_simulationSpeed_Injected(UnityEngine.ParticleSystem/MainModule&)
-extern void MainModule_get_simulationSpeed_Injected_m0D827D9D476E3EE9CFE067A7E166962ECF4A4432 (void);
+// 0x00000021 System.Void UnityEngine.ParticleSystem/MainModule::set_simulationSpeed_Injected(UnityEngine.ParticleSystem/MainModule&,System.Single)
+extern void MainModule_set_simulationSpeed_Injected_m982E56D1F890637441782004A5491770FDCDD197 (void);
 // 0x00000022 System.Void UnityEngine.ParticleSystem/SubEmittersModule::.ctor(UnityEngine.ParticleSystem)
 extern void SubEmittersModule__ctor_m88FC56A3AC3EB5013199BE0AE06032B6405EDD93 (void);
 // 0x00000023 System.Int32 UnityEngine.ParticleSystem/SubEmittersModule::get_subEmittersCount()
@@ -143,12 +143,12 @@ static Il2CppMethodPointer s_methodPointers[51] =
 	MainModule_get_loop_m4F75CD377C0555635995F7C1F8D580517473EDF8,
 	MainModule_get_startSize_m7D92E17A7D36FB18A9D3ADA54D2D1DEDE89601FC,
 	MainModule_get_startColor_m24E66E583EB51341A885ABAE84114CBB37018781,
-	MainModule_get_simulationSpeed_mF8660A6B965EA99FD0A37BE83CA77F019C088368,
+	MainModule_set_simulationSpeed_mFB44E06BF3F0D423636A6F37642CCC5722EBE0C6,
 	MainModule_get_duration_Injected_m8FFE76F870FE2DEE726419BF3D938ECF415B3510,
 	MainModule_get_loop_Injected_m981D150F1CB1259422834C967802AB03E6D098DB,
 	MainModule_get_startSize_Injected_m4450C02AC6B7E27E925D97761AFE732FE0F8F43C,
 	MainModule_get_startColor_Injected_m0E98B135389A5259B00D43751CB7802DFA2C0A6D,
-	MainModule_get_simulationSpeed_Injected_m0D827D9D476E3EE9CFE067A7E166962ECF4A4432,
+	MainModule_set_simulationSpeed_Injected_m982E56D1F890637441782004A5491770FDCDD197,
 	SubEmittersModule__ctor_m88FC56A3AC3EB5013199BE0AE06032B6405EDD93,
 	SubEmittersModule_get_subEmittersCount_m37858E5297285278ABC7CFA35168EB2DECB6A691,
 	SubEmittersModule_GetSubEmitterSystem_m866AA8A628E2CF3F78DA8E083C04D90AF7BD2B9D,
@@ -173,7 +173,7 @@ extern void MainModule_get_duration_mDCB80E6BD3B6B2DFB92E41FBCCA154D7E7150EB1_Ad
 extern void MainModule_get_loop_m4F75CD377C0555635995F7C1F8D580517473EDF8_AdjustorThunk (void);
 extern void MainModule_get_startSize_m7D92E17A7D36FB18A9D3ADA54D2D1DEDE89601FC_AdjustorThunk (void);
 extern void MainModule_get_startColor_m24E66E583EB51341A885ABAE84114CBB37018781_AdjustorThunk (void);
-extern void MainModule_get_simulationSpeed_mF8660A6B965EA99FD0A37BE83CA77F019C088368_AdjustorThunk (void);
+extern void MainModule_set_simulationSpeed_mFB44E06BF3F0D423636A6F37642CCC5722EBE0C6_AdjustorThunk (void);
 extern void SubEmittersModule__ctor_m88FC56A3AC3EB5013199BE0AE06032B6405EDD93_AdjustorThunk (void);
 extern void SubEmittersModule_get_subEmittersCount_m37858E5297285278ABC7CFA35168EB2DECB6A691_AdjustorThunk (void);
 extern void SubEmittersModule_GetSubEmitterSystem_m866AA8A628E2CF3F78DA8E083C04D90AF7BD2B9D_AdjustorThunk (void);
@@ -196,7 +196,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[21] =
 	{ 0x06000019, MainModule_get_loop_m4F75CD377C0555635995F7C1F8D580517473EDF8_AdjustorThunk },
 	{ 0x0600001A, MainModule_get_startSize_m7D92E17A7D36FB18A9D3ADA54D2D1DEDE89601FC_AdjustorThunk },
 	{ 0x0600001B, MainModule_get_startColor_m24E66E583EB51341A885ABAE84114CBB37018781_AdjustorThunk },
-	{ 0x0600001C, MainModule_get_simulationSpeed_mF8660A6B965EA99FD0A37BE83CA77F019C088368_AdjustorThunk },
+	{ 0x0600001C, MainModule_set_simulationSpeed_mFB44E06BF3F0D423636A6F37642CCC5722EBE0C6_AdjustorThunk },
 	{ 0x06000022, SubEmittersModule__ctor_m88FC56A3AC3EB5013199BE0AE06032B6405EDD93_AdjustorThunk },
 	{ 0x06000023, SubEmittersModule_get_subEmittersCount_m37858E5297285278ABC7CFA35168EB2DECB6A691_AdjustorThunk },
 	{ 0x06000024, SubEmittersModule_GetSubEmitterSystem_m866AA8A628E2CF3F78DA8E083C04D90AF7BD2B9D_AdjustorThunk },
@@ -215,57 +215,57 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[21] =
 };
 static const int32_t s_InvokerIndices[51] = 
 {
-	678,
-	3070,
-	3295,
-	2968,
-	3200,
-	2858,
-	1403,
-	2009,
-	1010,
-	2858,
-	3336,
-	1913,
-	2858,
-	3336,
-	2898,
-	2898,
-	2147,
-	2834,
-	3374,
-	3377,
-	3336,
-	1895,
-	2910,
-	3295,
-	3200,
-	3375,
-	3376,
-	3295,
-	7031,
-	6693,
-	5896,
-	5896,
-	7031,
-	2910,
-	3242,
-	2678,
-	6834,
-	5657,
-	2944,
-	2975,
-	2975,
-	2944,
-	2944,
-	2864,
-	2968,
-	2944,
-	2975,
-	2975,
-	3295,
-	3203,
-	2626,
+	886,
+	7149,
+	8426,
+	6979,
+	8230,
+	6744,
+	2151,
+	3973,
+	1589,
+	6744,
+	8489,
+	3349,
+	6744,
+	8489,
+	6830,
+	6830,
+	4135,
+	6698,
+	8591,
+	8595,
+	8489,
+	3331,
+	6866,
+	8426,
+	8230,
+	8592,
+	8593,
+	6938,
+	13910,
+	13523,
+	12485,
+	12485,
+	12492,
+	6866,
+	8314,
+	6126,
+	13667,
+	12054,
+	6938,
+	6987,
+	6987,
+	6938,
+	6938,
+	6754,
+	6979,
+	6938,
+	6987,
+	6987,
+	8426,
+	8237,
+	5818,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_ParticleSystemModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_ParticleSystemModule_CodeGenModule = 

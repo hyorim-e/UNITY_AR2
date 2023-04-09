@@ -64,9 +64,9 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Radius: 3.4028235e+38
+    - _Radius: 40
     m_Colors:
-    - _Center: {r: 22.230497, g: 0.029366806, b: -32.502033, a: 0}
+    - _Center: {r: 21.13, g: 0.029366806, b: -25.419998, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7322428877116474007
 MonoBehaviour:
