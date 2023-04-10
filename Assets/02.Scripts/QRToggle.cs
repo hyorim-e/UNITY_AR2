@@ -19,7 +19,7 @@ public class QRToggle : MonoBehaviour
 
     void toggleChanged(bool isOn)
     {
-        if (toggle.isOn) // true이면
+        if (isOn) // true이면
         {
             ARSessionOrigin.SetActive(false);
             QRTest.SetActive(true);
