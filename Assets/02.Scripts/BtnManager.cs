@@ -8,17 +8,27 @@ using UnityEngine.UI;
 public class BtnManager : MonoBehaviour
 {
     public GameObject ARManager;
+    private ARManager2 ARManager_sc;
 
     public GameObject ARSOrigin_ARRecog;
     public GameObject ARSOrigin_Game;
 
     public GameObject Canvas_ARRecog;
     public GameObject Canvas_Game;
+    public GameObject Canvas_Place;
 
     public GameObject plane;
     public GameObject gameDeco;
 
     public GameObject weather;
+
+    public Button placePrefabBtn;
+    public Button PosterRecognizeBtn;
+
+    private void Awake()
+    {
+        ARManager_sc = ARManager.GetComponent<ARManager2>();
+    }
 
     public void OnClickRecogBtn()
     {
@@ -29,6 +39,7 @@ public class BtnManager : MonoBehaviour
 
         Canvas_Game.SetActive(false);
         Canvas_ARRecog.SetActive(true);
+        Canvas_Place.SetActive(false);
 
         plane.SetActive(false);
         gameDeco.SetActive(false);
@@ -42,7 +53,8 @@ public class BtnManager : MonoBehaviour
         ARSOrigin_Game.SetActive(true);
 
         Canvas_ARRecog.SetActive(false);
-        Canvas_Game.SetActive(true);
+        Canvas_Game.SetActive(false);
+        Canvas_Place.SetActive(true);
 
         plane.SetActive(true);
         gameDeco.SetActive(true);
@@ -51,5 +63,15 @@ public class BtnManager : MonoBehaviour
     public void OnClickPlaceButton()
     {
         weather.SetActive(true);
+    }
+
+    public void OnClickCancelButton()
+    {
+        MyDataStruct.spawnedObject_Indicator.SetActive(false);
+
+        ARManager_sc.isMakePrefabBtnClick = false;
+
+        placePrefabBtn.onClick.AddListener(ARManager_sc.OnClickMakePrefabBtn);
+        placePrefabBtn.onClick.RemoveListener(ARManager_sc.PlaceIndicatorPrefab);
     }
 }
