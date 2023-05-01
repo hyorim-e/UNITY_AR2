@@ -40162,10 +40162,12 @@ struct QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8  : public MonoBehaviou
 {
 	// UnityEngine.UI.Toggle QRToggle::toggle
 	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___toggle_4;
-	// UnityEngine.GameObject QRToggle::ARSessionOrigin
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_5;
+	// UnityEngine.GameObject QRToggle::ARSessionOrigin_AR
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_AR_5;
+	// UnityEngine.GameObject QRToggle::ARSessionOrigin_QR
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_QR_6;
 	// UnityEngine.GameObject QRToggle::QRTest
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___QRTest_6;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___QRTest_7;
 };
 
 // UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListResource

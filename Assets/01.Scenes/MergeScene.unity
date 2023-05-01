@@ -27549,7 +27549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &648961990
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27584,7 +27584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83639adbaee5c17488678ad78a3635df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ARSessionOrigin: {fileID: 1454210991}
+  ARSessionOrigin_AR: {fileID: 1454210991}
+  ARSessionOrigin_QR: {fileID: 0}
   QRTest: {fileID: 207412024}
 --- !u!114 &648961992
 MonoBehaviour:
@@ -62960,6 +62961,8 @@ MonoBehaviour:
   - {fileID: 1140655785788907060, guid: 16c9cf3ada15f454e8c980357e974c8f, type: 3}
   - {fileID: 4691359005820059523, guid: aecc9a37a362648499ee5ec515cf6c5d, type: 3}
   - {fileID: 654295223907599209, guid: 29ddd3a1bddb3ae4a8aa8ec56cb3f58a, type: 3}
+  - {fileID: 1679298855433641708, guid: 30ee000aa827f4246b5a61899d4c35c0, type: 3}
+  - {fileID: 5962619530372552158, guid: 5ba775a923dd326468c97aad3694275f, type: 3}
   particle: {fileID: 2679884527034537125, guid: 49d6cc013c5767f4bbc9bba56dc21d49, type: 3}
   indicatorMt: {fileID: 2100000, guid: dc7eb122d473ce94eb19014984707b55, type: 2}
   debugText_AR: {fileID: 1696995977}

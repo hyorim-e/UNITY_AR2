@@ -7,8 +7,12 @@ public class QRToggle : MonoBehaviour
 {
     Toggle toggle;
 
-    public GameObject ARSessionOrigin;
-    public GameObject QRTest;
+    [SerializeField]
+    private GameObject ARSessionOrigin_AR;
+    [SerializeField]
+    private GameObject ARSessionOrigin_QR;
+    [SerializeField]
+    private GameObject QRTest;
 
     void Awake()
     {
@@ -21,13 +25,15 @@ public class QRToggle : MonoBehaviour
     {
         if (isOn) // true¿Ã∏È
         {
-            ARSessionOrigin.SetActive(false);
-            QRTest.SetActive(true);
+            ARSessionOrigin_AR.SetActive(false);
+            ARSessionOrigin_QR.SetActive(true);
+            //QRTest.SetActive(true);
         }
         else
         {
-            ARSessionOrigin.SetActive(true);
-            QRTest.SetActive(false);
+            ARSessionOrigin_AR.SetActive(true);
+            ARSessionOrigin_QR.SetActive(false);
+            //QRTest.SetActive(false);
         }
     }
 }

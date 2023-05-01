@@ -3634,10 +3634,12 @@ struct QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8  : public MonoBehaviou
 {
 	// UnityEngine.UI.Toggle QRToggle::toggle
 	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___toggle_4;
-	// UnityEngine.GameObject QRToggle::ARSessionOrigin
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_5;
+	// UnityEngine.GameObject QRToggle::ARSessionOrigin_AR
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_AR_5;
+	// UnityEngine.GameObject QRToggle::ARSessionOrigin_QR
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_QR_6;
 	// UnityEngine.GameObject QRToggle::QRTest
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___QRTest_6;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___QRTest_7;
 };
 
 // SettingsMenu
@@ -9881,12 +9883,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRToggle_toggleChanged_mF7F1DD484DF02561
 		}
 	}
 	{
-		// ARSessionOrigin.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___ARSessionOrigin_5;
+		// ARSessionOrigin_AR.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___ARSessionOrigin_AR_5;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
-		// QRTest.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___QRTest_6;
+		// ARSessionOrigin_QR.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___ARSessionOrigin_QR_6;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
 		return;
@@ -9894,12 +9896,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRToggle_toggleChanged_mF7F1DD484DF02561
 
 IL_001c:
 	{
-		// ARSessionOrigin.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___ARSessionOrigin_5;
+		// ARSessionOrigin_AR.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___ARSessionOrigin_AR_5;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)1, NULL);
-		// QRTest.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___QRTest_6;
+		// ARSessionOrigin_QR.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___ARSessionOrigin_QR_6;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
 		// }

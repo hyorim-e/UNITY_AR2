@@ -29915,10 +29915,12 @@ struct QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8  : public MonoBehaviou
 {
 	// UnityEngine.UI.Toggle QRToggle::toggle
 	Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* ___toggle_4;
-	// UnityEngine.GameObject QRToggle::ARSessionOrigin
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_5;
+	// UnityEngine.GameObject QRToggle::ARSessionOrigin_AR
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_AR_5;
+	// UnityEngine.GameObject QRToggle::ARSessionOrigin_QR
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSessionOrigin_QR_6;
 	// UnityEngine.GameObject QRToggle::QRTest
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___QRTest_6;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___QRTest_7;
 };
 
 // UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListResource
@@ -36458,9 +36460,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7790[8] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7791[2] = 
 {
 	static_cast<int32_t>(offsetof(QRTest_tBE92A8F7B02180549EDF8522066FE38288E870B8, ___CameraManager_4)),static_cast<int32_t>(offsetof(QRTest_tBE92A8F7B02180549EDF8522066FE38288E870B8, ___txt_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7792[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7792[4] = 
 {
-	static_cast<int32_t>(offsetof(QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8, ___toggle_4)),static_cast<int32_t>(offsetof(QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8, ___ARSessionOrigin_5)),static_cast<int32_t>(offsetof(QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8, ___QRTest_6)),};
+	static_cast<int32_t>(offsetof(QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8, ___toggle_4)),static_cast<int32_t>(offsetof(QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8, ___ARSessionOrigin_AR_5)),static_cast<int32_t>(offsetof(QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8, ___ARSessionOrigin_QR_6)),static_cast<int32_t>(offsetof(QRToggle_t0C1374080DFBB3C3D08F19C2F6C188C78C676CE8, ___QRTest_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7793[14] = 
 {
 	static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___spacing_4)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___rotationDuration_5)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___rotationEase_6)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___expandDuration_7)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___collapseDuration_8)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___expandEase_9)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___collapseEase_10)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___expandFadeDuration_11)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___collapseFadeDuration_12)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___mainButton_13)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___menuItems_14)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___isExpanded_15)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___mainButtonPosition_16)),static_cast<int32_t>(offsetof(SettingsMenu_t509117608BBFDCA2FBE0FFBB75E4121164E92EBA, ___itemsCount_17)),};
