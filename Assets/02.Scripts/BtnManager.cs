@@ -19,7 +19,9 @@ public class BtnManager : MonoBehaviour
 
     public GameObject plane;
     public GameObject gameDeco;
-
+    public GameObject character;
+    public GameObject randomMove;   
+    
     public GameObject weather;
 
     public Button placePrefabBtn;
@@ -43,6 +45,8 @@ public class BtnManager : MonoBehaviour
 
         plane.SetActive(false);
         gameDeco.SetActive(false);
+        character.SetActive(false);
+        randomMove.SetActive(false);    
     }
 
     public void OnClickGameBtn()
@@ -58,6 +62,8 @@ public class BtnManager : MonoBehaviour
 
         plane.SetActive(true);
         gameDeco.SetActive(true);
+        character.SetActive(true);
+        randomMove.SetActive(true);
     }
 
     public void OnClickPlaceButton()

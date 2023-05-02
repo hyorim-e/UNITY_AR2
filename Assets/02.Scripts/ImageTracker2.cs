@@ -21,8 +21,6 @@ public class ImageTracker2 : MonoBehaviour
 
     public Material indicatorMt;
 
-    private string referenceImageName;
-
     public Text debugText_AR;
 
     private void Awake()
@@ -36,6 +34,7 @@ public class ImageTracker2 : MonoBehaviour
             GameObject newObject = Instantiate(obj);
             newObject.name = obj.name;
             newObject.SetActive(false);
+            newObject.transform.SetParent(trackedImageManager.transform);
             
             spawnedObject.Add(newObject.name, newObject);
         }
@@ -59,7 +58,9 @@ public class ImageTracker2 : MonoBehaviour
         {
             UpdateSpawnObject(trackedImage);
 
-            InstParticle(trackedImage);
+            #region 파티클
+            //InstParticle(trackedImage);
+            #endregion
 
             /*if (trackedImage != null)
             {
@@ -71,7 +72,8 @@ public class ImageTracker2 : MonoBehaviour
         {
             UpdateSpawnObject(trackedImage);
 
-            if (trackedImage.trackingState == TrackingState.Tracking)
+            #region 파티클
+            /*if (trackedImage.trackingState == TrackingState.Tracking)
             {
                 trackedImage.transform.GetChild(0).gameObject.SetActive(true);
             }
@@ -79,21 +81,23 @@ public class ImageTracker2 : MonoBehaviour
             else if (trackedImage.trackingState == TrackingState.None)
             {
                 trackedImage.transform.GetChild(0).gameObject.SetActive(false);
-            }
+            }*/
+            #endregion
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
         {
             spawnedObject[trackedImage.name].SetActive(false);
 
-            Destroy(trackedImage.transform.GetChild(0).gameObject);
+            #region 파티클 
+            //Destroy(trackedImage.transform.GetChild(0).gameObject);
+            #endregion
         }
     }
 
     void UpdateSpawnObject(ARTrackedImage trackedImage)
     {
-        //string referenceImageName = trackedImage.referenceImage.name; // ReferenceImageLibrary에서 설정된 이름 받아옴
-        referenceImageName = trackedImage.referenceImage.name;
+        string referenceImageName = trackedImage.referenceImage.name; // ReferenceImageLibrary에서 설정된 이름 받아옴
 
         spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // 스폰된 오브젝트(프리팹)의 위치와 트래킹된 이미지의 위치 일치시키기
         spawnedObject[referenceImageName].transform.rotation = trackedImage.transform.rotation;
@@ -103,7 +107,7 @@ public class ImageTracker2 : MonoBehaviour
         MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
         MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
 
-        debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
+        //debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
     }
 
     public void RemoveSpawnedObject()
