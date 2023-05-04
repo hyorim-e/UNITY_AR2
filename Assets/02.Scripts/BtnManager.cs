@@ -77,7 +77,7 @@ public class BtnManager : MonoBehaviour
 
         ARManager_sc.isMakePrefabBtnClick = false;
 
-        placePrefabBtn.onClick.AddListener(ARManager_sc.OnClickMakePrefabBtn);
-        placePrefabBtn.onClick.RemoveListener(ARManager_sc.PlaceIndicatorPrefab);
+        //placePrefabBtn.onClick.AddListener(ARManager_sc.OnClickMakePrefabBtn);
+        //placePrefabBtn.onClick.RemoveListener(ARManager_sc.PlaceIndicatorPrefab);
     }
 }
