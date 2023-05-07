@@ -30,7 +30,7 @@ public class ImageTracker4 : MonoBehaviour
             List<ARTrackedImage> tNumList = new List<ARTrackedImage>();
             for(var i = 0; i < _trackedImg.Count; i++)
             {
-                if(_trackedImg[i].trackingState == TrackingState.Limited)
+                if(_trackedImg[i].trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Limited)
                 {
                     if(_trackedTimer[i] > _timer)
                     {

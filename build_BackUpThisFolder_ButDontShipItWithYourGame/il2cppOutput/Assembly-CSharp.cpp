@@ -10108,7 +10108,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker4_Update_m66E5D42472B19F85CC
 
 IL_001e:
 	{
-		// if(_trackedImg[i].trackingState == TrackingState.Limited)
+		// if(_trackedImg[i].trackingState ==  UnityEngine.XR.ARSubsystems.TrackingState.Limited)
 		List_1_tFA730335FF46512E4245B2F46892CA318B394FAE* L_3 = __this->____trackedImg_8;
 		int32_t L_4 = V_1;
 		NullCheck(L_3);
@@ -10303,6 +10303,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker4_OnEnable_m22BD6A7965AA372F
 		Action_1__ctor_m55BF5EC44D8DEC74D367B749B5B29C8F2A9CB957(L_1, __this, (intptr_t)((void*)ImageTracker4_ImageChanged_m2849BDC95AF48DD3B2763276AF17A107F15748C7_RuntimeMethod_var), NULL);
 		NullCheck(L_0);
 		ARTrackedImageManager_add_trackedImagesChanged_mB190015342B225144729100E0E38745CAFA7F438(L_0, L_1, NULL);
+		// }
+		return;
+	}
+}
+// System.Void ImageTracker4::OnDisable()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker4_OnDisable_m940AC87A251C4A4AB5B88896EF11A06F253BD434 (ImageTracker4_t113A0C90C4E635F11A56E6532E02CBF8C61BD0ED* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ImageTracker4_ImageChanged_m2849BDC95AF48DD3B2763276AF17A107F15748C7_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// trackedImageManager.trackedImagesChanged -= ImageChanged;
+		ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* L_0 = __this->___trackedImageManager_5;
+		Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F* L_1 = (Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F*)il2cpp_codegen_object_new(Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F_il2cpp_TypeInfo_var);
+		NullCheck(L_1);
+		Action_1__ctor_m55BF5EC44D8DEC74D367B749B5B29C8F2A9CB957(L_1, __this, (intptr_t)((void*)ImageTracker4_ImageChanged_m2849BDC95AF48DD3B2763276AF17A107F15748C7_RuntimeMethod_var), NULL);
+		NullCheck(L_0);
+		ARTrackedImageManager_remove_trackedImagesChanged_mA754FAB732F3D5D803FA3A58A51E6487E75CCF34(L_0, L_1, NULL);
 		// }
 		return;
 	}
