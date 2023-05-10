@@ -71,6 +71,7 @@ public class BtnManager : MonoBehaviour
         weather.SetActive(true);
     }
 
+    // Canvas_Place에 CancelButton에 연결
     public void OnClickCancelButton()
     {
         MyDataStruct.spawnedObject_Indicator.SetActive(false);

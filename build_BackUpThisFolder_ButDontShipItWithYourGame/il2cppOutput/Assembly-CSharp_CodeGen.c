@@ -146,8 +146,8 @@ extern void ImageTracker2_OnDisable_m31F48B7C49C17E75CFFE2ED6768A25E7E8849FA6 (v
 extern void ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB08465F362B (void);
 // 0x00000043 System.Void ImageTracker2::UpdateSpawnObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
 extern void ImageTracker2_UpdateSpawnObject_mDF6CB01557FC9AE16E408B131CCBEC31F2D82E13 (void);
-// 0x00000044 System.Void ImageTracker2::RemoveSpawnedObject()
-extern void ImageTracker2_RemoveSpawnedObject_mCEA23BE197377194B33EE9CB4BBC8C8D8AE44C7D (void);
+// 0x00000044 System.Void ImageTracker2::HideSpawnedObject()
+extern void ImageTracker2_HideSpawnedObject_m35F4C82BC4FA7405D95A47218D8AF8E6845104E4 (void);
 // 0x00000045 System.Void ImageTracker2::SetIndicator()
 extern void ImageTracker2_SetIndicator_m9BC4DE11B2B73E6D9D956E51012BC5644E1FD9D7 (void);
 // 0x00000046 System.Void ImageTracker2::InstParticle(UnityEngine.XR.ARFoundation.ARTrackedImage)
@@ -489,7 +489,7 @@ static Il2CppMethodPointer s_methodPointers[204] =
 	ImageTracker2_OnDisable_m31F48B7C49C17E75CFFE2ED6768A25E7E8849FA6,
 	ImageTracker2_OnTrackedImageChanged_m986791E6EA74DEAEB162BBCD0208FB08465F362B,
 	ImageTracker2_UpdateSpawnObject_mDF6CB01557FC9AE16E408B131CCBEC31F2D82E13,
-	ImageTracker2_RemoveSpawnedObject_mCEA23BE197377194B33EE9CB4BBC8C8D8AE44C7D,
+	ImageTracker2_HideSpawnedObject_m35F4C82BC4FA7405D95A47218D8AF8E6845104E4,
 	ImageTracker2_SetIndicator_m9BC4DE11B2B73E6D9D956E51012BC5644E1FD9D7,
 	ImageTracker2_InstParticle_mFDF81F5AB7F926A18747EC8EE7C794C4F0A3521E,
 	ImageTracker2__ctor_m6EB19F79890FE8A187312D12910FADA7C65B75E1,

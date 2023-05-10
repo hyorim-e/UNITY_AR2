@@ -110,7 +110,9 @@ public class ImageTracker2 : MonoBehaviour
         //debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
     }
 
-    public void RemoveSpawnedObject()
+    // 게임 Scene으로 넘어갔을 때 AR Scene에서 보였던 프리팹 숨기는 역할
+    // 배치하기 버튼(AR Scene에서 게임 Scene으로 넘어가는 버튼)에 연결
+    public void HideSpawnedObject()
     {
         spawnedObject[MyDataStruct.spawnedObject.name].SetActive(false);
     }
@@ -123,6 +125,10 @@ public class ImageTracker2 : MonoBehaviour
             {
                 MyDataStruct.spawnedObject_Indicator = Instantiate(obj);
                 MyDataStruct.spawnedObject_Indicator.name = obj.name;
+
+                // 게임 Scene에서는 축소되어 나와서 스케일 크게 조정함
+                MyDataStruct.spawnedObject_Indicator.transform.localScale = new Vector3(3,3,3);
+
                 MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
                 MyDataStruct.spawnedObject_Indicator.GetComponentInChildren<Renderer>().material = indicatorMt;
