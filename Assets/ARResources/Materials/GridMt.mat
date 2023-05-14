@@ -64,7 +64,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Radius: 40
+    - _Radius: 3.4028235e+38
     m_Colors:
     - _Center: {r: 21.13, g: 0.029366806, b: -25.419998, a: 0}
   m_BuildTextureStacks: []
