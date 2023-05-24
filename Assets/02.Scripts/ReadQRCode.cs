@@ -37,17 +37,40 @@ public class ReadQRCode : MonoBehaviour
                 }
 
                 IBarcodeReader barcodeReader = new BarcodeReader();
+                // result가 QRCode URL
                 var result = barcodeReader.Decode(grayscalePixels, image.width, image.height, RGBLuminanceSource.BitmapFormat.Gray8);
 
                 if (result != null)
                 {
                     txt.text = result.Text;
+                    SetPrefab();
                 }
             }
         }
+
+        if (GetComponent<ImageTracker2>().spawnedObject["Cube"].activeSelf == true)
+        {
+            GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.position = CameraManager.transform.position + new Vector3(0, 0, 1);
+            GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.rotation = CameraManager.transform.rotation;
+        }
     }
 
-    void SetObject()
+    void SetPrefab()
     {
+        //GetComponent<QRCodeTracker>().enabled = true;
+
+        /*if (txt.text == "https://www.qrcode.com/ko/index.html") // qr코드 홈페이지
+        {
+            GetComponent<ImageTracker2>().spawnedObject["Cube"].SetActive(true);
+            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.position = CameraManager.transform.position + new Vector3(0, 0, 1);
+            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.rotation = CameraManager.transform.rotation;
+
+        }
+        else if (txt.text == "http://www.samsungamoled.net/") // 삼성
+        {
+            GetComponent<ImageTracker2>().spawnedObject["Sphere"].SetActive(true);
+            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.position = CameraManager.transform.position + new Vector3(0, 0, 1);
+            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.rotation = CameraManager.transform.rotation;
+        }*/
     }
 }

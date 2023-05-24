@@ -31,12 +31,7 @@ public class ImageTracker2 : MonoBehaviour
         // 배치할 오리지널 오브젝트
         foreach (GameObject obj in placeablePrefabs)
         {
-            GameObject newObject = Instantiate(obj);
-            newObject.name = obj.name;
-            newObject.SetActive(false);
-            newObject.transform.SetParent(trackedImageManager.transform);
-            
-            spawnedObject.Add(newObject.name, newObject);
+            spawnedObject.Add(obj.name, obj);
         }
 
         debugText_AR.text = "ImageTracker2";
@@ -99,15 +94,20 @@ public class ImageTracker2 : MonoBehaviour
     {
         string referenceImageName = trackedImage.referenceImage.name; // ReferenceImageLibrary에서 설정된 이름 받아옴
 
-        spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // 스폰된 오브젝트(프리팹)의 위치와 트래킹된 이미지의 위치 일치시키기
-        spawnedObject[referenceImageName].transform.rotation = trackedImage.transform.rotation;
+        if (trackedImage.trackingState == TrackingState.Tracking)
+        {
+            spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // 스폰된 오브젝트(프리팹)의 위치와 트래킹된 이미지의 위치 일치시키기
+            spawnedObject[referenceImageName].transform.rotation = trackedImage.transform.rotation;
+            spawnedObject[referenceImageName].SetActive(true);
 
-        spawnedObject[referenceImageName].SetActive(true);
-
-        MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
-        MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
-
-        //debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
+            MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
+            MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
+            //debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
+        }
+        else
+        {
+            spawnedObject[referenceImageName].SetActive(false);
+        }  
     }
 
     // 게임 Scene으로 넘어갔을 때 AR Scene에서 보였던 프리팹 숨기는 역할
