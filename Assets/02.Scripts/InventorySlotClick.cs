@@ -24,6 +24,7 @@ public class InventorySlotClick : MonoBehaviour
         Debug.Log(arManager2_sc);
     }
 
+    // 인벤토리 버튼 별 배치되도록 하는 함수 (인스펙터에서 연결 필요)
     public void OnClick()
     {
         //SettingsMenu.cs의 toggleMenu
