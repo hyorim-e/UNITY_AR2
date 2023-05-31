@@ -6806,6 +6806,9 @@ const Il2CppGenericInst GenInst_String_t_SchemaNotation_tDA4063F0DD51070BAD94B42
 static const Il2CppType* GenInst_String_t_SharedGroupDataRecord_t6EABB17CCB23C3B14A9F2A29E1C0B06308DE22EB_Types[] = { (&String_t_0_0_0), (&SharedGroupDataRecord_t6EABB17CCB23C3B14A9F2A29E1C0B06308DE22EB_0_0_0) };
 extern const Il2CppGenericInst GenInst_String_t_SharedGroupDataRecord_t6EABB17CCB23C3B14A9F2A29E1C0B06308DE22EB;
 const Il2CppGenericInst GenInst_String_t_SharedGroupDataRecord_t6EABB17CCB23C3B14A9F2A29E1C0B06308DE22EB = { 2, GenInst_String_t_SharedGroupDataRecord_t6EABB17CCB23C3B14A9F2A29E1C0B06308DE22EB_Types };
+static const Il2CppType* GenInst_String_t_Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99_Types[] = { (&String_t_0_0_0), (&Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99_0_0_0) };
+extern const Il2CppGenericInst GenInst_String_t_Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99;
+const Il2CppGenericInst GenInst_String_t_Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99 = { 2, GenInst_String_t_Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99_Types };
 static const Il2CppType* GenInst_String_t_StringBuilder_t_Types[] = { (&String_t_0_0_0), (&StringBuilder_t_0_0_0) };
 extern const Il2CppGenericInst GenInst_String_t_StringBuilder_t;
 const Il2CppGenericInst GenInst_String_t_StringBuilder_t = { 2, GenInst_String_t_StringBuilder_t_Types };
@@ -19734,7 +19737,7 @@ static const Il2CppType* GenInst_TextureResource_t6289C25D4857A198BD5EBBDBE576F6
 extern const Il2CppGenericInst GenInst_TextureResource_t6289C25D4857A198BD5EBBDBE576F62DCC8FD0AA;
 const Il2CppGenericInst GenInst_TextureResource_t6289C25D4857A198BD5EBBDBE576F62DCC8FD0AA = { 1, GenInst_TextureResource_t6289C25D4857A198BD5EBBDBE576F62DCC8FD0AA_Types };
 IL2CPP_EXTERN_C const Il2CppGenericInst* const g_Il2CppGenericInstTable[];
-const Il2CppGenericInst* const g_Il2CppGenericInstTable[5134] = 
+const Il2CppGenericInst* const g_Il2CppGenericInstTable[5135] = 
 {
 	&GenInst_T_tF43DCC643496DBCDFCC0F87C5A8A9BBBEA203959,
 	&GenInst_T_t221CEE1C70D84C63101130D2D5E4BC85D8E9D57B,
@@ -20561,6 +20564,7 @@ const Il2CppGenericInst* const g_Il2CppGenericInstTable[5134] =
 	&GenInst_String_t_ResourceSet_tA2F16C08175368D3899938AD0FFCDC07B32B518D,
 	&GenInst_String_t_SchemaNotation_tDA4063F0DD51070BAD94B42C2F44BD1055372269,
 	&GenInst_String_t_SharedGroupDataRecord_t6EABB17CCB23C3B14A9F2A29E1C0B06308DE22EB,
+	&GenInst_String_t_Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99,
 	&GenInst_String_t_StringBuilder_t,
 	&GenInst_String_t_StyleComplexSelector_tE46C29F65FDBA48D3152781187401C8B55B7D8AD,
 	&GenInst_String_t_StylePropertyId_tA3B8A5213F5BA43F9C5443B27B165D744713BE69,

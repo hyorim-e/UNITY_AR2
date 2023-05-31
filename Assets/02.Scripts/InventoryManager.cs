@@ -8,8 +8,10 @@ public class InventoryManager : MonoBehaviour
     public Sprite[] MoviePosterList;
     // 에디터에서 해당 배열에 할당하는 이미지 이름과
     // MyDataStruct.spawnedObject.name(이미지를 인식했을 때 나오는 프리팹의 이름)이 같아야
-    public Image[] InvenList;
-    // 여기 인벤토리에 저장함.
+    public Image[] InvenList; // 여기 인벤토리에 저장함.
+    public Text[] InvenList_txt;// 인벤토리 슬롯별 텍스트
+    public Sprite[] imageList; // 인벤토리에 표시될 그래픽 이미지 
+    private Dictionary<string, Sprite> ImageList_dic;// 인벤토리에 표시될 그래픽 이미지 딕셔너리화
 
     [HideInInspector]
     public int InvenListIndex;
@@ -22,7 +24,22 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
+        ImageList_dic = new Dictionary<string, Sprite>();
+
+        foreach (Sprite img in imageList)
+        {
+            ImageList_dic.Add(img.name, img);
+        }
+
         InvenListIndex = 0;
+        for(int i = 0; i < InvenList.Length; i++)
+        {
+            //if(InvenList[i].sprite != null)
+            if(InvenList[i].gameObject.activeSelf)
+            {
+                InvenListIndex += 1;
+            }        
+        }
 
         invenCloseBtn = GameObject.Find("Canvas_Game").transform.Find("UI Tab(Inventory New Version)").transform.Find("Tab_Buttons").transform.Find("CloseButton").GetComponent<Button>();
         // 비활성화 오브젝트 Find 할 때는 transform으로 들어가야 한다고 했음.
@@ -75,7 +92,10 @@ public class InventoryManager : MonoBehaviour
                 {
 
                     // 스프라이트를 다음 사용 가능한 슬롯에 할당
-                    InvenList[InvenListIndex].sprite = MoviePoster;
+                    InvenList[InvenListIndex].sprite = ImageList_dic[MoviePoster.name];
+                    InvenList_txt[InvenListIndex].text = MoviePoster.name;
+                    InvenList[InvenListIndex].gameObject.SetActive(true);
+                    //InvenList[InvenListIndex].color = ;
                     InvenListIndex += 1;
                     break;
                     // 첫번째 인식할 때는 인덱스 증가가 안돼서 그 다음엔 첫 인벤토리가 덮어 씌워짐.

@@ -51,11 +51,11 @@ MonoBehaviour:
       m_GuidLow: 4932514845494414742
       m_GuidHigh: 5470702439544819876
     m_SerializedTextureGuid:
-      m_GuidLow: 8859972960580995865
-      m_GuidHigh: 3563555005442634890
-    m_Size: {x: 0.1, y: 0.1}
+      m_GuidLow: 15822475604516997894
+      m_GuidHigh: 13916238181605600473
+    m_Size: {x: 0.1, y: 0.14810427}
     m_SpecifySize: 1
-    m_Name: Whale
+    m_Name: Sphere
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4729729179372968568

@@ -11,6 +11,16 @@ public class ReadQRCode : MonoBehaviour
     public ARCameraManager CameraManager;
     public Text txt;
 
+    private ImageTracker2 imageTracker2;
+
+    [SerializeField]
+    private GameObject[] spawnPrefabs;
+
+    private void Awake()
+    {
+        imageTracker2 = GetComponent<ImageTracker2>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,29 +58,34 @@ public class ReadQRCode : MonoBehaviour
             }
         }
 
-        if (GetComponent<ImageTracker2>().spawnedObject["Cube"].activeSelf == true)
+        /*
+        if(imageTracker2.spawnedObject["Cube"].activeSelf == true)
         {
-            GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.position = CameraManager.transform.position + new Vector3(0, 0, 1);
-            GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.rotation = CameraManager.transform.rotation;
+            imageTracker2.spawnedObject["Cube"].transform.position = CameraManager.transform.position + CameraManager.transform.rotation * new Vector3(0, 0, 1);
+            imageTracker2.spawnedObject["Cube"].transform.rotation = CameraManager.transform.rotation;
         }
+        else if(imageTracker2.spawnedObject["Sphere"].activeSelf == true)
+        {
+            imageTracker2.spawnedObject["Sphere"].transform.position = CameraManager.transform.position + CameraManager.transform.rotation * new Vector3(0, 0, 1);
+            imageTracker2.spawnedObject["Sphere"].transform.rotation = CameraManager.transform.rotation;
+        }
+        */
     }
 
     void SetPrefab()
     {
-        //GetComponent<QRCodeTracker>().enabled = true;
-
-        /*if (txt.text == "https://www.qrcode.com/ko/index.html") // qr内靛 权其捞瘤
+        if (txt.text == "https://www.qrcode.com/ko/index.html") // qr内靛 权其捞瘤
         {
-            GetComponent<ImageTracker2>().spawnedObject["Cube"].SetActive(true);
-            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.position = CameraManager.transform.position + new Vector3(0, 0, 1);
-            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.rotation = CameraManager.transform.rotation;
+            spawnPrefabs[5].SetActive(true);
+            //GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.position = CameraManager.transform.position + CameraManager.transform.rotation * new Vector3(0, 0, 1);
+            //GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.rotation = CameraManager.transform.rotation;
 
         }
         else if (txt.text == "http://www.samsungamoled.net/") // 伙己
         {
-            GetComponent<ImageTracker2>().spawnedObject["Sphere"].SetActive(true);
-            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.position = CameraManager.transform.position + new Vector3(0, 0, 1);
-            GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.rotation = CameraManager.transform.rotation;
-        }*/
+            spawnPrefabs[4].SetActive(true);
+            //GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.position = CameraManager.transform.position + CameraManager.transform.rotation * new Vector3(0, 0, 1);
+            //GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.rotation = CameraManager.transform.rotation;
+        }
     }
 }

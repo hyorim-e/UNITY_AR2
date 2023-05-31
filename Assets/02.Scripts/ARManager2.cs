@@ -108,7 +108,11 @@ public class ARManager2 : MonoBehaviour
         MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
         Pose hitPose = indicatorHits[0].pose;
-        Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation).SetActive(true);
+
+        GameObject obj = Instantiate(MyDataStruct.spawnedObject, hitPose.position, hitPose.rotation);
+        // 인디케이터 사이즈와 맞춤
+        obj.transform.localScale = new Vector3(3, 3, 3);
+        obj.SetActive(true);
         //Instantiate(MyDataStruct.spawnedObject, IndicatorTr.position, IndicatorTr.rotation).SetActive(true); // 유니티 에디터 내 Play 테스트용
         //MyDataStruct.spawnedObject.SetActive(true);
 
