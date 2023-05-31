@@ -9,6 +9,7 @@ public class BtnManager : MonoBehaviour
 {
     public GameObject ARManager;
     private ARManager2 ARManager_sc;
+    public InventorySlotClick inventorySlotClick_cs;
 
     public GameObject ARSOrigin_ARRecog;
     public GameObject ARSOrigin_Game;
@@ -16,6 +17,13 @@ public class BtnManager : MonoBehaviour
     public GameObject Canvas_ARRecog;
     public GameObject Canvas_Game;
     public GameObject Canvas_Place;
+
+    public GameObject inventoryUI;
+
+    public GameObject settingBtn;
+    public GameObject setting;
+    public GameObject collectionBtn;
+    public GameObject inventoryBtn;
 
     public GameObject plane;
     public GameObject gameDeco;
@@ -26,6 +34,8 @@ public class BtnManager : MonoBehaviour
 
     public Button placePrefabBtn;
     public Button PosterRecognizeBtn;
+
+    public AudioSource btnClickSound;
 
     private void Awake()
     {
@@ -80,5 +90,19 @@ public class BtnManager : MonoBehaviour
 
         //placePrefabBtn.onClick.AddListener(ARManager_sc.OnClickMakePrefabBtn);
         //placePrefabBtn.onClick.RemoveListener(ARManager_sc.PlaceIndicatorPrefab);
+    }
+
+    public void OnClickInvenSlot()
+    {
+        btnClickSound.Play();
+
+        settingBtn.SetActive(true);
+        setting.SetActive(false);
+        collectionBtn.SetActive(true);
+        inventoryBtn.SetActive(true);
+        weather.SetActive(true);
+        inventoryUI.SetActive(false);
+
+        //해당 함수와 슬롯별로 inventorySlotClick 스크립트 컴포넌트 넣고 inventorySlotClick.OnClick도 연결
     }
 }

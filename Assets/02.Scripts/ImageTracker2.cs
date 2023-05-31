@@ -9,15 +9,16 @@ public class ImageTracker2 : MonoBehaviour
 {
     private ARTrackedImageManager trackedImageManager;
 
+    public ObjectPool objectPool_cs;
+
     //[HideInInspector]
     //[SerializeField]
     public GameObject[] placeablePrefabs;
+    [HideInInspector]
+    public Dictionary<string, GameObject> spawnedObject;
 
     [SerializeField]
     private ParticleSystem particle;
-
-    [HideInInspector]
-    public Dictionary<string, GameObject> spawnedObject;
 
     public Material indicatorMt;
 
