@@ -25,6 +25,6 @@ public class ObjectPool : MonoBehaviour
         {
             spawnedObject.Add(obj.name, obj);
         }
-        //*/
+        //*
     }
 }
