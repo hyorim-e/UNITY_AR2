@@ -173,7 +173,7 @@ struct InvokerActionInvoker2<T1*, T2*>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2* p2)
 	{
 		void* params[2] = { p1, p2 };
-		method->invoker_method(methodPtr, method, obj, params, params[1]);
+		method->invoker_method(methodPtr, method, obj, params, NULL);
 	}
 };
 template <typename T1, typename T2, typename T3>
@@ -184,7 +184,7 @@ struct InvokerActionInvoker3<T1*, T2*, T3*>
 	static inline void Invoke (Il2CppMethodPointer methodPtr, const RuntimeMethod* method, void* obj, T1* p1, T2* p2, T3* p3)
 	{
 		void* params[3] = { p1, p2, p3 };
-		method->invoker_method(methodPtr, method, obj, params, params[2]);
+		method->invoker_method(methodPtr, method, obj, params, NULL);
 	}
 };
 template <typename R, typename T1, typename T2, typename T3, typename T4>
@@ -274,8 +274,6 @@ struct UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA;
 struct X509CertificateU5BU5D_t611037197489DE7789C623E59FBEA4575D997D02;
 // Mono.Security.X509.X509Extension[]
 struct X509ExtensionU5BU5D_tFBA9FC41495DC42DC2D3576ECD0C50DDC9AFBDB3;
-// Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType[]
-struct __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC;
 // Mono.Security.Cryptography.ARC4Managed
 struct ARC4Managed_tC633C0E024FE231862B2DED26856727380100CCE;
 // Mono.Security.ASN1
@@ -3269,8 +3267,8 @@ struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeA
 };
 
 
-// System.Void System.Array::Reverse<Unity.IL2CPP.Metadata.__Il2CppFullySharedGenericType>(T[])
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Reverse_TisIl2CppFullySharedGenericAny_m9675346CBC4932648FC9B8AC786541FCC7734FBC_gshared (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___array0, const RuntimeMethod* method) ;
+// System.Void System.Array::Reverse<System.Byte>(T[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Reverse_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m49BFDE9B44D507726831588FFCF791506A0F5860_gshared (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___array0, const RuntimeMethod* method) ;
 
 // System.Void Mono.Security.X509.X509CertificateBuilder::.ctor(System.Byte)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509CertificateBuilder__ctor_mC79DC9FED9D41F2B95387CE851525F9A88A4B63C (X509CertificateBuilder_t4E97FF92A72835CA35E551E5F6744B29DC10AD21* __this, uint8_t ___version0, const RuntimeMethod* method) ;
@@ -3821,7 +3819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CryptoConvert_ToInt32LE_m0620E458267C
 // System.Void System.Array::Reverse<System.Byte>(T[])
 inline void Array_Reverse_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m49BFDE9B44D507726831588FFCF791506A0F5860 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___array0, const RuntimeMethod* method)
 {
-	((  void (*) (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC*, const RuntimeMethod*))Array_Reverse_TisIl2CppFullySharedGenericAny_m9675346CBC4932648FC9B8AC786541FCC7734FBC_gshared)((__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC*)___array0, method);
+	((  void (*) (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, const RuntimeMethod*))Array_Reverse_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m49BFDE9B44D507726831588FFCF791506A0F5860_gshared)(___array0, method);
 }
 // System.Byte[] Mono.Security.Cryptography.CryptoConvert::Trim(System.Byte[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* CryptoConvert_Trim_mDD4BAE25BC69D0FCDFBD656D20FFECCBB18EE594 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___array0, const RuntimeMethod* method) ;
