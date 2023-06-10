@@ -9,7 +9,13 @@ public class Scroll : MonoBehaviour
     public int count;  // 나눠야할 값
     private float pos;  // List의 LocalPosition
     private float movepos;  // 움직일 값
-    private bool IsScroll = false;  // 움직여야 하는지 아닌지 구별
+    private bool IsScroll;  // 움직여야 하는지 아닌지 구별
+
+    private void Awake()
+    {
+        count = 3;
+        IsScroll = false;
+    }
 
     // Start is called before the first frame update
     void Start()
