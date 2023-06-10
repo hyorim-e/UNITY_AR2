@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class MyDataStruct : MonoBehaviour
 {
-    public static GameObject spawnedObject;
-    public static GameObject spawnedObject_Indicator;
-    public static Material originMt;
+    public static GameObject spawnedObject = null;
+    public static GameObject spawnedObject_Indicator = null;
+    public static Material originMt = null;
 
 
     /*public static List<GameObject> PrefabList;

@@ -22,6 +22,8 @@ public class ImageTracker2 : MonoBehaviour
 
     public Material indicatorMt;
 
+    private Vector3 temp;
+
     public Text debugText_AR;
 
     private void Awake()
@@ -30,7 +32,8 @@ public class ImageTracker2 : MonoBehaviour
         spawnedObject = new Dictionary<string, GameObject>();
 
         // 배치할 오리지널 오브젝트
-        foreach (GameObject obj in placeablePrefabs)
+        //foreach (GameObject obj in placeablePrefabs)
+        foreach (GameObject obj in objectPool_cs.placeablePrefabs)
         {
             spawnedObject.Add(obj.name, obj);
         }
@@ -99,6 +102,8 @@ public class ImageTracker2 : MonoBehaviour
         {
             spawnedObject[referenceImageName].transform.position = trackedImage.transform.position; // 스폰된 오브젝트(프리팹)의 위치와 트래킹된 이미지의 위치 일치시키기
             spawnedObject[referenceImageName].transform.rotation = trackedImage.transform.rotation;
+            //temp = spawnedObject[referenceImageName].transform.localScale;
+            //spawnedObject[referenceImageName].transform.localScale = new Vector3(1, 1, 1);
             spawnedObject[referenceImageName].SetActive(true);
 
             MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
@@ -115,12 +120,14 @@ public class ImageTracker2 : MonoBehaviour
     // 배치하기 버튼(AR Scene에서 게임 Scene으로 넘어가는 버튼)에 연결
     public void HideSpawnedObject()
     {
+        //spawnedObject[MyDataStruct.spawnedObject.name].transform.localScale = temp;
         spawnedObject[MyDataStruct.spawnedObject.name].SetActive(false);
     }
 
     public void SetIndicator()
     {
-        foreach(GameObject obj in placeablePrefabs)
+        //foreach(GameObject obj in placeablePrefabs)
+        foreach(GameObject obj in objectPool_cs.placeablePrefabs)
         {
             if(obj.name == MyDataStruct.spawnedObject.name)
             {
@@ -128,13 +135,14 @@ public class ImageTracker2 : MonoBehaviour
                 MyDataStruct.spawnedObject_Indicator.name = obj.name;
 
                 // 게임 Scene에서는 축소되어 나와서 스케일 크게 조정함
-                MyDataStruct.spawnedObject_Indicator.transform.localScale = new Vector3(3,3,3);
+                MyDataStruct.spawnedObject_Indicator.transform.localScale = new Vector3(3, 3, 3);
+                MyDataStruct.spawnedObject.transform.localScale = new Vector3(3, 3, 3);
 
                 MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
                 MyDataStruct.spawnedObject_Indicator.GetComponentInChildren<Renderer>().material = indicatorMt;
             }
-        }
+        }     
     }
 
     private void InstParticle(ARTrackedImage trackedImage)

@@ -7,9 +7,17 @@ using UnityEngine.UI;
 
 public class BtnManager : MonoBehaviour
 {
-    public GameObject ARManager;
-    private ARManager2 ARManager_sc;
-    public InventorySlotClick inventorySlotClick_cs;
+    [SerializeField]
+    private ARManager2 arManager2_cs;
+    [SerializeField]
+    private ImageTracker2 imageTracker2_cs;
+    [SerializeField]
+    private InventoryManager inventoryManager_cs;
+    [SerializeField]
+    private CollectionBookManager collectionBookManager_cs;
+
+    [SerializeField]
+    private GameObject arManager;
 
     public GameObject ARSOrigin_ARRecog;
     public GameObject ARSOrigin_Game;
@@ -37,14 +45,9 @@ public class BtnManager : MonoBehaviour
 
     public AudioSource btnClickSound;
 
-    private void Awake()
-    {
-        ARManager_sc = ARManager.GetComponent<ARManager2>();
-    }
-
     public void OnClickRecogBtn()
     {
-        ARManager.SetActive(false);
+        arManager.SetActive(false);
 
         ARSOrigin_Game.SetActive(false);
         ARSOrigin_ARRecog.SetActive(true);
@@ -59,9 +62,12 @@ public class BtnManager : MonoBehaviour
         randomMove.SetActive(false);    
     }
 
+    // Canvas_Recog의 배치하기 버튼에 연결
     public void OnClickGameBtn()
     {
-        ARManager.SetActive(true);
+        btnClickSound.Play();
+
+        arManager.SetActive(true);
 
         ARSOrigin_ARRecog.SetActive(false);
         ARSOrigin_Game.SetActive(true);
@@ -74,6 +80,19 @@ public class BtnManager : MonoBehaviour
         gameDeco.SetActive(true);
         character.SetActive(true);
         randomMove.SetActive(true);
+
+        // if object != null 보다 ! ReferenceEquals(object, null) 이 성능 개선된다고 함.
+        // 근데 개선사항으로 is not null 추천됨. is not null 도 성능 개선 되는지?
+        //if (MyDataStruct.spawnedObject is not null && MyDataStruct.spawnedObject_Indicator is not null)
+        // indicator도 null이 아닐 때를 조건으로 해버리면 SetIndicator에서 indicator 할당하기 때문에 아래 함수들이 실행이 안됨.
+        if (MyDataStruct.spawnedObject is not null)
+        {
+            inventoryManager_cs.InventoryUpdate();
+            imageTracker2_cs.SetIndicator();
+            imageTracker2_cs.HideSpawnedObject();
+            collectionBookManager_cs.CollectionOpen();
+            arManager2_cs.OnClickMakePrefabBtn();
+        }
     }
 
     public void OnClickPlaceButton()
@@ -86,13 +105,13 @@ public class BtnManager : MonoBehaviour
     {
         MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
-        ARManager_sc.isMakePrefabBtnClick = false;
+        arManager2_cs.isMakePrefabBtnClick = false;
 
         Canvas_Game.SetActive(true);
         Canvas_Place.SetActive(false);
 
-        //placePrefabBtn.onClick.AddListener(ARManager_sc.OnClickMakePrefabBtn);
-        //placePrefabBtn.onClick.RemoveListener(ARManager_sc.PlaceIndicatorPrefab);
+        //placePrefabBtn.onClick.AddListener(arManager_cs.OnClickMakePrefabBtn);
+        //placePrefabBtn.onClick.RemoveListener(arManager_cs.PlaceIndicatorPrefab);
     }
 
     public void OnClickInvenSlot()

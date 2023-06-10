@@ -34,11 +34,7 @@ public class InventorySlotClick : MonoBehaviour
 
         //debugText.text = imageName;
         Debug.Log("imageName => " + imageName);
-        // imageName이 그냥 UISprite라고 출력됨.(원래 영화포스터 이름 나와야 함) 
-        // 그래서 아래 imageName으로 키값 쓰는 코드에서 NullReferenceException 오류 발생.
-        // 여길 고쳐야 아래 코드도 정상적으로 돌아갈 듯.
 
-        // 분명 InChildren 했는데 자식이 아니라 본인 버튼의 Image 컴포넌트의 Sprite 찾아오는 것 같음.
         // ※GetComponentInChildren는 무조건 자식 중 첫 번째 꺼 받아오는거임※
         // ※자식 고르려면 transform의 GetChild(n) 사용해서 접근해야 함※
 
