@@ -6450,10 +6450,10 @@ struct InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283  : public Mo
 {
 	// System.String InventorySlotClick::imageName
 	String_t* ___imageName_4;
-	// ImageTracker2 InventorySlotClick::imageTracker2_sc
-	ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* ___imageTracker2_sc_5;
-	// ARManager2 InventorySlotClick::arManager2_sc
-	ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* ___arManager2_sc_6;
+	// ImageTracker2 InventorySlotClick::imageTracker2_cs
+	ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* ___imageTracker2_cs_5;
+	// ARManager2 InventorySlotClick::arManager2_cs
+	ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* ___arManager2_cs_6;
 	// ObjectPool InventorySlotClick::objectPool_cs
 	ObjectPool_t7FEF06A8B5BAB66D5B574214EAD804D81F126082* ___objectPool_cs_7;
 };

@@ -649,8 +649,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteral10E8145386039BE398A0DBD01898C83721C1BE06
 IL2CPP_EXTERN_C String_t* _stringLiteral12C56485915096F28EC6C4ECA2B77B77B50798B4;
 IL2CPP_EXTERN_C String_t* _stringLiteral196AF8B7CBE3743275DF17FC16EA79D3C697F49D;
 IL2CPP_EXTERN_C String_t* _stringLiteral27154A086073D1C0DC43D0774CE14CA381D00946;
+IL2CPP_EXTERN_C String_t* _stringLiteral2C863C592E40F6D76F03C576D02BCAB4BAC70F15;
 IL2CPP_EXTERN_C String_t* _stringLiteral2CD57A14FD5F4A784CCBD9FBDB23F1152254639D;
 IL2CPP_EXTERN_C String_t* _stringLiteral33821B1EEC388364712AB24DDBE6E1F897BB27BE;
+IL2CPP_EXTERN_C String_t* _stringLiteral3B2EA52A70D42AFE17EB6B900CB0F7DAB477ED68;
 IL2CPP_EXTERN_C String_t* _stringLiteral3C95DC36BC35028D124872E120F7701E290A66F6;
 IL2CPP_EXTERN_C String_t* _stringLiteral45328F01BE4DF33E6071EF2CC58A379CA0338BE7;
 IL2CPP_EXTERN_C String_t* _stringLiteral45EDE4DB19150515241E2FE6610B1490B1DED5C7;
@@ -706,8 +708,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralE5A1D96CE41BD597A30172C890508C2BB5810152
 IL2CPP_EXTERN_C String_t* _stringLiteralEDC7DA317AC4027BE399B744AF03A8F9E239673D;
 IL2CPP_EXTERN_C String_t* _stringLiteralF5F861BBE894F6588541249DC5AD84E777EED323;
 IL2CPP_EXTERN_C const RuntimeMethod* ARManager2_FrameUpdated_mC3121CC8E7DA7F32E041FAF2258F51A20562D032_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* ARManager2_PlaceIndicatorPrefab_m95BF18CDB64380AD47A15B0E77527748C6ED657F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ARManager_FrameUpdated_m7DFE681A53B5C8C6B5940F1601096883C83E28B6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ARManager_OnClickMakePrefabBtn_mA3365C51FE3F62713EF5093198FD0451A2390B99_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ARManager_PlaceIndicatorPrefab_mE45400BBC30E78504163D467076C138EF8A10E5A_RuntimeMethod_var;
@@ -4519,10 +4519,10 @@ struct InventorySlotClick_t50C06E9B76AE7E2E97912F5A3F6C84993E653283  : public Mo
 {
 	// System.String InventorySlotClick::imageName
 	String_t* ___imageName_4;
-	// ImageTracker2 InventorySlotClick::imageTracker2_sc
-	ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* ___imageTracker2_sc_5;
-	// ARManager2 InventorySlotClick::arManager2_sc
-	ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* ___arManager2_sc_6;
+	// ImageTracker2 InventorySlotClick::imageTracker2_cs
+	ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* ___imageTracker2_cs_5;
+	// ARManager2 InventorySlotClick::arManager2_cs
+	ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* ___arManager2_cs_6;
 	// ObjectPool InventorySlotClick::objectPool_cs
 	ObjectPool_t7FEF06A8B5BAB66D5B574214EAD804D81F126082* ___objectPool_cs_7;
 };
@@ -6468,18 +6468,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_SetMapRadius_m307C8FC55C2327D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ARManager2_PlaceCoroutine_m8C258DA097F010D432E5DA55084A8AEFD2E2D6E5 (ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* __this, const RuntimeMethod* method) ;
 // UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___routine0, const RuntimeMethod* method) ;
+// System.Void ARManager2::PlaceIndicator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_PlaceIndicator_mB59817D7FB2AF92C666EDF61632743D25CC3F910 (ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* __this, const RuntimeMethod* method) ;
 // System.Void ARManager2::PlayerMove()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_PlayerMove_mB60D6C63E8CF8C872F6DAF14BB7A9E10D967DDCA (ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* __this, const RuntimeMethod* method) ;
 // System.Void ARManager2/<PlaceCoroutine>d__15::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlaceCoroutineU3Ed__15__ctor_mB401C739288E7DFDDAA9B6B8CD8D6F52949A17EF (U3CPlaceCoroutineU3Ed__15_t568C5CA0C21DF25A54FCBC35CD8F004E7FD611C0* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Events.UnityEvent::RemoveListener(UnityEngine.Events.UnityAction)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C (UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* __this, UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___call0, const RuntimeMethod* method) ;
 // System.Void ARManager2::SetMapCenter(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_SetMapCenter_m9DC2F1A2FCC61936AB8E718652683A18E0AED2F2 (ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___vec0, const RuntimeMethod* method) ;
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
-// System.Void ARManager2::PlaceIndicator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_PlaceIndicator_mB59817D7FB2AF92C666EDF61632743D25CC3F910 (ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Debug::Log(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219 (RuntimeObject* ___message0, const RuntimeMethod* method) ;
 // System.Void System.NotSupportedException::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.AudioSource::Play()
@@ -6626,8 +6626,6 @@ inline ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* Object_Instanti
 {
 	return ((  ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* (*) (ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m2A2DD50EC8EB54C91AF71E02DFD6969174D82B08_gshared)(___original0, ___position1, ___rotation2, method);
 }
-// System.Void UnityEngine.Debug::Log(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219 (RuntimeObject* ___message0, const RuntimeMethod* method) ;
 // System.Void ImageTracker3::InstantiateGameObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImageTracker3_InstantiateGameObject_m1A5293ADC9D112F8C53DC778FB2D3297877E3C70 (ImageTracker3_t5E828D4F5836371A53AA929BCE9559E2D6BBB97D* __this, ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* ___addedImage0, const RuntimeMethod* method) ;
 // System.Void ImageTracker3::UpdateTrackingGameObject(UnityEngine.XR.ARFoundation.ARTrackedImage)
@@ -6806,6 +6804,8 @@ inline ObjectPool_t7FEF06A8B5BAB66D5B574214EAD804D81F126082* GameObject_GetCompo
 {
 	return ((  ObjectPool_t7FEF06A8B5BAB66D5B574214EAD804D81F126082* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
 }
+// System.String System.String::Format(System.String,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m8C122B26BC5AA10E2550AECA16E57DAE10F07E30 (String_t* ___format0, RuntimeObject* ___arg01, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponentInChildren<UnityEngine.UI.Image>()
 inline Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* Component_GetComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_m22ACF33DC0AB281D8B1E18650516D0765006FE66 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -6942,6 +6942,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenerCore_3_tC0593021331EF2AF46590E2184F512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3* TweenSettingsExtensions_From_mC4867F10E8DF0108EB602F1BEB6BC7BD4B53F212 (TweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3* ___t0, float ___fromAlphaValue1, bool ___setImmediately2, bool ___isRelative3, const RuntimeMethod* method) ;
 // DG.Tweening.Core.TweenerCore`3<UnityEngine.Color,UnityEngine.Color,DG.Tweening.Plugins.Options.ColorOptions> DG.Tweening.DOTweenModuleUI::DOFade(UnityEngine.UI.Graphic,System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3* DOTweenModuleUI_DOFade_m3B026C515EBD5B21A4F0062F72003DEA9E6A1306 (Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* ___target0, float ___endValue1, float ___duration2, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Events.UnityEvent::RemoveListener(UnityEngine.Events.UnityAction)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C (UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* __this, UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___call0, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponentInChildren<TMPro.TMP_Text>()
 inline TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* Component_GetComponentInChildren_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA5C534600978A673C682FADEE1BBFE1B535981AA (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -8283,6 +8285,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_Start_mA0DDBDCCF092FB94E45B55
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_Update_m0A61C4DF0624FE1A1E00AA7E9DA84090A1C4A3C2 (ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* __this, const RuntimeMethod* method) 
 {
 	{
+		// if (isMakePrefabBtnClick)
+		bool L_0 = __this->___isMakePrefabBtnClick_14;
+		if (!L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		// PlaceIndicator(); // ?? ?? ? ???? ????? ??? ? ??
+		ARManager2_PlaceIndicator_mB59817D7FB2AF92C666EDF61632743D25CC3F910(__this, NULL);
+	}
+
+IL_000e:
+	{
 		// PlayerMove();
 		ARManager2_PlayerMove_mB60D6C63E8CF8C872F6DAF14BB7A9E10D967DDCA(__this, NULL);
 		// }
@@ -8373,10 +8389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_OnClickMakePrefabBtn_m56356EB
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARManager2_PlaceIndicatorPrefab_m95BF18CDB64380AD47A15B0E77527748C6ED657F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -8386,26 +8399,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_OnClickMakePrefabBtn_m56356EB
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ((MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields*)il2cpp_codegen_static_fields_for(MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_il2cpp_TypeInfo_var))->___spawnedObject_Indicator_5;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
-		// placePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___placePrefabBtn_12;
-		NullCheck(L_1);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_2;
-		L_2 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_1, NULL);
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_3 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		NullCheck(L_3);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_3, __this, (intptr_t)((void*)ARManager2_PlaceIndicatorPrefab_m95BF18CDB64380AD47A15B0E77527748C6ED657F_RuntimeMethod_var), NULL);
-		NullCheck(L_2);
-		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_2, L_3, NULL);
-		// placePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___placePrefabBtn_12;
-		NullCheck(L_4);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_5;
-		L_5 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_4, NULL);
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_6 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		NullCheck(L_6);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_6, __this, (intptr_t)((void*)ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B_RuntimeMethod_var), NULL);
-		NullCheck(L_5);
-		UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C(L_5, L_6, NULL);
 		// }
 		return;
 	}
@@ -8492,13 +8485,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_PlaceIndicatorPrefab_m95BF18C
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARManager2_PlaceIndicatorPrefab_m95BF18CDB64380AD47A15B0E77527748C6ED657F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m443F0D48247776D4257E06597AF794BCF6D8020F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m2537AA64AEAC12995F52F5B412866556B83CFBE0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_0;
@@ -8542,26 +8532,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARManager2_PlaceIndicatorPrefab_m95BF18C
 		Object_Destroy_m0E1B4CF8C29EB7FC8658C2C84C57F49C0DD12C91(L_15, (3.0f), NULL);
 		// isMakePrefabBtnClick = false;
 		__this->___isMakePrefabBtnClick_14 = (bool)0;
-		// placePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = __this->___placePrefabBtn_12;
-		NullCheck(L_16);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_17;
-		L_17 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_16, NULL);
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_18 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		NullCheck(L_18);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_18, __this, (intptr_t)((void*)ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B_RuntimeMethod_var), NULL);
-		NullCheck(L_17);
-		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_17, L_18, NULL);
-		// placePrefabBtn.onClick.RemoveListener(PlaceIndicatorPrefab);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_19 = __this->___placePrefabBtn_12;
-		NullCheck(L_19);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_20;
-		L_20 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_19, NULL);
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_21 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		NullCheck(L_21);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_21, __this, (intptr_t)((void*)ARManager2_PlaceIndicatorPrefab_m95BF18CDB64380AD47A15B0E77527748C6ED657F_RuntimeMethod_var), NULL);
-		NullCheck(L_20);
-		UnityEvent_RemoveListener_m0E138F5575CB4363019D3DA570E98FAD502B812C(L_20, L_21, NULL);
 		// }
 		return;
 	}
@@ -8995,6 +8965,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlaceCoroutineU3Ed__15_System_IDispos
 // System.Boolean ARManager2/<PlaceCoroutine>d__15::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPlaceCoroutineU3Ed__15_MoveNext_m9A6E2CD86D4F4F0AFD930A96E5E6F6103F3ED0D6 (U3CPlaceCoroutineU3Ed__15_t568C5CA0C21DF25A54FCBC35CD8F004E7FD611C0* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2C863C592E40F6D76F03C576D02BCAB4BAC70F15);
+		s_Il2CppMethodInitialized = true;
+	}
 	int32_t V_0 = 0;
 	ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* V_1 = NULL;
 	{
@@ -9012,7 +8989,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPlaceCoroutineU3Ed__15_MoveNext_m9A6E
 		int32_t L_3 = V_0;
 		if ((((int32_t)L_3) == ((int32_t)1)))
 		{
-			goto IL_003c;
+			goto IL_0046;
 		}
 	}
 	{
@@ -9026,13 +9003,16 @@ IL_0017:
 
 IL_001e:
 	{
+		// Debug.Log("coroutine is running");
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(_stringLiteral2C863C592E40F6D76F03C576D02BCAB4BAC70F15, NULL);
 		// if (isMakePrefabBtnClick)
 		ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* L_4 = V_1;
 		NullCheck(L_4);
 		bool L_5 = L_4->___isMakePrefabBtnClick_14;
 		if (!L_5)
 		{
-			goto IL_002c;
+			goto IL_0036;
 		}
 	}
 	{
@@ -9042,7 +9022,7 @@ IL_001e:
 		ARManager2_PlaceIndicator_mB59817D7FB2AF92C666EDF61632743D25CC3F910(L_6, NULL);
 	}
 
-IL_002c:
+IL_0036:
 	{
 		// yield return null; // ? ??? ??
 		__this->___U3CU3E2__current_1 = NULL;
@@ -9051,7 +9031,7 @@ IL_002c:
 		return (bool)1;
 	}
 
-IL_003c:
+IL_0046:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 		// while (true)
@@ -12746,8 +12726,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventorySlotClick_Awake_m41E33C5119BC38
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD_m0A7D1AB768BB9683DB991B070F8B1418FEFFB4C5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30_m245B011F62466BE5067C2F457A66F978751B3D19_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisObjectPool_t7FEF06A8B5BAB66D5B574214EAD804D81F126082_mC1AF1D104BA94CD71EA131920E02FE3AFBBEC54B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3B2EA52A70D42AFE17EB6B900CB0F7DAB477ED68);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6B5B03B701C495CA7870F21C9F27FD962EA503A1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral773C10AC7B2C7AFBFDA64607526E4F567D903BA2);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral791323D7D68622948FD30055EC90B1C50A76B838);
@@ -12755,7 +12737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventorySlotClick_Awake_m41E33C5119BC38
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// imageTracker2_sc = GameObject.Find("AR Session Origin_ARRecog").transform.Find("AR Session Origin").GetComponent<ImageTracker2>();
+		// imageTracker2_cs = GameObject.Find("AR Session Origin_ARRecog").transform.Find("AR Session Origin").GetComponent<ImageTracker2>();
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
 		L_0 = GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51(_stringLiteral791323D7D68622948FD30055EC90B1C50A76B838, NULL);
 		NullCheck(L_0);
@@ -12767,16 +12749,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventorySlotClick_Awake_m41E33C5119BC38
 		NullCheck(L_2);
 		ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* L_3;
 		L_3 = Component_GetComponent_TisImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD_m0A7D1AB768BB9683DB991B070F8B1418FEFFB4C5(L_2, Component_GetComponent_TisImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD_m0A7D1AB768BB9683DB991B070F8B1418FEFFB4C5_RuntimeMethod_var);
-		__this->___imageTracker2_sc_5 = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___imageTracker2_sc_5), (void*)L_3);
-		// arManager2_sc = GameObject.Find("ARManager").GetComponent<ARManager2>();
+		__this->___imageTracker2_cs_5 = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___imageTracker2_cs_5), (void*)L_3);
+		// arManager2_cs = GameObject.Find("ARManager").GetComponent<ARManager2>();
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51(_stringLiteral6B5B03B701C495CA7870F21C9F27FD962EA503A1, NULL);
 		NullCheck(L_4);
 		ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* L_5;
 		L_5 = GameObject_GetComponent_TisARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30_m245B011F62466BE5067C2F457A66F978751B3D19(L_4, GameObject_GetComponent_TisARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30_m245B011F62466BE5067C2F457A66F978751B3D19_RuntimeMethod_var);
-		__this->___arManager2_sc_6 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___arManager2_sc_6), (void*)L_5);
+		__this->___arManager2_cs_6 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___arManager2_cs_6), (void*)L_5);
 		// objectPool_cs = GameObject.Find("ObjectPool").GetComponent<ObjectPool>();
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
 		L_6 = GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51(_stringLiteralD6FA4ED6AC130CA41FADB0612CD51C6BDF4F3D62, NULL);
@@ -12785,6 +12767,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventorySlotClick_Awake_m41E33C5119BC38
 		L_7 = GameObject_GetComponent_TisObjectPool_t7FEF06A8B5BAB66D5B574214EAD804D81F126082_mC1AF1D104BA94CD71EA131920E02FE3AFBBEC54B(L_6, GameObject_GetComponent_TisObjectPool_t7FEF06A8B5BAB66D5B574214EAD804D81F126082_mC1AF1D104BA94CD71EA131920E02FE3AFBBEC54B_RuntimeMethod_var);
 		__this->___objectPool_cs_7 = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___objectPool_cs_7), (void*)L_7);
+		// Debug.Log($"arManager2_cs = {arManager2_cs}");
+		ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* L_8 = __this->___arManager2_cs_6;
+		String_t* L_9;
+		L_9 = String_Format_m8C122B26BC5AA10E2550AECA16E57DAE10F07E30(_stringLiteral3B2EA52A70D42AFE17EB6B900CB0F7DAB477ED68, L_8, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(L_9, NULL);
 		// }
 		return;
 	}
@@ -12858,12 +12846,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InventorySlotClick_OnClick_mC5E719C9D070
 
 IL_006e:
 	{
-		// imageTracker2_sc.SetIndicator();
-		ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* L_16 = __this->___imageTracker2_sc_5;
+		// imageTracker2_cs.SetIndicator();
+		ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD* L_16 = __this->___imageTracker2_cs_5;
 		NullCheck(L_16);
 		ImageTracker2_SetIndicator_m9BC4DE11B2B73E6D9D956E51012BC5644E1FD9D7(L_16, NULL);
-		// arManager2_sc.OnClickMakePrefabBtn();
-		ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* L_17 = __this->___arManager2_sc_6;
+		// arManager2_cs.OnClickMakePrefabBtn();
+		ARManager2_tBD22265C2B05657A4FD6B1DB206E1F2697E0CD30* L_17 = __this->___arManager2_cs_6;
 		NullCheck(L_17);
 		ARManager2_OnClickMakePrefabBtn_m56356EB178047070E658E873D13F605B548CEC0B(L_17, NULL);
 		// }

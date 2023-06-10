@@ -49,10 +49,10 @@ public class ARManager2 : MonoBehaviour
     void Update()
     {
         //PlacePrefab(); // 화면 터치 시 공 생성
-        /*if (isMakePrefabBtnClick)
+        if (isMakePrefabBtnClick)
         {
             PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
-        }*/ // 코루틴으로 변경
+        } // 코루틴으로 변경
         PlayerMove();
     }
 
@@ -61,6 +61,7 @@ public class ARManager2 : MonoBehaviour
     {
         while (true)
         {
+            Debug.Log("coroutine is running");
             if (isMakePrefabBtnClick)
             {
                 PlaceIndicator();
@@ -100,8 +101,8 @@ public class ARManager2 : MonoBehaviour
         MyDataStruct.spawnedObject_Indicator.SetActive(true);
         //indicator.SetActive(true);
  
-        placePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
-        placePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
+        //placePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
+        //placePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
 
         //MyDataStruct.spawnedObject.SetActive(true);
     }
@@ -144,8 +145,8 @@ public class ARManager2 : MonoBehaviour
 
         isMakePrefabBtnClick = false;
 
-        placePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
-        placePrefabBtn.onClick.RemoveListener(PlaceIndicatorPrefab);     
+        //placePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
+        //placePrefabBtn.onClick.RemoveListener(PlaceIndicatorPrefab);     
 
         //Debug.Log("PlaceIndicatorPrefab 버튼으로 프리팹 배치 실행");
     }

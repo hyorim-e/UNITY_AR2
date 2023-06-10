@@ -59,8 +59,6 @@ public class InventoryManager : MonoBehaviour
         {
             if (MoviePoster.name == MyDataStruct.spawnedObject.name)
             {
-                //debugText2.text = "MoviePoster.name == MyDataStruct.spawnedIbject.name";
-
                 // 인벤토리에 빈 슬롯이 있는지 확인
                 if (InvenListIndex < InvenList.Length)
                 {
