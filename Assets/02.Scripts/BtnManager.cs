@@ -81,12 +81,15 @@ public class BtnManager : MonoBehaviour
         weather.SetActive(true);
     }
 
-    // Canvas_Place에 CancelButton에 연결
+    // Canvas_Place의 CancelButton에 연결
     public void OnClickCancelButton()
     {
         MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
         ARManager_sc.isMakePrefabBtnClick = false;
+
+        Canvas_Game.SetActive(true);
+        Canvas_Place.SetActive(false);
 
         //placePrefabBtn.onClick.AddListener(ARManager_sc.OnClickMakePrefabBtn);
         //placePrefabBtn.onClick.RemoveListener(ARManager_sc.PlaceIndicatorPrefab);
@@ -103,6 +106,9 @@ public class BtnManager : MonoBehaviour
         weather.SetActive(true);
         inventoryUI.SetActive(false);
 
-        //해당 함수와 슬롯별로 inventorySlotClick 스크립트 컴포넌트 넣고 inventorySlotClick.OnClick도 연결
+        Canvas_Game.SetActive(false);
+        Canvas_Place.SetActive(true);
+
+        //슬롯별로 해당 함수와 inventorySlotClick 스크립트 컴포넌트 넣고 inventorySlotClick.OnClick도 연결
     }
 }

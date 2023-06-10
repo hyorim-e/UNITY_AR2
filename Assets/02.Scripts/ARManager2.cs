@@ -39,21 +39,44 @@ public class ARManager2 : MonoBehaviour
         isMakePrefabBtnClick = false;
     }
 
+    private void Start()
+    {
+        SetMapRadius(40f);
+
+        StartCoroutine(PlaceCoroutine());
+    }
+
     void Update()
     {
         //PlacePrefab(); // 화면 터치 시 공 생성
-        if (isMakePrefabBtnClick)
+        /*if (isMakePrefabBtnClick)
         {
             PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
-        }
+        }*/ // 코루틴으로 변경
         PlayerMove();
-
-        //debugText_Game.text = MyDataStruct.spawnedObject_Indicator.name;
-
-        //debugText_Game.text = PublicVars.spawnedObject.name;
-        //debugText_Game.text = MyDataStruct.spawnedObject.name;
-        //Debug.Log(PublicVars.spawnedObject);
     }
+
+    #region 배치 코루틴
+    IEnumerator PlaceCoroutine()
+    {
+        while (true)
+        {
+            if (isMakePrefabBtnClick)
+            {
+                PlaceIndicator();
+            }
+
+            yield return null; // 한 프레임 대기
+
+            // 필요한 경우에 따라 다른 대기 시간을 사용하려면 아래와 같이 WaitForSeconds 함수를 사용할 수 있습니다:
+            // yield return new WaitForSeconds(0.5f); // 0.5초 대기
+
+            // 필요한 경우에 따라 다른 조건으로 대기할 수도 있습니다:
+            // yield return new WaitUntil(() => condition); // 조건이 참이 될 때까지 대기
+            // yield return new WaitWhile(() => condition); // 조건이 거짓이 될 때까지 대기
+        }
+    }
+    #endregion
 
     #region 바닥 활성화
 
@@ -198,7 +221,7 @@ public class ARManager2 : MonoBehaviour
 
     public Material[] MapMts;
 
-    void Start() => SetMapRadius(40f);
+    //void Start() => SetMapRadius(40f);
     void OnApplicationQuit() => SetMapRadius(float.MaxValue);
 
     void SetMapCenter(Vector3 vec)
