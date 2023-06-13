@@ -77,3 +77,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Avatar_TheWayOfWater
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5463679480440908559
+      m_GuidHigh: 12179046547587786942
+    m_SerializedTextureGuid:
+      m_GuidLow: 10931368020051474402
+      m_GuidHigh: 14282489871572152683
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Building_Apartment_10
+    m_Texture: {fileID: 0}
