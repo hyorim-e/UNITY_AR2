@@ -55,7 +55,7 @@ public class ReadQRCode : MonoBehaviour
                 if (result != null)
                 {
                     txt.text = result.Text;
-                    SetPrefab();
+                    //SetPrefab();
                 }
             }
         }

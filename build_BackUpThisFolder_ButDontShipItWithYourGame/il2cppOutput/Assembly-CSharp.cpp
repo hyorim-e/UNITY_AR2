@@ -6890,8 +6890,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRCpuImage_get_width_m176240EBEBBD41D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRCpuImage_get_height_m139489AD26B264FA46EE5659258BBF9C6584E5E9 (XRCpuImage_t36F512AD65D5B0AA1CC458C3666873D741C60A57* __this, const RuntimeMethod* method) ;
 // System.String ZXing.Result::get_Text()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Result_get_Text_m65A52D001505F5311D513F3CDD86D3BB72103E89_inline (Result_tF578DE3ECC8EB51CFB66605B8ADCD433C837EBAF* __this, const RuntimeMethod* method) ;
-// System.Void ReadQRCode::SetPrefab()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReadQRCode_SetPrefab_mFB99E63790114C11154130D5EC56BDEA05802417 (ReadQRCode_t4544083189C582CBE8568DF87F763D170C736B8E* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
 // UnityEngine.Rect UnityEngine.RectTransform::get_rect()
@@ -13536,7 +13534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReadQRCode_Update_m0A6E6060777640FEA78DB
 		L_1 = ARCameraManager_TryAcquireLatestCpuImage_m79247340777701FCF1E9CF274D1FC6EAFE0AA874(L_0, (&V_0), NULL);
 		if (!L_1)
 		{
-			goto IL_00ad;
+			goto IL_00a7;
 		}
 	}
 	{
@@ -13548,7 +13546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReadQRCode_Update_m0A6E6060777640FEA78DB
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_009f:
+FINALLY_0099:
 			{// begin finally (depth: 1)
 				XRCpuImage_Dispose_m80B8CA56700DD5EB8A5613AA42F6F389D86A746B((&V_1), NULL);
 				return;
@@ -13653,7 +13651,7 @@ IL_0064_1:
 				Result_tF578DE3ECC8EB51CFB66605B8ADCD433C837EBAF* L_21 = V_5;
 				if (!L_21)
 				{
-					goto IL_009d_1;
+					goto IL_0097_1;
 				}
 			}
 			{
@@ -13665,14 +13663,12 @@ IL_0064_1:
 				L_24 = Result_get_Text_m65A52D001505F5311D513F3CDD86D3BB72103E89_inline(L_23, NULL);
 				NullCheck(L_22);
 				VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_22, L_24);
-				// SetPrefab();
-				ReadQRCode_SetPrefab_mFB99E63790114C11154130D5EC56BDEA05802417(__this, NULL);
 			}
 
-IL_009d_1:
+IL_0097_1:
 			{
 				// }
-				goto IL_00ad;
+				goto IL_00a7;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -13681,7 +13677,7 @@ IL_009d_1:
 		}
 	}
 
-IL_00ad:
+IL_00a7:
 	{
 		// }
 		return;
