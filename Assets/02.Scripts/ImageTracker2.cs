@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class ImageTracker2 : MonoBehaviour
 {
@@ -22,12 +23,21 @@ public class ImageTracker2 : MonoBehaviour
 
     public Material indicatorMt;
 
-    private Vector3 temp;
+    //private Vector3 temp;
 
-    public Text debugText_AR;
+    [SerializeField]
+    private TMP_Text debugTxt;
 
     private void Awake()
     {
+        if (MyDataStruct.spawnedObject is null)
+            debugTxt.text = "null";
+        else if (MyDataStruct.spawnedObject is not null)
+            debugTxt.text = "not null";
+        else
+            debugTxt.text = "MyDataStruct.spawnedObject.name";
+        Debug.Log($"MyDataStruct.spawnedObject.ToString() = {MyDataStruct.spawnedObject}");
+
         trackedImageManager = GetComponent<ARTrackedImageManager>();
         spawnedObject = new Dictionary<string, GameObject>();
 
@@ -37,8 +47,6 @@ public class ImageTracker2 : MonoBehaviour
         {
             spawnedObject.Add(obj.name, obj);
         }
-
-        debugText_AR.text = "ImageTracker2";
     }
 
     private void OnEnable()
@@ -113,7 +121,9 @@ public class ImageTracker2 : MonoBehaviour
         else
         {
             spawnedObject[referenceImageName].SetActive(false);
-        }  
+        }
+
+        debugTxt.text = MyDataStruct.spawnedObject.name;
     }
 
     // 게임 Scene으로 넘어갔을 때 AR Scene에서 보였던 프리팹 숨기는 역할
@@ -140,7 +150,25 @@ public class ImageTracker2 : MonoBehaviour
 
                 MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
-                MyDataStruct.spawnedObject_Indicator.GetComponentInChildren<Renderer>().material = indicatorMt;
+                //MyDataStruct.spawnedObject_Indicator.GetComponentInChildren<Renderer>().material = indicatorMt;
+                void FindComponentsInChildren(Transform parent)
+                {
+                    Renderer rendererComponent = parent.GetComponentInChildren<Renderer>();
+
+                    if (rendererComponent != null)
+                    {
+                        rendererComponent.material = indicatorMt;
+                        // 원하는 작업 수행
+                    }
+
+                    // 하위 오브젝트를 재귀적으로 탐색하여 컴포넌트를 찾음
+                    for (int i = 0; i < parent.childCount; i++)
+                    {
+                        Transform child = parent.GetChild(i);
+                        FindComponentsInChildren(child); // 재귀 호출
+                    }
+                }
+                FindComponentsInChildren(MyDataStruct.spawnedObject_Indicator.transform);
             }
         }     
     }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.AI;
+using TMPro;
 
 public class ARManager2 : MonoBehaviour
 {
@@ -37,13 +38,15 @@ public class ARManager2 : MonoBehaviour
         */
 
         isMakePrefabBtnClick = false;
+
+        debugText_Game.text = $"MyDataStruct.spawnedObject = {MyDataStruct.spawnedObject}";
     }
 
     private void Start()
     {
         SetMapRadius(40f);
 
-        StartCoroutine(PlaceCoroutine());
+        //StartCoroutine(PlaceCoroutine());
     }
 
     void Update()
@@ -101,8 +104,8 @@ public class ARManager2 : MonoBehaviour
         MyDataStruct.spawnedObject_Indicator.SetActive(true);
         //indicator.SetActive(true);
  
-        //placePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
-        //placePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
+        placePrefabBtn.onClick.AddListener(PlaceIndicatorPrefab);
+        placePrefabBtn.onClick.RemoveListener(OnClickMakePrefabBtn);
 
         //MyDataStruct.spawnedObject.SetActive(true);
     }
@@ -145,8 +148,8 @@ public class ARManager2 : MonoBehaviour
 
         isMakePrefabBtnClick = false;
 
-        //placePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
-        //placePrefabBtn.onClick.RemoveListener(PlaceIndicatorPrefab);     
+        placePrefabBtn.onClick.AddListener(OnClickMakePrefabBtn);
+        placePrefabBtn.onClick.RemoveListener(PlaceIndicatorPrefab);     
 
         //Debug.Log("PlaceIndicatorPrefab 버튼으로 프리팹 배치 실행");
     }

@@ -14,7 +14,9 @@ public class ReadQRCode : MonoBehaviour
     private ImageTracker2 imageTracker2;
 
     [SerializeField]
-    private GameObject[] spawnPrefabs;
+    private ObjectPool objectPool_cs;
+    //[SerializeField]
+    //private GameObject[] spawnPrefabs;
 
     private void Awake()
     {
@@ -76,16 +78,34 @@ public class ReadQRCode : MonoBehaviour
     {
         if (txt.text == "https://www.qrcode.com/ko/index.html") // qr内靛 权其捞瘤
         {
-            spawnPrefabs[5].SetActive(true);
+            for (int i = 0; i < objectPool_cs.placeablePrefabs.Length; i++)
+            {
+                objectPool_cs.placeablePrefabs[i].SetActive(false);
+            }
+            //spawnPrefabs[0].SetActive(true);
+            objectPool_cs.placeablePrefabs[0].SetActive(true);
             //GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.position = CameraManager.transform.position + CameraManager.transform.rotation * new Vector3(0, 0, 1);
             //GetComponent<ImageTracker2>().spawnedObject["Cube"].transform.rotation = CameraManager.transform.rotation;
 
         }
         else if (txt.text == "http://www.samsungamoled.net/") // 伙己
         {
-            spawnPrefabs[4].SetActive(true);
+            for (int i = 0; i < objectPool_cs.placeablePrefabs.Length; i++)
+            {
+                objectPool_cs.placeablePrefabs[i].SetActive(false);
+            }
+            //spawnPrefabs[1].SetActive(true);
+            objectPool_cs.placeablePrefabs[1].SetActive(true);
             //GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.position = CameraManager.transform.position + CameraManager.transform.rotation * new Vector3(0, 0, 1);
             //GetComponent<ImageTracker2>().spawnedObject["Sphere"].transform.rotation = CameraManager.transform.rotation;
+        }
+    }
+
+    public void HideSpawnedObject_QR()
+    {
+        for(int i = 0; i < objectPool_cs.placeablePrefabs.Length; i++)
+        {
+            objectPool_cs.placeablePrefabs[i].SetActive(false);
         }
     }
 }

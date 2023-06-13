@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
   m_ObjectGestureTranslationMode: 0
-  m_MaxTranslationDistance: 30
+  m_MaxTranslationDistance: 1000
   m_FallbackLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1268,8 +1268,8 @@ MonoBehaviour:
   m_XROrigin: {fileID: 0}
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
-  m_MinScale: 2
-  m_MaxScale: 20
+  m_MinScale: 1
+  m_MaxScale: 100
   m_ElasticRatioLimit: 0
   m_Sensitivity: 0.75
   m_Elasticity: 0.15

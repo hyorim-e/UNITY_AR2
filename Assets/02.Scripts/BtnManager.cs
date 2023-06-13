@@ -15,6 +15,8 @@ public class BtnManager : MonoBehaviour
     private InventoryManager inventoryManager_cs;
     [SerializeField]
     private CollectionBookManager collectionBookManager_cs;
+    [SerializeField]
+    private ReadQRCode readQRCode_cs;
 
     [SerializeField]
     private GameObject arManager;
@@ -72,10 +74,6 @@ public class BtnManager : MonoBehaviour
         ARSOrigin_ARRecog.SetActive(false);
         ARSOrigin_Game.SetActive(true);
 
-        Canvas_ARRecog.SetActive(false);
-        Canvas_Game.SetActive(false);
-        Canvas_Place.SetActive(true);
-
         plane.SetActive(true);
         gameDeco.SetActive(true);
         character.SetActive(true);
@@ -87,12 +85,24 @@ public class BtnManager : MonoBehaviour
         // indicator도 null이 아닐 때를 조건으로 해버리면 SetIndicator에서 indicator 할당하기 때문에 아래 함수들이 실행이 안됨.
         if (MyDataStruct.spawnedObject is not null)
         {
+            Canvas_ARRecog.SetActive(false);
+            Canvas_Game.SetActive(false);
+            Canvas_Place.SetActive(true);
+
             inventoryManager_cs.InventoryUpdate();
             imageTracker2_cs.SetIndicator();
             imageTracker2_cs.HideSpawnedObject();
             collectionBookManager_cs.CollectionOpen();
             arManager2_cs.OnClickMakePrefabBtn();
         }
+        else if (MyDataStruct.spawnedObject is null)
+        {
+            Canvas_ARRecog.SetActive(false);
+            Canvas_Place.SetActive(false);
+            Canvas_Game.SetActive(true);
+        }
+
+        readQRCode_cs.HideSpawnedObject_QR();
     }
 
     public void OnClickPlaceButton()
@@ -100,10 +110,22 @@ public class BtnManager : MonoBehaviour
         weather.SetActive(true);
     }
 
+    // Canvas_Place의 PlacePrefabButton에 연결
+    public void OnClickPlacePrefabButton()
+    {
+        btnClickSound.Play();
+    }
+
+
     // Canvas_Place의 CancelButton에 연결
     public void OnClickCancelButton()
     {
-        MyDataStruct.spawnedObject_Indicator.SetActive(false);
+        btnClickSound.Play();
+
+        if (MyDataStruct.spawnedObject_Indicator is not null)
+        {
+            MyDataStruct.spawnedObject_Indicator.SetActive(false);
+        }
 
         arManager2_cs.isMakePrefabBtnClick = false;
 

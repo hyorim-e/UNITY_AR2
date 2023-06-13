@@ -41,11 +41,11 @@ MonoBehaviour:
       m_GuidLow: 4961656853517090457
       m_GuidHigh: 788586365141859248
     m_SerializedTextureGuid:
-      m_GuidLow: 16808786094074519408
-      m_GuidHigh: 2888911279156622122
-    m_Size: {x: 8.4, y: 8.4}
+      m_GuidLow: 7905072153583791806
+      m_GuidHigh: 6385050455965048587
+    m_Size: {x: 5.8668747, y: 8.4}
     m_SpecifySize: 1
-    m_Name: TheHost_Poster
+    m_Name: Tiger
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4932514845494414742
@@ -53,9 +53,9 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 15822475604516997894
       m_GuidHigh: 13916238181605600473
-    m_Size: {x: 0.1, y: 0.14810427}
+    m_Size: {x: 5.67168, y: 8.4}
     m_SpecifySize: 1
-    m_Name: Sphere
+    m_Name: TheHost_Poster
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 4729729179372968568
@@ -63,7 +63,17 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 9733444222562611613
       m_GuidHigh: 7415742627421306297
-    m_Size: {x: 0.1, y: 0.15835}
+    m_Size: {x: 5.3047047, y: 8.4}
     m_SpecifySize: 1
     m_Name: Cube
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4643695780810877201
+      m_GuidHigh: 17157076033373977238
+    m_SerializedTextureGuid:
+      m_GuidLow: 8486071923891093161
+      m_GuidHigh: 4588685879633940136
+    m_Size: {x: 5.8603125, y: 8.4}
+    m_SpecifySize: 1
+    m_Name: Avatar_TheWayOfWater
     m_Texture: {fileID: 0}
