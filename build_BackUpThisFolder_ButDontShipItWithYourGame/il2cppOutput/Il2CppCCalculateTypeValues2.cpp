@@ -46,8 +46,12 @@ struct Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6;
 struct Action_2_t70E17A6F8F03189031C560482454FE2D87F496F2;
 // System.Collections.Generic.Dictionary`2<System.String,UnityEngine.GameObject>
 struct Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE;
+// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.Quaternion>
+struct Dictionary_2_t72520B30C5EAAA95320004F6812EEBF57D91A397;
 // System.Collections.Generic.Dictionary`2<System.String,UnityEngine.Sprite>
 struct Dictionary_2_tC7B9BD0CA755DD1E643DB18A74765E15DC3D9516;
+// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.Vector3>
+struct Dictionary_2_t1B115DB96F2674765975721520F73253084A610E;
 // System.Collections.Generic.Dictionary`2<UnityEngine.TerrainUtils.TerrainTileCoord,UnityEngine.Terrain>
 struct Dictionary_2_t5C5FBA59FA0804C53874B619629A7AF7EA74A119;
 // System.Collections.Generic.Dictionary`2<System.Type,UnityEngine.ISubsystem>
@@ -142,6 +146,8 @@ struct GlyphMarshallingStructU5BU5D_t9424A4B1FAAD615472A9346208026B1B9E22069E;
 struct GlyphPairAdjustmentRecordU5BU5D_tD5DD2A739A4CA745E7F28ECCB2CD0BD0A65A38F7;
 // UnityEngine.TextCore.GlyphRect[]
 struct GlyphRectU5BU5D_t494B690215E3F3F42B6F216930A461256CE2CC70;
+// HideObject[]
+struct HideObjectU5BU5D_t65C70A1F4AE47399AB5B1E6BE90913BC9EB6A98E;
 // UnityEngine.HumanBone[]
 struct HumanBoneU5BU5D_t443B81D55400778CBB921DF04BE932ABF14BAA52;
 // UnityEngine.UI.Image[]
@@ -6302,44 +6308,46 @@ struct BtnManager_t0CDA86D9A904B84FDE5ED50D9B037EFFFED569AD  : public MonoBehavi
 	CollectionBookManager_tB6709DFEBAFFA4F717BA11703FE3AE3D5270FF27* ___collectionBookManager_cs_7;
 	// ReadQRCode BtnManager::readQRCode_cs
 	ReadQRCode_t4544083189C582CBE8568DF87F763D170C736B8E* ___readQRCode_cs_8;
+	// HideObject[] BtnManager::hideObjects
+	HideObjectU5BU5D_t65C70A1F4AE47399AB5B1E6BE90913BC9EB6A98E* ___hideObjects_9;
 	// UnityEngine.GameObject BtnManager::arManager
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___arManager_9;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___arManager_10;
 	// UnityEngine.GameObject BtnManager::ARSOrigin_ARRecog
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSOrigin_ARRecog_10;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSOrigin_ARRecog_11;
 	// UnityEngine.GameObject BtnManager::ARSOrigin_Game
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSOrigin_Game_11;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ARSOrigin_Game_12;
 	// UnityEngine.GameObject BtnManager::Canvas_ARRecog
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Canvas_ARRecog_12;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Canvas_ARRecog_13;
 	// UnityEngine.GameObject BtnManager::Canvas_Game
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Canvas_Game_13;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Canvas_Game_14;
 	// UnityEngine.GameObject BtnManager::Canvas_Place
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Canvas_Place_14;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Canvas_Place_15;
 	// UnityEngine.GameObject BtnManager::inventoryUI
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___inventoryUI_15;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___inventoryUI_16;
 	// UnityEngine.GameObject BtnManager::settingBtn
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___settingBtn_16;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___settingBtn_17;
 	// UnityEngine.GameObject BtnManager::setting
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___setting_17;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___setting_18;
 	// UnityEngine.GameObject BtnManager::collectionBtn
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___collectionBtn_18;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___collectionBtn_19;
 	// UnityEngine.GameObject BtnManager::inventoryBtn
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___inventoryBtn_19;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___inventoryBtn_20;
 	// UnityEngine.GameObject BtnManager::plane
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___plane_20;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___plane_21;
 	// UnityEngine.GameObject BtnManager::gameDeco
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___gameDeco_21;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___gameDeco_22;
 	// UnityEngine.GameObject BtnManager::character
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___character_22;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___character_23;
 	// UnityEngine.GameObject BtnManager::randomMove
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___randomMove_23;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___randomMove_24;
 	// UnityEngine.GameObject BtnManager::weather
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weather_24;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___weather_25;
 	// UnityEngine.UI.Button BtnManager::placePrefabBtn
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___placePrefabBtn_25;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___placePrefabBtn_26;
 	// UnityEngine.UI.Button BtnManager::PosterRecognizeBtn
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___PosterRecognizeBtn_26;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___PosterRecognizeBtn_27;
 	// UnityEngine.AudioSource BtnManager::btnClickSound
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___btnClickSound_27;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___btnClickSound_28;
 };
 
 // CollectionBookManager
@@ -6388,12 +6396,16 @@ struct ImageTracker2_t3FD1F4E1023D1CD87D2E00D0922ED4E97FC0B9CD  : public MonoBeh
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___placeablePrefabs_6;
 	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.GameObject> ImageTracker2::spawnedObject
 	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___spawnedObject_7;
+	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.Vector3> ImageTracker2::spawnedObject_scale
+	Dictionary_2_t1B115DB96F2674765975721520F73253084A610E* ___spawnedObject_scale_8;
+	// System.Collections.Generic.Dictionary`2<System.String,UnityEngine.Quaternion> ImageTracker2::spawnedObject_rot
+	Dictionary_2_t72520B30C5EAAA95320004F6812EEBF57D91A397* ___spawnedObject_rot_9;
 	// UnityEngine.ParticleSystem ImageTracker2::particle
-	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___particle_8;
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___particle_10;
 	// UnityEngine.Material ImageTracker2::indicatorMt
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___indicatorMt_9;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___indicatorMt_11;
 	// TMPro.TMP_Text ImageTracker2::debugTxt
-	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___debugTxt_10;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___debugTxt_12;
 };
 
 // ImageTracker3
@@ -6505,8 +6517,12 @@ struct MyDataStruct_t65C9B7A2204BA995810D96D19BBCEA8C805C1317_StaticFields
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_4;
 	// UnityEngine.GameObject MyDataStruct::spawnedObject_Indicator
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_Indicator_5;
+	// UnityEngine.Vector3 MyDataStruct::spawnedObject_LocalScale
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___spawnedObject_LocalScale_6;
+	// UnityEngine.Quaternion MyDataStruct::spawnedObject_Rotation
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___spawnedObject_Rotation_7;
 	// UnityEngine.Material MyDataStruct::originMt
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_6;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___originMt_8;
 };
 
 // ObjectPool

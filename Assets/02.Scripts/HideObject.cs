@@ -12,12 +12,17 @@ public class HideObject : MonoBehaviour
         StartCoroutine(HideRendererCo());
     }
 
-IEnumerator HideRendererCo()
+    IEnumerator HideRendererCo()
     {
         while (true)
         {
             RR.enabled = (PublicVars.playerPos - transform.position).sqrMagnitude < 2116;
             yield return Delay04;
         }
+    }
+
+    public void StartCoroutineInScript()
+    {
+        StartCoroutine(HideRendererCo());
     }
 }

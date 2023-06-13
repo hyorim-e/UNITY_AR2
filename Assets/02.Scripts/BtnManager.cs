@@ -17,6 +17,7 @@ public class BtnManager : MonoBehaviour
     private CollectionBookManager collectionBookManager_cs;
     [SerializeField]
     private ReadQRCode readQRCode_cs;
+    private HideObject[] hideObjects;
 
     [SerializeField]
     private GameObject arManager;
@@ -47,6 +48,11 @@ public class BtnManager : MonoBehaviour
 
     public AudioSource btnClickSound;
 
+    private void Awake()
+    {
+        hideObjects = FindObjectsOfType<HideObject>();
+    }
+
     public void OnClickRecogBtn()
     {
         arManager.SetActive(false);
@@ -61,7 +67,16 @@ public class BtnManager : MonoBehaviour
         plane.SetActive(false);
         gameDeco.SetActive(false);
         character.SetActive(false);
-        randomMove.SetActive(false);    
+        randomMove.SetActive(false);
+
+            
+        if (MyDataStruct.spawnedObject is not null && imageTracker2_cs.spawnedObject.ContainsKey(MyDataStruct.spawnedObject.name))
+        //if (MyDataStruct.spawnedObject.name.Equals("TheHost"))
+        {
+            imageTracker2_cs.spawnedObject[MyDataStruct.spawnedObject.name].transform.localScale = imageTracker2_cs.spawnedObject_scale[MyDataStruct.spawnedObject.name];
+            //MyDataStruct.spawnedObject.transform.localScale = imageTracker2_cs.spawnedObject_scale[MyDataStruct.spawnedObject.name];
+            //MyDataStruct.spawnedObject.transform.localScale = new Vector3(1,1,1);
+        }
     }
 
     // Canvas_Recog의 배치하기 버튼에 연결
@@ -78,6 +93,11 @@ public class BtnManager : MonoBehaviour
         gameDeco.SetActive(true);
         character.SetActive(true);
         randomMove.SetActive(true);
+
+        foreach (HideObject myScript in hideObjects)
+        {
+            myScript.StartCoroutineInScript();
+        }
 
         // if object != null 보다 ! ReferenceEquals(object, null) 이 성능 개선된다고 함.
         // 근데 개선사항으로 is not null 추천됨. is not null 도 성능 개선 되는지?

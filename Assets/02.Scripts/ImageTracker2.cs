@@ -17,6 +17,10 @@ public class ImageTracker2 : MonoBehaviour
     public GameObject[] placeablePrefabs;
     [HideInInspector]
     public Dictionary<string, GameObject> spawnedObject;
+    [HideInInspector]
+    public Dictionary<string, Vector3> spawnedObject_scale;
+    [HideInInspector]
+    public Dictionary<string, Quaternion> spawnedObject_rot;
 
     [SerializeField]
     private ParticleSystem particle;
@@ -30,22 +34,21 @@ public class ImageTracker2 : MonoBehaviour
 
     private void Awake()
     {
-        if (MyDataStruct.spawnedObject is null)
-            debugTxt.text = "null";
-        else if (MyDataStruct.spawnedObject is not null)
-            debugTxt.text = "not null";
-        else
-            debugTxt.text = "MyDataStruct.spawnedObject.name";
-        Debug.Log($"MyDataStruct.spawnedObject.ToString() = {MyDataStruct.spawnedObject}");
-
         trackedImageManager = GetComponent<ARTrackedImageManager>();
         spawnedObject = new Dictionary<string, GameObject>();
+        spawnedObject_scale = new Dictionary<string, Vector3>();
+        spawnedObject_rot = new Dictionary<string, Quaternion>();
 
         // 배치할 오리지널 오브젝트
         //foreach (GameObject obj in placeablePrefabs)
         foreach (GameObject obj in objectPool_cs.placeablePrefabs)
         {
             spawnedObject.Add(obj.name, obj);
+            spawnedObject_scale.Add(obj.name, obj.transform.localScale);
+            spawnedObject_scale[obj.name] = new Vector3(obj.transform.localScale.x, obj.transform.localScale.y, obj.transform.localScale.z);
+            spawnedObject_rot.Add(obj.name, obj.transform.rotation);
+            spawnedObject_rot[obj.name] = new Quaternion(obj.transform.rotation.x, obj.transform.rotation.y, obj.transform.rotation.z, obj.transform.rotation.w);
+
         }
     }
 
@@ -116,7 +119,6 @@ public class ImageTracker2 : MonoBehaviour
 
             MyDataStruct.spawnedObject = spawnedObject[referenceImageName];
             MyDataStruct.originMt = MyDataStruct.spawnedObject.GetComponentInChildren<Renderer>().sharedMaterial;
-            //debugText_AR.text = "originMt = " + MyDataStruct.originMt.name;
         }
         else
         {
@@ -147,6 +149,7 @@ public class ImageTracker2 : MonoBehaviour
                 // 게임 Scene에서는 축소되어 나와서 스케일 크게 조정함
                 MyDataStruct.spawnedObject_Indicator.transform.localScale = new Vector3(3, 3, 3);
                 MyDataStruct.spawnedObject.transform.localScale = new Vector3(3, 3, 3);
+                MyDataStruct.spawnedObject.transform.rotation = spawnedObject_rot[obj.name];
 
                 MyDataStruct.spawnedObject_Indicator.SetActive(false);
 

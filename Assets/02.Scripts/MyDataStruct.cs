@@ -7,6 +7,8 @@ public class MyDataStruct : MonoBehaviour
 {
     public static GameObject spawnedObject = null;
     public static GameObject spawnedObject_Indicator = null;
+    public static Vector3 spawnedObject_LocalScale;
+    public static Quaternion spawnedObject_Rotation;
     public static Material originMt = null;
 
 
