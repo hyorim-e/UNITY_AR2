@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,5 +54,7 @@ public class InventorySlotClick : MonoBehaviour
 
         imageTracker2_cs.SetIndicator();
         arManager2_cs.OnClickMakePrefabBtn();
+
+        //Debug.Log(DateTime.Now.ToString(("yyyy-MM-dd tt HH:mm:ss")));
     }
 }

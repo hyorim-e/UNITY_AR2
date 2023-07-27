@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,6 +49,8 @@ public class BtnManager : MonoBehaviour
 
     public AudioSource btnClickSound;
 
+    public Text debugTxt;
+
     private void Awake()
     {
         hideObjects = FindObjectsOfType<HideObject>();
@@ -79,7 +82,9 @@ public class BtnManager : MonoBehaviour
         }
     }
 
-    // Canvas_Recog의 배치하기 버튼에 연결
+    /// <summary>
+    /// Canvas_Recog의 배치하기 버튼에 연결
+    /// </summary>
     public void OnClickGameBtn()
     {
         btnClickSound.Play();
@@ -103,7 +108,7 @@ public class BtnManager : MonoBehaviour
         // 근데 개선사항으로 is not null 추천됨. is not null 도 성능 개선 되는지?
         //if (MyDataStruct.spawnedObject is not null && MyDataStruct.spawnedObject_Indicator is not null)
         // indicator도 null이 아닐 때를 조건으로 해버리면 SetIndicator에서 indicator 할당하기 때문에 아래 함수들이 실행이 안됨.
-        if (MyDataStruct.spawnedObject is not null)
+        if (MyDataStruct.spawnedObject is not null) // 인식된 게 있으면
         {
             Canvas_ARRecog.SetActive(false);
             Canvas_Game.SetActive(false);
@@ -114,8 +119,12 @@ public class BtnManager : MonoBehaviour
             imageTracker2_cs.HideSpawnedObject();
             collectionBookManager_cs.CollectionOpen();
             arManager2_cs.OnClickMakePrefabBtn();
+
+            debugTxt.text = DateTime.Now.ToString(("yyyy-MM-dd tt HH:mm:ss"));
+            //Debug.Log(DateTime.Now.ToString(("yyyy-MM-dd tt HH:mm:ss")));
+
         }
-        else if (MyDataStruct.spawnedObject is null)
+        else if (MyDataStruct.spawnedObject is null) // 인식된 게 없으면
         {
             Canvas_ARRecog.SetActive(false);
             Canvas_Place.SetActive(false);
@@ -130,14 +139,18 @@ public class BtnManager : MonoBehaviour
         weather.SetActive(true);
     }
 
-    // Canvas_Place의 PlacePrefabButton에 연결
+    /// <summary>
+    /// Canvas_Place의 PlacePrefabButton에 연결
+    /// </summary>
     public void OnClickPlacePrefabButton()
     {
         btnClickSound.Play();
     }
 
 
-    // Canvas_Place의 CancelButton에 연결
+    /// <summary>
+    /// Canvas_Place의 CancelButton에 연결
+    /// </summary>
     public void OnClickCancelButton()
     {
         btnClickSound.Play();
