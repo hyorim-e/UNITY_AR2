@@ -22,9 +22,7 @@ public class ImageTracker2 : MonoBehaviour
     [HideInInspector]
     public Dictionary<string, Quaternion> spawnedObject_rot;
 
-    [SerializeField]
-    //private ParticleSystem particle;
-
+    
     public GameObject effectPrefab; // 이펙트 프리펩
 
     public Material indicatorMt;
@@ -68,20 +66,14 @@ public class ImageTracker2 : MonoBehaviour
     {
         foreach (ARTrackedImage trackedImage in eventArgs.added) // .added 트래킹되는 이미지가 추가되었을 때
         {
-            UpdateSpawnObject(trackedImage);
-
-            #region 파티클
-            //InstParticle(trackedImage);
-            #endregion
-
             #region 이펙트
-            // Destroy(Instantiate(particle, trackedImage.transform.position, trackedImage.transform.rotation), 3); 
-
             // 이미지 트래킹이 시작될 때 이펙트를 생성하고 트래킹된 이미지의 위치에 배치
             GameObject effect = Instantiate(effectPrefab, trackedImage.transform);
             effect.transform.localPosition = Vector3.zero;
             effect.SetActive(true);
             #endregion
+
+            UpdateSpawnObject(trackedImage);
 
             /*if (trackedImage != null)
             {
@@ -93,18 +85,6 @@ public class ImageTracker2 : MonoBehaviour
         {
             UpdateSpawnObject(trackedImage);
 
-            #region 파티클
-            /*if (trackedImage.trackingState == TrackingState.Tracking)
-            {
-                trackedImage.transform.GetChild(0).gameObject.SetActive(true);
-            }
-            // If the tracked image is lost, deactivate the particle system
-            else if (trackedImage.trackingState == TrackingState.None)
-            {
-                trackedImage.transform.GetChild(0).gameObject.SetActive(false);
-            }*/
-            #endregion
-
             #region 이펙트
             // 이미지 트래킹 상태에 따라 이펙트를 활성화 또는 비활성화
             trackedImage.transform.GetChild(0).gameObject.SetActive(trackedImage.trackingState == TrackingState.Tracking);
@@ -115,9 +95,6 @@ public class ImageTracker2 : MonoBehaviour
         {
             spawnedObject[trackedImage.name].SetActive(false);
 
-            #region 파티클 
-            //Destroy(trackedImage.transform.GetChild(0).gameObject);
-            #endregion
         }
     }
 
@@ -192,13 +169,4 @@ public class ImageTracker2 : MonoBehaviour
         }     
     }
 
-    /*
-    private void InstParticle(ARTrackedImage trackedImage)
-    {
-        Destroy(Instantiate(particle, trackedImage.transform.position, trackedImage.transform.rotation), 3);
-        //Instantiate(particle, trackedImage.transform.position, Quaternion.identity)
-        particle.transform.position = trackedImage.transform.position;
-        particle.transform.rotation = trackedImage.transform.rotation;
-    }
-    */
 }
