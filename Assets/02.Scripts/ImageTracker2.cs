@@ -23,7 +23,9 @@ public class ImageTracker2 : MonoBehaviour
     public Dictionary<string, Quaternion> spawnedObject_rot;
 
     [SerializeField]
-    private ParticleSystem particle;
+    //private ParticleSystem particle;
+
+    public GameObject effectPrefab; // 이펙트 프리펩
 
     public Material indicatorMt;
 
@@ -72,6 +74,15 @@ public class ImageTracker2 : MonoBehaviour
             //InstParticle(trackedImage);
             #endregion
 
+            #region 이펙트
+            // Destroy(Instantiate(particle, trackedImage.transform.position, trackedImage.transform.rotation), 3); 
+
+            // 이미지 트래킹이 시작될 때 이펙트를 생성하고 트래킹된 이미지의 위치에 배치
+            GameObject effect = Instantiate(effectPrefab, trackedImage.transform);
+            effect.transform.localPosition = Vector3.zero;
+            effect.SetActive(true);
+            #endregion
+
             /*if (trackedImage != null)
             {
                 debugText_AR.text = "trackedImage != null";
@@ -92,6 +103,11 @@ public class ImageTracker2 : MonoBehaviour
             {
                 trackedImage.transform.GetChild(0).gameObject.SetActive(false);
             }*/
+            #endregion
+
+            #region 이펙트
+            // 이미지 트래킹 상태에 따라 이펙트를 활성화 또는 비활성화
+            trackedImage.transform.GetChild(0).gameObject.SetActive(trackedImage.trackingState == TrackingState.Tracking);
             #endregion
         }
 
@@ -176,6 +192,7 @@ public class ImageTracker2 : MonoBehaviour
         }     
     }
 
+    /*
     private void InstParticle(ARTrackedImage trackedImage)
     {
         Destroy(Instantiate(particle, trackedImage.transform.position, trackedImage.transform.rotation), 3);
@@ -183,4 +200,5 @@ public class ImageTracker2 : MonoBehaviour
         particle.transform.position = trackedImage.transform.position;
         particle.transform.rotation = trackedImage.transform.rotation;
     }
+    */
 }
