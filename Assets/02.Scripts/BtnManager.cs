@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BtnManager : MonoBehaviour
 {
@@ -184,5 +185,15 @@ public class BtnManager : MonoBehaviour
         Canvas_Place.SetActive(true);
 
         //슬롯별로 해당 함수와 inventorySlotClick 스크립트 컴포넌트 넣고 inventorySlotClick.OnClick도 연결
+    }
+
+    public void OnClickButton()
+    {
+        SceneManager.LoadScene("OceanMap");
+    }
+
+    public void OnClickButton2()
+    {
+        SceneManager.LoadScene("MergeScene");
     }
 }

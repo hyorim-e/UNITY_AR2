@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/01.Scenes/Lobby.unity
     guid: 132ddda951e6f62409c039d785a06172
+  - enabled: 1
+    path: Assets/01.Scenes/OceanMap.unity
+    guid: d72fb99ad14991644ab3eef4e8dd4e4a
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1018e843d6bfe8d4a80e29659a8955b3, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 588d79e46a15a734fb1d16d9c728cd8c, type: 2}

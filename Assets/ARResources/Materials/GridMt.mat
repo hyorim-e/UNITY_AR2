@@ -66,7 +66,7 @@ Material:
     - _QueueOffset: 0
     - _Radius: 3.4028235e+38
     m_Colors:
-    - _Center: {r: 21.13, g: 0.12040894, b: -25.419998, a: 0}
+    - _Center: {r: 48.33, g: -66.83, b: 391.59, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7322428877116474007
 MonoBehaviour:
