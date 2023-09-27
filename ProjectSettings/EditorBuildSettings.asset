@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/MergeScene.unity
     guid: 65d388d7c2afae6469619ccfa0d6dc10
+  - enabled: 0
+    path: Assets/01.Scenes/Logo.unity
+    guid: 1c11dc44f51fbfa4c83b1adfb44a75a6
+  - enabled: 0
+    path: Assets/01.Scenes/Login.unity
+    guid: 375821795facdde4f9535251eb1bc0ea
+  - enabled: 0
+    path: Assets/01.Scenes/Lobby.unity
+    guid: 132ddda951e6f62409c039d785a06172
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1018e843d6bfe8d4a80e29659a8955b3, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 588d79e46a15a734fb1d16d9c728cd8c, type: 2}
