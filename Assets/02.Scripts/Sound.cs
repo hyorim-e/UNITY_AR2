@@ -8,6 +8,7 @@ public class Sound : MonoBehaviour
     public AudioSource ButtonClick;
     public AudioSource FootSound;
     public AudioSource Rain;
+    public AudioSource EffectSound;
 
     public void BGMVolume(float volume)
     {
@@ -19,6 +20,7 @@ public class Sound : MonoBehaviour
         ButtonClick.volume = volume;
         FootSound.volume = volume;
         Rain.volume = volume;
+        EffectSound.volume = volume;
     }
 }
 

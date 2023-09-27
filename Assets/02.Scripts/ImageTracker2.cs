@@ -32,6 +32,10 @@ public class ImageTracker2 : MonoBehaviour
     [SerializeField]
     private TMP_Text debugTxt;
 
+    // 이미지 트래킹 이펙트 구현 시 재생되는 사운드
+    public AudioSource effectSound;
+
+
     private void Awake()
     {
         trackedImageManager = GetComponent<ARTrackedImageManager>();
@@ -71,6 +75,9 @@ public class ImageTracker2 : MonoBehaviour
             GameObject effect = Instantiate(effectPrefab, trackedImage.transform);
             effect.transform.localPosition = Vector3.zero;
             effect.SetActive(true);
+
+            // 이펙트 구현 시 효과음
+            effectSound.Play();
             #endregion
 
             UpdateSpawnObject(trackedImage);
@@ -89,6 +96,7 @@ public class ImageTracker2 : MonoBehaviour
             // 이미지 트래킹 상태에 따라 이펙트를 활성화 또는 비활성화
             trackedImage.transform.GetChild(0).gameObject.SetActive(trackedImage.trackingState == TrackingState.Tracking);
             #endregion
+
         }
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed) // .removed 트래킹되는 이미지가 삭제되었을 때
