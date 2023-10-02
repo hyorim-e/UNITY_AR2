@@ -3,52 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class StartSceneManager : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    // Build Settings에서 게임씬 번호 달라지면 따라서 변경
-    public int loadSceneIndex = 1;
-
+    public GameObject loaderUI;
     public Slider progressSlider;
-    public GameObject startBtn;
-    public GameObject progressObj;
+    public TextMeshProUGUI LoadingText;
 
-    private void Start()
+    public void LoadScene(int index)
     {
-        StartCoroutine(LoadScene_Coroutine(loadSceneIndex));
+        StartCoroutine(LoadScene_Coroutine(index));
     }
 
     public IEnumerator LoadScene_Coroutine(int index)
     {
         progressSlider.value = 0;
+        loaderUI.SetActive(true);
 
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
         asyncOperation.allowSceneActivation = false;
         float progress = 0;
-
         while (!asyncOperation.isDone)
         {
             progress = Mathf.MoveTowards(progress, asyncOperation.progress, Time.deltaTime);
             progressSlider.value = progress;
+            LoadingText.text = $"Loading... {progressSlider.value * 100:F0}%";
+
             if (progress >= 0.9f)
             {
                 progressSlider.value = 1;
-                startBtn.SetActive(true);
-                progressObj.SetActive(false);
+                LoadingText.text = $"Loading... {progressSlider.value * 100:F0}%";
+                asyncOperation.allowSceneActivation = true;
             }
             yield return null;
         }
-    }
-
-    // 버튼 소리 나는 것 기다리느라 1초 뒤 로드
-    public void OnClickStartBtn()
-    {
-        Invoke(nameof(LoadScene), 1);
-        
-    }
-
-    public void LoadScene()
-    {
-        SceneManager.LoadScene("MergeScene");
     }
 }
