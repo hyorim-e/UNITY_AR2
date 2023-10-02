@@ -40,6 +40,8 @@ public class ARManager2 : MonoBehaviour
         isMakePrefabBtnClick = false;
 
         debugText_Game.text = $"MyDataStruct.spawnedObject = {MyDataStruct.spawnedObject}";
+
+        Debug.Log(UnityEngine.XR.XRSettings.enabled);
     }
 
     private void Start()
