@@ -2,6 +2,7 @@ using UnityEngine.SceneManagement;
 
 public enum SceneNames { Logo=0, Login, Lobby, }
 
+
 public static class Utills
 {
     public static string GetActiveScene()

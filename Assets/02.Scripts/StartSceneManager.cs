@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class StartSceneManager : MonoBehaviour
 {
-    public int loadSceneIndex;
+    // Build Settings에서 게임씬 번호 달라지면 따라서 변경
+    public int loadSceneIndex = 1;
 
     public Slider progressSlider;
     public GameObject startBtn;
@@ -39,7 +40,14 @@ public class StartSceneManager : MonoBehaviour
         }
     }
 
-    public void OnClickButton()
+    // 버튼 소리 나는 것 기다리느라 1초 뒤 로드
+    public void OnClickStartBtn()
+    {
+        Invoke(nameof(LoadScene), 1);
+        
+    }
+
+    public void LoadScene()
     {
         SceneManager.LoadScene("MergeScene");
     }
