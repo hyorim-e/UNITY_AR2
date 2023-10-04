@@ -20,29 +20,34 @@ public class MusicPlayer : MonoBehaviour
     public GameObject OSTPlay;  // OST Play Button
     public GameObject OSTStop; // OST Stop Button
 
-    // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         StartMusic();
         MusicTimeUI();
+
+        // Slider, Text에 재생 시간 정보 업데이트
+        StartCoroutine("OnPlayTimeUI");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!stop)
         {
-            TimeSlider.value += Time.deltaTime;
+            //TimeSlider.value += Time.deltaTime;
+            TimeSlider.value = audioSource.time;
 
             if (TimeSlider.value >= audioSource.clip.length)
             {
-                currentMusic++;
+                Debug.Log("(재생마침시작)currentMusic: " + currentMusic);
+                TimeSlider.value = 0;
+                currentMusic += 1;
 
                 if (currentMusic >= clipNames.Length)
                     currentMusic = 0;
 
                 StartMusic();
+                Debug.Log("(재생마침완료)currentMusic: " + currentMusic);
             }
         }
     }
@@ -50,6 +55,19 @@ public class MusicPlayer : MonoBehaviour
     public void StartMusic(int changeMusic = 0)
     {
         currentMusic += changeMusic;
+
+        switch (changeMusic)
+        {
+            case -1:
+                Debug.Log("(이전노래)currentMusic: " + currentMusic);
+                break;
+            case 0:
+                Debug.Log("(현재노래)currentMusic: " + currentMusic);
+                break;
+            case 1:
+                Debug.Log("(다음노래)currentMusic: " + currentMusic);
+                break;
+        }
 
         if (currentMusic >= clipNames.Length)
         {
@@ -60,7 +78,6 @@ public class MusicPlayer : MonoBehaviour
         {
             currentMusic = clipNames.Length - 1;
         }
-
 
         if (audioSource.isPlaying && changeMusic == 0)
         {
@@ -80,9 +97,6 @@ public class MusicPlayer : MonoBehaviour
 
         OSTPlay.SetActive(false);
         OSTStop.SetActive(true);
-
-        // Slider, Text에 재생 시간 정보 업데이트
-        StartCoroutine("OnPlayTimeUI");
     }
 
     public void StopMusic()
@@ -98,7 +112,6 @@ public class MusicPlayer : MonoBehaviour
         MusicTimeUI();
     }
 
-    
     public void MusicTimeUI()
     {
         TimeSlider.value = 0;
@@ -148,8 +161,11 @@ public class MusicPlayer : MonoBehaviour
             {
                 currentMusic = i;
                 StartMusic();
+                // Slider, Text에 재생 시간 정보 업데이트
+                StartCoroutine("OnPlayTimeUI");
                 break;
             }
         }
+        Debug.Log("(목록클릭)currentMusic: " + currentMusic);
     }
 }
