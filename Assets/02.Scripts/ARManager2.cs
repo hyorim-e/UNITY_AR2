@@ -28,6 +28,8 @@ public class ARManager2 : MonoBehaviour
 
     public Text debugText_Game;
 
+    public DecoManager decoManager;
+
     private void Awake()
     {
         animator = character.GetComponent<Animator>();
@@ -42,6 +44,8 @@ public class ARManager2 : MonoBehaviour
         debugText_Game.text = $"MyDataStruct.spawnedObject = {MyDataStruct.spawnedObject}";
 
         Debug.Log(UnityEngine.XR.XRSettings.enabled);
+
+        decoManager.OnLoad();
     }
 
     private void Start()
@@ -59,6 +63,17 @@ public class ARManager2 : MonoBehaviour
             PlaceIndicator(); // 버튼 터치 시 표시되는 인디케이터 부분에 공 생성
         } // 코루틴으로 변경
         PlayerMove();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            decoManager.OnSave();
+            Application.Quit();
+        }
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        decoManager.OnSave();
     }
 
     #region 배치 코루틴
