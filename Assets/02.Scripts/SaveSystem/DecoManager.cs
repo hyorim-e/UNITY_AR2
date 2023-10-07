@@ -31,6 +31,7 @@ public class DecoManager : MonoBehaviour
             decoHandler.decoData = currentDeco;
             decoHandler.transform.position = currentDeco.position;
             decoHandler.transform.rotation = currentDeco.rotation;
+            decoHandler.transform.localScale = currentDeco.localScale;
 
             obj.SetActive(true);
         }
