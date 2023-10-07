@@ -150,7 +150,7 @@ public class ImageTracker2 : MonoBehaviour
                 // 게임 Scene에서는 축소되어 나와서 스케일 크게 조정함
                 MyDataStruct.spawnedObject_Indicator.transform.localScale = new Vector3(3, 3, 3);
                 MyDataStruct.spawnedObject.transform.localScale = new Vector3(3, 3, 3);
-                MyDataStruct.spawnedObject.transform.rotation = spawnedObject_rot[obj.name];
+                //MyDataStruct.spawnedObject.transform.rotation = spawnedObject_rot[obj.name];
 
                 MyDataStruct.spawnedObject_Indicator.SetActive(false);
 
