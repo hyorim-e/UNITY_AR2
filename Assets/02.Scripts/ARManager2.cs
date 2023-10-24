@@ -45,7 +45,7 @@ public class ARManager2 : MonoBehaviour
 
         Debug.Log(UnityEngine.XR.XRSettings.enabled);
 
-        decoManager.OnLoad();
+       // decoManager.OnLoad();
     }
 
     private void Start()
@@ -73,7 +73,7 @@ public class ARManager2 : MonoBehaviour
 
     private void OnApplicationPause(bool pause)
     {
-        decoManager.OnSave();
+      //  decoManager.OnSave();
     }
 
     #region 배치 코루틴
